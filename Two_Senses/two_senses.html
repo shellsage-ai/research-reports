@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Create a guide on augmenting a human to have two extra senses using technology currently available. — For Dummies Guide — For Dummies Guide</title>
+<style>
+  body { font-family: 'Segoe UI', system-ui, sans-serif; max-width: 780px; margin: 0 auto; padding: 2rem; background: #FFFEF7; color: #212121; line-height: 1.7; }
+  h1 { color: #E65100; border-bottom: 3px solid #FFB74D; padding-bottom: 0.5rem; }
+  h2 { color: #F57C00; margin-top: 2rem; border-left: 4px solid #FFB74D; padding-left: 12px; }
+  h3 { color: #FB8C00; }
+  code { background: #FFF3E0; padding: 2px 6px; border-radius: 3px; font-family: Consolas, monospace; }
+  pre { background: #263238; color: #ECEFF1; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+  pre code { background: transparent; color: inherit; }
+  blockquote { border-left: 4px solid #FFB74D; margin: 1rem 0; padding: 0.5rem 1rem; background: #FFF8E1; font-style: italic; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #FFE0B2; padding: 8px 12px; text-align: left; }
+  th { background: #FF9800; color: white; }
+  img { max-width: 100%; height: auto; border-radius: 4px; margin: 0.5rem 0; }
+  .meta { color: #9E9E9E; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  .tip { background: #E8F5E9; border-left: 4px solid #4CAF50; padding: 12px 16px; margin: 1rem 0; border-radius: 0 4px 4px 0; }
+</style>
+</head>
+<body>
+<h1>📚 Create a guide on augmenting a human to have two extra senses using technology currently available. — For Dummies Guide</h1>
+<p class="meta">For Dummies Guide &middot; Source: ✏️ Custom &middot; Generated 3/1/2026 4:28 PM &middot; ResearchHive</p>
+<h3 id="what-is-it">🎯 What Is It?</h3>
+<p>You’re going to build a small wearable gadget that gives you <strong>two new “invisible” senses</strong> through vibration.<br />
+Sense 1 tells you where magnetic north is, and Sense 2 tells you how stale indoor air is (using carbon dioxide levels).<br />
+It’s like adding two background instincts your body didn’t have before.</p>
+<h3 id="why-does-it-matter">🤔 Why Does It Matter?</h3>
+<p>Humans already sense light, sound, touch, taste, and smell, but we miss many useful signals around us. This project lets you feel direction and air quality instantly, without staring at a screen.</p>
+<p>Personally, this can help you navigate unfamiliar places, notice stuffy rooms sooner, and make better choices about breaks, ventilation, and focus. You’re not just measuring data, you’re training your brain to “feel” hidden information.</p>
+<h3 id="what-youll-need">🛒 What You'll Need</h3>
+<ol>
+<li><p><strong>Seeeduino V4.3 (ATMega328P)</strong><br />
+Cost: <strong>$7-12</strong><br />
+URL: <a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html">https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html</a><br />
+What it’s for: Main microcontroller (“brain”) that runs your sensing logic.</p>
+</li>
+<li><p><strong>Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</strong><br />
+Cost: <strong>$50-60</strong><br />
+URL: <a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html">https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html</a><br />
+What it’s for: Measures carbon dioxide (CO2) as your air-quality sense.</p>
+</li>
+<li><p><strong>Grove - 3-Axis Digital Compass V2</strong><br />
+Cost: <strong>$10-15</strong><br />
+URL: <a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html">https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html</a><br />
+What it’s for: Measures magnetic field direction for your “north” sense.</p>
+</li>
+<li><p><strong>Grove - Vibration Motor</strong><br />
+Cost: <strong>$2-4</strong><br />
+URL: <a href="https://www.seeedstudio.com/Grove-Vibration-Motor.html">https://www.seeedstudio.com/Grove-Vibration-Motor.html</a><br />
+What it’s for: Physical vibration output your body can feel.</p>
+</li>
+<li><p><strong>Grove - I2C Hub</strong><br />
+Cost: <strong>$3-5</strong><br />
+URL: <a href="https://www.seeedstudio.com/Grove-I2C-Hub.html">https://www.seeedstudio.com/Grove-I2C-Hub.html</a><br />
+What it’s for: Lets both I2C sensors share one I2C port.</p>
+</li>
+<li><p><strong>Micro-USB data cable (4-wire, data-capable)</strong><br />
+Cost: <strong>$5-10</strong><br />
+URL: <a href="https://www.seeedstudio.com/USB-Type-A-to-Micro-USB-Cable-1-2m-p-1575.html">https://www.seeedstudio.com/USB-Type-A-to-Micro-USB-Cable-1-2m-p-1575.html</a><br />
+What it’s for: Powers/programs the board.</p>
+</li>
+<li><p><strong>Arduino IDE (software)</strong><br />
+Cost: <strong>Free</strong><br />
+URL: <a href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a><br />
+What it’s for: Uploading code and serial monitoring.</p>
+</li>
+<li><p><strong>Arduino CLI (optional but recommended for copy-paste workflow)</strong><br />
+Cost: <strong>Free</strong><br />
+URL: <a href="https://docs.arduino.cc/arduino-cli/installation/">https://docs.arduino.cc/arduino-cli/installation/</a><br />
+What it’s for: Command-line install/build/upload.</p>
+</li>
+</ol>
+<p><strong>Total Estimated Budget:</strong> <strong>~$82 to $116</strong> (before shipping/tax)</p>
+<hr />
+<h3 id="step-by-step-procedure">📋 Step-by-Step Procedure</h3>
+<h4 id="phase-1-setup-20-30-minutes">Phase 1: Setup (~20-30 minutes)</h4>
+<ol>
+<li><strong>Install Arduino tools</strong> (~5 minutes)<br />
+Run in PowerShell:</li>
+</ol>
+<pre><code class="language-powershell">winget install --id ArduinoSA.IDE.stable -e
+winget install --id ArduinoSA.CLI -e
+</code></pre>
+<p>💡 Tip: If <code>winget</code> isn’t available, install from <code>https://www.arduino.cc/en/software</code> manually.</p>
+<ol start="2">
+<li><strong>Initialize Arduino CLI and install board core</strong> (~3 minutes)</li>
+</ol>
+<pre><code class="language-powershell">arduino-cli config init
+arduino-cli core update-index
+arduino-cli core install arduino:avr
+</code></pre>
+<p>⚠️ Don’t: Skip <code>core install</code>, or compile/upload will fail.</p>
+<ol start="3">
+<li><strong>Install required libraries</strong> (~5 minutes)</li>
+</ol>
+<pre><code class="language-powershell">arduino-cli lib update-index
+arduino-cli lib install &quot;Sensirion I2C SCD4x&quot;
+arduino-cli lib install &quot;Sensirion Core&quot;
+arduino-cli lib install &quot;Grove 3Axis Compass V2.0 BMM150&quot;
+</code></pre>
+<p>If the compass library name fails, run:</p>
+<pre><code class="language-powershell">arduino-cli lib install --zip-path &quot;$env:USERPROFILE\Downloads\Grove_3Axis_Compass_V2_0_BMM150.zip&quot;
+</code></pre>
+<p>(Download ZIP from: <code>https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150</code>)</p>
+<ol start="4">
+<li><strong>Create your project folder</strong> (~1 minute)</li>
+</ol>
+<pre><code class="language-powershell">New-Item -ItemType Directory &quot;$env:USERPROFILE\Documents\DualSenseWearable&quot; -Force
+</code></pre>
+<h4 id="phase-2-wire-hardware-10-15-minutes">Phase 2: Wire Hardware (~10-15 minutes)</h4>
+<ol start="5">
+<li><p><strong>Set voltage mode on board</strong> (~1 minute)<br />
+Set the Seeeduino voltage switch to <strong><code>5V</code></strong>.</p>
+</li>
+<li><p><strong>Connect I2C chain</strong> (~4 minutes)</p>
+</li>
+</ol>
+<ul>
+<li>Plug <code>Grove I2C Hub</code> into board <code>I2C</code> port.</li>
+<li>Plug <code>SCD41</code> into one hub port.</li>
+<li>Plug <code>Compass V2</code> into another hub port.<br />
+💡 Tip: Grove connectors are keyed. If it doesn’t fit, don’t force it.</li>
+</ul>
+<ol start="7">
+<li><p><strong>Connect vibration output</strong> (~2 minutes)<br />
+Plug <code>Grove Vibration Motor</code> into digital port <strong><code>D6</code></strong>.</p>
+</li>
+<li><p><strong>Connect USB and verify port</strong> (~2 minutes)</p>
+</li>
+</ol>
+<pre><code class="language-powershell">arduino-cli board list
+</code></pre>
+<p>Note your port, like <code>COM5</code>.</p>
+<h4 id="phase-3-flash-code-15-20-minutes">Phase 3: Flash Code (~15-20 minutes)</h4>
+<ol start="9">
+<li><strong>Create sketch file</strong> (~3 minutes)<br />
+Create file:<br />
+<code>C:\Users\&lt;YOUR_USERNAME&gt;\Documents\DualSenseWearable\DualSenseWearable.ino</code></li>
+</ol>
+<p>Paste this code:</p>
+<pre><code class="language-cpp">#include &lt;Wire.h&gt;
+#include &quot;SensirionI2cScd4x.h&quot;
+#include &quot;bmm150.h&quot;
+#include &quot;bmm150_defs.h&quot;
+
+SensirionI2cScd4x scd4x;
+BMM150 bmm = BMM150();
+
+const int VIBE_PIN = 6;
+uint16_t co2ppm = 0;
+unsigned long lastNorthTick = 0;
+unsigned long lastAirAlert = 0;
+unsigned long lastCo2Read = 0;
+
+void vibePulse(int msOn, int msOff, int count) {
+  for (int i = 0; i &lt; count; i++) {
+    digitalWrite(VIBE_PIN, HIGH);
+    delay(msOn);
+    digitalWrite(VIBE_PIN, LOW);
+    if (i &lt; count - 1) delay(msOff);
+  }
+}
+
+float headingDeg() {
+  bmm.read_mag_data();
+  float x = bmm.raw_mag_data.raw_datax;
+  float y = bmm.raw_mag_data.raw_datay;
+  float hdg = atan2(x, y) * 180.0 / PI;
+  if (hdg &lt; 0) hdg += 360.0;
+  return hdg;
+}
+
+float northError(float hdg) {
+  float d = fabs(hdg - 0.0);
+  return (d &gt; 180.0) ? (360.0 - d) : d;
+}
+
+void setup() {
+  pinMode(VIBE_PIN, OUTPUT);
+  digitalWrite(VIBE_PIN, LOW);
+  Serial.begin(115200);
+  delay(1000);
+
+  Wire.begin();
+
+  if (bmm.initialize() == BMM150_E_ID_NOT_CONFORM) {
+    Serial.println(&quot;Compass init failed. Check wiring.&quot;);
+    while (1) delay(100);
+  }
+
+  scd4x.begin(Wire);
+  uint16_t error = scd4x.startPeriodicMeasurement();
+  if (error) {
+    Serial.println(&quot;SCD41 init failed. Check wiring.&quot;);
+    while (1) delay(100);
+  }
+
+  Serial.println(&quot;Dual-sense wearable started.&quot;);
+  Serial.println(&quot;Compass: face north to feel faster pulses.&quot;);
+  Serial.println(&quot;Air: every 15s, pulses represent CO2 band.&quot;);
+}
+
+void loop() {
+  unsigned long now = millis();
+
+  // Compass update every ~250 ms
+  float hdg = headingDeg();
+  float err = northError(hdg);
+
+  int interval = 0;
+  if (err &lt;= 10) interval = 500;
+  else if (err &lt;= 30) interval = 1000;
+  else if (err &lt;= 60) interval = 1500;
+  else interval = 0;
+
+  if (interval &gt; 0 &amp;&amp; (now - lastNorthTick &gt;= (unsigned long)interval)) {
+    vibePulse(90, 0, 1);
+    lastNorthTick = now;
+  }
+
+  // CO2 read every 5 s
+  if (now - lastCo2Read &gt;= 5000) {
+    bool ready = false;
+    if (!scd4x.getDataReadyStatus(ready) &amp;&amp; ready) {
+      float t, rh;
+      scd4x.readMeasurement(co2ppm, t, rh);
+      Serial.print(&quot;Heading=&quot;);
+      Serial.print(hdg, 1);
+      Serial.print(&quot; deg, Err=&quot;);
+      Serial.print(err, 1);
+      Serial.print(&quot; deg, CO2=&quot;);
+      Serial.print(co2ppm);
+      Serial.println(&quot; ppm&quot;);
+    }
+    lastCo2Read = now;
+  }
+
+  // Air quality haptic alert every 15 s
+  if (now - lastAirAlert &gt;= 15000) {
+    if (co2ppm &lt; 800) vibePulse(60, 0, 1);
+    else if (co2ppm &lt; 1000) vibePulse(100, 120, 2);
+    else if (co2ppm &lt; 1500) vibePulse(150, 140, 3);
+    else vibePulse(250, 150, 4);
+    lastAirAlert = now;
+  }
+}
+</code></pre>
+<ol start="10">
+<li><strong>Compile sketch</strong> (~1-2 minutes)</li>
+</ol>
+<pre><code class="language-powershell">arduino-cli compile --fqbn arduino:avr:uno &quot;$env:USERPROFILE\Documents\DualSenseWearable&quot;
+</code></pre>
+<ol start="11">
+<li><strong>Upload sketch</strong> (~1 minute)<br />
+Replace <code>COM5</code> with your port:</li>
+</ol>
+<pre><code class="language-powershell">arduino-cli upload -p COM5 --fqbn arduino:avr:uno &quot;$env:USERPROFILE\Documents\DualSenseWearable&quot;
+</code></pre>
+<p>⚠️ Don’t: Use charging-only USB cable. Upload will fail.</p>
+<ol start="12">
+<li><strong>Open serial monitor</strong> (~1 minute)</li>
+</ol>
+<pre><code class="language-powershell">arduino-cli monitor -p COM5 -c baudrate=115200
+</code></pre>
+<h4 id="phase-4-calibrate-and-use-10-20-minutes">Phase 4: Calibrate and Use (~10-20 minutes)</h4>
+<ol start="13">
+<li><p><strong>Calibrate compass</strong> (~2-5 minutes)<br />
+Move the device in a slow figure-8 for about <strong>30-60 seconds</strong>.<br />
+Keep away from laptops, keys, steel desks, and power bricks.</p>
+</li>
+<li><p><strong>Test the “north sense”</strong> (~3 minutes)<br />
+Rotate your body slowly. Vibration should get faster near north and disappear farther away.</p>
+</li>
+<li><p><strong>Test the “air sense”</strong> (~5-10 minutes)<br />
+Breathe near the SCD41 intake briefly, or move into a crowded room. Watch CO2 value rise and pulse pattern change every 15 seconds.</p>
+</li>
+<li><p><strong>Tune thresholds for your context</strong> (~5 minutes)<br />
+Edit these values in code and re-upload:<br />
+<code>800</code>, <code>1000</code>, <code>1500</code> ppm and pulse counts in the <code>if (co2ppm &lt; ...)</code> block.</p>
+</li>
+</ol>
+<hr />
+<h3 id="real-world-analogy">🌍 Real-World Analogy</h3>
+<p>Think of <strong>I2C sensor wiring</strong> like one hallway with labeled apartment doors. The hallway is shared, and each sensor answers only when its address is called. That’s why one microcontroller can talk to many sensors on two data wires.</p>
+<p>Think of <strong>compass calibration</strong> like tuning a guitar before a song. The instrument works out of tune, but calibration brings it into a stable reference so your “north notes” are accurate.</p>
+<p>Think of <strong>CO2 thresholds</strong> like traffic lights. Green means “ventilation is likely okay,” yellow means “getting stuffy,” and red means “open windows or improve airflow now.”</p>
+<p>Think of <strong>haptic encoding</strong> like Morse code for your skin. Different pulse counts and timings carry different meanings without you needing to look at a screen.</p>
+<h3 id="safety-note">⚠️ Safety Note</h3>
+<p>Do:</p>
+<ul>
+<li>Keep this as an awareness tool, not a medical safety device.</li>
+<li>Use vibration feedback while stationary first.</li>
+<li>Secure wires so they don’t snag while walking.</li>
+</ul>
+<p>Don’t:</p>
+<ul>
+<li>Use it as your only navigation aid in risky environments.</li>
+<li>Assume CO2 alone defines all indoor air hazards.</li>
+<li>Wear loose wiring near moving machinery or bike chains.</li>
+</ul>
+<h3 id="common-mistakes-how-to-avoid-them">❌ Common Mistakes &amp; How to Avoid Them</h3>
+<ol>
+<li><p><strong>Nothing uploads to board</strong><br />
+What goes wrong: <code>No device found on COMx</code>.<br />
+Why: Wrong port or charge-only cable.<br />
+Fix: Run <code>arduino-cli board list</code> and use a known data cable.</p>
+</li>
+<li><p><strong>CO2 always reads zero or stale values</strong><br />
+What goes wrong: No meaningful CO2 updates.<br />
+Why: Periodic measurement not started, or not waiting long enough.<br />
+Fix: Ensure <code>startPeriodicMeasurement()</code> runs and wait at least 5 seconds per read.</p>
+</li>
+<li><p><strong>Compass heading jumps wildly</strong><br />
+What goes wrong: North vibration feels random.<br />
+Why: Magnetic interference from metal/electronics nearby.<br />
+Fix: Calibrate with figure-8 and keep sensor away from magnets/steel surfaces.</p>
+</li>
+<li><p><strong>Both I2C sensors don’t show up together</strong><br />
+What goes wrong: One sensor works, other fails.<br />
+Why: Incorrect hub wiring or loose connector.<br />
+Fix: Re-seat all Grove cables and use the <code>Grove - I2C Hub</code> for branching.</p>
+</li>
+<li><p><strong>Vibration is too weak to notice</strong><br />
+What goes wrong: You miss cues while moving.<br />
+Why: Motor not touching body firmly or pulse too short.<br />
+Fix: Increase pulse duration (e.g., <code>90</code> to <code>150</code> ms) and mount motor against skin/clothing.</p>
+</li>
+<li><p><strong>Reader interprets CO2 as direct toxicity warning</strong><br />
+What goes wrong: Wrong decisions from misunderstood data.<br />
+Why: CO2 is mostly a ventilation proxy at common indoor levels.<br />
+Fix: Use it to guide ventilation habits, not as a complete air safety diagnosis.</p>
+</li>
+</ol>
+<h3 id="key-takeaways">✅ Key Takeaways</h3>
+<ul>
+<li>You can add useful “new senses” with cheap, current hardware.</li>
+<li>One vibration motor can encode multiple data streams.</li>
+<li>Compass and CO2 are both invisible signals you can learn quickly.</li>
+<li>Calibration quality determines compass reliability.</li>
+<li>CO2 thresholds are practical guides, not absolute danger lines.</li>
+<li>Consistent pulse patterns train your brain faster than random feedback.</li>
+</ul>
+<h3 id="quick-comparison-table">📊 Quick Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DIY Grove build (this guide)</td>
+<td>Cheap, customizable, educational</td>
+<td>Needs assembly and coding</td>
+<td>Learners and makers</td>
+<td>~$82-116</td>
+</tr>
+<tr>
+<td>App-only phone approach</td>
+<td>Fast start, no wiring</td>
+<td>Weak/no true haptic, limited sensors</td>
+<td>Quick demos</td>
+<td>~$0-10</td>
+</tr>
+<tr>
+<td>Commercial sensory wearable</td>
+<td>Polished experience</td>
+<td>Expensive, less flexible</td>
+<td>Users wanting plug-and-play</td>
+<td>~$200+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="going-deeper">🔬 Going Deeper</h3>
+<p>Earth’s magnetic field is usually around <strong>25,000 to 65,000 nT</strong> (that is <strong>25-65 µT</strong>), which is right in the usable range for compact compass sensors. Your BMM150-based module supports approximately <strong>±1300 µT (x/y)</strong> and <strong>±2500 µT (z)</strong>, so Earth’s field is comfortably measurable.</p>
+<p>The SCD4x family reports a broad CO2 output range, while best accuracy is specified in the typical indoor decision range. For SCD41, a commonly cited accuracy spec is <strong>±(40 ppm + 5% of reading)</strong>, which is why it’s good for trend-based decisions (ventilate sooner/later), not lab-grade gas certification.</p>
+<p>A practical interpretation ladder:</p>
+<ul>
+<li><strong>~400-600 ppm</strong>: near outdoor baseline or well-ventilated indoors.</li>
+<li><strong>~600-1000 ppm</strong>: commonly acceptable indoor range.</li>
+<li><strong>&gt;1000 ppm</strong>: often indicates under-ventilation; comfort/cognitive complaints may increase.</li>
+<li><strong>5000 ppm (occupational 8h limit context)</strong>: far above normal indoor comfort targets.</li>
+</ul>
+<p>Your coding cadence matters:</p>
+<ul>
+<li>Compass feedback every <strong>250 ms</strong> feels responsive.</li>
+<li>CO2 updates every <strong>5 s</strong> match sensor behavior.</li>
+<li>Air alerts every <strong>15 s</strong> avoid overwhelming your attention.</li>
+</ul>
+<p>This timing ratio is intentional: fast channel for orientation, slower channel for environmental context.</p>
+<h3 id="glossary">📖 Glossary</h3>
+<ul>
+<li><strong>Augmentation</strong>: Adding new abilities to your body using tools or devices.</li>
+<li><strong>Compass heading</strong>: Direction in degrees from 0 to 360, where 0 is north.</li>
+<li><strong>CO2 (carbon dioxide)</strong>: A gas in air; indoors, it often tracks ventilation quality.</li>
+<li><strong>I2C (Inter-Integrated Circuit)</strong>: A two-wire communication method for multiple sensors.</li>
+<li><strong>Microcontroller</strong>: A tiny programmable computer that controls sensors and outputs.</li>
+<li><strong>NDIR (non-dispersive infrared)</strong>: A gas-sensing method used to measure true CO2.</li>
+<li><strong>ppm (parts per million)</strong>: Unit for tiny concentrations, like CO2 in air.</li>
+<li><strong>Calibration</strong>: Adjusting sensor behavior so readings are stable and meaningful.</li>
+<li><strong>Haptic feedback</strong>: Information delivered through touch, usually vibration.</li>
+<li><strong>Threshold</strong>: A chosen boundary value that triggers an action.</li>
+<li><strong>Serial monitor</strong>: Text console showing live data from your board.</li>
+<li><strong>Geomagnetic field</strong>: Earth’s magnetic field used by compasses for direction.</li>
+</ul>
+<h3 id="sources">🔗 Sources</h3>
+<ul>
+<li><a href="https://www.arduino.cc/en/software">Arduino IDE Download</a></li>
+<li><a href="https://docs.arduino.cc/arduino-cli/installation/">Arduino CLI Installation</a></li>
+<li><a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html">Seeeduino V4.3 Product Page</a></li>
+<li><a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html">Grove CO2 Sensor (SCD41) Product Page</a></li>
+<li><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html">Grove 3-Axis Digital Compass V2 Product Page</a></li>
+<li><a href="https://www.seeedstudio.com/Grove-Vibration-Motor.html">Grove Vibration Motor Product Page</a></li>
+<li><a href="https://www.seeedstudio.com/Grove-I2C-Hub.html">Grove I2C Hub Product Page</a></li>
+<li><a href="https://wiki.seeedstudio.com/Grove-3-Axis_Digitial_Compass_v2.0/">Grove 3-Axis Digital Compass V2 Wiki</a></li>
+<li><a href="https://github.com/Sensirion/arduino-i2c-scd4x">Sensirion SCD4x Arduino Library</a></li>
+<li><a href="https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150">Seeed BMM150 Compass Library</a></li>
+<li><a href="https://www.ncei.noaa.gov/index.php/products/geomagnetism-frequently-asked-questions">NOAA Geomagnetism FAQ</a></li>
+<li><a href="https://dph.illinois.gov/topics-services/environmental-health-protection/toxicology/indoor-air-quality-healthy-homes/idph-guidelines-indoor-air-quality.html">Illinois IDPH Indoor Air Quality CO2 Guidelines</a></li>
+</ul>
+
+<hr/>
+<p style="color:#bbb;font-size:0.8rem;text-align:center;">Generated by ResearchHive — Agentic Research Studio</p>
+</body>
+</html>
