@@ -1,0 +1,450 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Noise-Cancelling Bionic Ear ML Manual &#8212; For Dummies Guide</title>
+<style>
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--green:#3fb950;--red:#f85149;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
+header{padding:2.5rem 2rem 2rem;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+header .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem;}
+.badge{border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:600;background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);}
+article{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem;}
+article h2,article h3{color:var(--acc);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.4rem;margin-top:2.2rem;}
+article h3{margin-top:1.8rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.92em;}
+article pre{background:#161b22;border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;}
+article blockquote{border-left:3px solid var(--acc);margin:1rem 0;padding:.5rem 1rem;color:var(--muted);font-style:italic;}
+article table{border-collapse:collapse;width:100%;margin:1rem 0;}
+article th,article td{border:1px solid var(--bdr);padding:8px 12px;text-align:left;}
+article th{background:rgba(255,152,0,.15);color:var(--acc);}
+article img{max-width:100%;border-radius:6px;}
+nav.breadcrumb{padding:1rem 2rem;font-size:.85rem;}
+nav.breadcrumb a{color:var(--link);text-decoration:none;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">&larr; All Reports</a></nav>
+<header>
+  <div class="eyebrow">&#128218; For Dummies Guide &nbsp;&middot;&nbsp; ResearchHive</div>
+  <h1>Noise-Cancelling Bionic Ear ML Manual &#8212; For Dummies Guide</h1>
+  <div class="badges">
+    <span class="badge">Noise-Cancelling</span>
+    <span class="badge">Bionic</span>
+    <span class="badge">Manual</span>
+  </div>
+</header>
+<article>
+<h3 id="what-is-it">&#127919; What Is It?</h3>
+<p>A Noise-Cancelling Bionic Ear is a portable listening-and-translation helper that captures speech, removes background noise, and shows readable text in real time.<br />
+Think of it as a &#8220;hearing assistant plus smart notebook&#8221; you carry with you. It helps you hear and understand conversations more clearly, especially in noisy places.</p>
+<h3 id="why-does-it-matter">&#129300; Why Does It Matter?</h3>
+<p>Noisy places make communication hard: meetings, travel hubs, conferences, busy streets, and shared offices. This system helps you isolate speech, translate it, and save organized notes so you can review important details later.</p>
+<p>Personally, this can reduce missed information, improve accessibility, and help you keep accurate records of what was said and when.</p>
+<h3 id="safety-note">&#9888;&#65039; Safety Note</h3>
+<p>Use this only in legal, consent-based situations. Recording or identifying people without permission may be illegal where you live.</p>
+<p>Do:</p>
+<ul>
+<li>Tell people recording is active.</li>
+<li>Get consent before storing voice data.</li>
+<li>Protect files with a password.</li>
+<li>Delete recordings you no longer need.</li>
+</ul>
+<p>Don&#8217;t:</p>
+<ul>
+<li>Use it for covert surveillance.</li>
+<li>Record private conversations without permission.</li>
+<li>Upload sensitive audio to public services.</li>
+</ul>
+<h3 id="what-youll-need">&#128722; What You'll Need</h3>
+<ol>
+<li><p>Directional/parabolic microphone (22&#8211;24 inch dish or equivalent)<br />
+Cost: <code>$80-250</code><br />
+Get it: <code>https://www.amazon.com/s?k=parabolic+microphone+dish</code><br />
+What it&#8217;s for: Captures speech from far away in a narrow direction.</p>
+</li>
+<li><p>USB audio interface or USB mic preamp (if your mic needs it)<br />
+Cost: <code>$25-90</code><br />
+Get it: <code>https://www.amazon.com/s?k=usb+audio+interface</code><br />
+What it&#8217;s for: Connects microphone cleanly to your computer/device.</p>
+</li>
+<li><p>Small compute device (laptop or mini PC/Raspberry Pi class device)<br />
+Cost: <code>$45-300</code><br />
+Get it: <code>https://www.raspberrypi.com/products/</code><br />
+What it&#8217;s for: Runs noise cleaning, speech recognition, translation, and storage.</p>
+</li>
+<li><p>Earphones (wired 3.5 mm or Bluetooth)<br />
+Cost: <code>$15-80</code><br />
+Get it: <code>https://www.amazon.com/s?k=earphones+3.5mm</code><br />
+What it&#8217;s for: Private listening output.</p>
+</li>
+<li><p>microSD card (64&#8211;256 GB) or SSD storage<br />
+Cost: <code>$10-70</code><br />
+Get it: <code>https://www.amazon.com/s?k=microSD+card+128GB</code><br />
+What it&#8217;s for: Stores recordings, transcripts, and translation files.</p>
+</li>
+<li><p>Power bank (10,000&#8211;20,000 mAh)<br />
+Cost: <code>$20-60</code><br />
+Get it: <code>https://www.amazon.com/s?k=power+bank+20000mah</code><br />
+What it&#8217;s for: Portable runtime.</p>
+</li>
+<li><p>Optional 3.5&#8211;5 inch touchscreen (for on-device navigation)<br />
+Cost: <code>$30-90</code><br />
+Get it: <code>https://www.raspberrypi.com/products/raspberry-pi-touch-display-2/</code><br />
+What it&#8217;s for: Browse recordings, speakers, and translated text on-device.</p>
+</li>
+<li><p>Software tools<br />
+Cost: <code>$0</code><br />
+Get them:</p>
+</li>
+</ol>
+<ul>
+<li>Python: <code>https://www.python.org/downloads/</code></li>
+<li>Git: <code>https://git-scm.com/downloads</code></li>
+<li>FFmpeg: <code>https://ffmpeg.org/download.html</code></li>
+<li>Whisper (speech-to-text + translation): <code>https://github.com/openai/whisper</code></li>
+<li>WhisperX (speaker diarization + timestamps): <code>https://github.com/m-bain/whisperX</code></li>
+<li>Streamlit (simple built-in screen app): <code>https://streamlit.io/</code></li>
+</ul>
+<p><strong>Total Estimated Budget:</strong> <code>$195-940</code> (cheapest practical build to moderate build)</p>
+<h3 id="step-by-step-procedure">&#128203; Step-by-Step Procedure</h3>
+<p><strong>Phase 1: Physical Setup (~20&#8211;35 minutes)</strong></p>
+<ol>
+<li><p>Mount the microphone and point it at your target speech zone. (~10 minutes)<br />
+Set dish angle to face speaker chest/head area and keep line-of-sight clear.<br />
+&#9888;&#65039; Don&#8217;t: Point directly at reflective walls/windows; echoes hurt clarity.</p>
+</li>
+<li><p>Connect hardware. (~5 minutes)<br />
+Use:</p>
+</li>
+</ol>
+<ul>
+<li>Microphone -&gt; USB audio interface -&gt; computer/mini PC</li>
+<li>Earphones -&gt; 3.5 mm jack or Bluetooth<br />
+&#128161; Tip: Keep cable length under <code>3 meters</code> where possible to reduce noise pickup.</li>
+</ul>
+<ol start="3">
+<li>Power the system. (~5 minutes)<br />
+Connect power bank and verify stable power LED/device status.<br />
+If available, set battery saving to <code>Balanced</code>, not <code>Power Saver</code>, to avoid audio glitches.</li>
+</ol>
+<p><strong>Phase 2: Software Installation (~25&#8211;45 minutes)</strong></p>
+<ol start="4">
+<li>Install Python, Git, and FFmpeg. (~10&#8211;20 minutes)<br />
+Download from the URLs above, install with defaults, then verify in PowerShell:</li>
+</ol>
+<pre><code class="language-powershell">python --version
+git --version
+ffmpeg -version
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: Skip FFmpeg. Whisper depends on it for audio decoding.</p>
+<ol start="5">
+<li>Create your project folder and virtual environment. (~3 minutes)</li>
+</ol>
+<pre><code class="language-powershell">mkdir C:\BionicEar
+cd C:\BionicEar
+python -m venv .venv
+.\.venv\Scripts\activate
+</code></pre>
+<ol start="6">
+<li>Install required packages. (~8&#8211;15 minutes)</li>
+</ol>
+<pre><code class="language-powershell">pip install --upgrade pip
+pip install openai-whisper whisperx streamlit pandas
+</code></pre>
+<p>&#128161; Tip: If <code>whisperx</code> is heavy on your machine, start with only <code>openai-whisper</code> first.</p>
+<ol start="7">
+<li>Create working folders. (~1 minute)</li>
+</ol>
+<pre><code class="language-powershell">mkdir recordings,cleaned,transcripts,translations,speakers,db,exports
+</code></pre>
+<p><strong>Phase 3: First Capture and Noise Cleaning (~10&#8211;15 minutes)</strong></p>
+<ol start="8">
+<li>List available audio devices and find exact microphone name. (~2 minutes)</li>
+</ol>
+<pre><code class="language-powershell">ffmpeg -list_devices true -f dshow -i dummy
+</code></pre>
+<p>Copy the exact device label shown in output.</p>
+<ol start="9">
+<li>Record a 60-second test clip at speech-friendly settings. (~2 minutes)<br />
+Replace <code>YOUR_MIC_NAME</code> with exact device name:</li>
+</ol>
+<pre><code class="language-powershell">ffmpeg -f dshow -i audio=&quot;YOUR_MIC_NAME&quot; -t 60 -ar 16000 -ac 1 recordings\test_raw.wav
+</code></pre>
+<ol start="10">
+<li>Clean background noise (wind/traffic hiss) with a practical filter chain. (~2 minutes)</li>
+</ol>
+<pre><code class="language-powershell">ffmpeg -i recordings\test_raw.wav -af &quot;highpass=f=120,lowpass=f=7000,afftdn=nf=-25,acompressor=threshold=-18dB:ratio=3&quot; -ar 16000 -ac 1 cleaned\test_clean.wav
+</code></pre>
+<p>&#128161; Tip: If voices sound thin, reduce highpass to <code>f=90</code>.</p>
+<ol start="11">
+<li>Check quality in earphones before moving on. (~2 minutes)</li>
+</ol>
+<pre><code class="language-powershell">ffplay cleaned\test_clean.wav
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: Continue with bad input. Fix mic direction first.</p>
+<p><strong>Phase 4: Transcription, Translation, and Speaker Handling (~20&#8211;40 minutes)</strong></p>
+<ol start="12">
+<li>Transcribe and translate to English using Whisper. (~5&#8211;15 minutes)</li>
+</ol>
+<pre><code class="language-powershell">whisper cleaned\test_clean.wav --model small --task translate --output_dir translations --word_timestamps True
+</code></pre>
+<p>For same-language transcript instead of translation:</p>
+<pre><code class="language-powershell">whisper cleaned\test_clean.wav --model small --task transcribe --output_dir transcripts --word_timestamps True
+</code></pre>
+<ol start="13">
+<li>Run speaker diarization (who spoke when) with WhisperX. (~8&#8211;20 minutes)<br />
+You need a Hugging Face token in environment variable first:</li>
+</ol>
+<pre><code class="language-powershell">setx HF_TOKEN &quot;YOUR_HF_TOKEN_HERE&quot;
+</code></pre>
+<p>Open new PowerShell window, then:</p>
+<pre><code class="language-powershell">whisperx cleaned\test_clean.wav --model small --diarize --hf_token $env:HF_TOKEN --output_dir speakers
+</code></pre>
+<p>&#128161; Tip: Start with 2&#8211;4 speakers in a controlled test conversation for best first results.</p>
+<ol start="14">
+<li>Save files with timestamp naming for easy history. (~2 minutes)</li>
+</ol>
+<pre><code class="language-powershell">$ts = Get-Date -Format &quot;yyyyMMdd_HHmmss&quot;
+Copy-Item cleaned\test_clean.wav &quot;recordings\session_$ts.wav&quot;
+</code></pre>
+<p><strong>Phase 5: Data Navigation on Built-in Screen (~15&#8211;30 minutes first time)</strong></p>
+<ol start="15">
+<li>Build a simple local browser app for recordings and text files. (~10 minutes)<br />
+Create <code>C:\BionicEar\app.py</code> with this:</li>
+</ol>
+<pre><code class="language-python">import streamlit as st
+from pathlib import Path
+
+st.title(&quot;Bionic Ear Navigator&quot;)
+base = Path(&quot;C:/BionicEar&quot;)
+
+section = st.selectbox(&quot;Open section&quot;, [&quot;recordings&quot;, &quot;cleaned&quot;, &quot;transcripts&quot;, &quot;translations&quot;, &quot;speakers&quot;, &quot;exports&quot;])
+folder = base / section
+
+files = sorted(folder.glob(&quot;*&quot;))
+choice = st.selectbox(&quot;Select file&quot;, [f.name for f in files] if files else [&quot;(none)&quot;])
+
+if files and choice != &quot;(none)&quot;:
+    p = folder / choice
+    st.write(f&quot;Path: {p}&quot;)
+    if p.suffix.lower() in [&quot;.txt&quot;, &quot;.json&quot;, &quot;.srt&quot;, &quot;.vtt&quot;]:
+        st.text(p.read_text(encoding=&quot;utf-8&quot;, errors=&quot;ignore&quot;)[:20000])
+    else:
+        st.write(&quot;Binary/audio file. Open with external player if needed.&quot;)
+</code></pre>
+<ol start="16">
+<li>Launch the built-in screen interface. (~1 minute)</li>
+</ol>
+<pre><code class="language-powershell">cd C:\BionicEar
+.\.venv\Scripts\activate
+streamlit run app.py
+</code></pre>
+<p>Open the shown local URL (usually <code>http://localhost:8501</code>).</p>
+<ol start="17">
+<li>Export selected artifacts for sharing/archive. (~2 minutes)</li>
+</ol>
+<pre><code class="language-powershell">$ts = Get-Date -Format &quot;yyyyMMdd_HHmmss&quot;
+mkdir &quot;exports\$ts&quot;
+Copy-Item transcripts\* &quot;exports\$ts&quot; -ErrorAction SilentlyContinue
+Copy-Item translations\* &quot;exports\$ts&quot; -ErrorAction SilentlyContinue
+Copy-Item speakers\* &quot;exports\$ts&quot; -ErrorAction SilentlyContinue
+</code></pre>
+<p><strong>Phase 6: Daily Use Routine (~5 minutes per session setup)</strong></p>
+<ol start="18">
+<li>Run your repeatable session workflow.</li>
+</ol>
+<ul>
+<li>Record: <code>recordings\raw_YYYYMMDD_HHMM.wav</code></li>
+<li>Clean with same filter</li>
+<li>Transcribe/translate</li>
+<li>Diarize</li>
+<li>Export<br />
+&#128161; Tip: Keep constant mic distance and orientation for better voice-pattern consistency.</li>
+</ul>
+<h3 id="real-world-analogy">&#127757; Real-World Analogy</h3>
+<p>Think of <strong>parabolic capture</strong> like a satellite dish for radio stations.<br />
+It works because the dish shape gathers weak sound waves and focuses them onto one microphone point.</p>
+<p>Think of <strong>noise reduction</strong> like cleaning muddy water through layered filters.<br />
+Each filter removes a different type of &#8220;dirt&#8221; (wind rumble, hiss, traffic hum), leaving clearer speech.</p>
+<p>Think of <strong>speaker recognition</strong> like sorting laundry by person.<br />
+The system uses voice patterns (tone, rhythm, spectral shape) to put segments into the right &#8220;person pile.&#8221;</p>
+<p>Think of <strong>real-time translation</strong> like a live sports interpreter in your ear.<br />
+It listens to the original language, understands intent, and quickly outputs understandable text/speech.</p>
+<p>Think of <strong>timestamped storage</strong> like receipts in a folder by date and store name.<br />
+You can find exactly &#8220;what was said, by whom, and when&#8221; without replaying everything.</p>
+<h3 id="common-mistakes-how-to-avoid-them">&#10060; Common Mistakes &amp; How to Avoid Them</h3>
+<ol>
+<li><p>Recording at the wrong sample rate<br />
+What goes wrong: Text accuracy drops and timing drifts.<br />
+Why: Models are optimized around <code>16 kHz</code> speech pipelines.<br />
+Fix: Always record/process with <code>-ar 16000 -ac 1</code>.</p>
+</li>
+<li><p>Microphone pointed too broadly<br />
+What goes wrong: You capture crowd noise instead of target speech.<br />
+Why: Directional gear still needs precise aiming.<br />
+Fix: Aim dish at speaker zone; re-check every location change.</p>
+</li>
+<li><p>Over-aggressive noise filtering<br />
+What goes wrong: Speech sounds robotic or clipped.<br />
+Why: Too much denoise/highpass removes voice frequencies.<br />
+Fix: Start with <code>highpass=120</code> and <code>afftdn=nf=-25</code>; adjust gradually.</p>
+</li>
+<li><p>Skipping short test recordings<br />
+What goes wrong: You discover failures after a full event.<br />
+Why: Device names, gain, and filters were not validated.<br />
+Fix: Always do a <code>60-second</code> test clip first.</p>
+</li>
+<li><p>Not labeling files with timestamps<br />
+What goes wrong: You lose session history and cannot trace context.<br />
+Why: Generic names overwrite or confuse files.<br />
+Fix: Use <code>yyyyMMdd_HHmmss</code> naming every time.</p>
+</li>
+<li><p>Ignoring consent and privacy rules<br />
+What goes wrong: Legal/ethical issues and trust damage.<br />
+Why: Voice data is personally sensitive.<br />
+Fix: Ask permission, announce recording, encrypt archives, delete old files.</p>
+</li>
+<li><p>Trying highest model size on weak hardware<br />
+What goes wrong: Slow or frozen processing.<br />
+Why: Larger models need more memory and compute.<br />
+Fix: Start with <code>small</code>; upgrade only after stable operation.</p>
+</li>
+</ol>
+<h3 id="key-takeaways">&#9989; Key Takeaways</h3>
+<ul>
+<li>Start with clean audio, not complex settings.</li>
+<li>Use <code>16 kHz mono</code> for reliable speech workflows.</li>
+<li>Test for 60 seconds before each real session.</li>
+<li>Timestamp everything to stay organized.</li>
+<li>Begin with <code>small</code> model for speed and stability.</li>
+<li>Keep consent, privacy, and security non-negotiable.</li>
+<li>Good mic placement beats software tricks.</li>
+</ul>
+<h3 id="quick-comparison-table">&#128202; Quick Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Basic Build (directional mic + laptop)</td>
+<td>Fast setup, easy troubleshooting</td>
+<td>Less discreet, bigger footprint</td>
+<td>Home office, fixed desk</td>
+<td>$195-450</td>
+</tr>
+<tr>
+<td>Portable Build (mini PC + power bank + earphones)</td>
+<td>Mobile, field-ready</td>
+<td>More cable/power management</td>
+<td>Conferences, travel</td>
+<td>$260-650</td>
+</tr>
+<tr>
+<td>Enhanced Build (touchscreen + larger storage + better mic)</td>
+<td>Best navigation and archive workflow</td>
+<td>Highest setup complexity</td>
+<td>Frequent professional use</td>
+<td>$450-940</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Speech Model</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>tiny/base</code></td>
+<td>Very fast</td>
+<td>Lower accuracy</td>
+<td>Quick rough notes</td>
+<td>$0</td>
+</tr>
+<tr>
+<td><code>small</code></td>
+<td>Good balance</td>
+<td>Moderate compute need</td>
+<td>Most beginners</td>
+<td>$0</td>
+</tr>
+<tr>
+<td><code>medium/large</code></td>
+<td>Highest accuracy</td>
+<td>Much slower on weak hardware</td>
+<td>High-stakes transcripts</td>
+<td>$0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="going-deeper">&#128300; Going Deeper</h3>
+<p>From your source targets, the practical goals are <code>75 meters</code> capture range and up to <code>98%</code> noise reduction. In real use, these are best-case numbers that depend heavily on wind, obstacles, mic aiming, and speaker volume.</p>
+<p>For reliable speech recognition, keep audio at <code>16,000 samples/second</code>, mono channel, and voice band roughly <code>120-7000 Hz</code>. That range keeps most intelligible speech while dropping low-frequency rumble and high-frequency harsh noise.</p>
+<p>Latency has three parts: capture window, denoise/transcription compute time, and display update. If you process in <code>5-10 second</code> chunks on a modest machine with <code>small</code> model, practical end-to-end delay is often around <code>2-8 seconds</code>.</p>
+<p>Storage planning helps avoid surprises. At <code>16 kHz</code>, mono, uncompressed WAV is about <code>~1.9 MB/minute</code> (<code>~114 MB/hour</code>). Compressed archives (like FLAC) can reduce this significantly while preserving quality.</p>
+<p>Speaker recognition quality improves when each person has at least <code>20-30 seconds</code> of clear speech across the session. Overlapping speech, heavy accents, or loud background noise can reduce labeling accuracy, so manual renaming is still important.</p>
+<p>For translation into <code>10+ languages</code>, quality depends on domain vocabulary. Names, slang, and technical terms are common error zones; keep both original transcript and translation for review.</p>
+<p>Battery planning: a typical mini-PC + mic + small screen setup may draw roughly <code>6-15 W</code>. A <code>20,000 mAh</code> power bank (usable energy varies by voltage conversion) often gives a few hours of practical runtime, so test your exact build before critical events.</p>
+<h3 id="glossary">&#128214; Glossary</h3>
+<ol>
+<li>Parabolic microphone: A mic plus curved dish that focuses distant sound toward one point.</li>
+<li>Directional pickup: Capturing sound mostly from where the mic is pointed.</li>
+<li>Noise reduction: Software processing that removes non-speech sounds.</li>
+<li>Latency: Time delay between hearing speech and seeing/playing processed output.</li>
+<li>Transcription: Converting spoken audio into written text.</li>
+<li>Translation: Converting speech/text from one language to another language.</li>
+<li>Speaker diarization: Labeling which speaker talked at each time segment.</li>
+<li>Timestamp: A date-and-time marker attached to a recording or text line.</li>
+<li>Waveform Audio File Format (WAV): A common uncompressed audio file format.</li>
+<li>Sample rate: How many audio snapshots are taken each second (for example, 16 kHz).</li>
+<li>Virtual environment: Isolated Python workspace for project-specific packages.</li>
+<li>Voice pattern: Distinctive characteristics in a person&#8217;s speech used for identification.</li>
+</ol>
+<h3 id="sources">&#128279; Sources</h3>
+<p>No verified source URLs were included in the provided source content block.</p>
+<p>Practical implementation links used in this guide:</p>
+<ul>
+<li><a href="https://www.python.org/downloads/">Python Downloads</a></li>
+<li><a href="https://git-scm.com/downloads">Git Downloads</a></li>
+<li><a href="https://ffmpeg.org/download.html">FFmpeg Download Page</a></li>
+<li><a href="https://github.com/openai/whisper">OpenAI Whisper</a></li>
+<li><a href="https://github.com/m-bain/whisperX">WhisperX</a></li>
+<li><a href="https://streamlit.io/">Streamlit</a></li>
+<li><a href="https://www.raspberrypi.com/products/">Raspberry Pi Products</a></li>
+<li><a href="https://www.raspberrypi.com/products/raspberry-pi-touch-display-2/">Raspberry Pi Touch Display 2</a></li>
+<li><a href="https://www.amazon.com/s?k=parabolic+microphone+dish">Parabolic microphone search</a></li>
+<li><a href="https://www.amazon.com/s?k=usb+audio+interface">USB audio interface search</a></li>
+<li><a href="https://www.amazon.com/s?k=earphones+3.5mm">Earphones search</a></li>
+<li><a href="https://www.amazon.com/s?k=microSD+card+128GB">microSD search</a></li>
+<li><a href="https://www.amazon.com/s?k=power+bank+20000mah">Power bank search</a></li>
+</ul>
+
+</article>
+<footer>
+  <p>ResearchHive &mdash; Agentic Research Studio &nbsp;&middot;&nbsp; 3/1/2026 8:08 PM</p>
+  <p><a href="../">&#8592; Back to all reports</a></p>
+</footer>
+</body>
+</html>
