@@ -3,288 +3,181 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta name="description" content="A beginner-friendly, hands-on guide to augmenting a human with two extra senses using technology available today."/>
-<title>Augmenting Human Senses: Two Extra Senses &#8212; For Dummies Guide</title>
+<title>Augmenting Human Senses: Two Extra Senses &mdash; For Dummies Guide</title>
 <style>
-  :root {
-    --bg: #0e1117;
-    --surface: #161b22;
-    --border: #30363d;
-    --accent: #FF9800;
-    --accent2: #FFB74D;
-    --text: #e6edf3;
-    --muted: #8b949e;
-    --code-bg: #1c2128;
-    --link: #58a6ff;
-    --link-h: #79c0ff;
-    --green: #3fb950;
-    --yellow: #d29922;
-    --red: #f85149;
-  }
-  *, *::before, *::after { box-sizing: border-box; }
-  body {
-    margin: 0; padding: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.7;
-  }
-  header {
-    background: linear-gradient(135deg, #1a1f2e 0%, #0e1117 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 2.5rem 1.5rem 2rem;
-    text-align: center;
-  }
-  header .eyebrow {
-    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: 0.5rem;
-  }
-  header h1 {
-    margin: 0 0 0.5rem;
-    font-size: clamp(1.6rem, 4vw, 2.5rem);
-    font-weight: 700;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  header .subtitle {
-    color: var(--muted); font-size: 1rem; margin-top: 0.5rem;
-  }
-  .badge {
-    display: inline-block; padding: 3px 10px; border-radius: 20px;
-    font-size: 0.75rem; font-weight: 600; margin: 0 4px;
-  }
-  .badge-orange { background: rgba(255,152,0,.18); color: var(--accent); border: 1px solid rgba(255,152,0,.3); }
-  .badge-blue   { background: rgba(88,166,255,.15); color: var(--link); border: 1px solid rgba(88,166,255,.25); }
-  .badge-green  { background: rgba(63,185,80,.15); color: var(--green); border: 1px solid rgba(63,185,80,.25); }
-  nav.breadcrumb {
-    text-align: center; padding: 0.6rem 1.5rem;
-    font-size: 0.85rem; color: var(--muted);
-    border-bottom: 1px solid var(--border);
-  }
-  nav.breadcrumb a { color: var(--link); text-decoration: none; }
-  nav.breadcrumb a:hover { text-decoration: underline; }
-  main {
-    max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 6rem;
-  }
-  h1, h2, h3, h4 { color: var(--text); margin: 2rem 0 0.75rem; }
-  h2 { font-size: 1.4rem; border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; color: var(--accent2); }
-  h3 { font-size: 1.15rem; color: var(--accent); }
-  h4 { font-size: 1rem; color: var(--accent2); }
-  p { margin: 0.5rem 0 0.9rem; }
-  a { color: var(--link); }
-  a:hover { color: var(--link-h); }
-  code {
-    background: var(--code-bg); border: 1px solid var(--border);
-    border-radius: 4px; padding: 1px 6px;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 0.88em;
-  }
-  pre {
-    background: var(--code-bg); border: 1px solid var(--border);
-    border-radius: 8px; overflow-x: auto;
-    padding: 1rem 1.2rem; margin: 0.75rem 0 1.2rem;
-    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 0.87em; line-height: 1.55;
-    position: relative;
-  }
-  pre code { background: none; border: none; padding: 0; font-size: inherit; }
-  li { margin: 0.3rem 0; }
-  li p { margin: 0; }
-  ul, ol { padding-left: 1.4rem; margin: 0.4rem 0 0.9rem; }
-  table {
-    border-collapse: collapse; width: 100%; margin: 1rem 0 1.5rem;
-    font-size: 0.9rem;
-  }
-  thead { background: rgba(255,152,0,.08); }
-  th, td { border: 1px solid var(--border); padding: 8px 14px; text-align: left; }
-  th { color: var(--accent); font-weight: 600; }
-  tr:nth-child(even) { background: rgba(255,255,255,.02); }
-  hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
-  blockquote {
-    border-left: 4px solid var(--accent); margin: 1rem 0;
-    padding: 0.5rem 1rem; background: rgba(255,152,0,.06);
-    border-radius: 0 6px 6px 0; color: var(--muted);
-  }
-  .toc {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 1.2rem 1.5rem;
-    margin: 0 0 2rem;
-  }
-  .toc h2 { margin-top: 0; font-size: 1rem; color: var(--muted); letter-spacing: 0.05em; border: none; }
-  .toc ul { list-style: none; padding-left: 0; margin: 0; }
-  .toc li { margin: 0.25rem 0; }
-  .toc a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
-  .toc a:hover { color: var(--accent); }
-  .budget-box {
-    background: rgba(63,185,80,.08); border: 1px solid rgba(63,185,80,.2);
-    border-radius: 8px; padding: 0.7rem 1rem; margin: 1rem 0;
-    display: inline-block;
-    color: var(--green); font-weight: 600;
-  }
-  footer {
-    text-align: center; color: var(--muted); font-size: 0.8rem;
-    padding: 2rem 1.5rem;
-    border-top: 1px solid var(--border);
-  }
-  footer a { color: var(--muted); }
-  @media (max-width: 600px) {
-    main { padding: 1rem 1rem 4rem; }
-    header { padding: 1.5rem 1rem 1.5rem; }
-    pre { font-size: 0.8em; }
-  }
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--green:#3fb950;--red:#f85149;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
+header{padding:2.5rem 2rem 2rem;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+header .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem;}
+.badge{border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:600;background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);}
+article{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem;}
+article h1,article h2,article h3{color:var(--acc);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.4rem;margin-top:2.2rem;}
+article h3{margin-top:1.8rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.92em;}
+article pre{background:#161b22;border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;}
+article blockquote{border-left:3px solid var(--acc);margin:1rem 0;padding:.5rem 1rem;color:var(--muted);font-style:italic;}
+article table{border-collapse:collapse;width:100%;margin:1rem 0;}
+article th,article td{border:1px solid var(--bdr);padding:8px 12px;text-align:left;}
+article th{background:rgba(255,152,0,.15);color:var(--acc);}
+article img{max-width:100%;border-radius:6px;}
+article li{margin-bottom:0.3rem;}
+article ul,article ol{padding-left:1.5rem;}
+nav.breadcrumb{padding:1rem 2rem;font-size:.85rem;}
+nav.breadcrumb a{color:var(--link);text-decoration:none;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+footer a{color:var(--muted);}
 </style>
 </head>
 <body>
-
+<nav class="breadcrumb"><a href="../">&larr; All Reports</a></nav>
 <header>
   <div class="eyebrow">&#128218; For Dummies Guide &nbsp;&middot;&nbsp; ResearchHive</div>
-  <h1>Augmenting a Human to Have Two Extra Senses</h1>
-  <div class="subtitle">Using technology currently available &#8212; a complete beginner's build guide</div>
-  <div style="margin-top:1rem">
-    <span class="badge badge-orange">Hardware Build</span>
-    <span class="badge badge-blue">Arduino</span>
-    <span class="badge badge-green">~$82&#8211;$116</span>
-    <span class="badge badge-blue">Biohacking</span>
+  <h1>Augmenting Human Senses: Two Extra Senses</h1>
+  <div class="badges">
+    <span class="badge">Hardware</span>
+    <span class="badge">Arduino</span>
+    <span class="badge">Biohacking</span>
   </div>
 </header>
-
-<nav class="breadcrumb">
-  <a href="../">&larr; Research Reports</a> &nbsp;/&nbsp; Two Senses Guide
-</nav>
-
-<main>
-
-<div class="toc">
-<h2>CONTENTS</h2>
-<ul>
-<li><a href="#what">&#127919; What Is It?</a></li>
-<li><a href="#why">&#129300; Why Does It Matter?</a></li>
-<li><a href="#materials">&#128722; What You&#8217;ll Need</a></li>
-<li><a href="#steps">&#128203; Step-by-Step Procedure</a></li>
-<li><a href="#analogy">&#127757; Real-World Analogies</a></li>
-<li><a href="#safety">&#9888;&#65039; Safety Note</a></li>
-<li><a href="#mistakes">&#10060; Common Mistakes</a></li>
-<li><a href="#takeaways">&#9989; Key Takeaways</a></li>
-<li><a href="#compare">&#128202; Comparison Table</a></li>
-<li><a href="#deeper">&#128300; Going Deeper</a></li>
-<li><a href="#glossary">&#128214; Glossary</a></li>
-<li><a href="#sources">&#128279; Sources</a></li>
-</ul>
-</div>
-
-<h3 id="what">&#127919; What Is It?</h3>
-<p>You&#8217;re going to build a small wearable gadget that gives you <strong>two new &#8220;invisible&#8221; senses</strong> through vibration.  </p>
-<p>Sense 1 tells you where magnetic north is, and Sense 2 tells you how stale indoor air is (using carbon dioxide levels).  </p>
-<p>It&#8217;s like adding two background instincts your body didn&#8217;t have before.</p>
-
-<h3 id="why">&#129300; Why Does It Matter?</h3>
+<article>
+<h3 id="what-is-it">&#127919; What Is It?</h3>
+<p>You&#8217;re going to build a small wearable gadget that gives you <strong>two new &#8220;invisible&#8221; senses</strong> through vibration.<br />
+Sense 1 tells you where magnetic north is, and Sense 2 tells you how stale indoor air is (using carbon dioxide levels).<br />
+It&#8217;s like adding two background instincts your body didn&#8217;t have before.</p>
+<h3 id="why-does-it-matter">&#129300; Why Does It Matter?</h3>
 <p>Humans already sense light, sound, touch, taste, and smell, but we miss many useful signals around us. This project lets you feel direction and air quality instantly, without staring at a screen.</p>
-
 <p>Personally, this can help you navigate unfamiliar places, notice stuffy rooms sooner, and make better choices about breaks, ventilation, and focus. You&#8217;re not just measuring data, you&#8217;re training your brain to &#8220;feel&#8221; hidden information.</p>
-
-<h3 id="materials">&#128722; What You'll Need</h3>
-<li><strong>Seeeduino V4.3 (ATMega328P)</strong>  </li>
-<p>Cost: <strong>$7-12</strong>  </p>
-<p>URL: <a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank" rel="noopener">https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html</a>  </p>
-<p>What it&#8217;s for: Main microcontroller (&#8220;brain&#8221;) that runs your sensing logic.</p>
-
-<li><strong>Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</strong>  </li>
-<p>Cost: <strong>$50-60</strong>  </p>
-<p>URL: <a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html" target="_blank" rel="noopener">https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html</a>  </p>
-<p>What it&#8217;s for: Measures carbon dioxide (CO2) as your air-quality sense.</p>
-
-<li><strong>Grove - 3-Axis Digital Compass V2</strong>  </li>
-<p>Cost: <strong>$10-15</strong>  </p>
-<p>URL: <a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html" target="_blank" rel="noopener">https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html</a>  </p>
-<p>What it&#8217;s for: Measures magnetic field direction for your &#8220;north&#8221; sense.</p>
-
-<li><strong>Grove - Vibration Motor</strong>  </li>
-<p>Cost: <strong>$2-4</strong>  </p>
-<p>URL: <a href="https://www.seeedstudio.com/Grove-Vibration-Motor.html" target="_blank" rel="noopener">https://www.seeedstudio.com/Grove-Vibration-Motor.html</a>  </p>
-<p>What it&#8217;s for: Physical vibration output your body can feel.</p>
-
-<li><strong>Grove - I2C Hub</strong>  </li>
-<p>Cost: <strong>$3-5</strong>  </p>
-<p>URL: <a href="https://www.seeedstudio.com/Grove-I2C-Hub.html" target="_blank" rel="noopener">https://www.seeedstudio.com/Grove-I2C-Hub.html</a>  </p>
-<p>What it&#8217;s for: Lets both I2C sensors share one I2C port.</p>
-
-<li><strong>Micro-USB data cable (4-wire, data-capable)</strong>  </li>
-<p>Cost: <strong>$5-10</strong>  </p>
-<p>URL: <a href="https://www.seeedstudio.com/USB-Type-A-to-Micro-USB-Cable-1-2m-p-1575.html" target="_blank" rel="noopener">https://www.seeedstudio.com/USB-Type-A-to-Micro-USB-Cable-1-2m-p-1575.html</a>  </p>
-<p>What it&#8217;s for: Powers/programs the board.</p>
-
-<li><strong>Arduino IDE (software)</strong>  </li>
-<p>Cost: <strong>Free</strong>  </p>
-<p>URL: <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener">https://www.arduino.cc/en/software</a>  </p>
-<p>What it&#8217;s for: Uploading code and serial monitoring.</p>
-
-<li><strong>Arduino CLI (optional but recommended for copy-paste workflow)</strong>  </li>
-<p>Cost: <strong>Free</strong>  </p>
-<p>URL: <a href="https://docs.arduino.cc/arduino-cli/installation/" target="_blank" rel="noopener">https://docs.arduino.cc/arduino-cli/installation/</a>  </p>
-<p>What it&#8217;s for: Command-line install/build/upload.</p>
-
+<h3 id="what-youll-need">&#128722; What You'll Need</h3>
+<ol>
+<li>
+<p><strong>Seeeduino V4.3 (ATMega328P)</strong><br />
+Cost: <strong>$7-12</strong><br />
+URL: https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html<br />
+What it&#8217;s for: Main microcontroller (&#8220;brain&#8221;) that runs your sensing logic.</p>
+</li>
+<li>
+<p><strong>Grove - CO2 &amp; Temperature &amp; Humidity Sensor (SCD41)</strong><br />
+Cost: <strong>$50-60</strong><br />
+URL: https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html<br />
+What it&#8217;s for: Measures carbon dioxide (CO2) as your air-quality sense.</p>
+</li>
+<li>
+<p><strong>Grove - 3-Axis Digital Compass V2</strong><br />
+Cost: <strong>$10-15</strong><br />
+URL: https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html<br />
+What it&#8217;s for: Measures magnetic field direction for your &#8220;north&#8221; sense.</p>
+</li>
+<li>
+<p><strong>Grove - Vibration Motor</strong><br />
+Cost: <strong>$2-4</strong><br />
+URL: https://www.seeedstudio.com/Grove-Vibration-Motor.html<br />
+What it&#8217;s for: Physical vibration output your body can feel.</p>
+</li>
+<li>
+<p><strong>Grove - I2C Hub</strong><br />
+Cost: <strong>$3-5</strong><br />
+URL: https://www.seeedstudio.com/Grove-I2C-Hub.html<br />
+What it&#8217;s for: Lets both I2C sensors share one I2C port.</p>
+</li>
+<li>
+<p><strong>Micro-USB data cable (4-wire, data-capable)</strong><br />
+Cost: <strong>$5-10</strong><br />
+URL: https://www.seeedstudio.com/USB-Type-A-to-Micro-USB-Cable-1-2m-p-1575.html<br />
+What it&#8217;s for: Powers/programs the board.</p>
+</li>
+<li>
+<p><strong>Arduino IDE (software)</strong><br />
+Cost: <strong>Free</strong><br />
+URL: https://www.arduino.cc/en/software<br />
+What it&#8217;s for: Uploading code and serial monitoring.</p>
+</li>
+<li>
+<p><strong>Arduino CLI (optional but recommended for copy-paste workflow)</strong><br />
+Cost: <strong>Free</strong><br />
+URL: https://docs.arduino.cc/arduino-cli/installation/<br />
+What it&#8217;s for: Command-line install/build/upload.</p>
+</li>
+</ol>
 <p><strong>Total Estimated Budget:</strong> <strong>~$82 to $116</strong> (before shipping/tax)</p>
-
-<hr/>
-
-<h3 id="steps">&#128203; Step-by-Step Procedure</h3>
-
-<h4>Phase 1: Setup (~20-30 minutes)</h4>
-
-<li><strong>Install Arduino tools</strong> (~5 minutes)  </li>
-<p>Run in PowerShell:</p>
+<hr />
+<h3 id="step-by-step-procedure">&#128203; Step-by-Step Procedure</h3>
+<h4 id="phase-1-setup-20-30-minutes">Phase 1: Setup (~20-30 minutes)</h4>
+<ol>
+<li><strong>Install Arduino tools</strong> (~5 minutes)<br />
+Run in PowerShell:</li>
+</ol>
 <pre><code class="language-powershell">winget install --id ArduinoSA.IDE.stable -e
-winget install --id ArduinoSA.CLI -e</code></pre>
+winget install --id ArduinoSA.CLI -e
+</code></pre>
 <p>&#128161; Tip: If <code>winget</code> isn&#8217;t available, install from <code>https://www.arduino.cc/en/software</code> manually.</p>
-
+<ol>
 <li><strong>Initialize Arduino CLI and install board core</strong> (~3 minutes)  </li>
+</ol>
 <pre><code class="language-powershell">arduino-cli config init
 arduino-cli core update-index
-arduino-cli core install arduino:avr</code></pre>
+arduino-cli core install arduino:avr
+</code></pre>
 <p>&#9888;&#65039; Don&#8217;t: Skip <code>core install</code>, or compile/upload will fail.</p>
-
+<ol>
 <li><strong>Install required libraries</strong> (~5 minutes)  </li>
+</ol>
 <pre><code class="language-powershell">arduino-cli lib update-index
-arduino-cli lib install "Sensirion I2C SCD4x"
-arduino-cli lib install "Sensirion Core"
-arduino-cli lib install "Grove 3Axis Compass V2.0 BMM150"</code></pre>
+arduino-cli lib install &quot;Sensirion I2C SCD4x&quot;
+arduino-cli lib install &quot;Sensirion Core&quot;
+arduino-cli lib install &quot;Grove 3Axis Compass V2.0 BMM150&quot;
+</code></pre>
 <p>If the compass library name fails, run:</p>
-<pre><code class="language-powershell">arduino-cli lib install --zip-path "$env:USERPROFILE\Downloads\Grove_3Axis_Compass_V2_0_BMM150.zip"</code></pre>
+<pre><code class="language-powershell">arduino-cli lib install --zip-path &quot;$env:USERPROFILE\Downloads\Grove_3Axis_Compass_V2_0_BMM150.zip&quot;
+</code></pre>
 <p>(Download ZIP from: <code>https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150</code>)</p>
-
+<ol>
 <li><strong>Create your project folder</strong> (~1 minute)  </li>
-<pre><code class="language-powershell">New-Item -ItemType Directory "$env:USERPROFILE\Documents\DualSenseWearable" -Force</code></pre>
-
-<h4>Phase 2: Wire Hardware (~10-15 minutes)</h4>
-
-<li><strong>Set voltage mode on board</strong> (~1 minute)  </li>
-<p>Set the Seeeduino voltage switch to <strong><code>5V</code></strong>.</p>
-
-<li><strong>Connect I2C chain</strong> (~4 minutes)  </li>
+</ol>
+<pre><code class="language-powershell">New-Item -ItemType Directory &quot;$env:USERPROFILE\Documents\DualSenseWearable&quot; -Force
+</code></pre>
+<h4 id="phase-2-wire-hardware-10-15-minutes">Phase 2: Wire Hardware (~10-15 minutes)</h4>
+<ol>
+<li>
+<p><strong>Set voltage mode on board</strong> (~1 minute)<br />
+Set the Seeeduino voltage switch to <strong><code>5V</code></strong>.</p>
+</li>
+<li>
+<p><strong>Connect I2C chain</strong> (~4 minutes)  </p>
+</li>
 <li>Plug <code>Grove I2C Hub</code> into board <code>I2C</code> port.  </li>
 <li>Plug <code>SCD41</code> into one hub port.  </li>
-<li>Plug <code>Compass V2</code> into another hub port.  </li>
-<p>&#128161; Tip: Grove connectors are keyed. If it doesn&#8217;t fit, don&#8217;t force it.</p>
-
-<li><strong>Connect vibration output</strong> (~2 minutes)  </li>
-<p>Plug <code>Grove Vibration Motor</code> into digital port <strong><code>D6</code></strong>.</p>
-
-<li><strong>Connect USB and verify port</strong> (~2 minutes)  </li>
-<pre><code class="language-powershell">arduino-cli board list</code></pre>
+<li>
+<p>Plug <code>Compass V2</code> into another hub port.<br />
+&#128161; Tip: Grove connectors are keyed. If it doesn&#8217;t fit, don&#8217;t force it.</p>
+</li>
+<li>
+<p><strong>Connect vibration output</strong> (~2 minutes)<br />
+Plug <code>Grove Vibration Motor</code> into digital port <strong><code>D6</code></strong>.</p>
+</li>
+<li>
+<p><strong>Connect USB and verify port</strong> (~2 minutes)  </p>
+</li>
+</ol>
+<pre><code class="language-powershell">arduino-cli board list
+</code></pre>
 <p>Note your port, like <code>COM5</code>.</p>
-
-<h4>Phase 3: Flash Code (~15-20 minutes)</h4>
-
-<li><strong>Create sketch file</strong> (~3 minutes)  </li>
-<p>Create file:  </p>
-<p><code>C:\Users\&lt;YOUR_USERNAME&gt;\Documents\DualSenseWearable\DualSenseWearable.ino</code></p>
-
+<h4 id="phase-3-flash-code-15-20-minutes">Phase 3: Flash Code (~15-20 minutes)</h4>
+<ol>
+<li><strong>Create sketch file</strong> (~3 minutes)<br />
+Create file:<br />
+<code>C:\Users\&lt;YOUR_USERNAME&gt;\Documents\DualSenseWearable\DualSenseWearable.ino</code></li>
+</ol>
 <p>Paste this code:</p>
 <pre><code class="language-cpp">#include &lt;Wire.h&gt;
-#include "SensirionI2cScd4x.h"
-#include "bmm150.h"
-#include "bmm150_defs.h"
+#include &quot;SensirionI2cScd4x.h&quot;
+#include &quot;bmm150.h&quot;
+#include &quot;bmm150_defs.h&quot;
 
 SensirionI2cScd4x scd4x;
 BMM150 bmm = BMM150();
@@ -327,20 +220,20 @@ void setup() {
   Wire.begin();
 
   if (bmm.initialize() == BMM150_E_ID_NOT_CONFORM) {
-    Serial.println("Compass init failed. Check wiring.");
+    Serial.println(&quot;Compass init failed. Check wiring.&quot;);
     while (1) delay(100);
   }
 
   scd4x.begin(Wire);
   uint16_t error = scd4x.startPeriodicMeasurement();
   if (error) {
-    Serial.println("SCD41 init failed. Check wiring.");
+    Serial.println(&quot;SCD41 init failed. Check wiring.&quot;);
     while (1) delay(100);
   }
 
-  Serial.println("Dual-sense wearable started.");
-  Serial.println("Compass: face north to feel faster pulses.");
-  Serial.println("Air: every 15s, pulses represent CO2 band.");
+  Serial.println(&quot;Dual-sense wearable started.&quot;);
+  Serial.println(&quot;Compass: face north to feel faster pulses.&quot;);
+  Serial.println(&quot;Air: every 15s, pulses represent CO2 band.&quot;);
 }
 
 void loop() {
@@ -367,13 +260,13 @@ void loop() {
     if (!scd4x.getDataReadyStatus(ready) &amp;&amp; ready) {
       float t, rh;
       scd4x.readMeasurement(co2ppm, t, rh);
-      Serial.print("Heading=");
+      Serial.print(&quot;Heading=&quot;);
       Serial.print(hdg, 1);
-      Serial.print(" deg, Err=");
+      Serial.print(&quot; deg, Err=&quot;);
       Serial.print(err, 1);
-      Serial.print(" deg, CO2=");
+      Serial.print(&quot; deg, CO2=&quot;);
       Serial.print(co2ppm);
-      Serial.println(" ppm");
+      Serial.println(&quot; ppm&quot;);
     }
     lastCo2Read = now;
   }
@@ -386,124 +279,159 @@ void loop() {
     else vibePulse(250, 150, 4);
     lastAirAlert = now;
   }
-}</code></pre>
-
+}
+</code></pre>
+<ol>
 <li><strong>Compile sketch</strong> (~1-2 minutes)  </li>
-<pre><code class="language-powershell">arduino-cli compile --fqbn arduino:avr:uno "$env:USERPROFILE\Documents\DualSenseWearable"</code></pre>
-
-<li><strong>Upload sketch</strong> (~1 minute)  </li>
-<p>Replace <code>COM5</code> with your port:</p>
-<pre><code class="language-powershell">arduino-cli upload -p COM5 --fqbn arduino:avr:uno "$env:USERPROFILE\Documents\DualSenseWearable"</code></pre>
+</ol>
+<pre><code class="language-powershell">arduino-cli compile --fqbn arduino:avr:uno &quot;$env:USERPROFILE\Documents\DualSenseWearable&quot;
+</code></pre>
+<ol>
+<li><strong>Upload sketch</strong> (~1 minute)<br />
+Replace <code>COM5</code> with your port:</li>
+</ol>
+<pre><code class="language-powershell">arduino-cli upload -p COM5 --fqbn arduino:avr:uno &quot;$env:USERPROFILE\Documents\DualSenseWearable&quot;
+</code></pre>
 <p>&#9888;&#65039; Don&#8217;t: Use charging-only USB cable. Upload will fail.</p>
-
+<ol>
 <li><strong>Open serial monitor</strong> (~1 minute)  </li>
-<pre><code class="language-powershell">arduino-cli monitor -p COM5 -c baudrate=115200</code></pre>
-
-<h4>Phase 4: Calibrate and Use (~10-20 minutes)</h4>
-
-<li><strong>Calibrate compass</strong> (~2-5 minutes)  </li>
-<p>Move the device in a slow figure-8 for about <strong>30-60 seconds</strong>.  </p>
-<p>Keep away from laptops, keys, steel desks, and power bricks.</p>
-
-<li><strong>Test the &#8220;north sense&#8221;</strong> (~3 minutes)  </li>
-<p>Rotate your body slowly. Vibration should get faster near north and disappear farther away.</p>
-
-<li><strong>Test the &#8220;air sense&#8221;</strong> (~5-10 minutes)  </li>
-<p>Breathe near the SCD41 intake briefly, or move into a crowded room. Watch CO2 value rise and pulse pattern change every 15 seconds.</p>
-
-<li><strong>Tune thresholds for your context</strong> (~5 minutes)  </li>
-<p>Edit these values in code and re-upload:  </p>
-<p><code>800</code>, <code>1000</code>, <code>1500</code> ppm and pulse counts in the <code>if (co2ppm &lt; ...)</code> block.</p>
-
-<hr/>
-
-<h3 id="analogy">&#127757; Real-World Analogy</h3>
+</ol>
+<pre><code class="language-powershell">arduino-cli monitor -p COM5 -c baudrate=115200
+</code></pre>
+<h4 id="phase-4-calibrate-and-use-10-20-minutes">Phase 4: Calibrate and Use (~10-20 minutes)</h4>
+<ol>
+<li>
+<p><strong>Calibrate compass</strong> (~2-5 minutes)<br />
+Move the device in a slow figure-8 for about <strong>30-60 seconds</strong>.<br />
+Keep away from laptops, keys, steel desks, and power bricks.</p>
+</li>
+<li>
+<p><strong>Test the &#8220;north sense&#8221;</strong> (~3 minutes)<br />
+Rotate your body slowly. Vibration should get faster near north and disappear farther away.</p>
+</li>
+<li>
+<p><strong>Test the &#8220;air sense&#8221;</strong> (~5-10 minutes)<br />
+Breathe near the SCD41 intake briefly, or move into a crowded room. Watch CO2 value rise and pulse pattern change every 15 seconds.</p>
+</li>
+<li>
+<p><strong>Tune thresholds for your context</strong> (~5 minutes)<br />
+Edit these values in code and re-upload:<br />
+<code>800</code>, <code>1000</code>, <code>1500</code> ppm and pulse counts in the <code>if (co2ppm &lt; ...)</code> block.</p>
+</li>
+</ol>
+<hr />
+<h3 id="real-world-analogy">&#127757; Real-World Analogy</h3>
 <p>Think of <strong>I2C sensor wiring</strong> like one hallway with labeled apartment doors. The hallway is shared, and each sensor answers only when its address is called. That&#8217;s why one microcontroller can talk to many sensors on two data wires.</p>
-
 <p>Think of <strong>compass calibration</strong> like tuning a guitar before a song. The instrument works out of tune, but calibration brings it into a stable reference so your &#8220;north notes&#8221; are accurate.</p>
-
 <p>Think of <strong>CO2 thresholds</strong> like traffic lights. Green means &#8220;ventilation is likely okay,&#8221; yellow means &#8220;getting stuffy,&#8221; and red means &#8220;open windows or improve airflow now.&#8221;</p>
-
 <p>Think of <strong>haptic encoding</strong> like Morse code for your skin. Different pulse counts and timings carry different meanings without you needing to look at a screen.</p>
-
-<h3 id="safety">&#9888;&#65039; Safety Note</h3>
-<p>Do:</p>
-<li>Keep this as an awareness tool, not a medical safety device.</li>
-<li>Use vibration feedback while stationary first.</li>
-<li>Secure wires so they don&#8217;t snag while walking.</li>
-
-<p>Don&#8217;t:</p>
-<li>Use it as your only navigation aid in risky environments.</li>
-<li>Assume CO2 alone defines all indoor air hazards.</li>
-<li>Wear loose wiring near moving machinery or bike chains.</li>
-
-<h3 id="mistakes">&#10060; Common Mistakes &amp; How to Avoid Them</h3>
-<li><strong>Nothing uploads to board</strong>  </li>
-<p>What goes wrong: <code>No device found on COMx</code>.  </p>
-<p>Why: Wrong port or charge-only cable.  </p>
-<p>Fix: Run <code>arduino-cli board list</code> and use a known data cable.</p>
-
-<li><strong>CO2 always reads zero or stale values</strong>  </li>
-<p>What goes wrong: No meaningful CO2 updates.  </p>
-<p>Why: Periodic measurement not started, or not waiting long enough.  </p>
-<p>Fix: Ensure <code>startPeriodicMeasurement()</code> runs and wait at least 5 seconds per read.</p>
-
-<li><strong>Compass heading jumps wildly</strong>  </li>
-<p>What goes wrong: North vibration feels random.  </p>
-<p>Why: Magnetic interference from metal/electronics nearby.  </p>
-<p>Fix: Calibrate with figure-8 and keep sensor away from magnets/steel surfaces.</p>
-
-<li><strong>Both I2C sensors don&#8217;t show up together</strong>  </li>
-<p>What goes wrong: One sensor works, other fails.  </p>
-<p>Why: Incorrect hub wiring or loose connector.  </p>
-<p>Fix: Re-seat all Grove cables and use the <code>Grove - I2C Hub</code> for branching.</p>
-
-<li><strong>Vibration is too weak to notice</strong>  </li>
-<p>What goes wrong: You miss cues while moving.  </p>
-<p>Why: Motor not touching body firmly or pulse too short.  </p>
-<p>Fix: Increase pulse duration (e.g., <code>90</code> to <code>150</code> ms) and mount motor against skin/clothing.</p>
-
-<li><strong>Reader interprets CO2 as direct toxicity warning</strong>  </li>
-<p>What goes wrong: Wrong decisions from misunderstood data.  </p>
-<p>Why: CO2 is mostly a ventilation proxy at common indoor levels.  </p>
-<p>Fix: Use it to guide ventilation habits, not as a complete air safety diagnosis.</p>
-
-<h3 id="takeaways">&#9989; Key Takeaways</h3>
+<h3 id="safety-note">&#9888;&#65039; Safety Note</h3>
+<p>Do:
+- Keep this as an awareness tool, not a medical safety device.
+- Use vibration feedback while stationary first.
+- Secure wires so they don&#8217;t snag while walking.</p>
+<p>Don&#8217;t:
+- Use it as your only navigation aid in risky environments.
+- Assume CO2 alone defines all indoor air hazards.
+- Wear loose wiring near moving machinery or bike chains.</p>
+<h3 id="common-mistakes-how-to-avoid-them">&#10060; Common Mistakes &amp; How to Avoid Them</h3>
+<ol>
+<li>
+<p><strong>Nothing uploads to board</strong><br />
+What goes wrong: <code>No device found on COMx</code>.<br />
+Why: Wrong port or charge-only cable.<br />
+Fix: Run <code>arduino-cli board list</code> and use a known data cable.</p>
+</li>
+<li>
+<p><strong>CO2 always reads zero or stale values</strong><br />
+What goes wrong: No meaningful CO2 updates.<br />
+Why: Periodic measurement not started, or not waiting long enough.<br />
+Fix: Ensure <code>startPeriodicMeasurement()</code> runs and wait at least 5 seconds per read.</p>
+</li>
+<li>
+<p><strong>Compass heading jumps wildly</strong><br />
+What goes wrong: North vibration feels random.<br />
+Why: Magnetic interference from metal/electronics nearby.<br />
+Fix: Calibrate with figure-8 and keep sensor away from magnets/steel surfaces.</p>
+</li>
+<li>
+<p><strong>Both I2C sensors don&#8217;t show up together</strong><br />
+What goes wrong: One sensor works, other fails.<br />
+Why: Incorrect hub wiring or loose connector.<br />
+Fix: Re-seat all Grove cables and use the <code>Grove - I2C Hub</code> for branching.</p>
+</li>
+<li>
+<p><strong>Vibration is too weak to notice</strong><br />
+What goes wrong: You miss cues while moving.<br />
+Why: Motor not touching body firmly or pulse too short.<br />
+Fix: Increase pulse duration (e.g., <code>90</code> to <code>150</code> ms) and mount motor against skin/clothing.</p>
+</li>
+<li>
+<p><strong>Reader interprets CO2 as direct toxicity warning</strong><br />
+What goes wrong: Wrong decisions from misunderstood data.<br />
+Why: CO2 is mostly a ventilation proxy at common indoor levels.<br />
+Fix: Use it to guide ventilation habits, not as a complete air safety diagnosis.</p>
+</li>
+</ol>
+<h3 id="key-takeaways">&#9989; Key Takeaways</h3>
+<ul>
 <li>You can add useful &#8220;new senses&#8221; with cheap, current hardware.</li>
 <li>One vibration motor can encode multiple data streams.</li>
 <li>Compass and CO2 are both invisible signals you can learn quickly.</li>
 <li>Calibration quality determines compass reliability.</li>
 <li>CO2 thresholds are practical guides, not absolute danger lines.</li>
 <li>Consistent pulse patterns train your brain faster than random feedback.</li>
-
-<h3 id="compare">&#128202; Quick Comparison Table</h3>
+</ul>
+<h3 id="quick-comparison-table">&#128202; Quick Comparison Table</h3>
 <table>
-<thead><tr><th>Option</th><th>Pros</th><th>Cons</th><th>Best For</th><th>Cost</th></tr>
-</thead><tbody>
-<tr><td>DIY Grove build (this guide)</td><td>Cheap, customizable, educational</td><td>Needs assembly and coding</td><td>Learners and makers</td><td>~$82-116</td></tr>
-<tr><td>App-only phone approach</td><td>Fast start, no wiring</td><td>Weak/no true haptic, limited sensors</td><td>Quick demos</td><td>~$0-10</td></tr>
-<tr><td>Commercial sensory wearable</td><td>Polished experience</td><td>Expensive, less flexible</td><td>Users wanting plug-and-play</td><td>~$200+</td></tr>
-</tbody></table>
-
-<h3 id="deeper">&#128300; Going Deeper</h3>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DIY Grove build (this guide)</td>
+<td>Cheap, customizable, educational</td>
+<td>Needs assembly and coding</td>
+<td>Learners and makers</td>
+<td>~$82-116</td>
+</tr>
+<tr>
+<td>App-only phone approach</td>
+<td>Fast start, no wiring</td>
+<td>Weak/no true haptic, limited sensors</td>
+<td>Quick demos</td>
+<td>~$0-10</td>
+</tr>
+<tr>
+<td>Commercial sensory wearable</td>
+<td>Polished experience</td>
+<td>Expensive, less flexible</td>
+<td>Users wanting plug-and-play</td>
+<td>~$200+</td>
+</tr>
+</tbody>
+</table>
+<h3 id="going-deeper">&#128300; Going Deeper</h3>
 <p>Earth&#8217;s magnetic field is usually around <strong>25,000 to 65,000 nT</strong> (that is <strong>25-65 &#181;T</strong>), which is right in the usable range for compact compass sensors. Your BMM150-based module supports approximately <strong>&#177;1300 &#181;T (x/y)</strong> and <strong>&#177;2500 &#181;T (z)</strong>, so Earth&#8217;s field is comfortably measurable.</p>
-
 <p>The SCD4x family reports a broad CO2 output range, while best accuracy is specified in the typical indoor decision range. For SCD41, a commonly cited accuracy spec is <strong>&#177;(40 ppm + 5% of reading)</strong>, which is why it&#8217;s good for trend-based decisions (ventilate sooner/later), not lab-grade gas certification.</p>
-
-<p>A practical interpretation ladder:</p>
-<li><strong>~400-600 ppm</strong>: near outdoor baseline or well-ventilated indoors.</li>
-<li><strong>~600-1000 ppm</strong>: commonly acceptable indoor range.</li>
-<li><strong>&gt;1000 ppm</strong>: often indicates under-ventilation; comfort/cognitive complaints may increase.</li>
-<li><strong>5000 ppm (occupational 8h limit context)</strong>: far above normal indoor comfort targets.</li>
-
-<p>Your coding cadence matters:</p>
-<li>Compass feedback every <strong>250 ms</strong> feels responsive.</li>
-<li>CO2 updates every <strong>5 s</strong> match sensor behavior.</li>
-<li>Air alerts every <strong>15 s</strong> avoid overwhelming your attention.</li>
-
+<p>A practical interpretation ladder:
+- <strong>~400-600 ppm</strong>: near outdoor baseline or well-ventilated indoors.
+- <strong>~600-1000 ppm</strong>: commonly acceptable indoor range.
+- <strong>&gt;1000 ppm</strong>: often indicates under-ventilation; comfort/cognitive complaints may increase.
+- <strong>5000 ppm (occupational 8h limit context)</strong>: far above normal indoor comfort targets.</p>
+<p>Your coding cadence matters:
+- Compass feedback every <strong>250 ms</strong> feels responsive.
+- CO2 updates every <strong>5 s</strong> match sensor behavior.
+- Air alerts every <strong>15 s</strong> avoid overwhelming your attention.</p>
 <p>This timing ratio is intentional: fast channel for orientation, slower channel for environmental context.</p>
-
 <h3 id="glossary">&#128214; Glossary</h3>
+<ul>
 <li><strong>Augmentation</strong>: Adding new abilities to your body using tools or devices.</li>
 <li><strong>Compass heading</strong>: Direction in degrees from 0 to 360, where 0 is north.</li>
 <li><strong>CO2 (carbon dioxide)</strong>: A gas in air; indoors, it often tracks ventilation quality.</li>
@@ -516,27 +444,26 @@ void loop() {
 <li><strong>Threshold</strong>: A chosen boundary value that triggers an action.</li>
 <li><strong>Serial monitor</strong>: Text console showing live data from your board.</li>
 <li><strong>Geomagnetic field</strong>: Earth&#8217;s magnetic field used by compasses for direction.</li>
-
+</ul>
 <h3 id="sources">&#128279; Sources</h3>
-<li><a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener">Arduino IDE Download</a>  </li>
-<li><a href="https://docs.arduino.cc/arduino-cli/installation/" target="_blank" rel="noopener">Arduino CLI Installation</a>  </li>
-<li><a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html" target="_blank" rel="noopener">Seeeduino V4.3 Product Page</a>  </li>
-<li><a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html" target="_blank" rel="noopener">Grove CO2 Sensor (SCD41) Product Page</a>  </li>
-<li><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html" target="_blank" rel="noopener">Grove 3-Axis Digital Compass V2 Product Page</a>  </li>
-<li><a href="https://www.seeedstudio.com/Grove-Vibration-Motor.html" target="_blank" rel="noopener">Grove Vibration Motor Product Page</a>  </li>
-<li><a href="https://www.seeedstudio.com/Grove-I2C-Hub.html" target="_blank" rel="noopener">Grove I2C Hub Product Page</a>  </li>
-<li><a href="https://wiki.seeedstudio.com/Grove-3-Axis_Digitial_Compass_v2.0/" target="_blank" rel="noopener">Grove 3-Axis Digital Compass V2 Wiki</a>  </li>
-<li><a href="https://github.com/Sensirion/arduino-i2c-scd4x" target="_blank" rel="noopener">Sensirion SCD4x Arduino Library</a>  </li>
-<li><a href="https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150" target="_blank" rel="noopener">Seeed BMM150 Compass Library</a>  </li>
-<li><a href="https://www.ncei.noaa.gov/index.php/products/geomagnetism-frequently-asked-questions" target="_blank" rel="noopener">NOAA Geomagnetism FAQ</a>  </li>
-<li><a href="https://dph.illinois.gov/topics-services/environmental-health-protection/toxicology/indoor-air-quality-healthy-homes/idph-guidelines-indoor-air-quality.html" target="_blank" rel="noopener">Illinois IDPH Indoor Air Quality CO2 Guidelines</a></li>
-
-</main>
-
+<ul>
+<li><a href="https://www.arduino.cc/en/software">Arduino IDE Download</a>  </li>
+<li><a href="https://docs.arduino.cc/arduino-cli/installation/">Arduino CLI Installation</a>  </li>
+<li><a href="https://www.seeedstudio.com/Seeeduino-V4.2-p-2517.html">Seeeduino V4.3 Product Page</a>  </li>
+<li><a href="https://www.seeedstudio.com/Grove-CO2-Temperature-Humidity-Sensor-SCD41-p-5025.html">Grove CO2 Sensor (SCD41) Product Page</a>  </li>
+<li><a href="https://www.seeedstudio.com/Grove-3-Axis-Digital-Compass-V2.html">Grove 3-Axis Digital Compass V2 Product Page</a>  </li>
+<li><a href="https://www.seeedstudio.com/Grove-Vibration-Motor.html">Grove Vibration Motor Product Page</a>  </li>
+<li><a href="https://www.seeedstudio.com/Grove-I2C-Hub.html">Grove I2C Hub Product Page</a>  </li>
+<li><a href="https://wiki.seeedstudio.com/Grove-3-Axis_Digitial_Compass_v2.0/">Grove 3-Axis Digital Compass V2 Wiki</a>  </li>
+<li><a href="https://github.com/Sensirion/arduino-i2c-scd4x">Sensirion SCD4x Arduino Library</a>  </li>
+<li><a href="https://github.com/Seeed-Studio/Grove_3_Axis_Compass_V2.0_BMM150">Seeed BMM150 Compass Library</a>  </li>
+<li><a href="https://www.ncei.noaa.gov/index.php/products/geomagnetism-frequently-asked-questions">NOAA Geomagnetism FAQ</a>  </li>
+<li><a href="https://dph.illinois.gov/topics-services/environmental-health-protection/toxicology/indoor-air-quality-healthy-homes/idph-guidelines-indoor-air-quality.html">Illinois IDPH Indoor Air Quality CO2 Guidelines</a></li>
+</ul>
+</article>
 <footer>
-  <p>Generated by <a href="https://github.com/shellsage-ai/research-reports">ResearchHive</a> &mdash; Agentic Research Studio &nbsp;&middot;&nbsp; March 2026</p>
-  <p><a href="../">&larr; Research Reports</a></p>
+  <p>ResearchHive &mdash; Agentic Research Studio &nbsp;&middot;&nbsp; March 2026</p>
+  <p><a href="../">&#8592; Back to all reports</a></p>
 </footer>
-
 </body>
 </html>
