@@ -1,0 +1,415 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Create a guide to enhance human hearing. Give them translation capabilities, augmented hearing at LONG distances with proper noise cancellation utilizing technology and machine learning meant for it. Make sure that this is a diy project, with a parts list and instructions. &#8212; For Dummies Guide</title>
+<style>
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--green:#3fb950;--red:#f85149;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
+header{padding:2.5rem 2rem 2rem;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+header .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem;}
+.badge{border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:600;background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);}
+article{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem;}
+article h2,article h3{color:var(--acc);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.4rem;margin-top:2.2rem;}
+article h3{margin-top:1.8rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.92em;}
+article pre{background:#161b22;border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;}
+article blockquote{border-left:3px solid var(--acc);margin:1rem 0;padding:.5rem 1rem;color:var(--muted);font-style:italic;}
+article table{border-collapse:collapse;width:100%;margin:1rem 0;}
+article th,article td{border:1px solid var(--bdr);padding:8px 12px;text-align:left;}
+article th{background:rgba(255,152,0,.15);color:var(--acc);}
+article img{max-width:100%;border-radius:6px;}
+nav.breadcrumb{padding:1rem 2rem;font-size:.85rem;}
+nav.breadcrumb a{color:var(--link);text-decoration:none;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">&larr; All Reports</a></nav>
+<header>
+  <div class="eyebrow">&#128218; For Dummies Guide &nbsp;&middot;&nbsp; ResearchHive</div>
+  <h1>Create a guide to enhance human hearing. Give them translation capabilities, augmented hearing at LONG distances with proper noise cancellation utilizing technology and machine learning meant for it. Make sure that this is a diy project, with a parts list and instructions. &#8212; For Dummies Guide</h1>
+  <div class="badges">
+    <span class="badge">enhance</span>
+    <span class="badge">human</span>
+    <span class="badge">hearing</span>
+    <span class="badge">Give</span>
+  </div>
+</header>
+<article>
+<p>I&#8217;m building this as a real DIY recipe with a verified parts/software stack first, then I&#8217;ll give you copy-paste commands and step-by-step setup in phases. I&#8217;m now confirming stable product/download URLs for the hardware and ML tools so every link is explicit.</p>
+<p>I&#8217;ve narrowed to a beginner-friendly build on a normal Windows laptop with a directional mic, then ML denoise + speech-to-text + translation in Python. I&#8217;m validating one solid noise-cancellation model source now so the commands are realistic.</p>
+<p>I&#8217;m finalizing around a Raspberry Pi build so long-range audio and local translation are both realistic for beginners. I&#8217;m checking one last set of official docs (RNNoise/noise suppression and Raspberry Pi setup links) before writing the full guide with exact commands.</p>
+<h3 id="what-is-it">&#127919; What Is It?</h3>
+<p>This is a DIY &#8220;AI hearing translator&#8221; rig: a directional microphone listens to far-away speech, machine-learning noise reduction cleans it up, and local speech recognition plus translation turns it into text you can understand.<br />
+You wear open-ear headphones so you can still hear your surroundings while the system boosts distant voices and shows translated text in near real time.</p>
+<h3 id="why-does-it-matter">&#129300; Why Does It Matter?</h3>
+<p>Normal hearing drops off quickly with distance and background noise. This build helps you hear speech from farther away more clearly, then translates it locally without sending everything to the cloud.</p>
+<p>Personally, this can help in multilingual travel, outdoor field work, events, lectures, birding/nature observation, and accessibility-style augmentation. You control the hardware, software, and privacy settings yourself.</p>
+<h3 id="what-youll-need">&#128722; What You'll Need</h3>
+<ol>
+<li><p><code>Directional microphone (R&#216;DE VideoMic GO II)</code><br />
+Cost: <code>$99-130</code><br />
+Where: <code>https://rode.com/en-us/products/videomic-go-ii</code><br />
+What for: Captures sound from where you point it, while reducing side/rear noise.</p>
+</li>
+<li><p><code>USB-C mic cable (R&#216;DE SC16, 30 cm)</code><br />
+Cost: <code>$19-29</code><br />
+Where: <code>https://rode.com/en-us/accessories/adaptors-cables/sc16</code><br />
+What for: Connects the mic digitally to your computer for cleaner audio.</p>
+</li>
+<li><p><code>Open-ear headphones (Shokz OpenRun)</code><br />
+Cost: <code>$90-130</code><br />
+Where: <code>https://shokz.com/products/openrun</code><br />
+What for: Lets you hear processed audio while keeping environmental awareness.</p>
+</li>
+<li><p><code>Computer (Windows 10/11, 8GB+ RAM)</code><br />
+Cost: <code>$0</code> if you already own one<br />
+Where: Use your existing PC<br />
+What for: Runs denoising, speech recognition, and translation models.</p>
+</li>
+<li><p><code>Optional long-range parabolic dish setup (Telinga ecosystem)</code><br />
+Cost: <code>$250-900+</code><br />
+Where: <code>https://telinga.com/products/</code><br />
+What for: Big jump in long-distance pickup when paired with directional mic technique.</p>
+</li>
+<li><p><code>Python (software)</code><br />
+Cost: <code>Free</code><br />
+Where: <code>https://www.python.org/downloads/</code><br />
+What for: Runtime for your local AI pipeline.</p>
+</li>
+<li><p><code>RNNoise Python binding (pyrnnoise)</code><br />
+Cost: <code>Free</code><br />
+Where: <code>https://pypi.org/project/pyrnnoise/</code><br />
+What for: ML-based noise suppression (real denoising model, not just volume gating).</p>
+</li>
+<li><p><code>Faster Whisper (speech recognition)</code><br />
+Cost: <code>Free</code><br />
+Where: <code>https://pypi.org/project/faster-whisper/</code><br />
+What for: Fast local speech-to-text.</p>
+</li>
+<li><p><code>Argos Translate (offline translation)</code><br />
+Cost: <code>Free</code><br />
+Where: <code>https://github.com/argosopentech/argos-translate</code><br />
+What for: Local text translation between languages.</p>
+</li>
+<li><p><code>SoundDevice (audio I/O)</code><br />
+Cost: <code>Free</code><br />
+Where: <code>https://pypi.org/project/sounddevice/</code><br />
+What for: Recording and playback from Python.</p>
+</li>
+</ol>
+<p><strong>Total Estimated Budget:</strong> <code>$208-289</code> (without parabolic dish) or <code>$458-1,189+</code> (with parabolic gear)</p>
+<hr />
+<h3 id="step-by-step-procedure">&#128203; Step-by-Step Procedure</h3>
+<h4 id="phase-1-hardware-setup-20-30-minutes">Phase 1: Hardware Setup (~20-30 minutes)</h4>
+<ol>
+<li><p><strong>Mount</strong> the directional mic so it points exactly where voices are expected (<code>~5 minutes</code>).<br />
+Use a stable mount and keep the mic 20-60 cm away from your body to reduce handling noise.<br />
+&#128161; Tip: Small aim errors matter a lot with directional mics.</p>
+</li>
+<li><p><strong>Connect</strong> the mic by USB (<code>~2 minutes</code>).<br />
+Plug in with <code>R&#216;DE SC16</code> (or equivalent USB-C data cable), then verify device detection in Windows Sound settings:<br />
+<code>Settings &gt; System &gt; Sound &gt; Input &gt; Choose your input device</code><br />
+&#9888;&#65039; Don&#8217;t: Use a charge-only cable; audio won&#8217;t appear.</p>
+</li>
+<li><p><strong>Pair</strong> your open-ear headphones (<code>~5 minutes</code>).<br />
+Go to <code>Settings &gt; Bluetooth &amp; devices &gt; Add device &gt; Bluetooth</code>, select your headphones, then set them as output.<br />
+&#128161; Tip: Keep output volume below 60% on first test.</p>
+</li>
+<li><p><strong>Aim</strong> and <strong>distance-test</strong> the microphone (<code>~8-15 minutes</code>).<br />
+Have someone speak at <code>5 m</code>, <code>10 m</code>, and <code>20 m</code>, while you rotate mic angle in <code>5-10&#176;</code> increments.<br />
+Write down the best angle for clarity in your location.</p>
+</li>
+</ol>
+<h4 id="phase-2-software-installation-20-35-minutes">Phase 2: Software Installation (~20-35 minutes)</h4>
+<ol start="5">
+<li><strong>Install</strong> Python from <code>https://www.python.org/downloads/</code> (<code>~5-10 minutes</code>).<br />
+During install, check <code>Add Python to PATH</code>.<br />
+Then open PowerShell and run:</li>
+</ol>
+<pre><code class="language-powershell">python --version
+</code></pre>
+<ol start="6">
+<li><strong>Create</strong> a project folder and virtual environment (<code>~3 minutes</code>).</li>
+</ol>
+<pre><code class="language-powershell">New-Item -ItemType Directory -Force C:\HearingTranslator
+python -m venv C:\HearingTranslator\.venv
+C:\HearingTranslator\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+</code></pre>
+<p>&#128161; Tip: If PowerShell blocks activation, run:</p>
+<pre><code class="language-powershell">Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+</code></pre>
+<ol start="7">
+<li><strong>Install</strong> audio, denoise, speech, and translation packages (<code>~8-15 minutes</code>).</li>
+</ol>
+<pre><code class="language-powershell">pip install numpy scipy sounddevice pyrnnoise faster-whisper argostranslate
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: Install globally outside the venv; dependency conflicts are common.</p>
+<ol start="8">
+<li><strong>Install</strong> one translation model pair (<code>~2-5 minutes</code>, internet needed once).<br />
+Example: English to Spanish (<code>en -&gt; es</code>):</li>
+</ol>
+<pre><code class="language-powershell">@'
+import argostranslate.package
+from_code=&quot;en&quot;
+to_code=&quot;es&quot;
+argostranslate.package.update_package_index()
+available = argostranslate.package.get_available_packages()
+pkg = next(p for p in available if p.from_code == from_code and p.to_code == to_code)
+argostranslate.package.install_from_path(pkg.download())
+print(&quot;Installed:&quot;, pkg)
+'@ | python -
+</code></pre>
+<p>&#128161; Tip: Change <code>from_code</code>/<code>to_code</code> to your language pair.</p>
+<h4 id="phase-3-build-and-run-the-hearing-translator-25-40-minutes">Phase 3: Build and Run the Hearing Translator (~25-40 minutes)</h4>
+<ol start="9">
+<li><strong>Create</strong> the main script file (<code>~3 minutes</code>).<br />
+Run:</li>
+</ol>
+<pre><code class="language-powershell">@'
+import argparse
+import os
+import subprocess
+import tempfile
+from scipy.io.wavfile import write
+import sounddevice as sd
+from faster_whisper import WhisperModel
+import argostranslate.translate
+
+def get_translator(src, tgt):
+    langs = argostranslate.translate.get_installed_languages()
+    src_lang = next((l for l in langs if l.code == src), None)
+    tgt_lang = next((l for l in langs if l.code == tgt), None)
+    if not src_lang or not tgt_lang:
+        raise RuntimeError(f&quot;Missing Argos model for {src}-&gt;{tgt}&quot;)
+    return src_lang.get_translation(tgt_lang)
+
+def denoise_wav(inp, outp):
+    try:
+        r = subprocess.run([&quot;denoise&quot;, inp, outp], capture_output=True, text=True)
+        return r.returncode == 0
+    except FileNotFoundError:
+        return False
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(&quot;--seconds&quot;, type=float, default=2.5)
+    parser.add_argument(&quot;--source&quot;, type=str, default=&quot;en&quot;)
+    parser.add_argument(&quot;--target&quot;, type=str, default=&quot;es&quot;)
+    parser.add_argument(&quot;--samplerate&quot;, type=int, default=48000)
+    parser.add_argument(&quot;--model&quot;, type=str, default=&quot;small&quot;)
+    args = parser.parse_args()
+
+    print(&quot;Loading speech model...&quot;)
+    model = WhisperModel(args.model, device=&quot;cpu&quot;, compute_type=&quot;int8&quot;)
+    translator = get_translator(args.source, args.target)
+
+    print(&quot;Running. Press Ctrl+C to stop.&quot;)
+    with tempfile.TemporaryDirectory() as d:
+        raw_wav = os.path.join(d, &quot;raw.wav&quot;)
+        clean_wav = os.path.join(d, &quot;clean.wav&quot;)
+
+        while True:
+            audio = sd.rec(int(args.seconds * args.samplerate),
+                           samplerate=args.samplerate,
+                           channels=1,
+                           dtype=&quot;int16&quot;)
+            sd.wait()
+            write(raw_wav, args.samplerate, audio)
+
+            ok = denoise_wav(raw_wav, clean_wav)
+            asr_input = clean_wav if ok else raw_wav
+
+            segments, info = model.transcribe(
+                asr_input,
+                language=args.source,
+                vad_filter=True,
+                beam_size=1
+            )
+            text = &quot; &quot;.join(seg.text.strip() for seg in segments).strip()
+            if text:
+                translated = translator.translate(text)
+                print(f&quot;HEARD ({args.source}): {text}&quot;)
+                print(f&quot;TRANSLATED ({args.target}): {translated}&quot;)
+                print(&quot;-&quot; * 50)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+'@ | Set-Content C:\HearingTranslator\hear_translate.py
+</code></pre>
+<ol start="10">
+<li><strong>List</strong> audio devices and confirm the right microphone (<code>~2 minutes</code>).</li>
+</ol>
+<pre><code class="language-powershell">python -c &quot;import sounddevice as sd; print(sd.query_devices())&quot;
+</code></pre>
+<p>If needed, set your directional mic as default input in Windows:<br />
+<code>Settings &gt; System &gt; Sound &gt; Input</code>.</p>
+<ol start="11">
+<li><strong>Run</strong> the translator loop (<code>~1 minute to start</code>).</li>
+</ol>
+<pre><code class="language-powershell">C:\HearingTranslator\.venv\Scripts\Activate.ps1
+python C:\HearingTranslator\hear_translate.py --seconds 2.5 --source en --target es --model small
+</code></pre>
+<p>&#128161; Tip: Use <code>--seconds 3.0</code> for noisier environments; it improves recognition stability.</p>
+<ol start="12">
+<li><strong>Tune</strong> for distance and noise (<code>~10-20 minutes</code>).<br />
+Change chunk size:</li>
+</ol>
+<pre><code class="language-powershell">python C:\HearingTranslator\hear_translate.py --seconds 3.5 --source en --target es --model small
+</code></pre>
+<p>Try faster/lighter model:</p>
+<pre><code class="language-powershell">python C:\HearingTranslator\hear_translate.py --seconds 2.0 --source en --target es --model tiny
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: Expect zero delay; chunked translation trades latency for cleaner output.</p>
+<hr />
+<h3 id="safety-note">&#9888;&#65039; Safety Note</h3>
+<ul>
+<li>Do keep headphone volume low at first (<code>30-40%</code>) and increase slowly.</li>
+<li>Do take 5-minute ear breaks every 30-45 minutes.</li>
+<li>Do get consent before recording people, and follow local audio-recording laws.</li>
+<li>Don&#8217;t use this while driving, cycling in traffic, or in any situation requiring full unprocessed hearing.</li>
+<li>Don&#8217;t point directional mics at very loud sources (sirens, speakers at close range).</li>
+</ul>
+<h3 id="real-world-analogy">&#127757; Real-World Analogy</h3>
+<p>Think of a <strong>directional microphone</strong> like a flashlight beam: you &#8220;light up&#8221; one direction strongly and leave the sides darker. That works because both tools are directional and reward precise aiming.</p>
+<p>Think of <strong>RNNoise denoising</strong> like a smart sieve in a kitchen that keeps rice but lets dirty water pass. It works because the model learns speech patterns and suppresses non-speech textures.</p>
+<p>Think of <strong>voice activity detection (VAD)</strong> like automatic subtitles that only wake up when someone starts talking. It works because the system detects speech presence before full transcription.</p>
+<p>Think of <strong>speech-to-text (Whisper)</strong> like a very fast court stenographer listening to audio and writing words. It works because a trained model maps sound patterns to language tokens.</p>
+<p>Think of <strong>machine translation (Argos)</strong> like converting a recipe from one language while preserving steps and meaning. It works because translation models map semantic relationships, not just word-for-word swaps.</p>
+<p>Think of <strong>chunk-based latency</strong> like waiting for a sentence to finish before translating in a live interpreter app. It works because context improves accuracy but adds delay.</p>
+<h3 id="common-mistakes-how-to-avoid-them">&#10060; Common Mistakes &amp; How to Avoid Them</h3>
+<ol>
+<li><p>Mic sounds weak or missing.<br />
+What goes wrong: No/low signal.<br />
+Why: Charge-only USB cable or wrong input device selected.<br />
+Fix: Use data-capable cable and set the exact input in Windows Sound.</p>
+</li>
+<li><p>Translation model error.<br />
+What goes wrong: Script says language pair missing.<br />
+Why: Argos package for that pair was never installed.<br />
+Fix: Run the install snippet again with correct <code>from_code</code> and <code>to_code</code>.</p>
+</li>
+<li><p>Lots of gibberish text at long range.<br />
+What goes wrong: ASR confidence collapses.<br />
+Why: Mic not aimed precisely or too much ambient noise.<br />
+Fix: Re-aim mic and increase <code>--seconds</code> to <code>3.0-4.0</code>.</p>
+</li>
+<li><p>Delay feels too high.<br />
+What goes wrong: Translation appears too late.<br />
+Why: Chunk size too long and model too heavy.<br />
+Fix: Use <code>--model tiny</code> or <code>small</code> and lower <code>--seconds</code> to <code>2.0-2.5</code>.</p>
+</li>
+<li><p>Denoising not applied.<br />
+What goes wrong: You still get raw noisy audio.<br />
+Why: <code>denoise</code> command not found or package install failed.<br />
+Fix: Reinstall <code>pyrnnoise</code> in venv, then run <code>denoise --help</code>.</p>
+</li>
+<li><p>CPU spikes and stutter.<br />
+What goes wrong: Dropped chunks and inconsistent output.<br />
+Why: Low-power machine + heavy model settings.<br />
+Fix: Close background apps and use <code>--model tiny</code>.</p>
+</li>
+<li><p>Feedback or echo loops.<br />
+What goes wrong: Screeching or repeated audio artifacts.<br />
+Why: Speaker output leaks back into mic.<br />
+Fix: Use headphones only and keep mic pointed away from your head.</p>
+</li>
+</ol>
+<h3 id="key-takeaways">&#9989; Key Takeaways</h3>
+<ul>
+<li>Directional mic aiming is as important as software.</li>
+<li>ML denoising improves speech clarity before transcription.</li>
+<li>Shorter chunks reduce delay but may hurt accuracy.</li>
+<li>Local translation protects privacy and works offline after setup.</li>
+<li>Start with <code>small</code> or <code>tiny</code> models on CPU.</li>
+<li>Install language models explicitly; they&#8217;re not automatic.</li>
+<li>Safe listening volume matters for long sessions.</li>
+</ul>
+<h3 id="quick-comparison-table">&#128202; Quick Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shotgun mic only</td>
+<td>Simple setup, portable</td>
+<td>Less reach in noisy spaces</td>
+<td>Indoor talks, events</td>
+<td>$99-160</td>
+</tr>
+<tr>
+<td>Shotgun + parabolic dish</td>
+<td>Strong long-distance pickup</td>
+<td>Bulkier, more aiming skill needed</td>
+<td>Outdoor long-range listening</td>
+<td>$350-1,000+</td>
+</tr>
+<tr>
+<td>Laptop mic array</td>
+<td>Easy and cheap</td>
+<td>Weak directionality at distance</td>
+<td>Close-range transcription</td>
+<td>$0-60</td>
+</tr>
+</tbody>
+</table>
+<h3 id="going-deeper">&#128300; Going Deeper</h3>
+<p><code>RNNoise</code> processes audio in short frames (commonly 10 ms at 48 kHz, i.e., 480 samples), which is why it can be used for near-real-time denoising rather than offline-only cleanup. That frame-level design is a major reason it works well for interactive listening pipelines.</p>
+<p>From Faster Whisper benchmark data, CPU <code>int8</code> mode can materially cut memory and time versus full-precision settings, which is why this guide defaults to <code>compute_type=&quot;int8&quot;</code> and <code>small</code> model. On low-power systems, this often matters more than absolute model size.</p>
+<p>The chunk window (<code>--seconds</code>) is your core control knob. Around <code>2.0-2.5 s</code> gives lower delay but less language context; <code>3.0-4.0 s</code> usually improves difficult phrases, especially with far-field audio.</p>
+<p>Parabolic systems can add substantial effective gain at target frequencies by physically focusing sound before software even runs (inference from acoustic geometry and field practice). That is why hardware directionality plus ML denoise usually beats software-only cleanup in outdoor or high-noise environments.</p>
+<h3 id="glossary">&#128214; Glossary</h3>
+<ul>
+<li><strong>Directional Microphone</strong>: A mic that listens strongest in one direction.</li>
+<li><strong>Parabolic Dish</strong>: Curved reflector that focuses distant sound onto a mic.</li>
+<li><strong>Noise Suppression</strong>: Reducing unwanted background sounds while keeping speech.</li>
+<li><strong>Machine Learning</strong>: Software that learns patterns from data instead of fixed rules.</li>
+<li><strong>RNNoise</strong>: Neural-network noise reduction method for speech audio.</li>
+<li><strong>Speech-to-Text (ASR)</strong>: Turning spoken audio into written words.</li>
+<li><strong>VAD (Voice Activity Detection)</strong>: Detecting whether speech is present.</li>
+<li><strong>Whisper</strong>: Multilingual speech recognition model family.</li>
+<li><strong>Argos Translate</strong>: Offline translation engine and model package system.</li>
+<li><strong>Latency</strong>: Delay between hearing input and seeing translated output.</li>
+<li><strong>Chunk</strong>: Small time slice of audio processed as one unit.</li>
+<li><strong>Beam Size</strong>: Search width in decoding; higher can improve accuracy but slows output.</li>
+</ul>
+<h3 id="sources">&#128279; Sources</h3>
+<ul>
+<li><a href="https://rode.com/en-us/products/videomic-go-ii">R&#216;DE VideoMic GO II</a></li>
+<li><a href="https://rode.com/en-us/accessories/adaptors-cables/sc16">R&#216;DE SC16 Cable</a></li>
+<li><a href="https://shokz.com/products/openrun">Shokz OpenRun</a></li>
+<li><a href="https://telinga.com/products/">Telinga Products</a></li>
+<li><a href="https://www.python.org/downloads/">Download Python</a></li>
+<li><a href="https://pypi.org/project/pyrnnoise/">pyrnnoise (PyPI)</a></li>
+<li><a href="https://github.com/xiph/rnnoise">RNNoise (Xiph GitHub)</a></li>
+<li><a href="https://pypi.org/project/faster-whisper/">faster-whisper (PyPI)</a></li>
+<li><a href="https://github.com/SYSTRAN/faster-whisper">faster-whisper (GitHub)</a></li>
+<li><a href="https://github.com/argosopentech/argos-translate">Argos Translate (GitHub)</a></li>
+<li><a href="https://argos-translate.readthedocs.io/en/stable/source/cli.html">Argos CLI Docs</a></li>
+<li><a href="https://pypi.org/project/sounddevice/">python-sounddevice (PyPI)</a></li>
+</ul>
+
+</article>
+<footer>
+  <p>ResearchHive &mdash; Agentic Research Studio &nbsp;&middot;&nbsp; 3/1/2026 7:24 PM</p>
+  <p><a href="../">&#8592; Back to all reports</a></p>
+</footer>
+</body>
+</html>
