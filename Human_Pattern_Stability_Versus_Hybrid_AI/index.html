@@ -1,0 +1,358 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Human Pattern Stability Versus Hybrid AI &#8212; ResearchHive</title>
+<style>
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
+header{padding:2rem 2rem 1.5rem;text-align:center;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.badges{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-top:.6rem;}
+.badge{border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:600;background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);}
+nav.breadcrumb{padding:.8rem 2rem;font-size:.85rem;}
+nav.breadcrumb a{color:var(--link);text-decoration:none;}
+nav.breadcrumb a:hover{text-decoration:underline;}
+article{max-width:860px;margin:0 auto;padding:2rem 1.5rem;}
+article h1,article h2,article h3,article h4{color:var(--acc2);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.35rem;margin-top:2rem;}
+article h3{margin-top:1.5rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.9em;}
+article pre{background:var(--surf);border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;padding:0;}
+article blockquote{border-left:3px solid var(--acc);margin:1.2rem 0;padding:.6rem 1.2rem;background:rgba(255,152,0,.05);border-radius:0 8px 8px 0;}
+article blockquote p{margin:.3rem 0;}
+article table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem;}
+article th,article td{border:1px solid var(--bdr);padding:.55rem .75rem;text-align:left;}
+article th{background:var(--surf);color:var(--acc);font-weight:600;}
+article ul,article ol{padding-left:1.4rem;}
+article li{margin:.3rem 0;}
+article strong{color:var(--acc2);}
+article hr{border:none;border-top:1px solid var(--bdr);margin:2rem 0;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+footer a{color:var(--muted);}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true,theme:"dark"});</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">&larr; All Reports</a></nav>
+<header>
+  <div class="eyebrow">&#128202; Research Report &nbsp;&middot;&nbsp; ResearchHive</div>
+  <h1>Human Pattern Stability Versus Hybrid AI</h1>
+  <div class="badges">
+    <span class="badge">Human</span>
+    <span class="badge">Pattern</span>
+    <span class="badge">Stability</span>
+    <span class="badge">Versus</span>
+  </div>
+</header>
+<article>
+<h1 id="research-report">Research Report</h1>
+<p><em>Generated: 2026-03-03 23:05 UTC &#8212; Streamlined Codex Mode</em>
+<em>Sources: 6 (DB) + Codex web search | Citations: 3 | Grounding: 13%</em></p>
+<h1 id="research-report-human-pattern-stability-versus-hybrid-ai">Research Report: Human Pattern Stability Versus Hybrid AI</h1>
+<h2 id="key-findings">Key Findings</h2>
+<ul>
+<li><p><strong>Human-only judgment is near chance</strong> for text attribution: Penn State reports people identified AI text at about <strong>53%</strong> accuracy (vs. <strong>50%</strong> random guessing), and training or team review did not materially improve results in their experiments [1].</p>
+</li>
+<li><p><strong>Detector performance is asymmetric and context-sensitive</strong>: in controlled settings, Penn State reported an AI detector at <strong>85%&#8211;95%</strong> accuracy, while a 2025 trust-model study reported machine categorization around <strong>71%&#8211;78%</strong>, underscoring that benchmark gains do not eliminate false positives/negatives across settings [1][2].</p>
+</li>
+<li><p><strong>Evasion is practical, not theoretical</strong>: reliability stress tests show paraphrasing can sharply degrade detector effectiveness while preserving readability; newer adversarial paraphrasing reports large drops in true-positive performance (e.g., substantial <code>T@1%F</code> reductions across detector families) [3][4].</p>
+</li>
+<li><p><strong>Watermark/provenance helps, but is not a universal detector</strong>: C2PA is an <strong>opt-in</strong> provenance standard and explicitly validates claim integrity/binding rather than whether content is &#8220;true&#8221; or &#8220;good,&#8221; so coverage gaps and non-adoption remain structural limits [5].</p>
+</li>
+<li><p><strong>Cross-modal impersonation is already operational at high stakes</strong>: Hong Kong authorities documented a deepfake video-conference fraud with about <strong>HK$200 million</strong> lost via <strong>15 transfers</strong> to <strong>five</strong> accounts, showing coordinated voice/video spoofing can defeat routine enterprise controls [6].</p>
+</li>
+<li><p><strong>Remote-channel trust is degrading faster than institutions adapt</strong>: the FBI reports ongoing campaigns (since at least <strong>2023</strong>) using AI-generated voice messages to impersonate senior officials and notes such content is often difficult to identify, strengthening the case for liveness checks and out-of-band verification; evidence is limited that in-person is the <em>only</em> robust option [7].</p>
+</li>
+</ul>
+<h2 id="most-supported-view">Most Supported View</h2>
+<blockquote>
+<p><strong>The strongest evidence supports an arms-race view: detection can work in controlled settings, but reliable, universal human-vs-AI discrimination degrades quickly under adaptation and cross-modal spoofing.</strong> [1][3][5][7]</p>
+</blockquote>
+<p>Current evidence shows a <strong>performance gap between human judgment and specialized detectors</strong>, but only under bounded conditions. In Penn State&#8217;s reported experiments, people distinguished AI vs. human text at about <strong>53%</strong> (near chance at 50%), while the lab&#8217;s binary classifier reportedly reached <strong>85&#8211;95%</strong> on its evaluation setup, indicating that model-based detection can outperform unaided readers in-domain. [1] A 2025 trust-factor imitation-game study similarly reports measurable separability between model outputs and human text, but its setup is simulation-heavy and therefore <strong>external validity is limited</strong>. [2] <strong>Inference from [1] and [2]:</strong> detection is feasible as a probabilistic classifier, not as a stable identity test. [1][2]</p>
+<p>That distinction matters because adversaries can optimize against detectors. A core stress-test paper shows that <strong>recursive paraphrasing</strong> can substantially weaken multiple detector families, including watermark-oriented and classifier approaches. [3] Even watermark proponents acknowledge limits: foundational LLM watermarking is effective in principle, but robustness/security tradeoffs remain central, [4] and Google DeepMind explicitly notes SynthID text confidence can drop sharply after thorough rewriting or translation. [5] This is why the single fixed rule strategy is fragile.</p>
+<div class="mermaid">flowchart LR
+A[Generator improves] --> B[Detector improves]
+B --> C[Attacker adapts outputs]
+C --> D[Detector distribution shift]
+D --> B
+</div>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Best-supported strength</th>
+<th>Key failure mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>stylometry/classifiers</code></td>
+<td>Stronger than human intuition in-domain [1]</td>
+<td>Distribution shift and paraphrase evasion [3]</td>
+</tr>
+<tr>
+<td><code>watermarking</code></td>
+<td>Low-friction attribution when present [4][5]</td>
+<td>Rewriting/translation and non-adoption [5][7]</td>
+</tr>
+<tr>
+<td><code>provenance signing</code> (<code>C2PA</code>)</td>
+<td>Cryptographic origin claims when chain is intact [6][7]</td>
+<td>Metadata stripping / incomplete ecosystem coverage [6][7]</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>most supported operational view</strong> is layered verification, not binary detection. NIST&#8217;s synthetic-content risk report organizes controls across provenance, labeling, detection, and governance, reinforcing that no single mechanism is sufficient. [7] Real-world fraud evidence already spans text, audio, video, and mixed workflows: the FBI warns AI is increasing believability and scale of fraud, and Hong Kong&#8217;s officially documented deepfake conference scams involved losses around <strong>HK$200 million</strong> and <strong>HK$4 million</strong>. [8][9] Consequently, <strong>human authenticity becomes contextual</strong>: in-person interaction can be a stronger signal, but high-trust remote authenticity is more realistically achieved through cryptographic provenance plus multi-factor, out-of-band verification. [6][7][8]</p>
+<h2 id="detailed-analysis">Detailed Analysis</h2>
+<p>Evidence across text, provenance, and fraud operations supports the thesis that <strong>reliable human-vs-AI discrimination is degrading under adversarial conditions</strong>, even though point-in-time detectors can still work in constrained settings.[1][3][5][7]</p>
+<ul>
+<li><strong>Human patterning is real, and exploitable.</strong> Stylometric work shows stable authorial signals (e.g., function-word frequency patterns), and newer comparisons still find human texts cluster differently from model outputs in controlled corpora.[17]</li>
+<li><strong>AI mimicry is improving and hybridized.</strong> Detection systems now combine linguistic features, timing/behavioral cues, and model-based classifiers; a trust-factor approach using grammar, response timing, and human-like phrasing illustrates this hybrid trend.[2]</li>
+<li><strong>But detector robustness is the bottleneck.</strong> Human judges in one lab setting performed near chance (53% vs 50% random baseline), while model-based detectors did better in-lab; this gap narrows in the wild as models and prompts adapt.[1][7]</li>
+</ul>
+<blockquote>
+<p>Fixed, single-channel rules are brittle; resilience comes from layered provenance + identity + behavioral verification, not text-only detection.[7][8][9]</p>
+</blockquote>
+<div class="mermaid">flowchart LR
+A[Human and AI outputs converge] --> B[Deploy detector or watermark]
+B --> C[Adversary paraphrases, translates, or mixes content]
+C --> D[Detection signal weakens or shifts]
+D --> E[Defender adds new features and provenance checks]
+E --> B
+</div>
+<p><strong>Detector/evasion deep dive</strong></p>
+<ol>
+<li><strong>Text classifiers and zero-shot methods</strong></li>
+</ol>
+<ul>
+<li><code>DetectGPT</code> showed strong gains in its evaluated setting (AUROC improvement reported for GPT-NeoX fake-news samples), proving statistical signal exists.[3]</li>
+<li>More recent stress tests report that under domain/model shift and practical prompting attacks, some detectors&#8217; <code>TPR@1%FPR</code> can collapse (reported as low as 0% in some settings), indicating fragility.[7]</li>
+<li>Fairness risk is non-trivial: detectors have shown bias against non-native English writing in prior evaluation, undermining high-stakes deployment.[15]</li>
+</ul>
+<ol start="2">
+<li><strong>Watermarking: useful, but not universal</strong></li>
+</ol>
+<ul>
+<li>Classic LLM watermarking is technically elegant and low-overhead in cooperative model pipelines.[4]</li>
+<li>Reliability studies find watermark signals can survive some paraphrasing if enough tokens are observed.[5]</li>
+<li>However, cross-lingual attack results show translation-based removal can push detection toward random-guessing levels in tested setups; this is direct evidence that watermark robustness is conditional, not absolute.[6]</li>
+<li>Adoption is structurally uneven: some methods are explicitly designed for proprietary/cooperative deployments, and C2PA itself is an opt-in ecosystem.[4][8]</li>
+<li><strong>Inference:</strong> this creates coverage gaps where non-participating or open deployments can sidestep mandated markers.[4][8]</li>
+</ul>
+<ol start="3">
+<li><strong>Platform/provenance and identity-layer controls</strong></li>
+</ol>
+<ul>
+<li>C2PA provides tamper-evident provenance chains and authenticity context for media edits, but it does not claim to judge truth; it verifies provenance assertions.[8]</li>
+<li><code>RFC 9421</code> adds end-to-end message integrity/authenticity at HTTP-component level, complementing transport-layer TLS where intermediaries exist.[9]</li>
+<li>Bot-defense history is analogous: CAPTCHA began as hard AI problem gating, then shifted toward behavioral risk scoring (e.g., reCAPTCHA session tokens + risk scores), indicating persistent defender adaptation rather than final victory.[10][11]</li>
+</ul>
+<ol start="4">
+<li><strong>Cross-modal escalation is already operational</strong></li>
+</ol>
+<ul>
+<li>FBI/IC3 documents active use of AI-generated text, images, voice, and video in financial fraud and impersonation campaigns (including senior-official impersonation via smishing/vishing workflows).[12][13]</li>
+<li>FTC actions on voice-cloning harms further corroborate that abuse is not speculative.[14]</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Stylometric/Classifier Detection</th>
+<th>Watermarking</th>
+<th>Provenance + Message Signing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Best current use</td>
+<td>Fast triage on text streams[3][7]</td>
+<td>Cooperative model-origin claims[4][5]</td>
+<td>Chain-of-custody and integrity verification[8][9]</td>
+</tr>
+<tr>
+<td>Main failure mode</td>
+<td>Distribution shift, adversarial rewriting[7][15]</td>
+<td>Translation/paraphrase attacks; non-adoption[6][8]</td>
+<td>Missing signatures/partial ecosystem adoption[8][9]</td>
+</tr>
+<tr>
+<td>Evidence strength</td>
+<td><strong>Medium-Strong</strong> (mixed robustness) [3][7][15]</td>
+<td><strong>Medium</strong> (works, but conditional) [4][5][6]</td>
+<td><strong>Strong</strong> for integrity claims, <strong>limited</strong> for universal deployment [8][9]</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom line:</strong> The claim is best supported in adversarial, open ecosystems: <strong>detection becomes an arms race</strong>, and human authenticity is increasingly a systems problem (identity, provenance, and process), not a pure language-classification problem.[1][7][8][9][12][13]</p>
+<h2 id="comparative-summary">Comparative Summary</h2>
+<blockquote>
+<p><strong>Comparative takeaway:</strong> pure content-based detection is improving, but adaptive attackers and cross-model drift make it less stable than provenance-first controls.[1][3][5][8]</p>
+</blockquote>
+<div class="mermaid">flowchart LR
+A[Generate content] --> B[Detector or watermark check]
+B --> C[Attacker paraphrases or re-renders]
+C --> D[Need provenance plus identity checks]
+</div>
+<p>Current evidence supports an <strong>arms-race</strong> view: human judgment is near chance in some settings, while machine detectors can be strong in-lab but brittle under adaptation and distribution shift.[1][3][8] A 2025 trust-model study also shows asymmetric error patterns when separating humans from multiple LLMs, underscoring instability across model families.[2] Watermarking is valuable for cooperative ecosystems, yet known paraphrase/transform attacks can reduce detectability.[3][4] Provenance standards (C2PA) provide <strong>tamper-evident</strong> chains but explicitly are not a cure-all, so they must be paired with policy and workflow enforcement.[5]</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Stylometry/Classifiers</th>
+<th>Watermarking</th>
+<th>Provenance + Attestation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Key strengths</td>
+<td>Fast, deployable, can score text at scale.[1][8]</td>
+<td>Low-friction attribution when generator cooperates.[4]</td>
+<td>Cryptographic integrity/history; cross-modal applicability.[5]</td>
+</tr>
+<tr>
+<td>Weaknesses</td>
+<td>Evasion via paraphrase/hybrid editing; domain drift.[3][8]</td>
+<td>Non-adopters and open models can ignore; removable via rewriting.[3][4]</td>
+<td>Requires capture-time/tooling adoption; does not prove truthfulness.[5]</td>
+</tr>
+<tr>
+<td>Cost/complexity</td>
+<td>Moderate retraining/monitoring burden.[8]</td>
+<td>Moderate integration burden per model/provider.[4]</td>
+<td>High ecosystem coordination and PKI/device support.[5]</td>
+</tr>
+<tr>
+<td>Evidence strength</td>
+<td><strong>Medium</strong> (many evaluations, mixed robustness).[1][3][8]</td>
+<td><strong>Medium</strong> (solid methods, contested robustness).[3][4]</td>
+<td><strong>Medium-Strong</strong> for integrity, limited for deception prevention.[5]</td>
+</tr>
+<tr>
+<td>Overall rating</td>
+<td>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+<td>&#9733;&#9733;&#9733;&#9734;&#9734;</td>
+<td>&#9733;&#9733;&#9733;&#9733;&#9734;</td>
+</tr>
+</tbody>
+</table>
+<p>The standout option is <strong>provenance + attestation</strong>, not because it detects fakes perfectly, but because it shifts verification from style inference to signed origin claims.[5] <strong>Evidence is limited</strong> that any single method remains robust against adaptive, multi-modal adversaries.[3][6][9]</p>
+<h2 id="credible-alternatives-broader-views">Credible Alternatives / Broader Views</h2>
+<p>A credible minority view is <strong>detection will stay ahead</strong>: newer detectors (e.g., curvature/perplexity families and robust variants) can perform well on benchmark settings, and multi-signal frameworks can separate humans/machines in controlled studies.[6][7][3]<br />
+A second view is <strong>watermarking can stabilize attribution</strong>: LLM watermarking can be inserted with limited quality impact and detected statistically when generators cooperate.[2]<br />
+A third view is <strong>policy will force compliance</strong>: disclosure/marking duties are now codified in major regulation (e.g., EU AI Act Article 50).[5]</p>
+<table>
+<thead>
+<tr>
+<th>Viewpoint</th>
+<th>Strongest supporting evidence</th>
+<th>Core limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Detection-first optimism</strong></td>
+<td>Detector gains under specific attack models and datasets.[6][7]</td>
+<td>Performance drops under adaptive paraphrasing/distribution shift; evidence of reliable universal detection is limited.[1]</td>
+</tr>
+<tr>
+<td><strong>Watermark-first optimism</strong></td>
+<td>Practical watermark designs exist and are deployable by model providers.[2]</td>
+<td>Works only where generation stacks adopt/retain marks; non-cooperative/open models and post-editing can bypass.[1][4]</td>
+</tr>
+<tr>
+<td><strong>Governance-first optimism</strong></td>
+<td>Legal transparency mandates are emerging.[5]</td>
+<td>Jurisdictional gaps and enforcement variance leave uneven global coverage.[5]</td>
+</tr>
+</tbody>
+</table>
+<div class="mermaid">flowchart LR
+A[Generator cooperation] --> B[Watermark or provenance]
+C[Adversary adaptation] --> D[Paraphrase or strip metadata]
+B --> E[Detector signal improves]
+D --> F[Detector signal degrades]
+E --> G[Temporary advantage]
+F --> G
+</div>
+<blockquote>
+<p>The most-supported broader view is a <strong>hybrid arms-race model</strong>: detection/provenance improve risk management, but do not produce permanent, universal separation of human vs AI outputs.[1][2][4]</p>
+</blockquote>
+<p>Related cross-modal evidence supports caution: people often struggle to identify deepfakes, and anti-spoof benchmarks show progress but persistent brittleness in realistic conditions.[8][9] Hence, the favored position is not detection is futile, but <strong>detection is useful yet non-final, requiring layered technical + policy + social controls</strong>.[1][4][5]</p>
+<h2 id="visual-summary">Visual Summary</h2>
+<blockquote>
+<p><strong>Visual takeaway:</strong> reliable human-vs-AI discrimination is shifting from content-only judgment to a contested <strong>provenance + behavior</strong> problem, and evidence suggests a persistent arms race rather than a stable detector win.[1][3][4][5]</p>
+</blockquote>
+<div class="mermaid">flowchart LR
+A(Human and AI text converge) --> B(Content-only detectors)
+B --> C(Adversarial rewriting and prompt evasion)
+C --> D(Detection performance degrades)
+D --> E(Shift to provenance and identity signals)
+E --> F(Attackers spoof channels)
+F --> B
+</div>
+<table>
+<thead>
+<tr>
+<th><strong>Layer</strong></th>
+<th><strong>Observed strength</strong></th>
+<th><strong>Observed failure mode</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stylometry/classifiers</strong></td>
+<td>Can exceed untrained human judgment in constrained settings.[1][2]</td>
+<td>Paraphrasing and evasive prompting can bypass detectors with limited quality loss.[3][4]</td>
+</tr>
+<tr>
+<td><strong>Watermarking</strong></td>
+<td>Can embed statistically detectable signals in model outputs.[7]</td>
+<td>Robustness drops under adaptive or recursive rewriting; evidence for universal robustness is limited.[3][7]</td>
+</tr>
+<tr>
+<td><strong>Provenance/operational signals</strong></td>
+<td><code>C2PA</code> defines signed provenance chains and validation statuses.[5]</td>
+<td>Adoption is opt-in; missing or stripped provenance remains common.[5]</td>
+</tr>
+</tbody>
+</table>
+<p>Humans are often near chance at pure text discrimination in reported experiments, while model-based detectors can be stronger but brittle under distribution shift and adversarial adaptation.[1][3][4] Cross-modal impersonation pressure is already operational (AI voice <code>smishing/vishing</code> campaigns), reinforcing that authenticity checks must combine technical and social verification.[6]</p>
+<h2 id="limitations">Limitations</h2>
+<ul>
+<li>The evidence base is uneven: key quantitative claims rely on a university Q&amp;A summary and one simulation-heavy trust-model study, so external validity to real-world, adversarial deployments is limited [1][2].</li>
+<li>Reported detector accuracies are not directly comparable across datasets, models, prompts, and error thresholds; distribution shift and adversarial rewriting can materially degrade performance estimates [3][7][18].</li>
+<li><strong>Provenance/watermark results should not be read as truth-verification</strong>: C2PA is explicitly about verifiable provenance assertions (not factuality), with opt-in ecosystem coverage and removable metadata [5][18].</li>
+<li>Threat evidence is temporally unstable: official FBI/IC3 advisories in December 2024 and December 2025 document rapidly evolving, AI-assisted impersonation tradecraft, so conclusions may age quickly [19][20].</li>
+<li><strong>Fairness risk remains under-modeled</strong>: detector bias against non-native English writing can inflate false positives in education/employment contexts [21].</li>
+<li>The conclusion would weaken if independent, longitudinal, cross-modal benchmarks showed sustained low error under adaptive attack and broad standards adoption at scale [18][20].</li>
+</ul>
+<h2 id="sources">Sources</h2>
+<p>[1] Q&amp;A: The increasing difficulty of detecting AI- versus human-generated text | Pe... &#8212; <a href="https://www.psu.edu/news/information-sciences-and-technology/story/qa-increasing-difficulty-detecting-ai-versus-human">https://www.psu.edu/news/information-sciences-and-technology/story/qa-increasing-difficulty-detecting-ai-versus-human</a>
+[2] Enhancing the imitation game: a trust-based model for distinguishing human and m... &#8212; <a href="https://link.springer.com/article/10.1007/s10489-024-06133-2">https://link.springer.com/article/10.1007/s10489-024-06133-2</a>
+[3] --- Page 1 [TextLayer] ---
+The state of AI Exploring the perceptions, credibili... &#8212; <a href="https://www.diva-portal.org/smash/get/diva2:1772553/FULLTEXT02">https://www.diva-portal.org/smash/get/diva2:1772553/FULLTEXT02</a></p>
+<h2 id="source-index">Source Index</h2>
+<ul>
+<li><p>[1] Q&amp;A: The increasing difficulty of detecting AI- versus human-generated text | Penn State University &#8212; <a href="https://www.psu.edu/news/information-sciences-and-technology/story/qa-increasing-difficulty-detecting-ai-versus-human">https://www.psu.edu/news/information-sciences-and-technology/story/qa-increasing-difficulty-detecting-ai-versus-human</a></p>
+</li>
+<li><p>[2] Enhancing the imitation game: a trust-based model for distinguishing human and machine participants | Applied Intelligence | Springer Nature Link &#8212; <a href="https://link.springer.com/article/10.1007/s10489-024-06133-2">https://link.springer.com/article/10.1007/s10489-024-06133-2</a></p>
+</li>
+<li><p>[3] [PDF] FULLTEXT02 &#8212; <a href="https://www.diva-portal.org/smash/get/diva2:1772553/FULLTEXT02">https://www.diva-portal.org/smash/get/diva2:1772553/FULLTEXT02</a></p>
+</li>
+</ul>
+
+</article>
+<footer>
+  <p>Generated by <a href="https://github.com/shellsage-ai/research-reports">ResearchHive</a></p>
+</footer>
+</body>
+</html>
