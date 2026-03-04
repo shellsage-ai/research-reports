@@ -37,13 +37,13 @@ footer a{color:var(--muted);}
 
 <style>
 .diagram-wrap{margin:1.5rem 0;}
-.diagram-ctrl{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
-.diagram-ctrl button{min-width:60px;min-height:50px;font-size:18px;font-weight:700;border:2.5px solid #FF9800;border-radius:10px;background:rgba(255,152,0,.13);color:#FF9800;cursor:pointer;padding:0 18px;transition:background .15s,transform .1s;}
-.diagram-ctrl button:hover{background:rgba(255,152,0,.3);transform:scale(1.05);}
-.diagram-ctrl .dz-reset{font-size:13px;min-width:68px;padding:0 14px;}
-.diagram-ctrl .dz-lbl{font-size:14px;color:#8b949e;min-width:52px;text-align:center;font-weight:600;}
-.diagram-scroll{overflow-x:auto;overflow-y:hidden;}
-.diagram-scroll svg{transform-origin:top left;display:block;}
+.diagram-ctrl{display:inline-flex;align-items:center;gap:6px;margin-bottom:8px;padding:4px 10px;background:rgba(255,255,255,.03);border:1px solid var(--bdr);border-radius:8px;}
+.diagram-ctrl button{height:28px;font-size:12px;font-weight:600;border:1px solid rgba(255,152,0,.38);border-radius:6px;background:rgba(255,152,0,.08);color:#FF9800;cursor:pointer;padding:0 11px;transition:background .12s;white-space:nowrap;letter-spacing:.01em;}
+.diagram-ctrl button:hover{background:rgba(255,152,0,.2);}
+.diagram-ctrl .dz-reset{border-color:rgba(139,148,158,.3);background:rgba(139,148,158,.06);color:#8b949e;}
+.diagram-ctrl .dz-lbl{font-size:11px;color:#8b949e;min-width:34px;text-align:center;font-weight:700;letter-spacing:.02em;}
+.diagram-scroll{overflow-x:auto;overflow-y:hidden;width:100%;}
+.diagram-scroll svg{display:block;}
 </style>
 
 <style>
@@ -493,46 +493,14 @@ Fix: Use it to guide ventilation habits, not as a complete air safety diagnosis.
   <p><a href="../">&#8592; Back to all reports</a></p>
 </footer>
 <script>(function(){
-  window._dzs={};
-  window.dZ=function(i,d){
-    _dzs[i]=Math.max(0.25,Math.min(4,(_dzs[i]||1.4)+d));
-    var s=document.querySelector('#dw-'+i+' svg');
-    if(s){s.style.transform='scale('+_dzs[i]+')';s.style.transformOrigin='top left';}
-    var l=document.getElementById('dz-'+i);
-    if(l)l.textContent=Math.round(_dzs[i]*100)+'%';
-  };
-  window.dR=function(i){
-    _dzs[i]=1.4;
-    var s=document.querySelector('#dw-'+i+' svg');
-    if(s)s.style.transform='scale(1.4)';
-    var l=document.getElementById('dz-'+i);
-    if(l)l.textContent='140%';
-  };
-  function setup(){
-    document.querySelectorAll('.mermaid').forEach(function(el,i){
-      if(el.dataset.dz)return;
-      var svg=el.querySelector('svg');
-      if(!svg)return;
-      el.dataset.dz='1';
-      var w=document.createElement('div');
-      w.id='dw-'+i;w.className='diagram-wrap';
-      el.parentNode.insertBefore(w,el);
-      var sc=document.createElement('div');
-      sc.className='diagram-scroll';
-      w.appendChild(sc);sc.appendChild(el);
-      var b=document.createElement('div');
-      b.className='diagram-ctrl';
-      b.innerHTML='<button onclick="dZ('+i+',0.3)">+ Zoom In</button>'
-        +'<span class="dz-lbl" id="dz-'+i+'">100%</span>'
-        +'<button onclick="dZ('+i+',-0.3)">&#x2212; Zoom Out</button>'
-        +'<button class="dz-reset" onclick="dR('+i+')">&#8635; Reset</button>';
-      w.insertBefore(b,sc);
-    });
-  }
-  function trySetup(n){
-    if(document.querySelectorAll('.mermaid svg').length>0){setup();return;}
-    if(n>0)setTimeout(function(){trySetup(n-1);},400);
-  }
+  var _dzs={};
+  function svgOf(i){return document.querySelector('#dw-'+i+' svg');}
+  function lblOf(i){return document.getElementById('dz-'+i);}
+  function applyScale(i){var s=svgOf(i);if(!s)return;var sc=_dzs[i];if(sc==null){s.style.transform='none';s.style.width='100%';s.style.height='auto';var l=lblOf(i);if(l)l.textContent='Fit';}else{s.style.width='';s.style.height='';s.style.transform='scale('+sc+')';s.style.transformOrigin='top left';var l=lblOf(i);if(l)l.textContent=Math.round(sc*100)+'%';}}
+  window.dZ=function(i,d){var s=svgOf(i);if(!s)return;var cur=_dzs[i];if(cur==null){var bw=s.getBoundingClientRect().width||s.viewBox.baseVal.width||800;var cw=s.parentElement.getBoundingClientRect().width||bw;cur=bw/Math.max(cw,1);}_dzs[i]=Math.max(0.25,Math.min(5,cur+d));applyScale(i);};
+  window.dR=function(i){delete _dzs[i];applyScale(i);};
+  function setup(){document.querySelectorAll('.mermaid').forEach(function(el,i){if(el.dataset.dz)return;var svg=el.querySelector('svg');if(!svg)return;el.dataset.dz='1';var w=document.createElement('div');w.id='dw-'+i;w.className='diagram-wrap';el.parentNode.insertBefore(w,el);var sc=document.createElement('div');sc.className='diagram-scroll';w.appendChild(sc);sc.appendChild(el);svg.style.width='100%';svg.style.height='auto';svg.style.display='block';var b=document.createElement('div');b.className='diagram-ctrl';b.innerHTML='<button onclick="dZ('+i+',0.25)">&#xFF0B;&thinsp;Zoom In</button><span class="dz-lbl" id="dz-'+i+'">Fit</span><button onclick="dZ('+i+',-0.25)">&#xFF0D;&thinsp;Zoom Out</button><button class="dz-reset" onclick="dR('+i+')">&#8635;&thinsp;Reset</button>';w.insertBefore(b,sc);});}};
+  function trySetup(n){if(document.querySelectorAll('.mermaid svg').length>0){setup();return;}if(n>0)setTimeout(function(){trySetup(n-1);},400);};
   window.addEventListener('load',function(){setTimeout(function(){trySetup(15);},300);});
 })();
 </script>

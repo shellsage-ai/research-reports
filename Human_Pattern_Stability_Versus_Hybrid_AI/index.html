@@ -37,18 +37,18 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 footer a{color:var(--muted);}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true,securityLevel:'loose',flowchart:{htmlLabels:true},theme:'base',themeVariables:{primaryColor:'#1a2d4a',primaryTextColor:'#e6edf3',primaryBorderColor:'#4a90d9',secondaryColor:'#0d2e2b',secondaryTextColor:'#e6edf3',secondaryBorderColor:'#26a69a',tertiaryColor:'#3a2400',tertiaryTextColor:'#e6edf3',tertiaryBorderColor:'#FF9800',lineColor:'#6ba3d6',edgeLabelBackground:'#1c2333',clusterBkg:'#161b22',clusterBorder:'#30363d',titleColor:'#e6edf3',fontFamily:'Segoe UI,Roboto,sans-serif',fontSize:'15px'}});</script>
+<script>mermaid.initialize({startOnLoad:true,securityLevel:'loose',flowchart:{htmlLabels:true},theme:'base',themeVariables:{primaryColor:'#1C2232',primaryTextColor:'#E6EDF3',primaryBorderColor:'#4A8ECC',secondaryColor:'#121920',secondaryTextColor:'#E6EDF3',secondaryBorderColor:'#4A8ECC',tertiaryColor:'#1C2232',tertiaryTextColor:'#E6EDF3',tertiaryBorderColor:'#4A8ECC',lineColor:'#8B949E',edgeLabelBackground:'#161B22',clusterBkg:'#161b22',clusterBorder:'#30363d',titleColor:'#e6edf3',fontFamily:'Segoe UI,Roboto,sans-serif',fontSize:'15px'}});</script>
 <style>.mermaid .label foreignObject{overflow:visible !important;} .mermaid .nodeLabel,.mermaid .label div{white-space:normal !important;word-break:break-word !important;max-width:170px;display:block;line-height:1.35;}</style>
 
 <style>
 .diagram-wrap{margin:1.5rem 0;}
-.diagram-ctrl{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
-.diagram-ctrl button{min-width:60px;min-height:50px;font-size:18px;font-weight:700;border:2.5px solid #FF9800;border-radius:10px;background:rgba(255,152,0,.13);color:#FF9800;cursor:pointer;padding:0 18px;transition:background .15s,transform .1s;}
-.diagram-ctrl button:hover{background:rgba(255,152,0,.3);transform:scale(1.05);}
-.diagram-ctrl .dz-reset{font-size:13px;min-width:68px;padding:0 14px;}
-.diagram-ctrl .dz-lbl{font-size:14px;color:#8b949e;min-width:52px;text-align:center;font-weight:600;}
-.diagram-scroll{overflow-x:auto;overflow-y:hidden;}
-.diagram-scroll svg{transform-origin:top left;display:block;}
+.diagram-ctrl{display:inline-flex;align-items:center;gap:6px;margin-bottom:8px;padding:4px 10px;background:rgba(255,255,255,.03);border:1px solid var(--bdr);border-radius:8px;}
+.diagram-ctrl button{height:28px;font-size:12px;font-weight:600;border:1px solid rgba(255,152,0,.38);border-radius:6px;background:rgba(255,152,0,.08);color:#FF9800;cursor:pointer;padding:0 11px;transition:background .12s;white-space:nowrap;letter-spacing:.01em;}
+.diagram-ctrl button:hover{background:rgba(255,152,0,.2);}
+.diagram-ctrl .dz-reset{border-color:rgba(139,148,158,.3);background:rgba(139,148,158,.06);color:#8b949e;}
+.diagram-ctrl .dz-lbl{font-size:11px;color:#8b949e;min-width:34px;text-align:center;font-weight:700;letter-spacing:.02em;}
+.diagram-scroll{overflow-x:auto;overflow-y:hidden;width:100%;}
+.diagram-scroll svg{display:block;}
 </style>
 
 <style>
@@ -109,11 +109,11 @@ A[Generator improves] --> B[Detector improves]
 B --> C[Attacker adapts outputs]
 C --> D[Detector distribution shift]
 D --> B
-  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
-  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
-  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
-  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
-  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk fill:#1E0000,stroke:#EF5350,color:#FFAB91
   class A input
   class B,C,D process</div>
 <table>
@@ -159,11 +159,11 @@ B --> C[Adversary paraphrases, translates, or mixes content]
 C --> D[Detection signal weakens or shifts]
 D --> E[Defender adds new features and provenance checks]
 E --> B
-  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
-  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
-  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
-  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
-  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk fill:#1E0000,stroke:#EF5350,color:#FFAB91
   class A input
   class B,C,D,E process</div>
 <p><strong>Detector/evasion deep dive</strong></p>
@@ -239,11 +239,11 @@ E --> B
 A[Generate content] --> B[Detector or watermark check]
 B --> C[Attacker paraphrases or re-renders]
 C --> D[Need provenance plus identity checks]
-  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
-  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
-  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
-  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
-  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk fill:#1E0000,stroke:#EF5350,color:#FFAB91
   class A input
   class B,C process
   class D outcome</div>
@@ -328,11 +328,11 @@ B --> E[Detector signal improves]
 D --> F[Detector signal degrades]
 E --> G[Temporary advantage]
 F --> G
-  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
-  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
-  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
-  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
-  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk fill:#1E0000,stroke:#EF5350,color:#FFAB91
   class A,C input
   class B,D,E,F process
   class G outcome</div>
@@ -351,11 +351,11 @@ C --> D(Detection performance degrades)
 D --> E(Shift to provenance and identity signals)
 E --> F(Attackers spoof channels)
 F --> B
-  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
-  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
-  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
-  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
-  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk fill:#1E0000,stroke:#EF5350,color:#FFAB91
   class A input
   class B,C,D,E,F process</div>
 <table>
@@ -414,46 +414,14 @@ The state of AI Exploring the perceptions, credibili... &#8212; <a href="https:/
   <p>Generated by <a href="https://github.com/shellsage-ai/research-reports">ResearchHive</a></p>
 </footer>
 <script>(function(){
-  window._dzs={};
-  window.dZ=function(i,d){
-    _dzs[i]=Math.max(0.25,Math.min(4,(_dzs[i]||1.4)+d));
-    var s=document.querySelector('#dw-'+i+' svg');
-    if(s){s.style.transform='scale('+_dzs[i]+')';s.style.transformOrigin='top left';}
-    var l=document.getElementById('dz-'+i);
-    if(l)l.textContent=Math.round(_dzs[i]*100)+'%';
-  };
-  window.dR=function(i){
-    _dzs[i]=1.4;
-    var s=document.querySelector('#dw-'+i+' svg');
-    if(s)s.style.transform='scale(1.4)';
-    var l=document.getElementById('dz-'+i);
-    if(l)l.textContent='140%';
-  };
-  function setup(){
-    document.querySelectorAll('.mermaid').forEach(function(el,i){
-      if(el.dataset.dz)return;
-      var svg=el.querySelector('svg');
-      if(!svg)return;
-      el.dataset.dz='1';
-      var w=document.createElement('div');
-      w.id='dw-'+i;w.className='diagram-wrap';
-      el.parentNode.insertBefore(w,el);
-      var sc=document.createElement('div');
-      sc.className='diagram-scroll';
-      w.appendChild(sc);sc.appendChild(el);
-      var b=document.createElement('div');
-      b.className='diagram-ctrl';
-      b.innerHTML='<button onclick="dZ('+i+',0.3)">+ Zoom In</button>'
-        +'<span class="dz-lbl" id="dz-'+i+'">100%</span>'
-        +'<button onclick="dZ('+i+',-0.3)">&#x2212; Zoom Out</button>'
-        +'<button class="dz-reset" onclick="dR('+i+')">&#8635; Reset</button>';
-      w.insertBefore(b,sc);
-    });
-  }
-  function trySetup(n){
-    if(document.querySelectorAll('.mermaid svg').length>0){setup();return;}
-    if(n>0)setTimeout(function(){trySetup(n-1);},400);
-  }
+  var _dzs={};
+  function svgOf(i){return document.querySelector('#dw-'+i+' svg');}
+  function lblOf(i){return document.getElementById('dz-'+i);}
+  function applyScale(i){var s=svgOf(i);if(!s)return;var sc=_dzs[i];if(sc==null){s.style.transform='none';s.style.width='100%';s.style.height='auto';var l=lblOf(i);if(l)l.textContent='Fit';}else{s.style.width='';s.style.height='';s.style.transform='scale('+sc+')';s.style.transformOrigin='top left';var l=lblOf(i);if(l)l.textContent=Math.round(sc*100)+'%';}}
+  window.dZ=function(i,d){var s=svgOf(i);if(!s)return;var cur=_dzs[i];if(cur==null){var bw=s.getBoundingClientRect().width||s.viewBox.baseVal.width||800;var cw=s.parentElement.getBoundingClientRect().width||bw;cur=bw/Math.max(cw,1);}_dzs[i]=Math.max(0.25,Math.min(5,cur+d));applyScale(i);};
+  window.dR=function(i){delete _dzs[i];applyScale(i);};
+  function setup(){document.querySelectorAll('.mermaid').forEach(function(el,i){if(el.dataset.dz)return;var svg=el.querySelector('svg');if(!svg)return;el.dataset.dz='1';var w=document.createElement('div');w.id='dw-'+i;w.className='diagram-wrap';el.parentNode.insertBefore(w,el);var sc=document.createElement('div');sc.className='diagram-scroll';w.appendChild(sc);sc.appendChild(el);svg.style.width='100%';svg.style.height='auto';svg.style.display='block';var b=document.createElement('div');b.className='diagram-ctrl';b.innerHTML='<button onclick="dZ('+i+',0.25)">&#xFF0B;&thinsp;Zoom In</button><span class="dz-lbl" id="dz-'+i+'">Fit</span><button onclick="dZ('+i+',-0.25)">&#xFF0D;&thinsp;Zoom Out</button><button class="dz-reset" onclick="dR('+i+')">&#8635;&thinsp;Reset</button>';w.insertBefore(b,sc);});}};
+  function trySetup(n){if(document.querySelectorAll('.mermaid svg').length>0){setup();return;}if(n>0)setTimeout(function(){trySetup(n-1);},400);};
   window.addEventListener('load',function(){setTimeout(function(){trySetup(15);},300);});
 })();
 </script>
