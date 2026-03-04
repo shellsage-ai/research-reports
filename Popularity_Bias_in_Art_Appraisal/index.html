@@ -36,7 +36,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 footer a{color:var(--muted);}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true,securityLevel:'loose',flowchart:{htmlLabels:true},theme:'base',themeVariables:{primaryColor:'#1a2d4a',primaryTextColor:'#e6edf3',primaryBorderColor:'#4a90d9',secondaryColor:'#0d2e2b',secondaryTextColor:'#e6edf3',secondaryBorderColor:'#26a69a',tertiaryColor:'#3a2400',tertiaryTextColor:'#e6edf3',tertiaryBorderColor:'#FF9800',lineColor:'#6ba3d6',edgeLabelBackground:'#1c2333',clusterBkg:'#161b22',clusterBorder:'#30363d',titleColor:'#e6edf3',fontFamily:'Segoe UI,Roboto,sans-serif',fontSize:'14px'}});</script>
+<script>mermaid.initialize({startOnLoad:true,securityLevel:'loose',flowchart:{htmlLabels:true},theme:'base',themeVariables:{primaryColor:'#1a2d4a',primaryTextColor:'#e6edf3',primaryBorderColor:'#4a90d9',secondaryColor:'#0d2e2b',secondaryTextColor:'#e6edf3',secondaryBorderColor:'#26a69a',tertiaryColor:'#3a2400',tertiaryTextColor:'#e6edf3',tertiaryBorderColor:'#FF9800',lineColor:'#6ba3d6',edgeLabelBackground:'#1c2333',clusterBkg:'#161b22',clusterBorder:'#30363d',titleColor:'#e6edf3',fontFamily:'Segoe UI,Roboto,sans-serif',fontSize:'15px'}});</script>
 <style>.mermaid .label foreignObject{overflow:visible !important;} .mermaid .nodeLabel,.mermaid .label div{white-space:normal !important;word-break:break-word !important;max-width:170px;display:block;line-height:1.35;}</style>
 
 <style>
@@ -48,6 +48,21 @@ footer a{color:var(--muted);}
 .diagram-ctrl .dz-lbl{font-size:14px;color:#8b949e;min-width:52px;text-align:center;font-weight:600;}
 .diagram-scroll{overflow-x:auto;overflow-y:hidden;}
 .diagram-scroll svg{transform-origin:top left;display:block;}
+</style>
+
+<style>
+html{font-size:17px;}
+body{line-height:1.75;}
+.page-wrap{display:flex;gap:2rem;max-width:1400px;margin:0 auto;padding:0 1.5rem;align-items:flex-start;}
+.toc-nav{width:250px;min-width:190px;flex-shrink:0;position:sticky;top:1.5rem;max-height:calc(100vh - 3rem);overflow-y:auto;padding:1rem;background:var(--surf);border:1px solid var(--bdr);border-radius:10px;}
+.toc-nav .toc-title{font-weight:700;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:.75rem;}
+.toc-nav .toc-list{margin:0;padding:0;list-style:none;}
+.toc-nav .toc-list li{margin:.28rem 0;}
+.toc-nav .toc-list a{color:var(--link);text-decoration:none;font-size:.85rem;line-height:1.4;display:block;}
+.toc-nav .toc-list a:hover{text-decoration:underline;color:var(--acc);}
+.toc-nav .toc-h3>a{padding-left:1rem;font-size:.82rem;color:var(--muted);}
+article{flex:1;min-width:0;padding:2rem 1.5rem;}
+@media(max-width:960px){.page-wrap{flex-direction:column;}.toc-nav{width:100%;position:static;max-height:none;}}
 </style>
 </head>
 <body>
@@ -351,18 +366,18 @@ Z --> P[Boycott or devaluation]
 <script>(function(){
   window._dzs={};
   window.dZ=function(i,d){
-    _dzs[i]=Math.max(0.25,Math.min(4,(_dzs[i]||1)+d));
+    _dzs[i]=Math.max(0.25,Math.min(4,(_dzs[i]||1.4)+d));
     var s=document.querySelector('#dw-'+i+' svg');
     if(s){s.style.transform='scale('+_dzs[i]+')';s.style.transformOrigin='top left';}
     var l=document.getElementById('dz-'+i);
     if(l)l.textContent=Math.round(_dzs[i]*100)+'%';
   };
   window.dR=function(i){
-    _dzs[i]=1;
+    _dzs[i]=1.4;
     var s=document.querySelector('#dw-'+i+' svg');
-    if(s)s.style.transform='scale(1)';
+    if(s)s.style.transform='scale(1.4)';
     var l=document.getElementById('dz-'+i);
-    if(l)l.textContent='100%';
+    if(l)l.textContent='140%';
   };
   function setup(){
     document.querySelectorAll('.mermaid').forEach(function(el,i){
@@ -390,6 +405,25 @@ Z --> P[Boycott or devaluation]
     if(n>0)setTimeout(function(){trySetup(n-1);},400);
   }
   window.addEventListener('load',function(){setTimeout(function(){trySetup(15);},300);});
+})();
+</script>
+<script>
+(function(){
+  function buildToc(){
+    var headings=document.querySelectorAll('article h2[id],article h3[id]');
+    var nav=document.getElementById('siteToc');
+    if(!nav)return;
+    if(headings.length<2){nav.style.display='none';return;}
+    var html='<div class="toc-title">&#9776;&nbsp;Contents</div><ul class="toc-list">';
+    headings.forEach(function(h){
+      var is3=h.tagName==='H3';
+      html+='<li class="'+(is3?'toc-h3':'toc-h2')+'"><a href="#'+h.id+'">'+h.textContent.replace(/<[^>]+>/g,'')+'</a></li>';
+    });
+    html+='</ul>';
+    nav.innerHTML=html;
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',buildToc);}
+  else{buildToc();}
 })();
 </script>
 </body>
