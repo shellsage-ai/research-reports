@@ -40,7 +40,6 @@ B --> C[Early Adoption]
 C --> D[Mass Adoption]
 D --> E[Productivity Broadening]
 E --> F[Maturity/Plateau]
-
 A -. AI cycles restart .-> A
 C -. Hype/Correction risk .-> C
 B -. Energy/Compute constraints .-> D
@@ -235,14 +234,12 @@ flowchart LR
 A[Invention] --> B[Infrastructure/Complement Development]
 B --> C[Mass Adoption]
 C --> D[Plateau or Recomposition]
-
 P[Printing] --> B
 S[Steam] --> B
 E[Electricity] --> B
 I[Internet] --> C
 M[Smartphones] --> C
 AI[AI] --> C
-
 B --> W1[Possible Slowdown: bottlenecks]
 C --> W2[Possible Slowdown: regulation/saturation]
 W1 --> C
@@ -347,7 +344,6 @@ A[Invention] --> B[Infrastructure and Tooling]
 B --> C[Complementary Reorganization]
 C --> D[Broad Productivity Effects]
 D --> E[Maturity and Plateau]
-
 P[Printing Press] --> C
 S[Steam] --> B
 EL[Electricity] --> C
@@ -444,7 +440,6 @@ flowchart LR
     C --> D[Mass Adoption]
     D --> E[Productivity Broadening]
     E --> F[Maturity]
-
     %% Technology paths mapped to same lifecycle
     subgraph P[Printing Press]
       P1[Urban print-node spread] --> P2[Institutional literacy expansion] --> P3[Long-run regional growth divergence]
@@ -461,13 +456,11 @@ flowchart LR
     subgraph AI[Artificial Intelligence]
       AI1[Model and compute scaling] --> AI2[Rapid enterprise workflow insertion] --> AI3[Micro gains now, macro lag still forming]
     end
-
     P1 -. maps to .-> B
     S1 -. maps to .-> B
     EL1 -. maps to .-> B
     I1 -. maps to .-> C
     AI1 -. maps to .-> C
-
     %% Tempo annotation
     T1[Historical baseline diffusion lag often multi-decade] --> T2[AI front-end capability and adoption cycle compressed to years]
     T2 --> T3[Verdict: faster tempo with recognizable GPT structure]
@@ -481,27 +474,22 @@ flowchart TD
     A3[Geopolitical competition] --> K
     A4[Digital distribution substrate already mature] --> K
     A5[Partial regulatory gap with rising oversight] --> K
-
     %% Observable signals
     K --> O1[Rapid capability improvement]
     K --> O2[Fast organizational adoption]
     K --> O3[Patent and publication surge]
     K --> O4[Strong task-level productivity gains]
-
     %% Classical lag channel
     O4 --> L1[Complementary redesign requirement]
     L1 --> L2[Macro productivity lag relative to micro gains]
-
     %% Binding constraints
     K --> B1[Compute demand expansion]
     B1 --> B2[Electricity and grid bottlenecks]
     B2 --> B3[Most likely 5-year binding constraint]
-
     %% Uncertainty channel
     O1 --> U1[Possible recursive capability production]
     U1 --> U2[Potential institutional adaptation compression]
     U2 --> U3[Evidence still limited and measurement-sensitive]
-
     %% Scenario outcomes
     L2 --> S0[Base case: faster but predictable GPT diffusion]
     B3 --> S1[Conservative case: constrained scaling and uneven gains]

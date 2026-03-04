@@ -370,18 +370,15 @@ flowchart LR
     A[Humans show stable language and behavior patterns] --> B[Models learn those patterns from large corpora and interaction traces]
     B --> C[Hybrid generation stack: LLM plus stylometric steering plus detector-aware rewriting]
     C --> D[Output appears human across text voice image and video]
-
     D --> E[Defenders deploy content detectors watermark checks and platform rules]
     E --> F[Attackers adapt with paraphrase translation style mixing and cross-modal coordination]
     F --> G[Distribution shift reduces detector reliability and raises false confidence]
     G --> E
-
     E --> H[Platforms add provenance identity and workflow controls]
     H --> I[Signed metadata trusted capture device attestation out-of-band verification]
     I --> J[Higher assurance in managed ecosystems]
     J --> K[Residual risk persists in open ecosystems and non-cooperative model supply]
     K --> F
-
     D --> L[Operational harms]
     L --> M[Personal impersonation scams]
     L --> N[Corporate fraud and social engineering]
@@ -391,7 +388,6 @@ flowchart LR
 ```mermaid
 flowchart TB
     Q{Communication decision is high stakes?}
-
     Q -->|Yes| A1[Use strongest authenticity path]
     A1 --> A2[In-person verification when feasible]
     A1 --> A3[Or high-assurance remote stack]
@@ -401,7 +397,6 @@ flowchart TB
     A4 --> A7[Approve only after multi-signal agreement]
     A5 --> A7
     A6 --> A7
-
     Q -->|No or medium| B1[Use scalable layered controls]
     B1 --> B2[Content detectors for triage not final judgment]
     B1 --> B3[Watermark checks where available]
@@ -409,12 +404,10 @@ flowchart TB
     B2 --> B5[Escalate uncertain cases to human review]
     B3 --> B5
     B4 --> B5
-
     A7 --> T1[0 to 12 months: process hardening and impersonation playbooks]
     B5 --> T1
     T1 --> T2[1 to 3 years: broader provenance tooling and policy compliance]
     T2 --> T3[3 to 10 years: trust shifts from content guessing to identity plus provenance infrastructure]
-
     T3 --> R[Core outcome: no single detector wins; durable trust comes from layered verification]
 ```
 

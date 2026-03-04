@@ -180,7 +180,6 @@ B --> C[Signal Encoding]
 C --> D[Feedback Channel]
 D --> E[User Adaptation]
 E --> F[Task Performance]
-
 A1[Obstacles] --> A
 A2[Visual Scene] --> A
 A3[Magnetic North] --> A
