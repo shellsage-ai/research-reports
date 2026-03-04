@@ -387,24 +387,19 @@ flowchart LR
     E --> F[Revenue strategic value and geopolitical priority]
     F --> G[Reinvestment in compute talent and data centers]
     G --> B
-
     D --> H[Organizational redesign skills tooling workflows]
     H --> I[Productivity gains in specific tasks]
     I --> J[Economy wide impact with delay]
     J --> K[Labor reallocation wage dispersion and sector shifts]
-
     E --> L[Diffusion constraints by country sector and firm]
     L --> M[Uneven adoption outcomes]
     M --> J
-
     G --> N[Energy demand grid transmission siting pressure]
     N --> O[Infrastructure throughput bottleneck]
     O --> D
-
     E --> P[Safety governance standards and regulation]
     P --> Q[Compliance friction and trust effects]
     Q --> E
-
     O --> R[Shift from invention bottleneck to deployment bottleneck]
     Q --> R
     L --> R
@@ -424,32 +419,25 @@ flowchart TD
     A[Historical baseline pattern] --> B[Exponential cores in compute and cost]
     A --> C[Punctuated capability advances]
     A --> D[S curve diffusion with unequal access]
-
     B --> E[Short term 5 to 10 years]
     C --> E
     D --> E
-
     E --> E1[High probability continued capability and cost improvement]
     E --> E2[High probability wider enterprise use]
     E --> E3[Medium probability broad productivity lift due to adaptation lag]
-
     E --> F[Mid term 10 to 25 years scenario split]
-
     F --> G1[Gradual improvement path]
     F --> G2[Faster predictable acceleration path]
     F --> G3[Segmented plateau path]
     F --> G4[Disruptive breakthrough path]
-
     G1 --> H1[Institutional and skills bottlenecks dominate pace]
     G2 --> H2[Complementary systems scale in time with AI]
     G3 --> H3[Energy policy or reliability limits slow selected domains]
     G4 --> H4[New architecture or robotics integration resets frontier]
-
     H1 --> I[Likely outcome distributionally uneven gains]
     H2 --> I
     H3 --> I
     H4 --> I
-
     I --> J[Most supported central case]
     J --> J1[AI is faster but historically predictable acceleration]
     J --> J2[Neither simple continuity nor total rupture]
@@ -505,4 +493,18 @@ flowchart TD
 - [2] Technology Advancements in Research Methodologies: Transforming the Research Landscape — https://notedsource.io/resources/blog/technology-advancements-in-research-methodologies-transforming-the-research/
 
 - [3] Identifying Patterns, Trends and Relationships in Data: Time Series, Cluster, Correlation Analysis and More - Finance, Tech & Analytics Career Resources | Imarticus Blog — https://imarticus.org/blog/identifying-patterns-trends-and-relationships-in-data-time-series-cluster-correlation-analysis-and-more/
+
+---
+
+## Citation Verification Summary
+
+*Verified automatically after report generation.*
+
+| Outcome | Count |
+|---------|-------|
+| ✓ Verified (source supports claim) | 36 |
+| ~ Plausible (partial text match) | 6 |
+| ⚠ Unverified (claim not found in source) | 0 |
+| ✗ No Source (citation has no fetched content) | 0 |
+| [inference] labels from model | 0 |
 
