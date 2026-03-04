@@ -68,6 +68,7 @@ D --> E[Detector performance degrades under shift]
 E --> C
 C --> F[Provenance and identity controls added]
 F --> D
+  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
   classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
   classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
@@ -144,12 +145,14 @@ D --> E[Policy and product countermeasures]
 E --> C
 D --> F[Cross-modal impersonation incidents]
 F --> E
+  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
   classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
   classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
   class A input
-  class B,C,D,E,F process</div>
+  class B,D,E,F process
+  class C outcome</div>
 <table>
 <thead>
 <tr>
@@ -286,6 +289,7 @@ C --> D[Evasion tactics improve]
 D --> E[False negatives rise]
 E --> F[Defender adds provenance and identity checks]
 F --> B
+  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
   classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
   classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
@@ -469,13 +473,14 @@ E --> C
 D --> F[Shift toward provenance and identity layers]
 F --> G[Higher assurance in closed ecosystems]
 G --> H[Residual risk in open ecosystems]
+  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
   classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
   classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
   class A input
   class B,C,D,E,F,G process
-  class H risk</div>
+  class H outcome</div>
 <table>
 <thead>
 <tr>
@@ -544,6 +549,7 @@ C --> D[Distribution shift and model drift]
 D --> E[Classifier reliability drops on unseen attacks]
 E --> F[Need layered trust stack]
 F --> G[Provenance plus attestation plus human process]
+  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
   classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
   classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
@@ -625,14 +631,14 @@ F --> G[Provenance plus attestation plus human process]
     L --> M[Personal impersonation scams]
     L --> N[Corporate fraud and social engineering]
     L --> O[Political misinformation and reputation attacks]
+  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
   classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
   classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
   class A input
-  class B,C,D,E,F,G,H,I,J,L process
-  class M,N,O outcome
-  class K risk</div>
+  class B,C,E,F,G,H,I,J,K,L process
+  class D,M,N,O outcome</div>
 <div class="mermaid">flowchart TB
     Q{Communication decision is high stakes?}
     Q -->|Yes| A1[Use strongest authenticity path]
@@ -656,14 +662,15 @@ F --> G[Provenance plus attestation plus human process]
     T1 --> T2[1 to 3 years: broader provenance tooling and policy compliance]
     T2 --> T3[3 to 10 years: trust shifts from content guessing to identity plus provenance infrastructure]
     T3 --> R[Core outcome: no single detector wins; durable trust comes from layered verification]
+  classDef decision fill:#2b1d5c,stroke:#7c5cbf,color:#e6edf3
   classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
   classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
-  class Q input
-  class A1,A3,A4,A5,A7,B1,B2,B3,B5,T1,T2,T3 process
-  class A2,R outcome
-  class A6,B4 risk</div>
+  class Q decision
+  class B4 risk
+  class A1,A3,A4,A5,A6,A7,B1,B2,B3,B5,T1,T2,T3 process
+  class A2,R outcome</div>
 <h2 id="limitations">Limitations</h2>
 <ul>
 <li><p>The evidence base is heterogeneous: it mixes peer-reviewed studies, preprints, standards documents, platform documentation, and law-enforcement advisories, which are not equally strong for causal inference or generalization.[5][6][10][11][12][14] <strong>This means confidence should be interpreted as weight of converging signals, not as a single high-certainty experimental result.</strong>[5][6][11]</p>
