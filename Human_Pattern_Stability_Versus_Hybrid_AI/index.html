@@ -87,7 +87,7 @@ D --> B
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
   class A input
-  class B C D process</div>
+  class B,C,D process</div>
 <table>
 <thead>
 <tr>
@@ -136,7 +136,7 @@ E --> B
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
   class A input
-  class B C D E process</div>
+  class B,C,D,E process</div>
 <p><strong>Detector/evasion deep dive</strong></p>
 <ol>
 <li><strong>Text classifiers and zero-shot methods</strong></li>
@@ -215,7 +215,7 @@ C --> D[Need provenance plus identity checks]
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
   class A input
-  class B C process
+  class B,C process
   class D outcome</div>
 <p>Current evidence supports an <strong>arms-race</strong> view: human judgment is near chance in some settings, while machine detectors can be strong in-lab but brittle under adaptation and distribution shift.[1][3][8] A 2025 trust-model study also shows asymmetric error patterns when separating humans from multiple LLMs, underscoring instability across model families.[2] Watermarking is valuable for cooperative ecosystems, yet known paraphrase/transform attacks can reduce detectability.[3][4] Provenance standards (C2PA) provide <strong>tamper-evident</strong> chains but explicitly are not a cure-all, so they must be paired with policy and workflow enforcement.[5]</p>
 <table>
@@ -302,8 +302,8 @@ F --> G
   classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
-  class A C input
-  class B D E F process
+  class A,C input
+  class B,D,E,F process
   class G outcome</div>
 <blockquote>
 <p>The most-supported broader view is a <strong>hybrid arms-race model</strong>: detection/provenance improve risk management, but do not produce permanent, universal separation of human vs AI outputs.[1][2][4]</p>
@@ -325,7 +325,7 @@ F --> B
   classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
   classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
   class A input
-  class B C D E F process</div>
+  class B,C,D,E,F process</div>
 <table>
 <thead>
 <tr>
