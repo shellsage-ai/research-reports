@@ -102,11 +102,17 @@ footer a{color:var(--muted);}
 
 <p>For the great art hated because artist disliked side, evidence is strongest at the mechanism level: negative knowledge measurably devalues reception in experiments. [6] High-profile institutional cases (e.g., Roman Polanski winning 2003 Best Director for <em>The Pianist</em> yet later being expelled from the Academy in 2018) show how acclaim and social rejection can coexist around the same artist. [11][12] With older canon disputes (e.g., Wagner), evidence shows enduring artistic status alongside sustained moral backlash and performance controversy. [13] <strong>Claiming intrinsic quality reversal in each individual case remains difficult; for that, evidence is limited.</strong> [6][13]</p>
 
-<pre class="mermaid">
-flowchart LR
+<pre class="mermaid">flowchart LR
 A[Artist Reputation Signals] --> B[Audience Expectations]
 B --> C[Perceived Quality and Interest]
-C --> D[Institutional and Market Outcomes]</code></pre>
+C --> D[Institutional and Market Outcomes]
+  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
+  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
+  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
+  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  class A input
+  class B C process
+  class D outcome</code></pre>
 </pre>
 
 <h2>Detailed Analysis</h2>
@@ -116,13 +122,19 @@ C --> D[Institutional and Market Outcomes]</code></pre>
 <p><strong>When artistic judgment is socially contaminated, fame can raise weak work and stigma can depress strong work.</strong> [4][9]</p>
 </blockquote>
 
-<pre class="mermaid">
-flowchart LR
+<pre class="mermaid">flowchart LR
 A[Artist reputation cue] --> B[Audience expectation]
 B --> C[Perceived quality]
 C --> D[Market or institutional outcome]
 A --> E[Moral reaction]
-E --> C</code></pre>
+E --> C
+  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
+  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
+  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
+  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  class A input
+  class B C E process
+  class D outcome</code></pre>
 </pre>
 <p>[4][9]</p>
 
@@ -166,13 +178,19 @@ E --> C</code></pre>
 <tr><td>Overall rating</td><td>&#9733;&#9733;&#9733;&#9734;&#9734; [1][2]</td><td>&#9733;&#9733;&#9733;&#9733;&#9734; [3][4][5]</td><td>&#9733;&#9733;&#9733;&#9733;&#9733; [6]</td></tr>
 </table>
 
-<pre class="mermaid">
-flowchart LR
+<pre class="mermaid">flowchart LR
 A[Artist identity known] --> B[Social priors activated]
 B --> C[Perceived quality shifts]
 C --> D[Market/critical outcomes]
 E[Identity masked] --> F[Work-first evaluation]
-F --> G[Bias reduced]</code></pre>
+F --> G[Bias reduced]
+  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
+  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
+  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
+  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  class A E input
+  class B C F process
+  class D G outcome</code></pre>
 </pre>
 
 <blockquote>
@@ -194,12 +212,18 @@ F --> G[Bias reduced]</code></pre>
 <tr><td><strong>Autonomist/Separate Art from Artist View</strong></td><td>Art should be judged independently of creator biography or popularity.</td><td>This remains a credible minority position in Wagner scholarship and performance debates. [9] Some essay-based sources also argue for independent judgment and creative freedom, though evidence is limited. [2][3]</td></tr>
 </table>
 
-<pre class="mermaid">
-flowchart LR
+<pre class="mermaid">flowchart LR
 A[Artist reputation signal] --> B[Audience expectations]
 B --> C[Perceived quality]
 C --> D[Market and critical outcomes]
-A --> D</code></pre>
+A --> D
+  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
+  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
+  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
+  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  class A input
+  class B C process
+  class D outcome</code></pre>
 </pre>
 
 <p>The favored interpretation is the first two views combined: <strong>social signaling</strong> and <strong>moral knowledge</strong> both measurably shift evaluations, while strict autonomism is normatively coherent but empirically weaker. [6][7][9]</p>
@@ -219,20 +243,32 @@ A --> D</code></pre>
 <p><strong>Takeaway:</strong> social identity cues can overpower perceived artistic merit; evidence is limited on exact effect sizes across all art forms.[1]</p>
 </blockquote>
 
-<pre class="mermaid">
-flowchart LR
+<pre class="mermaid">flowchart LR
 A[Artist social image] --> B[Audience expectations]
 B --> C[Perceived quality]
 C --> D[Gatekeeper amplification]
-D --> E[Canon or backlash]</code></pre>
+D --> E[Canon or backlash]
+  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
+  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
+  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
+  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  class A input
+  class B C D process
+  class E outcome</code></pre>
 </pre>
 
-<pre class="mermaid">
-graph TD
+<pre class="mermaid">graph TD
 X[Famous attribution] --> Y[Higher legitimacy]
 N[Negative artist info] --> Z[Lower ratings]
 Y --> O[Commercial and critical lift]
-Z --> P[Boycott or devaluation]</code></pre>
+Z --> P[Boycott or devaluation]
+  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
+  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
+  classDef outcome fill:#1a3a1a,stroke:#4caf50,color:#e6edf3
+  classDef risk fill:#3a1a00,stroke:#ff7043,color:#e6edf3
+  class N X input
+  class Y Z process
+  class O P outcome</code></pre>
 </pre>
 
 <h2>Limitations</h2>
