@@ -1,11 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Anonymity Amplifying Bystander Inhibition Dynamics &#8212; ResearchHive</title>
 <style>
-:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;}
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--toc-w:240px;}
 *,*::before,*::after{box-sizing:border-box;}
 body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
 header{padding:2rem 2rem 1.5rem;text-align:center;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
@@ -16,10 +16,17 @@ header h1{margin:0 0 .6rem;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:800;ba
 nav.breadcrumb{padding:.8rem 2rem;font-size:.85rem;}
 nav.breadcrumb a{color:var(--link);text-decoration:none;}
 nav.breadcrumb a:hover{text-decoration:underline;}
-article{max-width:860px;margin:0 auto;padding:2rem 1.5rem;}
+.main-cols{display:flex;align-items:flex-start;max-width:1160px;margin:0 auto;padding:1.5rem 1rem;gap:2rem;}
+#siteToc{flex:0 0 var(--toc-w);width:var(--toc-w);position:sticky;top:1.5rem;max-height:calc(100vh - 3rem);overflow-y:auto;background:var(--surf);border:1px solid var(--bdr);border-radius:10px;padding:.9rem 1rem;font-size:.82rem;scrollbar-width:thin;scrollbar-color:var(--bdr) transparent;}
+#siteToc .toc-title{color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600;margin-bottom:.6rem;}
+#siteToc .toc-list{list-style:none;margin:0;padding:0;}
+#siteToc .toc-list li a{display:block;padding:.25rem .4rem;border-radius:4px;color:var(--muted);text-decoration:none;transition:background .15s,color .15s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#siteToc .toc-list li a:hover,#siteToc .toc-list li.active a{background:rgba(255,152,0,.1);color:var(--acc);}
+#siteToc .toc-h3 a{padding-left:1.2rem;font-size:.78rem;}
+article{flex:1 1 0;min-width:0;max-width:860px;}
 article h1,article h2,article h3,article h4{color:var(--acc2);}
-article h2{border-bottom:1px solid var(--bdr);padding-bottom:.35rem;margin-top:2rem;}
-article h3{margin-top:1.5rem;}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.35rem;margin-top:2.2rem;}
+article h3{margin-top:1.5rem;color:#81d4fa;}
 article a{color:var(--link);}
 article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.9em;}
 article pre{background:var(--surf);border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
@@ -33,11 +40,21 @@ article ul,article ol{padding-left:1.4rem;}
 article li{margin:.3rem 0;}
 article strong{color:var(--acc2);}
 article hr{border:none;border-top:1px solid var(--bdr);margin:2rem 0;}
+.mermaid{margin:2rem 0;padding:1rem;background:#0d1b2a;border:1px solid var(--bdr);border-radius:12px;overflow-x:auto;}
+.mermaid svg{max-width:100%;height:auto;}
+.diagram-wrap{margin:2rem 0;}
+.diagram-ctrl{display:flex;align-items:center;gap:.5rem;padding:.4rem .5rem;background:var(--surf);border:1px solid var(--bdr);border-bottom:none;border-radius:8px 8px 0 0;font-size:.78rem;}
+.diagram-ctrl button{background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.25);border-radius:4px;padding:2px 8px;cursor:pointer;font-size:.78rem;}
+.diagram-ctrl button:hover{background:rgba(255,152,0,.25);}
+.dz-lbl{color:var(--muted);min-width:36px;text-align:center;}
+.diagram-wrap .diagram-scroll{overflow-x:auto;}
+.diagram-wrap .mermaid{margin:0;border-radius:0 0 10px 10px;}
 footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
 footer a{color:var(--muted);}
+@media(max-width:760px){.main-cols{flex-direction:column;}#siteToc{position:static;width:100%;max-height:none;border-radius:8px;margin-bottom:1rem;}}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>mermaid.initialize({startOnLoad:true,theme:"dark"});</script>
+<script>mermaid.initialize({startOnLoad:true,theme:'base',themeVariables:{primaryColor:'#1e3050',primaryTextColor:'#e6edf3',primaryBorderColor:'#FF9800',lineColor:'#FFB74D',secondaryColor:'#102030',tertiaryColor:'#0d1b2a',edgeLabelBackground:'#161b22',nodeTextColor:'#e6edf3',mainBkg:'#1e3050',clusterBkg:'#1e2d40',titleColor:'#FF9800',fontFamily:"-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif",'fontSize':'14px'},flowchart:{curve:'basis',padding:20,useMaxWidth:true}});</script>
 </head>
 <body>
 <nav class="breadcrumb"><a href="../">&larr; All Reports</a></nav>
@@ -45,17 +62,26 @@ footer a{color:var(--muted);}
   <div class="eyebrow">&#128202; Research Report &nbsp;&middot;&nbsp; ResearchHive</div>
   <h1>Anonymity Amplifying Bystander Inhibition Dynamics</h1>
   <div class="badges">
+    <span class="badge">Bystander Inhibition</span>
+    <span class="badge">Digital Trauma</span>
     <span class="badge">Anonymity</span>
-    <span class="badge">Amplifying</span>
-    <span class="badge">Bystander</span>
-    <span class="badge">Inhibition</span>
+    <span class="badge">Crisis Communication</span>
   </div>
+  <p style="color:var(--muted);font-size:.82rem;margin:.6rem 0 0">
+    Generated 2026-03-04 &nbsp;&middot;&nbsp; Streamlined Codex Mode
+    &nbsp;&middot;&nbsp; Sources: 3 (DB) + Codex web search
+  </p>
 </header>
-<article>
-<h1 id="research-report">Research Report</h1>
+
+<div class="main-cols">
+  <!-- Sticky sidebar TOC (populated by JS) -->
+  <nav id="siteToc" aria-label="Table of contents"></nav>
+
+  <!-- Main article -->
+  <article>
+
 <p><em>Generated: 2026-03-04 22:57 UTC &#8212; Streamlined Codex Mode</em>
 <em>Sources: 3 (DB) + Codex web search | Citations: 3 | Grounding: 3%</em></p>
-<h1 id="research-report-anonymity-amplifying-bystander-inhibition-dynamics">Research Report: Anonymity Amplifying Bystander Inhibition Dynamics</h1>
 <h2 id="key-findings">Key Findings</h2>
 <ul>
 <li><p><strong>Evidence sufficiency is the primary empirical constraint</strong>: the supplied evidence packet contains crisis-communication and policy excerpts rather than a full turn-level chat transcript, so deterministic log metrics (<code>N</code>, segment-level <code>ESC</code> rates, <code>DL-HI</code> latency medians, and bystander-ratio denominators) cannot be validly computed from the material provided; therefore, evidence is limited for any claim requiring message-by-message counts, and the strongest defensible findings are structural/mechanistic rather than fully quantified at chat-turn resolution [2][6][9][10].</p>
@@ -106,6 +132,14 @@ B --> C[Delayed recognition and responsibility diffusion]
 C --> D[Topic drift or passive bystanding]
 D --> E[Late or absent intervention]
 E --> F[Higher escalation risk]
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input   fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk    fill:#1E0000,stroke:#EF5350,color:#FFAB91
+  class A,B input
+  class C,D,E process
+  class F risk
 </div>
 <p>This pathway is consistent with bystander-effect theory, online intervention findings, and crisis communication guidance [1][2][5][10].</p>
 <h2 id="most-supported-view">Most Supported View</h2>
@@ -167,6 +201,15 @@ E --> F
 F --> G[Escalation Risk]
 H[Design Supports: assignment prompts, anti-drift cues, crisis routing] --> I[Higher Intervention Reliability]
 I --> G
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input   fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk    fill:#1E0000,stroke:#EF5350,color:#FFAB91
+  class A,B,C input
+  class D,E,F process
+  class G risk
+  class H,I outcome
 </div>
 <h2 id="detailed-analysis">Detailed Analysis</h2>
 <p>I&#8217;m going to quickly check the workspace for the actual chat-log dataset so the analysis can stay faithful to your non-fabrication rules. I&#8217;ll then draft the section strictly from that text plus verified external sources.</p>
@@ -187,6 +230,14 @@ F --> H[Latency rises, topic drift risk]
 H --> I[Escalation probability increases]
 G --> J[Trauma-informed intervention]
 J --> K[De-escalation or referral]
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input   fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk    fill:#1E0000,stroke:#EF5350,color:#FFAB91
+  class F,H process
+  class G,J,K outcome
+  class I risk
 </div>
 <p>For <strong>RQ1 (recognition signaling)</strong>, the strongest applicable literature indicates that recognition is often inferred through explicit acknowledgment turns (e.g., direct address, concern confirmation, safety-check language), while failures to acknowledge are common when responsibility is diffused [1][2][3]. In online settings, anonymity and weak relational ties can further reduce personal obligation to act, especially when many observers are simultaneously present [4][5]. The CDC crisis communication framework is consistent with this: when people are stressed, they simplify interpretation and may miss nuance, which makes subtle disclosures easier to overlook [6]. Evidence strength is <strong>high</strong> for the general mechanism (meta-analytic and experimental), but <strong>low-to-moderate</strong> for this specific dataset because turn-level recognition tokens cannot be exhaustively counted without the full log.</p>
 <p>For <strong>RQ2 (escalation rate and response correlation)</strong>, the evidence base predicts a reciprocal pattern: delayed or absent acknowledgment can coincide with disclosure intensification, while timely empathic response can interrupt escalation pathways [2][6][8]. The provided CDC material explicitly notes stress-related cognitive simplification and reliance on heuristics under threat, both of which can degrade response quality in high-load exchanges [6]. However, because the transcript needed to compute <code>ESC</code> per segment and latency windows (<code>K=8</code> or <code>K=5</code>) is unavailable, escalation <em>rates</em> cannot be validly reported here. The strongest defensible conclusion is causal plausibility, not numeric estimation.</p>
@@ -247,6 +298,15 @@ E --> F
 F --> G[Escalation risk and topic drift]
 H[Trauma-informed prompts and policy cues] --> I[Faster and clearer intervention attempts]
 I --> J[Improved support alignment]
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input   fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk    fill:#1E0000,stroke:#EF5350,color:#FFAB91
+  class A,B,C input
+  class D,E,F process
+  class G risk
+  class H,I,J outcome
 </div>
 <table>
 <thead>
@@ -350,6 +410,12 @@ C2 --> D2[Higher chance of intervention]
 D1 --> E[Policy or moderator trigger]
 D2 --> E
 E --> F[Outcome quality shaped by platform rules and user skill]
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input   fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk    fill:#1E0000,stroke:#EF5350,color:#FFAB91
+  class D2 outcome
 </div>
 <p>Two minority but credible positions deserve inclusion. First, a <strong>Prosocial-Crowd Potential</strong> position argues that groups can become supportive when threat is salient and norms of helping are activated, which is compatible with evidence that danger salience can attenuate the bystander effect.[2] Second, a <strong>Peer-Community Benefit</strong> position argues that repeated disclosure in anonymous spaces can itself be adaptive by generating belonging, stigma resistance, and practical coping exchange.[4][5] These views are empirically grounded and should not be dismissed.[2][4][5]</p>
 <p>Still, the <strong>most-supported synthesis</strong> is the convergent account: anonymity and reduced social cues alter disclosure/response dynamics; fragmented attention and high inflow depress responsiveness; and crisis cognition under stress promotes simplification and belief-preserving interpretations.[3][6][7][8] This synthesis better explains mixed outcomes, including coexisting support, delay, and topic drift, than any single-factor model.[2][6][8] It also aligns with trauma-informed and psychological-first-aid guidance emphasizing early, clear, non-speculative, dignity-preserving responses that reduce ambiguity and increase actionable support pathways.[9][10]</p>
@@ -380,6 +446,15 @@ I --> J[Escalation risk increases]
 K[Design supports: explicit ownership prompts, anti-drift guardrails, fast escalation links] --> L[Earlier BY-ACT and INT]
 L --> M[Higher intervention reliability]
 M --> J
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input   fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk    fill:#1E0000,stroke:#EF5350,color:#FFAB91
+  class A,B,C input
+  class D,E,F,G,I process
+  class H,J risk
+  class K,L,M outcome
 </div>
 <div class="mermaid">flowchart TD
 S[Structural Amplification Model] --> S1[Explains diffusion plus ambiguity effects]
@@ -400,6 +475,15 @@ P3 --> R
 R --> R1[Combine structural UX changes]
 R --> R2[Add trauma-informed response prompts]
 R --> R3[Retain policy escalation backstops]
+  classDef decision fill:#271A00,stroke:#FF9800,color:#FFD180
+  classDef input   fill:#00192A,stroke:#29B6F6,color:#82CEF5
+  classDef process fill:#001916,stroke:#26A69A,color:#80CBCA
+  classDef outcome fill:#0A1A0A,stroke:#66BB6A,color:#A5D6A7
+  classDef risk    fill:#1E0000,stroke:#EF5350,color:#FFAB91
+  class S decision
+  class I process
+  class P input
+  class R,R2 outcome
 </div>
 <h2 id="limitations">Limitations</h2>
 <ul>
@@ -425,9 +509,101 @@ R --> R3[Retain policy escalation backstops]
 </li>
 </ul>
 
-</article>
+
+  </article>
+</div>
+
 <footer>
   <p>Generated by <a href="https://github.com/shellsage-ai/research-reports">ResearchHive</a></p>
 </footer>
+
+<!-- Diagram zoom controls -->
+<script>(function(){
+  var _dzs={};
+  function svgOf(i){return document.querySelector("#dw-"+i+" svg");}
+  function lblOf(i){return document.getElementById("dz-"+i);}
+  function applyScale(i){
+    var s=svgOf(i);if(!s)return;
+    var sc=_dzs[i];
+    if(sc==null){
+      s.style.transform="none";s.style.width="100%";s.style.height="auto";
+      var l=lblOf(i);if(l)l.textContent="Fit";
+    }else{
+      s.style.width="";s.style.height="";
+      s.style.transform="scale("+sc+")";s.style.transformOrigin="top left";
+      var l=lblOf(i);if(l)l.textContent=Math.round(sc*100)+"%";
+    }
+  }
+  window.dZ=function(i,d){
+    var s=svgOf(i);if(!s)return;
+    var cur=_dzs[i];
+    if(cur==null){
+      var bw=s.getBoundingClientRect().width||s.viewBox.baseVal.width||800;
+      var cw=s.parentElement.getBoundingClientRect().width||bw;
+      cur=bw/Math.max(cw,1);
+    }
+    _dzs[i]=Math.max(0.25,Math.min(5,cur+d));applyScale(i);
+  };
+  window.dR=function(i){delete _dzs[i];applyScale(i);};
+  function setup(){
+    document.querySelectorAll(".mermaid").forEach(function(el,i){
+      if(el.dataset.dz)return;
+      var svg=el.querySelector("svg");if(!svg)return;
+      el.dataset.dz="1";
+      var w=document.createElement("div");w.id="dw-"+i;w.className="diagram-wrap";
+      el.parentNode.insertBefore(w,el);
+      var sc=document.createElement("div");sc.className="diagram-scroll";
+      w.appendChild(sc);sc.appendChild(el);
+      svg.style.width="100%";svg.style.height="auto";svg.style.display="block";
+      var b=document.createElement("div");b.className="diagram-ctrl";
+      b.innerHTML='<button onclick="dZ('+i+',0.25)">&#xFF0B;&thinsp;Zoom In</button>'
+        +'<span class="dz-lbl" id="dz-'+i+'">Fit</span>'
+        +'<button onclick="dZ('+i+',-0.25)">&#xFF0D;&thinsp;Zoom Out</button>'
+        +'<button class="dz-reset" onclick="dR('+i+')">&#8635;&thinsp;Reset</button>';
+      w.insertBefore(b,sc);
+    });
+  }
+  function trySetup(n){
+    if(document.querySelectorAll(".mermaid svg").length>0){setup();return;}
+    if(n>0)setTimeout(function(){trySetup(n-1);},400);
+  }
+  window.addEventListener("load",function(){setTimeout(function(){trySetup(15);},300);});
+})();
+</script>
+
+<!-- Auto-build sticky TOC from article headings -->
+<script>
+(function(){
+  function buildToc(){
+    var headings=document.querySelectorAll("article h2[id],article h3[id]");
+    var nav=document.getElementById("siteToc");
+    if(!nav)return;
+    if(headings.length<2){nav.style.display="none";return;}
+    var html='<div class="toc-title">&#9776;&nbsp;Contents</div><ul class="toc-list">';
+    headings.forEach(function(h){
+      var is3=h.tagName==="H3";
+      html+='<li class="'+(is3?"toc-h3":"toc-h2")+'">'
+        +'<a href="#'+h.id+'">'+h.textContent.replace(/<[^>]+>/g,"")+'</a></li>';
+    });
+    html+='</ul>';
+    nav.innerHTML=html;
+    var links=nav.querySelectorAll("a");
+    var ids=Array.from(headings).map(function(h){return h.id;});
+    window.addEventListener("scroll",function(){
+      var pos=window.scrollY+100;
+      var active="";
+      ids.forEach(function(id){
+        var el=document.getElementById(id);
+        if(el&&el.offsetTop<=pos)active=id;
+      });
+      links.forEach(function(a){
+        a.parentElement.classList.toggle("active",a.getAttribute("href")==="#"+active);
+      });
+    },{passive:true});
+  }
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",buildToc);}
+  else{buildToc();}
+})();
+</script>
 </body>
 </html>
