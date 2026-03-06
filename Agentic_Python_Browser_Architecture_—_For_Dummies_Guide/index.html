@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Agentic Python Browser Architecture &#8212; For Dummies Guide</title>
+<style>
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--green:#3fb950;--red:#f85149;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
+header{padding:2.5rem 2rem 2rem;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+header .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem;}
+.badge{border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:600;background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);}
+article{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem;}
+article h2,article h3{color:var(--acc);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.4rem;margin-top:2.2rem;}
+article h3{margin-top:1.8rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.92em;}
+article pre{background:#161b22;border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;}
+article blockquote{border-left:3px solid var(--acc);margin:1rem 0;padding:.5rem 1rem;color:var(--muted);font-style:italic;}
+article table{border-collapse:collapse;width:100%;margin:1rem 0;}
+article th,article td{border:1px solid var(--bdr);padding:8px 12px;text-align:left;}
+article th{background:rgba(255,152,0,.15);color:var(--acc);}
+article img{max-width:100%;border-radius:6px;}
+nav.breadcrumb{padding:1rem 2rem;font-size:.85rem;}
+nav.breadcrumb a{color:var(--link);text-decoration:none;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">&larr; All Reports</a></nav>
+<header>
+  <div class="eyebrow">&#128218; For Dummies Guide &nbsp;&middot;&nbsp; ResearchHive</div>
+  <h1>Agentic Python Browser Architecture &#8212; For Dummies Guide</h1>
+  <div class="badges">
+    <span class="badge">Agentic</span>
+    <span class="badge">Python</span>
+    <span class="badge">Browser</span>
+    <span class="badge">Architecture</span>
+  </div>
+</header>
+<article>
+<h3 id="what-is-it">&#127919; What Is It?</h3>
+<p>An agentic browser is a browser that can decide what to do next, not just follow one hard-coded script.<br />
+You give it a goal like &#8220;find the latest NASA headline,&#8221; and it loops: look at page, think, click/type, repeat.<br />
+In this guide, you will build one in Python that actually runs in a real Chromium browser window.</p>
+<h3 id="why-does-it-matter">&#129300; Why Does It Matter?</h3>
+<p>Most automation breaks when one button moves. Agentic browsing is more flexible because the model can adapt step-by-step.</p>
+<p>This matters personally if you do repetitive web tasks: form filling, research collection, checking dashboards, or pulling structured info from websites. Once you build this, you can reuse the same &#8220;agent brain&#8221; for many tasks instead of writing a new script every time.</p>
+<h3 id="what-youll-need">&#128722; What You'll Need</h3>
+<ol>
+<li><p><strong>Python 3 (Windows installer)</strong><br />
+Cost: <strong>$0</strong><br />
+Get it: <strong><a href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></strong><br />
+What it&#8217;s for: runs your code and package tools.</p>
+</li>
+<li><p><strong>Code editor (Visual Studio Code, optional but helpful)</strong><br />
+Cost: <strong>$0</strong><br />
+Get it: <strong><a href="https://code.visualstudio.com/Download">https://code.visualstudio.com/Download</a></strong><br />
+What it&#8217;s for: editing Python files cleanly.</p>
+</li>
+<li><p><strong>OpenAI API account + API key</strong><br />
+Cost: <strong>~$5&#8211;$20 starter usage (pay-as-you-go)</strong><br />
+Get key page: <strong><a href="https://platform.openai.com/api-keys">https://platform.openai.com/api-keys</a></strong><br />
+Pricing page: <strong><a href="https://openai.com/api/pricing/">https://openai.com/api/pricing/</a></strong><br />
+What it&#8217;s for: gives the &#8220;decision-making brain&#8221; for the agent.</p>
+</li>
+<li><p><strong>Python packages: <code>openai</code>, <code>playwright</code>, <code>python-dotenv</code></strong><br />
+Cost: <strong>$0 for packages</strong><br />
+Get them:</p>
+</li>
+</ol>
+<ul>
+<li><a href="https://pypi.org/project/openai/">https://pypi.org/project/openai/</a></li>
+<li><a href="https://pypi.org/project/playwright/">https://pypi.org/project/playwright/</a></li>
+<li><a href="https://pypi.org/project/python-dotenv/">https://pypi.org/project/python-dotenv/</a><br />
+What they&#8217;re for: model calls, browser control, and secure key loading.</li>
+</ul>
+<ol start="5">
+<li><strong>Playwright browser binaries (Chromium)</strong><br />
+Cost: <strong>$0</strong><br />
+Install docs: <strong><a href="https://playwright.dev/python/docs/library">https://playwright.dev/python/docs/library</a></strong><br />
+What it&#8217;s for: local browser engine your agent controls.</li>
+</ol>
+<p><strong>Total Estimated Budget:</strong> <strong>$5&#8211;$20</strong> to start (software is free; API usage is the main cost)</p>
+<hr />
+<h3 id="step-by-step-procedure">&#128203; Step-by-Step Procedure</h3>
+<h4 id="phase-1-setup-15-25-minutes">Phase 1: Setup (~15-25 minutes)</h4>
+<ol>
+<li><p><strong>Install Python</strong> (~5 minutes)<br />
+Open: <code>https://www.python.org/downloads/windows/</code><br />
+Install latest stable Python 3.x and check the installer box: <strong>&#8220;Add python.exe to PATH&#8221;</strong>.<br />
+&#9888;&#65039; Don&#8217;t: skip PATH checkbox, or <code>python</code> won&#8217;t run in terminal.</p>
+</li>
+<li><p><strong>Create a project folder</strong> (~1 minute)<br />
+Open PowerShell and run:</p>
+</li>
+</ol>
+<pre><code class="language-powershell">mkdir C:\agentic-browser
+cd C:\agentic-browser
+</code></pre>
+<ol start="3">
+<li><strong>Create and activate a virtual environment</strong> (~2 minutes)<br />
+Run:</li>
+</ol>
+<pre><code class="language-powershell">python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+</code></pre>
+<p>If PowerShell blocks activation, run once:</p>
+<pre><code class="language-powershell">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+</code></pre>
+<p>Then activate again.<br />
+&#128161; Tip: You should see <code>(.venv)</code> at the start of your prompt.</p>
+<ol start="4">
+<li><strong>Install required Python libraries</strong> (~2 minutes)<br />
+Run:</li>
+</ol>
+<pre><code class="language-powershell">python -m pip install --upgrade pip
+pip install openai playwright python-dotenv
+</code></pre>
+<ol start="5">
+<li><strong>Install Chromium for Playwright</strong> (~3-8 minutes)<br />
+Run:</li>
+</ol>
+<pre><code class="language-powershell">python -m playwright install chromium
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: skip this, or Playwright will fail on first run.</p>
+<ol start="6">
+<li><strong>Create your API key environment file</strong> (~2 minutes)<br />
+Create <code>C:\agentic-browser\.env</code> with exactly:</li>
+</ol>
+<pre><code class="language-env">OPENAI_API_KEY=your_real_api_key_here
+MODEL=gpt-5-mini
+</code></pre>
+<p>Get your key from: <code>https://platform.openai.com/api-keys</code><br />
+&#9888;&#65039; Don&#8217;t: put quotes around the key unless it contains spaces (it shouldn&#8217;t).</p>
+<hr />
+<h4 id="phase-2-build-the-agent-20-30-minutes">Phase 2: Build the Agent (~20-30 minutes)</h4>
+<ol start="7">
+<li><p><strong>Create your Python file</strong> (~1 minute)<br />
+Create: <code>C:\agentic-browser\agentic_browser.py</code></p>
+</li>
+<li><p><strong>Paste this complete code</strong> (~10 minutes)</p>
+</li>
+</ol>
+<pre><code class="language-python">import json
+import os
+import re
+import sys
+import time
+from typing import Any, Dict, List, Tuple
+
+from dotenv import load_dotenv
+from openai import OpenAI
+from playwright.sync_api import sync_playwright
+
+
+SYSTEM_PROMPT = &quot;&quot;&quot;
+You are a browser agent.
+Return ONLY valid JSON with this shape:
+{
+  &quot;action&quot;: &quot;goto|click|type|wait|done&quot;,
+  &quot;element_id&quot;: 0,
+  &quot;text&quot;: &quot;&quot;,
+  &quot;url&quot;: &quot;&quot;,
+  &quot;seconds&quot;: 1,
+  &quot;answer&quot;: &quot;&quot;,
+  &quot;reason&quot;: &quot;&quot;
+}
+
+Rules:
+- Use only listed element_id values.
+- Prefer short, safe actions.
+- If goal is complete, return action=&quot;done&quot; with a clear answer.
+- If page still loading, use wait.
+&quot;&quot;&quot;
+
+MAX_STEPS = 15
+
+
+def extract_json(text: str) -&gt; Dict[str, Any]:
+    text = text.strip()
+    try:
+        return json.loads(text)
+    except Exception:
+        match = re.search(r&quot;\{.*\}&quot;, text, re.DOTALL)
+        if not match:
+            raise ValueError(&quot;No JSON found in model output.&quot;)
+        return json.loads(match.group(0))
+
+
+def get_interactables(page) -&gt; List[Dict[str, Any]]:
+    js = r&quot;&quot;&quot;
+    () =&gt; {
+      function cssPath(el) {
+        if (!el || !el.tagName) return &quot;&quot;;
+        if (el.id) return &quot;#&quot; + CSS.escape(el.id);
+        const parts = [];
+        let cur = el;
+        let depth = 0;
+        while (cur &amp;&amp; cur.nodeType === 1 &amp;&amp; depth &lt; 6) {
+          let part = cur.tagName.toLowerCase();
+          const parent = cur.parentElement;
+          if (parent) {
+            const siblings = Array.from(parent.children).filter(
+              x =&gt; x.tagName === cur.tagName
+            );
+            if (siblings.length &gt; 1) {
+              part += `:nth-of-type(${siblings.indexOf(cur) + 1})`;
+            }
+          }
+          parts.unshift(part);
+          cur = parent;
+          depth++;
+        }
+        return parts.join(&quot; &gt; &quot;);
+      }
+
+      const candidates = Array.from(
+        document.querySelectorAll(&quot;a,button,input,textarea,select,[role='button']&quot;)
+      );
+
+      const visible = candidates.filter(el =&gt; {
+        const r = el.getBoundingClientRect();
+        const style = window.getComputedStyle(el);
+        return r.width &gt; 0 &amp;&amp; r.height &gt; 0 &amp;&amp; style.visibility !== &quot;hidden&quot; &amp;&amp; style.display !== &quot;none&quot;;
+      });
+
+      return visible.slice(0, 40).map((el, idx) =&gt; ({
+        id: idx,
+        tag: (el.tagName || &quot;&quot;).toLowerCase(),
+        text: (el.innerText || el.textContent || &quot;&quot;).trim().slice(0, 80),
+        aria_label: (el.getAttribute(&quot;aria-label&quot;) || &quot;&quot;).slice(0, 80),
+        placeholder: (el.getAttribute(&quot;placeholder&quot;) || &quot;&quot;).slice(0, 80),
+        href: (el.getAttribute(&quot;href&quot;) || &quot;&quot;).slice(0, 120),
+        selector: cssPath(el),
+        can_type: [&quot;input&quot;, &quot;textarea&quot;].includes((el.tagName || &quot;&quot;).toLowerCase())
+      }));
+    }
+    &quot;&quot;&quot;
+    return page.evaluate(js)
+
+
+def run_action(page, action: Dict[str, Any], elements: List[Dict[str, Any]]) -&gt; Tuple[bool, str]:
+    name = action.get(&quot;action&quot;, &quot;&quot;).strip().lower()
+
+    if name == &quot;goto&quot;:
+        url = action.get(&quot;url&quot;, &quot;&quot;).strip()
+        if not (url.startswith(&quot;http://&quot;) or url.startswith(&quot;https://&quot;)):
+            return False, f&quot;Invalid URL: {url}&quot;
+        page.goto(url, wait_until=&quot;domcontentloaded&quot;, timeout=20000)
+        return True, f&quot;Navigated to {url}&quot;
+
+    if name == &quot;click&quot;:
+        idx = int(action.get(&quot;element_id&quot;, -1))
+        if idx &lt; 0 or idx &gt;= len(elements):
+            return False, f&quot;Bad element_id: {idx}&quot;
+        selector = elements[idx][&quot;selector&quot;]
+        page.locator(selector).first.click(timeout=10000)
+        page.wait_for_load_state(&quot;domcontentloaded&quot;, timeout=10000)
+        return True, f&quot;Clicked element {idx}: {selector}&quot;
+
+    if name == &quot;type&quot;:
+        idx = int(action.get(&quot;element_id&quot;, -1))
+        text = action.get(&quot;text&quot;, &quot;&quot;)
+        if idx &lt; 0 or idx &gt;= len(elements):
+            return False, f&quot;Bad element_id: {idx}&quot;
+        selector = elements[idx][&quot;selector&quot;]
+        loc = page.locator(selector).first
+        loc.click(timeout=10000)
+        loc.fill(str(text), timeout=10000)
+        if action.get(&quot;press_enter&quot;, True):
+            loc.press(&quot;Enter&quot;)
+            page.wait_for_load_state(&quot;domcontentloaded&quot;, timeout=10000)
+        return True, f&quot;Typed into element {idx}: {selector}&quot;
+
+    if name == &quot;wait&quot;:
+        sec = float(action.get(&quot;seconds&quot;, 1))
+        sec = max(0.5, min(sec, 10))
+        time.sleep(sec)
+        return True, f&quot;Waited {sec:.1f}s&quot;
+
+    if name == &quot;done&quot;:
+        return True, f&quot;DONE: {action.get('answer', '').strip()}&quot;
+
+    return False, f&quot;Unknown action: {name}&quot;
+
+
+def main() -&gt; None:
+    load_dotenv()
+    api_key = os.getenv(&quot;OPENAI_API_KEY&quot;)
+    model = os.getenv(&quot;MODEL&quot;, &quot;gpt-5-mini&quot;)
+
+    if not api_key:
+        raise RuntimeError(&quot;OPENAI_API_KEY not found in .env&quot;)
+
+    if len(sys.argv) &lt; 2:
+        print('Usage: python .\\agentic_browser.py &quot;your goal here&quot;')
+        sys.exit(1)
+
+    goal = &quot; &quot;.join(sys.argv[1:])
+    client = OpenAI(api_key=api_key)
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False, slow_mo=250)
+        context = browser.new_context(viewport={&quot;width&quot;: 1280, &quot;height&quot;: 800})
+        page = context.new_page()
+        page.goto(&quot;https://example.com&quot;, wait_until=&quot;domcontentloaded&quot;)
+
+        history: List[Dict[str, Any]] = []
+
+        for step in range(1, MAX_STEPS + 1):
+            elements = get_interactables(page)
+            state = {
+                &quot;goal&quot;: goal,
+                &quot;step&quot;: step,
+                &quot;max_steps&quot;: MAX_STEPS,
+                &quot;url&quot;: page.url,
+                &quot;title&quot;: page.title(),
+                &quot;elements&quot;: [
+                    {
+                        &quot;id&quot;: e[&quot;id&quot;],
+                        &quot;tag&quot;: e[&quot;tag&quot;],
+                        &quot;text&quot;: e[&quot;text&quot;],
+                        &quot;aria_label&quot;: e[&quot;aria_label&quot;],
+                        &quot;placeholder&quot;: e[&quot;placeholder&quot;],
+                        &quot;href&quot;: e[&quot;href&quot;],
+                        &quot;can_type&quot;: e[&quot;can_type&quot;],
+                    }
+                    for e in elements
+                ],
+                &quot;recent_history&quot;: history[-5:],
+            }
+
+            response = client.responses.create(
+                model=model,
+                input=[
+                    {&quot;role&quot;: &quot;system&quot;, &quot;content&quot;: SYSTEM_PROMPT},
+                    {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: json.dumps(state, ensure_ascii=False)},
+                ],
+            )
+
+            raw = (response.output_text or &quot;&quot;).strip()
+            action = extract_json(raw)
+
+            ok, result = run_action(page, action, elements)
+            history.append({&quot;step&quot;: step, &quot;action&quot;: action, &quot;result&quot;: result})
+
+            print(f&quot;[Step {step}] {action.get('action')} -&gt; {result}&quot;)
+
+            if action.get(&quot;action&quot;, &quot;&quot;).lower() == &quot;done&quot;:
+                print(&quot;\nFinal answer:&quot;)
+                print(action.get(&quot;answer&quot;, &quot;&quot;))
+                break
+
+            if not ok:
+                print(&quot;Stopping due to action error.&quot;)
+                break
+        else:
+            print(&quot;\nReached step limit. Increase MAX_STEPS if needed.&quot;)
+
+        context.close()
+        browser.close()
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<ol start="9">
+<li><strong>Run your first agent task</strong> (~2-5 minutes)<br />
+In PowerShell:</li>
+</ol>
+<pre><code class="language-powershell">cd C:\agentic-browser
+.\.venv\Scripts\Activate.ps1
+python .\agentic_browser.py &quot;Go to https://news.ycombinator.com, open the top story, then tell me the story title and URL.&quot;
+</code></pre>
+<p>&#128161; Tip: Keep the browser window visible. The agent is acting live.</p>
+<hr />
+<h4 id="phase-3-improve-reliability-10-20-minutes">Phase 3: Improve Reliability (~10-20 minutes)</h4>
+<ol start="10">
+<li><strong>Use Playwright code generator to discover robust selectors</strong> (~5 minutes)<br />
+Run:</li>
+</ol>
+<pre><code class="language-powershell">playwright codegen https://example.com
+</code></pre>
+<p>This helps you inspect stable interaction targets.<br />
+&#9888;&#65039; Don&#8217;t: rely only on fragile CSS class names from dynamic sites.</p>
+<ol start="11">
+<li><strong>Lower cost during testing</strong> (~2 minutes)<br />
+In <code>.env</code>, keep:</li>
+</ol>
+<pre><code class="language-env">MODEL=gpt-5-mini
+</code></pre>
+<p>Then rerun your script. Smaller models are usually cheaper for iteration.</p>
+<ol start="12">
+<li><strong>Add a safety stop for dangerous actions</strong> (~3 minutes)<br />
+Keep <code>MAX_STEPS = 15</code> (or lower) in code.<br />
+&#9888;&#65039; Don&#8217;t: run unlimited loops on unknown sites.</li>
+</ol>
+<hr />
+<h3 id="safety-note">&#9888;&#65039; Safety Note</h3>
+<ul>
+<li>Do: test first on harmless sites like <code>https://example.com</code> or docs pages.</li>
+<li>Do: keep <code>headless=False</code> while learning so you can watch actions.</li>
+<li>Don&#8217;t: store API keys in code files or screenshots. Use <code>.env</code>.</li>
+<li>Don&#8217;t: automate login to banking/medical/government portals until you add strict action allowlists and domain restrictions.</li>
+<li>Don&#8217;t: bypass captchas or terms of service of websites.</li>
+</ul>
+<h3 id="real-world-analogy">&#127757; Real-World Analogy</h3>
+<p>Think of <strong>the agent loop</strong> like a self-driving delivery bike: it checks the road (page state), decides the next turn (model output), then moves one block (action).</p>
+<p>Think of <strong>Playwright</strong> like robotic hands and eyes: it can see buttons and type in boxes, but it needs instructions.</p>
+<p>Think of <strong>the model</strong> like a navigator: it doesn&#8217;t touch the steering wheel directly; it tells the driver which move to make.</p>
+<p>Think of <strong>the action schema (JSON)</strong> like a restaurant order ticket: short, structured, and unambiguous so the kitchen (your Python code) can execute correctly.</p>
+<p>Think of <strong>step limits and guardrails</strong> like a leash on an excited dog: it still explores, but cannot run forever or into unsafe places.</p>
+<h3 id="common-mistakes-how-to-avoid-them">&#10060; Common Mistakes &amp; How to Avoid Them</h3>
+<ol>
+<li><p><strong>Agent says &#8220;browser executable not found.&#8221;</strong><br />
+What goes wrong: Playwright can&#8217;t launch Chromium.<br />
+Why: you installed package but not browser binaries.<br />
+Fix: run <code>python -m playwright install chromium</code>.</p>
+</li>
+<li><p><strong><code>OPENAI_API_KEY</code> not found error.</strong><br />
+What goes wrong: model call fails immediately.<br />
+Why: <code>.env</code> missing or wrong directory.<br />
+Fix: keep <code>.env</code> in <code>C:\agentic-browser\</code> and activate venv before running.</p>
+</li>
+<li><p><strong>Agent clicks wrong thing repeatedly.</strong><br />
+What goes wrong: loop burns steps with no progress.<br />
+Why: page elements are ambiguous or hidden.<br />
+Fix: reduce candidate list, add clearer prompt rules, and include visible text + labels.</p>
+</li>
+<li><p><strong>Script works once, then fails on another site.</strong><br />
+What goes wrong: fragile selectors break.<br />
+Why: sites have dynamic structure/classes.<br />
+Fix: prioritize role/text logic and use <code>playwright codegen</code> for stable patterns.</p>
+</li>
+<li><p><strong>Costs grow unexpectedly.</strong><br />
+What goes wrong: many model calls per run.<br />
+Why: high step count and verbose state payload.<br />
+Fix: lower <code>MAX_STEPS</code>, shorten page snapshot text, use lower-cost model for testing.</p>
+</li>
+<li><p><strong>PowerShell activation blocked.</strong><br />
+What goes wrong: <code>.venv</code> activation fails.<br />
+Why: execution policy restriction.<br />
+Fix: run <code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code>.</p>
+</li>
+</ol>
+<h3 id="key-takeaways">&#9989; Key Takeaways</h3>
+<ul>
+<li>Agentic browser = observe, decide, act, repeat.</li>
+<li>Playwright controls the browser; model controls decisions.</li>
+<li>Keep API keys in <code>.env</code>, never in source code.</li>
+<li>Start with <code>headless=False</code> for visible debugging.</li>
+<li>Limit steps to control risk and cost.</li>
+<li>Use structured JSON actions for reliability.</li>
+<li>Test on simple websites before real tasks.</li>
+</ul>
+<h3 id="quick-comparison-table">&#128202; Quick Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Playwright + custom loop (this guide)</td>
+<td>Full control, learn core mechanics, flexible</td>
+<td>More code to maintain</td>
+<td>Learning and custom workflows</td>
+<td>Low to moderate API cost</td>
+</tr>
+<tr>
+<td>Selenium + custom loop</td>
+<td>Huge ecosystem, broad compatibility</td>
+<td>More boilerplate for modern web apps</td>
+<td>Legacy testing stacks</td>
+<td>Low to moderate API cost</td>
+</tr>
+<tr>
+<td><code>browser-use</code> framework</td>
+<td>Fast start, built-in agent patterns</td>
+<td>Less low-level control</td>
+<td>Rapid prototyping</td>
+<td>Varies by model/provider</td>
+</tr>
+</tbody>
+</table>
+<h3 id="going-deeper">&#128300; Going Deeper</h3>
+<p>Playwright docs list Python <strong>3.8+</strong> support and install flow (<code>pip install playwright</code> + <code>playwright install</code>). That split matters: one command installs Python code, the other installs browser engines.</p>
+<p>Your agent run cost is mostly proportional to:</p>
+<ul>
+<li><code>number_of_steps</code></li>
+<li><code>state_size_per_step</code> (how much page data you send)</li>
+<li><code>model_price_per_token</code></li>
+</ul>
+<p>As of <strong>March 6, 2026</strong>, OpenAI pricing pages show token-based billing and multiple tiers. A practical beginner strategy is:</p>
+<ul>
+<li>Start with a lower-cost model for debugging.</li>
+<li>Trim state to top 20-40 visible elements.</li>
+<li>Keep steps at 10-15 until behavior is stable.</li>
+</ul>
+<p>Reliability usually improves when you constrain outputs. Requiring strict JSON action objects reduces &#8220;chatty&#8221; responses and makes error handling deterministic. In real projects, you can go further by using formal tool-calling interfaces and domain allowlists (for example, only allow <code>https://docs.python.org</code> during a documentation task).</p>
+<h3 id="glossary">&#128214; Glossary</h3>
+<ul>
+<li><strong>Agentic</strong>: able to choose next actions toward a goal.</li>
+<li><strong>Playwright</strong>: Python library that automates browsers.</li>
+<li><strong>Model</strong>: the language system that decides what to do next.</li>
+<li><strong>Application Programming Interface (API)</strong>: a way software talks to another service.</li>
+<li><strong>API key</strong>: secret token proving your app can use an API.</li>
+<li><strong>Virtual environment (venv)</strong>: isolated Python package workspace per project.</li>
+<li><strong>Chromium</strong>: open-source browser engine used by Playwright here.</li>
+<li><strong>Selector</strong>: rule for finding a page element (button, input, link).</li>
+<li><strong>JSON (JavaScript Object Notation)</strong>: structured text format for data.</li>
+<li><strong>Guardrail</strong>: rule that limits unsafe or runaway behavior.</li>
+<li><strong>Headless mode</strong>: browser runs without visible window.</li>
+<li><strong>Token</strong>: chunk of text used for model input/output billing.</li>
+</ul>
+<h3 id="sources">&#128279; Sources</h3>
+<ul>
+<li><a href="https://www.python.org/downloads/windows/">Python Releases for Windows</a></li>
+<li><a href="https://docs.python.org/3/library/venv.html">venv &#8212; Creation of virtual environments</a></li>
+<li><a href="https://playwright.dev/python/docs/library">Playwright Python: Getting started - Library</a></li>
+<li><a href="https://playwright.dev/python/docs/intro">Playwright Python: Installation</a></li>
+<li><a href="https://playwright.dev/python/docs/codegen">Playwright Python: Test generator (codegen)</a></li>
+<li><a href="https://playwright.dev/python/docs/locators">Playwright Python: Locators</a></li>
+<li><a href="https://platform.openai.com/docs/quickstart">OpenAI API Developer Quickstart</a></li>
+<li><a href="https://github.com/openai/openai-python">openai/openai-python (official SDK)</a></li>
+<li><a href="https://pypi.org/project/python-dotenv/">python-dotenv on PyPI</a></li>
+<li><a href="https://openai.com/api/pricing/">OpenAI API Pricing</a></li>
+<li><a href="https://www.selenium.dev/documentation/webdriver/getting_started/install_library/">Selenium install library docs</a></li>
+<li><a href="https://github.com/browser-use/browser-use">browser-use GitHub repository</a></li>
+</ul>
+
+</article>
+<footer>
+  <p>ResearchHive &mdash; Agentic Research Studio &nbsp;&middot;&nbsp; 3/5/2026 8:06 PM</p>
+  <p><a href="../">&#8592; Back to all reports</a></p>
+</footer>
+</body>
+</html>
