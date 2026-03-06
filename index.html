@@ -1,253 +1,50 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ResearchHive Reports</title>
+<title>Research Reports — ShellSage AI</title>
 <style>
-:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;}
-*,*::before,*::after{box-sizing:border-box;}
-body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;}
-header{padding:3rem 2rem 2.5rem;text-align:center;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
-header h1{margin:0 0 .5rem;font-size:clamp(1.8rem,5vw,3rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-header p{color:var(--muted);font-size:1.05rem;margin:0;}
-main{max-width:900px;margin:0 auto;padding:3rem 1.5rem;}
-h2{color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;margin:0 0 1rem;}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem;}
-.card{display:block;text-decoration:none;color:inherit;background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:1.4rem 1.6rem;transition:border-color .2s,transform .15s;}
-.card:hover{border-color:var(--acc);transform:translateY(-3px);}
-.card .icon{font-size:2.2rem;margin-bottom:.7rem;}
-.card h3{margin:0 0 .4rem;font-size:1.1rem;color:var(--acc);}
-.card p{margin:0;font-size:.9rem;color:var(--muted);}
-.meta{margin-top:.9rem;padding-top:.9rem;border-top:1px solid var(--bdr);font-size:.78rem;color:var(--muted);display:flex;gap:.5rem;flex-wrap:wrap;}
-.tag{background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);border-radius:20px;padding:2px 9px;font-size:.72rem;font-weight:600;}
-footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
-footer a{color:var(--muted);}
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#a855f7;--acc2:#c084fc;--text:#e6edf3;--muted:#8b949e;}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+header{padding:3.2rem 1.5rem 2.5rem;text-align:center;border-bottom:1px solid var(--bdr);background:radial-gradient(circle at top,rgba(168,85,247,.22),transparent 36%),linear-gradient(135deg,#171126,#0e1117)}
+h1{margin:0 0 .7rem;font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-.04em}header p{margin:0;color:var(--muted);font-size:1.02rem}
+main{max-width:1100px;margin:0 auto;padding:2.5rem 1.4rem 3rem}.eyebrow{color:var(--acc2);font-size:.82rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}.card{display:block;text-decoration:none;color:inherit;background:var(--surf);border:1px solid var(--bdr);border-radius:18px;padding:1.3rem;transition:transform .16s,border-color .16s}.card:hover{transform:translateY(-3px);border-color:rgba(192,132,252,.55)}
+.card h2{margin:0 0 .55rem;font-size:1.08rem;line-height:1.3}.card p{margin:0;color:var(--muted);font-size:.92rem}.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1rem}.tag{padding:.24rem .55rem;border-radius:999px;background:rgba(168,85,247,.12);border:1px solid rgba(192,132,252,.24);color:#ddd6fe;font-size:.72rem;font-weight:700}
+footer{padding:0 1.4rem 2.4rem;text-align:center;color:var(--muted);font-size:.85rem}
 </style>
 </head>
 <body>
 <header>
-  <h1> Research Reports</h1>
-  <p>Auto-published research by ResearchHive &mdash; shellsage-ai</p>
+	<h1>Research Reports</h1>
+	<p>Only AI- and developer-relevant reports remain public.</p>
 </header>
 <main>
-  <h2>Published Guides &amp; Research</h2>
-  <div class="grid">
-    <a href="AI_Agent_Income_Blueprint/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>AI Agent Income Blueprint</h3>
-      <p>**Market window is open now**: In the 2025 AI Index (using McKinsey survey data), organizations reporting AI use in at least one business function rose from ...</p>
-      <div class="meta">
-        <span class="tag">Agent</span>
-        <span class="tag">Income</span>
-        <span class="tag">Blueprint</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Assessing_Optimal_Test_Difficulty/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>Assessing Optimal Test Difficulty</h3>
-      <p>**Difficulty is population-dependent**: item `p` value is the proportion correct (`0` to `1`), and higher `p` indicates an easier item [2](https://www.ets.or...</p>
-      <div class="meta">
-        <span class="tag">Assessing</span>
-        <span class="tag">Optimal</span>
-        <span class="tag">Test</span>
-        <span class="tag">Difficulty</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Evaluating_XRP_Investment_Prospects/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>Evaluating XRP Investment Prospects</h3>
-      <p>**Core utility is real, but adoption-to-price transmission is not guaranteed.** XRP was designed for cross-border value transfer, and XRPL documentation repo...</p>
-      <div class="meta">
-        <span class="tag">Evaluating</span>
-        <span class="tag">Investment</span>
-        <span class="tag">Prospects</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Crypto_Five-Year_Investment_Forecast/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>Crypto Five-Year Investment Forecast</h3>
-      <p>**Market structure favors a barbell approach**: crypto remains highly concentrated, with Bitcoin at roughly **57.4% dominance** and Ethereum at **10.2%** of ...</p>
-      <div class="meta">
-        <span class="tag">Crypto</span>
-        <span class="tag">Five-Year</span>
-        <span class="tag">Investment</span>
-        <span class="tag">Forecast</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Anonymity_Amplifying_Bystander_Inhibition_Dynamics/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>Anonymity Amplifying Bystander Inhibition Dynamics</h3>
-      <p>**Evidence sufficiency is the primary empirical constraint**: the supplied evidence packet contains crisis-communication and policy excerpts rather than a fu...</p>
-      <div class="meta">
-        <span class="tag">Anonymity</span>
-        <span class="tag">Amplifying</span>
-        <span class="tag">Bystander</span>
-        <span class="tag">Inhibition</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="AI_Trajectory_Within_Technological_Revolutions/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>AI Trajectory Within Technological Revolutions</h3>
-      <p>**Historical diffusion regularities remain the baseline model.** Cross-technology evidence still supports staged diffusion (invention, complementary infrastr...</p>
-      <div class="meta">
-        <span class="tag">Trajectory</span>
-        <span class="tag">Within</span>
-        <span class="tag">Technological</span>
-        <span class="tag">Revolutions</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Historical_Patterns_Forecasting_AI_Evolution/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>Historical Patterns Forecasting AI Evolution</h3>
-      <p>**Historical technological change is usually nonlinear, mixing long plateaus, incremental preparation, and short bursts of acceleration rather than steady li...</p>
-      <div class="meta">
-        <span class="tag">Historical</span>
-        <span class="tag">Patterns</span>
-        <span class="tag">Forecasting</span>
-        <span class="tag">Evolution</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Habitual_Patterns_Versus_Adaptive_AI_Detection/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>Habitual Patterns Versus Adaptive AI Detection</h3>
-      <p>**Human-only judgment is often weak against modern synthetic content.** In a 2024 Scientific Reports study, participants averaged **57%** accuracy on human-v...</p>
-      <div class="meta">
-        <span class="tag">Habitual</span>
-        <span class="tag">Patterns</span>
-        <span class="tag">Versus</span>
-        <span class="tag">Adaptive</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Human_Pattern_Stability_Versus_Hybrid_AI/" class="card">
-      <div class="icon">&#128202;</div>
-      <h3>Human Pattern Stability Versus Hybrid AI</h3>
-      <p>**Human-only judgment is near chance** for text attribution: Penn State reports people identified AI text at about **53%** accuracy (vs. **50%** random guess...</p>
-      <div class="meta">
-        <span class="tag">Human</span>
-        <span class="tag">Pattern</span>
-        <span class="tag">Stability</span>
-        <span class="tag">Versus</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Bridging_Perception_and_the_Perceived/" class="card">
-      <div class="icon">&#129504;</div>
-      <h3>Bridging Perception and the Perceived</h3>
-      <p>Can we ever fully close the gap between our perceptions and reality? Examines underdetermination, Bayesian inference, Kant&#8217;s transcendental idealism, and inattentional blindness experiments.</p>
-      <div class="meta">
-        <span class="tag">Philosophy</span>
-        <span class="tag">Perception</span>
-        <span class="tag">Cognition</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Popularity_Bias_in_Art_Appraisal/" class="card">
-      <div class="icon">&#127912;</div>
-      <h3>Popularity Bias in Art Appraisal</h3>
-      <p>How fame inflates and stigma deflates perceived artistic quality &#8212; evidence from controlled experiments, market data, and famous cases like Salvator Mundi and van Meegeren.</p>
-      <div class="meta">
-        <span class="tag">Art</span>
-        <span class="tag">Psychology</span>
-        <span class="tag">Bias</span>
-        <span class="tag">Research</span>
-      </div>
-    </a>
-    <a href="Two_Senses/" class="card">
-      <div class="icon"></div>
-      <h3>DIY Sensory Augmentation: Magnetic North and CO2 Detection</h3>
-      <p>Augment a human with magnetic-north vibration and CO2 air-quality haptic feedback. Complete step-by-step Arduino guide with code.</p>
-      <div class="meta">
-        <span class="tag">Hardware</span>
-        <span class="tag">Arduino</span>
-        <span class="tag">Biohacking</span>
-        <span class="tag">For Dummies</span>
-      </div>
-    </a>
-    <a href="research_agent_producing_evidence-based/" class="card">
-      <div class="icon"></div>
-      <h3>Evidence-Based Research Agent</h3>
-      <p>Agentic research pipeline with web search, citation verification and structured report generation.</p>
-      <div class="meta">
-        <span class="tag">Research</span>
-        <span class="tag">AI Agents</span>
-      </div>
-    </a>
-  
-    <a href="Stronger_Better_Hearing_Translation/" class="card">
-      <div class="icon">&#128218;</div>
-      <h3>Human Augmentation: Enhanced Strength, Hearing, and Real-Time Translation</h3>
-      <p>30% stronger via progressive overload + exosuit, 5x better hearing with NC earbuds + speech clarity apps, real-time language translation. Complete build guide.</p>
-      <div class="meta">
-        <span class="tag">Strength</span>
-        <span class="tag">Hearing</span>
-        <span class="tag">Translation</span>
-        <span class="tag">For Dummies</span>
-      </div>
-    </a>
-  
-    <a href="Create_a_guide_to_enhance_human_hearing._Give_them_translation_capabilities,_aug/" class="card">
-      <div class="icon">&#128218;</div>
-      <h3>Create a guide to enhance human hearing. Give them translation capabilities, augmented hearing at LONG distances with proper noise cancellation utilizing technology and machine learning meant for it. Make sure that this is a diy project, with a parts list and instructions. &#8212; For Dummies Guide</h3>
-      <p>I&#8217;m building this as a real DIY recipe with a verified parts/software stack first, then I&#8217;ll give you copy-paste commands and step-by-step setup in ...</p>
-      <div class="meta">
-        <span class="tag">enhance</span>
-        <span class="tag">human</span>
-        <span class="tag">hearing</span>
-        <span class="tag">Give</span>
-        <span class="tag">For Dummies</span>
-      </div>
-    </a>
-  
-    <a href="Portable_Multilingual_Translation_Device_Blueprint_—_For_Dummies_Guide/" class="card">
-      <div class="icon">&#128218;</div>
-      <h3>Portable Multilingual Translation Device Blueprint &#8212; For Dummies Guide</h3>
-      <p>### &#127919; What Is It?</p>
-      <div class="meta">
-        <span class="tag">Portable</span>
-        <span class="tag">Multilingual</span>
-        <span class="tag">Translation</span>
-        <span class="tag">Device</span>
-        <span class="tag">For Dummies</span>
-      </div>
-    </a>
-  
-    <a href="Noise-Cancelling_Bionic_Ear_ML_Manual_—_For_Dummies_Guide/" class="card">
-      <div class="icon">&#128218;</div>
-      <h3>Noise-Cancelling Bionic Ear ML Manual &#8212; For Dummies Guide</h3>
-      <p>### &#127919; What Is It?</p>
-      <div class="meta">
-        <span class="tag">Noise-Cancelling</span>
-        <span class="tag">Bionic</span>
-        <span class="tag">Manual</span>
-        <span class="tag">For Dummies</span>
-      </div>
-    </a>
-  
-    <a href="Agentic_Python_Browser_Architecture_—_For_Dummies_Guide/" class="card">
-      <div class="icon">&#128218;</div>
-      <h3>Agentic Python Browser Architecture &#8212; For Dummies Guide</h3>
-      <p>### &#127919; What Is It?</p>
-      <div class="meta">
-        <span class="tag">Agentic</span>
-        <span class="tag">Python</span>
-        <span class="tag">Browser</span>
-        <span class="tag">Architecture</span>
-        <span class="tag">For Dummies</span>
-      </div>
-    </a>
-  </div>
+	<div class="eyebrow">Public AI Report Set</div>
+	<div class="grid">
+		<a class="card" href="AI_Trajectory_Within_Technological_Revolutions/">
+			<h2>AI Trajectory Within Technological Revolutions</h2>
+			<p>Historical technology-wave framing for understanding AI adoption and acceleration.</p>
+			<div class="tags"><span class="tag">AI</span><span class="tag">Forecasting</span></div>
+		</a>
+		<a class="card" href="Habitual_Patterns_Versus_Adaptive_AI_Detection/">
+			<h2>Habitual Patterns vs. Adaptive AI Detection</h2>
+			<p>Detection performance under shifting synthetic content patterns and adaptive model behavior.</p>
+			<div class="tags"><span class="tag">AI Detection</span><span class="tag">Evaluation</span></div>
+		</a>
+		<a class="card" href="Historical_Patterns_Forecasting_AI_Evolution/">
+			<h2>Historical Patterns Forecasting AI Evolution</h2>
+			<p>Long-arc historical analogs applied to AI progress forecasting.</p>
+			<div class="tags"><span class="tag">AI</span><span class="tag">History</span></div>
+		</a>
+		<a class="card" href="Human_Pattern_Stability_Versus_Hybrid_AI/">
+			<h2>Human Pattern Stability vs. Hybrid AI</h2>
+			<p>How hybrid AI systems challenge human attribution and pattern-recognition assumptions.</p>
+			<div class="tags"><span class="tag">Hybrid AI</span><span class="tag">Cognition</span></div>
+		</a>
+	</div>
 </main>
-<footer>
-  <p>Generated by <a href="https://github.com/shellsage-ai/research-reports">ResearchHive</a></p>
-</footer>
+<footer>Archived non-public reports are preserved privately.</footer>
 </body>
 </html>
