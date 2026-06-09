@@ -1,0 +1,518 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Research Design Practical Local-first &#8220;asset &#8212; ResearchHive</title>
+<style>
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
+header{padding:2rem 2rem 1.5rem;text-align:center;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.badges{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap;margin-top:.6rem;}
+.badge{border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:600;background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);}
+nav.breadcrumb{padding:.8rem 2rem;font-size:.85rem;}
+nav.breadcrumb a{color:var(--link);text-decoration:none;}
+nav.breadcrumb a:hover{text-decoration:underline;}
+article{max-width:860px;margin:0 auto;padding:2rem 1.5rem;}
+article h1,article h2,article h3,article h4{color:var(--acc2);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.35rem;margin-top:2rem;}
+article h3{margin-top:1.5rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.9em;}
+article pre{background:var(--surf);border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;padding:0;}
+article blockquote{border-left:3px solid var(--acc);margin:1.2rem 0;padding:.6rem 1.2rem;background:rgba(255,152,0,.05);border-radius:0 8px 8px 0;}
+article blockquote p{margin:.3rem 0;}
+article table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem;display:block;overflow-x:auto;}
+article th,article td{border:1px solid var(--bdr);padding:.55rem .75rem;text-align:left;white-space:nowrap;}
+article th{background:var(--surf);color:var(--acc);font-weight:600;position:sticky;top:0;z-index:1;}
+article tr:nth-child(even){background:rgba(255,255,255,.03);}
+article ul,article ol{padding-left:1.4rem;}
+article li{margin:.3rem 0;}
+article strong{color:var(--acc2);}
+article hr{border:none;border-top:1px solid var(--bdr);margin:2rem 0;}
+article blockquote{border-left:3px solid var(--acc);margin:1.4rem 0;padding:.8rem 1.4rem;background:rgba(255,152,0,.07);border-radius:0 10px 10px 0;font-style:italic;color:var(--acc2);}
+article blockquote p{margin:.3rem 0;}
+.mermaid-wrap{background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.46));border:1px solid var(--bdr);border-radius:18px;padding:1.2rem 1rem .95rem;margin:1.6rem 0;text-align:center;overflow-x:auto;box-shadow:0 18px 36px rgba(0,0,0,.08);}
+.mermaid-wrap svg{max-width:100%;height:auto;display:block;margin:0 auto;}
+.meta-bar{display:flex;flex-wrap:wrap;gap:.5rem .8rem;padding:.7rem 1.5rem;background:rgba(255,152,0,.06);border-top:1px solid rgba(255,152,0,.18);border-bottom:1px solid rgba(255,152,0,.18);font-size:.8rem;color:var(--muted);align-items:center;justify-content:center;margin-bottom:1rem;}
+.meta-pill{background:rgba(255,152,0,.1);border:1px solid rgba(255,152,0,.25);border-radius:20px;padding:2px 10px;color:var(--acc2);font-weight:600;}
+.reading-nav{position:sticky;top:0;z-index:100;background:rgba(14,17,23,.94);backdrop-filter:blur(8px);padding:.45rem 1.5rem;display:flex;align-items:center;gap:1rem;border-bottom:1px solid var(--bdr);font-size:.82rem;}
+.reading-nav a{color:var(--link);text-decoration:none;}
+.reading-nav a:hover{text-decoration:underline;}
+.reading-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,#FF9800,#FFE082);z-index:200;transition:width .15s;}
+.anchor{opacity:0;color:var(--acc);margin-left:.5rem;text-decoration:none;font-weight:300;font-size:.85em;}
+h2:hover .anchor,h3:hover .anchor{opacity:1;}
+sup.cit{color:var(--acc);font-size:.72em;font-weight:700;cursor:default;font-style:normal;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+footer a{color:var(--muted);}
+@media(max-width:600px){article{padding:1.2rem .9rem;}header{padding:1.5rem 1rem 1rem;}header h1{font-size:1.3rem;}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+(function(){
+  // Convert Markdig pre>code.language-mermaid to pre.mermaid so mermaid.js finds them.
+  // Markdig renders ```mermaid blocks as pre>code.language-mermaid, but mermaid.js
+  // startOnLoad only queries .mermaid elements. We swap them before init so diagrams render.
+  document.querySelectorAll('pre > code.language-mermaid').forEach(function(code){
+    var wrap = document.createElement('div');
+    wrap.className = 'mermaid-wrap';
+    var pre = document.createElement('pre');
+    pre.className = 'mermaid';
+    pre.textContent = code.textContent; // textContent decodes HTML entities e.g. &amp; to &
+    wrap.appendChild(pre);
+    code.parentElement.replaceWith(wrap);
+  });
+
+  // Promote Generated/Sources metadata italic paragraphs into a styled meta-bar.
+  var metaPills = [];
+  document.querySelectorAll('article p').forEach(function(p){
+    var em = p.querySelector('em');
+    if(!em) return;
+    var t = em.textContent || '';
+    if(t.match(/^Generated:/i) || t.match(/^Sources:/i)){
+      t.split('|').forEach(function(seg){
+        seg = seg.trim();
+        if(seg) metaPills.push('<span class="meta-pill">' + seg + '</span>');
+      });
+      p.remove();
+    }
+  });
+  if(metaPills.length){
+    var bar = document.createElement('div');
+    bar.className = 'meta-bar';
+    bar.innerHTML = metaPills.join('');
+    var article = document.querySelector('article');
+    if(article) article.prepend(bar);
+  }
+
+  // Section anchor links
+  var slug = function(s){ return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); };
+  document.querySelectorAll('article h2,article h3').forEach(function(h){
+    if(!h.id) h.id = slug(h.textContent);
+    var a = document.createElement('a');
+    a.className = 'anchor';
+    a.href = '#' + h.id;
+    a.textContent = '§';
+    h.appendChild(a);
+  });
+
+  // Citation pill badges
+  (function fixCitations(node){
+    if(node.nodeType === 3){ // text node
+      var val = node.nodeValue;
+      if(val && /\[\d+\]/.test(val)){
+        var span = document.createElement('span');
+        span.innerHTML = val.replace(/\[(\d+)\]/g,'<sup class="cit">[$1]</sup>');
+        node.parentNode.replaceChild(span, node);
+      }
+    } else if(node.nodeType === 1 && node.nodeName !== 'PRE' && node.nodeName !== 'CODE'){
+      Array.from(node.childNodes).forEach(fixCitations);
+    }
+  })(document.querySelector('article'));
+
+  // Reading progress bar
+  var prog = document.querySelector('.reading-progress');
+  if(prog){
+    window.addEventListener('scroll', function(){
+      var h = document.documentElement;
+      var pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+      prog.style.width = Math.min(100, pct) + '%';
+    }, {passive:true});
+  }
+
+  mermaid.initialize({startOnLoad:true,theme:'base',securityLevel:'loose',themeVariables:{primaryColor:'#DCEBFF',primaryTextColor:'#10243E',primaryBorderColor:'#4A7BD0',secondaryColor:'#DCF6EF',secondaryTextColor:'#10243E',secondaryBorderColor:'#1F8A70',tertiaryColor:'#FFF1D9',tertiaryTextColor:'#10243E',tertiaryBorderColor:'#D97706',lineColor:'#4B6380',edgeLabelBackground:'#F7FAFC',clusterBkg:'#F2F6FB',clusterBorder:'#BCCADD',titleColor:'#10243E',fontFamily:'Segoe UI, Aptos, Roboto, sans-serif',fontSize:'14px',pie1:'#4A7BD0',pie2:'#1F8A70',pie3:'#D97706',pie4:'#C2410C',pie5:'#7C3AED',pie6:'#0F766E',pie7:'#BE185D',pie8:'#475569'}});
+})();
+</script>
+</head>
+<body>
+<div class="reading-progress"></div>
+<nav class="reading-nav"><a href="../">&larr; All Reports</a></nav>
+<header>
+  <div class="eyebrow">&#128202; Research Report &nbsp;&middot;&nbsp; ResearchHive</div>
+  <h1>Research Design Practical Local-first &#8220;asset</h1>
+  <div class="badges">
+    <span class="badge">Design</span>
+    <span class="badge">Practical</span>
+    <span class="badge">Local-first</span>
+    <span class="badge">&#8220;asset</span>
+  </div>
+</header>
+<article>
+<p><em>Generated: 2026-06-09 05:02 UTC &#8212; Streamlined Codex Mode</em>
+<em>Sources: 0 curated | Codex web search: enabled | Citations: 20 | Grounding: 93%</em></p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p><strong>Adopt a two-tier local-first asset intelligence pipeline: project-local catalogs for game-specific truth, plus reusable Hermes skills/scripts for extraction, labeling, validation, and preview rendering.</strong> The core decision is to stop letting Hermes infer asset semantics from filenames, GIDs, colors, or raw map output, because Tiled global tile IDs can change between maps when tilesets or ordering change, and Phaser consumes Tilemap/Tiled data structurally rather than semantically [1][2][3].</p>
+<p>The recommended pipeline is offline and on-demand: extract tiles, frames, and sprites into canonical asset records; render contact sheets; classify those records with a local VLM; cluster similar assets with CLIP or SigLIP embeddings; optionally segment irregular sprites with OpenCV alpha connected components or SAM/SAM2; store approved and rejected roles in JSON catalogs; generate maps only from approved assets; validate the generated map against semantic and spatial rules; and render local previews before browser launch [4][12][13][14][15][16].</p>
+<p><strong>Use Qwen3-VL or Qwen2.5-VL as the primary local VLM if LM Studio supports the chosen quantization and image-input path, with MiniCPM-V as a smaller fallback and LLaVA/InternVL as alternatives rather than defaults.</strong> Qwen2.5-VL emphasizes visual recognition, localization, document parsing, and long-video comprehension, while Qwen3-VL is presented by Qwen as a newer vision-language model family with image-text-to-text usage and Apache-2.0 model-card availability on Hugging Face [7][8]. MiniCPM-V is useful when local hardware favors compact multimodal models, but the evidence here is not sufficient to claim it will outperform Qwen on small pixel-art sprites [10].</p>
+<p><strong>Use OpenCV first, SAM/SAM2 second, CLIP/SigLIP for indexing and review, and YOLO only after human-reviewed labels exist.</strong> OpenCV connected components can extract separate opaque regions and stats from binary masks, SAM and SAM2 provide promptable segmentation for ambiguous or irregular objects, CLIP and SigLIP provide text-image embedding machinery for zero-shot similarity and clustering, and YOLO&#8217;s documented strength is trainable object detection after a labeled dataset exists [12][13][14][15][16][17].</p>
+<p>The most important engineering constraint is that the vision step must not run during every code edit. LM Studio exposes local API and SDK options suitable for scripts, but Hermes should normally consume versioned JSON catalogs and deterministic validators rather than repeatedly asking a VLM what a sprite means [6]. The minimum viable system should extract assets, make contact sheets, run VLM batch classification with confidence and evidence thumbnails, create <code>asset_role_catalog.json</code>, <code>rejected_assets.json</code>, and <code>map_design_rules.json</code>, and block map generation when assets violate catalog rules [2][4][7][18].</p>
+<h2 id="key-findings">Key Findings</h2>
+<ul>
+<li><p><strong>Use VLMs for meaning, not extraction, because Qwen/LLaVA/MiniCPM/InternVL families are designed for image-text understanding while OpenCV and SAM/SAM2 are designed for image processing or segmentation [7][8][9][10][11][14][15][16].</strong></p>
+</li>
+<li><p><strong>Use CLIP or SigLIP for embedding, clustering, duplicate detection, and looks like prior approved asset retrieval, because those models are trained to align images and natural-language concepts rather than to author Phaser maps directly [12][13].</strong></p>
+</li>
+<li><p><strong>Use YOLO late, because Ultralytics&#8217; documented workflow assumes a custom dataset, labels, training, and validation before reliable detector use [17].</strong></p>
+</li>
+<li><p><strong>Use validators plus rendered previews as acceptance gates, because code and schema checks can pass while the visual map is semantically wrong [1][4][7][18].</strong></p>
+</li>
+<li><p><strong>Keep reusable tooling global and semantic outputs project-local, because the reusable logic is extraction/classification/validation while the meaning of a tile depends on the project&#8217;s art style and role taxonomy [2][3][18].</strong></p>
+</li>
+</ul>
+<h2 id="methodology-evidence-base">Methodology / Evidence Base</h2>
+<p>The evidence base combines official game-engine documentation, official asset-format documentation, primary model papers or model cards, official local-inference documentation, and validation-library documentation [1][2][3][4][6][18]. Confidence is highest for Phaser/Tiled/Vite/JSON Schema integration constraints because those behaviors are documented by the relevant projects [1][2][3][4][5][18]. Confidence is moderate for VLM selection because model papers and model cards establish general capabilities, but they do not benchmark tiny pixel-art tilesheets directly [7][8][9][10][11]. Confidence is moderate for CLIP/SigLIP clustering because the papers establish language-image representation learning, but the evidence does not prove high accuracy for 16x16 or 32x32 pixel-art roles without local evaluation [12][13]. Confidence is high that YOLO should come later because the official workflow is dataset-and-training oriented, which presupposes labeled examples [17]. Confidence is high that preview rendering must be a first-class gate because Phaser provides renderer snapshot mechanisms and Tilemap loading paths, while the described failure mode is visual rather than purely type-level [1][4][19].</p>
+<h2 id="detailed-analysis">Detailed Analysis</h2>
+<h3 id="verdict">Verdict</h3>
+<p><strong>Adopt: local-first asset intelligence as a catalog-producing pipeline, not as a prompt-only behavior.</strong> The pipeline should create durable JSON facts that Hermes can read deterministically during map generation, because Hermes&#8217; coding model is not the right runtime component to repeatedly infer whether a tile is a lily pad, crop, plank path, sign, or door [6][7][18].</p>
+<p><strong>Avoid: direct map generation from raw GIDs or filenames.</strong> Tiled global tile IDs refer to tiles through map-specific tileset ordering and include flip flags, so raw IDs are a brittle semantic substrate for reusable generation [3].</p>
+<p><strong>Watch: YOLO, fine-tuned VLMs, and project-specific detectors.</strong> These become useful after enough human-reviewed classifications and bad-example rejections exist to form a training and validation set [17].</p>
+<h3 id="target-architecture">Target Architecture</h3>
+<p>The architecture should have three layers: reusable tool layer, project-local knowledge layer, and Hermes consumption layer [6][18]. The reusable tool layer should include scripts for extraction, contact-sheet generation, VLM batch classification, embedding computation, clustering, catalog validation, map generation, and preview rendering [4][12][13][16]. The project-local knowledge layer should contain catalogs such as <code>asset_role_catalog.json</code>, <code>visual_palette.json</code>, <code>rejected_assets.json</code>, <code>map_design_rules.json</code>, and generated preview artifacts [18]. The Hermes consumption layer should read those catalogs before editing map code or Tiled JSON, and it should fail closed when a role lacks approved assets [1][2][18].</p>
+<div class="mermaid">flowchart LR
+    A[Project assets PNG JSON atlas Tiled] --> B[Extractor]
+    B --> C[Canonical asset crops]
+    C --> D[Contact sheets]
+    C --> E[OpenCV alpha components]
+    C --> F["SAM/SAM2 optional masks"]
+    D --> G[Local VLM classification]
+    C --> H["CLIP/SigLIP embeddings"]
+    G --> I[Human review queue]
+    H --> I
+    I --> J[asset_role_catalog.json]
+    I --> K[rejected_assets.json]
+    J --> L[Deterministic map generator]
+    K --> L
+    M[map_design_rules.json] --> L
+    L --> N[Map validator]
+    N --> O[Local preview renderer]
+    O --> P["Hermes browser/game launch gate"]
+</div>
+<p>This design separates asset meaning from generated map syntax, which is necessary because Phaser tilemaps and loaders describe how to load images, spritesheets, atlases, JSON, and tile layers but do not decide which tile is visually appropriate for a gameplay role [1][4]. It also preserves future-project reuse by making extraction and validation scripts reusable while keeping semantic approvals project-local [2][18].</p>
+<h3 id="extraction-layer">Extraction Layer</h3>
+<p>The extractor should normalize four input classes: grid tilesheets, spritesheets, atlas JSON frames, and individual PNG folders [4]. Phaser&#8217;s loader documentation explicitly covers common asset types including images, texture atlases, sprite sheets, fonts, audio, and JSON data, so the pipeline should model those as separate source types rather than pretending every image is a uniform tilesheet [4]. Tiled JSON supports image collection tilesets and layer data formats, so the extractor should read Tiled metadata when available instead of relying only on filesystem scanning [2].</p>
+<p>For grid tilesheets, extraction should use configured <code>tileWidth</code>, <code>tileHeight</code>, <code>margin</code>, and <code>spacing</code>, and it should produce a stable <code>asset_id</code> derived from source path plus local tile index rather than global GID [2][3]. For atlas frames, extraction should parse the atlas JSON format used by the project and preserve the Phaser frame key, because Phaser expects atlas data in JSON hash or JSON array form [4]. For individual PNG folders, extraction should treat each file as a source sprite and optionally run alpha-connected-component extraction when the file contains multiple separated objects [16].</p>
+<p>OpenCV should be the default for transparent-background sprites because <code>connectedComponentsWithStats</code> returns labels, stats, and centroids for connected regions in an 8-bit single-channel image [16]. SAM or SAM2 should be reserved for ambiguous cases where sprites overlap, share transparency, or need object masks beyond alpha components, because SAM is a promptable zero-shot segmentation model and SAM2 extends promptable segmentation to images and videos with reported speed and accuracy improvements over SAM for images [14][15]. This ordering is practical because OpenCV is deterministic and cheap, while SAM-class models add inference complexity and can produce masks without semantic labels [14][16].</p>
+<h3 id="contact-sheets-and-review-ux">Contact Sheets and Review UX</h3>
+<p>Every extracted crop should appear in a labeled contact sheet with <code>asset_id</code>, source filename, local coordinates, frame key, dimensions, and alpha occupancy [16]. Contact sheets are essential because the human reviewer and VLM need to evaluate visual meaning at tile scale, and the system must preserve a trail from catalog decisions back to exact source pixels [4][16]. The contact sheet should include multiple zoom levels, because small pixel-art tiles are often unreadable at native 16x16 or 32x32 scale [4].</p>
+<p>The VLM prompt should ask for constrained JSON rather than free-form prose, because downstream validators need enumerated fields such as <code>primary_role</code>, <code>secondary_roles</code>, <code>reject_for_roles</code>, <code>confidence</code>, <code>visual_description</code>, and <code>needs_human_review</code> [18]. The prompt should include role definitions and negative examples such as lily pad is water vegetation, not crop and plank or boardwalk is not dirt road unless explicitly approved, because the user&#8217;s failure cases are semantic confusions rather than unknown file formats [7][18]. The output should be treated as a draft label until either human review or high-confidence cross-checking confirms it, because VLM papers establish general visual understanding but do not guarantee perfect recognition of project-specific pixel-art semantics [7][8][9][10][11].</p>
+<h3 id="vlm-choice">VLM Choice</h3>
+<p>Qwen3-VL or Qwen2.5-VL should be the first model family to test under LM Studio because the Qwen2.5-VL report emphasizes visual recognition and localization, while the Qwen3-VL model card exposes image-text-to-text usage and an Apache-2.0 model card on Hugging Face [7][8]. Qwen3-VL should be preferred if it runs reliably on the user&#8217;s Windows hardware through LM Studio or an adjacent local runner, because it is the newer Qwen vision-language generation in the evidence set [8]. Qwen2.5-VL should remain the fallback default if Qwen3-VL is slower, unavailable in the local runtime, or less stable on the user&#8217;s installed stack [7][8].</p>
+<p>MiniCPM-V should be evaluated as a compact local fallback, because its official repository emphasizes efficient image, video, and text understanding and lists low memory requirements for newer MiniCPM-V variants [10]. LLaVA should be considered a baseline rather than the primary recommendation, because the original paper establishes visual instruction tuning and general-purpose image conversation but is older than Qwen2.5-VL and Qwen3-VL in this evidence set [7][8][9]. InternVL should be considered when a strong local setup can support it, because the InternVL paper describes scaling a vision foundation model and aligning it with a language model for generic visual-linguistic tasks [11].</p>
+<p>The model choice should be empirical inside Hermes&#8217; environment rather than assumed from public benchmarks, because the relevant task is tiny pixel-art role classification, not broad VQA, document parsing, or benchmark leaderboard performance [7][8][9][10][11]. The first evaluation set should include the known failures: lily-pad crops, plank roads, oversized signs as farm objects, wrong object layers, wrong collision roles, and unreachable doors [1][2][3].</p>
+<h3 id="clip-and-siglip-use">CLIP and SigLIP Use</h3>
+<p>CLIP or SigLIP should be used as an embedding and retrieval subsystem, not as the sole semantic authority [12][13]. CLIP was trained to align images and natural-language supervision for zero-shot transfer to downstream tasks, which makes it appropriate for find assets similar to approved dirt path and cluster visually similar tree variants workflows [12]. SigLIP replaces softmax contrastive normalization with a sigmoid loss over image-text pairs and is relevant as an alternative embedding model when local tooling supports it [13].</p>
+<p>Embedding outputs should power three specific features: duplicate grouping, review batching, and nearest-approved-asset lookup [12][13]. Duplicate grouping reduces repeated VLM calls by classifying one representative crop per visual cluster and propagating low-risk labels to neighbors with reviewer confirmation [12][13]. Nearest-approved lookup helps Hermes choose a role-consistent variant during generation without asking a VLM during every map edit [12][13].</p>
+<p>CLIP/SigLIP should not be trusted to distinguish every project-specific role alone, because broad language-image embeddings can rank similarity without enforcing gameplay semantics like walkable path, blocking fence, or trigger volume [12][13][18]. Those gameplay semantics belong in <code>map_design_rules.json</code> and validator code rather than in embedding distance alone [18].</p>
+<h3 id="sam-sam2-and-opencv-use">SAM, SAM2, and OpenCV Use</h3>
+<p>OpenCV alpha-channel connected components should be the first extraction tool for single PNG folders and packed sheets with transparent backgrounds [16]. It is deterministic, local, fast, and returns component stats that can flag oversized props, tiny noise, or compound sprites [16]. SAM should be used when alpha does not separate objects or when a sheet contains irregular objects that need masks [14]. SAM2 should be considered over SAM when local installation is stable, because the SAM2 paper reports image segmentation that is more accurate and faster than SAM while also supporting video segmentation [15].</p>
+<p>SAM and SAM2 should not be treated as classifiers, because their core contribution is promptable segmentation rather than semantic role labeling [14][15]. The correct pairing is OpenCV/SAM for crops or masks, then VLM for labels, then JSON catalog rules for deterministic use [7][14][15][16][18].</p>
+<h3 id="yolo-use">YOLO Use</h3>
+<p>YOLO should not be part of the minimum viable pipeline unless there is already a labeled dataset of project sprites and preview-map objects [17]. Ultralytics documents YOLO object detection through training, validation, custom datasets, and model loading, which implies a labeled training process rather than zero-shot semantic asset understanding [17]. YOLO becomes useful after the asset catalog has hundreds of reviewed examples and the goal is repeatable detection of known classes in preview screenshots or future spritesheets [17].</p>
+<p>A practical later use is screenshot QA: train a detector to identify signs, doors, crops, water, roofs, trees, and props in rendered previews, then compare detections to intended map layers and placement rules [17]. Another later use is atlas scanning when future projects contain similar art styles and the labels have already been curated [17]. The risk is that early YOLO training on bad Hermes labels would automate mistakes such as lily-pad crops or boardwalk roads [17].</p>
+<h3 id="catalog-design">Catalog Design</h3>
+<p>The catalog schema should be strict enough to block bad generation but flexible enough to allow multiple projects and art packs [18]. JSON Schema is appropriate for the catalog contracts because it defines validation keywords for JSON structure and values, and Ajv can compile schemas into validation functions in JavaScript environments [18][20]. The schemas should be project-local but versioned, because asset meaning can vary by game even when extraction logic is reusable [2][3][18].</p>
+<p>Minimal <code>asset_role_catalog.json</code> shape:</p>
+<pre><code class="language-json">{
+  schema_version: &quot;1.0.0&quot;,
+  project_id: &quot;pixelwood&quot;,
+  generated_at: 2026-06-09T00:00:00Z,
+  role_taxonomy: [&quot;grass&quot;, &quot;path&quot;, &quot;crop&quot;, &quot;water&quot;, &quot;roof&quot;, &quot;tree&quot;, &quot;fence&quot;, &quot;sign&quot;, &quot;lamp&quot;, &quot;house&quot;, &quot;rock&quot;, &quot;prop&quot;, &quot;collision&quot;, &quot;trigger&quot;],
+  &quot;assets&quot;: [{
+      &quot;asset_id&quot;: tiles/farm.png#tile_012,
+      &quot;source&quot;: {
+        &quot;kind&quot;: &quot;tilesheet&quot;,
+        &quot;path&quot;: assets/tiles/farm.png,
+        local_index: 12,
+        &quot;x&quot;: 96,
+        &quot;y&quot;: 0,
+        &quot;w&quot;: 16,
+        &quot;h&quot;: 16
+      },
+      &quot;visual&quot;: {
+        contact_sheet: asset-intel/contact_sheets/farm.png,
+        &quot;crop_path&quot;: asset-intel/crops/tiles_farm_tile_012.png,
+        alpha_occupancy: 0.94,
+        dominant_palette: [&quot;#5c9a3d&quot;, &quot;#2f5e2f&quot;]
+      },
+      classification: {
+        primary_role: &quot;grass&quot;,
+        secondary_roles: [&quot;ground&quot;],
+        approved_roles: [&quot;grass&quot;],
+        rejected_roles: [&quot;crop&quot;, &quot;path&quot;, &quot;water&quot;],
+        confidence: 0.88,
+        review_status: &quot;approved&quot;,
+        &quot;reviewer&quot;: &quot;human&quot;,
+        &quot;model&quot;: qwen3-vl-8b-instruct,
+        &quot;notes&quot;: Plain grass ground tile.
+      },
+      &quot;phaser&quot;: {
+        texture_key: farm_tiles,
+        &quot;frame&quot;: null,
+        tileset_name: &quot;farm&quot;,
+        local_tile_id: 12
+      }
+    }]
+}
+</code></pre>
+<p>Minimal <code>rejected_assets.json</code> shape:</p>
+<pre><code class="language-json">{
+  schema_version: &quot;1.0.0&quot;,
+  rejections: [{
+      &quot;asset_id&quot;: tiles/pond.png#tile_031,
+      reject_for_roles: [&quot;crop&quot;, &quot;dirt_path&quot;],
+      allowed_roles: [water_plant, pond_detail],
+      &quot;reason&quot;: Looks like lily pad or pond vegetation.,
+      &quot;severity&quot;: hard_block,
+      examples_failed: [farm_crop_patch_v3]
+    }]
+}
+</code></pre>
+<p>Minimal <code>map_design_rules.json</code> shape:</p>
+<pre><code class="language-json">{
+  schema_version: &quot;1.0.0&quot;,
+  &quot;roles&quot;: {
+    &quot;crop&quot;: {
+      requires_approved_asset: true,
+      forbid_asset_roles: [&quot;water&quot;, water_plant, &quot;sign&quot;, &quot;roof&quot;],
+      allowed_layers: [ground_detail, interactive_crop],
+      max_tile_area_ratio: 0.12
+    },
+    &quot;path&quot;: {
+      requires_approved_asset: true,
+      forbid_asset_roles: [&quot;boardwalk&quot;, &quot;roof&quot;, &quot;water&quot;],
+      must_connect: [&quot;spawn&quot;, house_door, &quot;field&#20837;&#21475;&quot;],
+      min_width_tiles: 1
+    },
+    &quot;house&quot;: {
+      requires_door_reachable: true,
+      collision_policy: solid_except_door
+    }
+  },
+  &quot;layers&quot;: {
+    &quot;ground&quot;: { allowed_roles: [&quot;grass&quot;, &quot;path&quot;, &quot;water&quot;] },
+    &quot;objects&quot;: { allowed_roles: [&quot;tree&quot;, &quot;fence&quot;, &quot;sign&quot;, &quot;lamp&quot;, &quot;rock&quot;, &quot;prop&quot;] },
+    &quot;collision&quot;: { allowed_roles: [&quot;collision&quot;] },
+    &quot;triggers&quot;: { allowed_roles: [&quot;trigger&quot;] }
+  }
+}
+</code></pre>
+<p>Minimal <code>visual_palette.json</code> shape:</p>
+<pre><code class="language-json">{
+  schema_version: &quot;1.0.0&quot;,
+  &quot;clusters&quot;: [{
+      cluster_id: grass_mid_green,
+      &quot;asset_ids&quot;: [tiles/farm.png#tile_012, tiles/farm.png#tile_013],
+      &quot;roles&quot;: [&quot;grass&quot;],
+      embedding_model: siglip-or-clip-local,
+      representative_asset_id: tiles/farm.png#tile_012
+    }]
+}
+</code></pre>
+<h3 id="validator-strategy">Validator Strategy</h3>
+<p>Validation must combine schema validation, catalog validation, map semantic validation, spatial validation, and visual preview validation [1][2][18][19]. Schema validation should reject malformed catalogs and maps before generation continues, because JSON Schema and Ajv provide a formal and practical mechanism for validating JSON data structures [18][20]. Catalog validation should reject any map request that uses an asset outside its approved role list or inside a rejected role list [18].</p>
+<p>Map semantic validation should inspect each generated tile and object layer against <code>map_design_rules.json</code> [1][2][18]. It should fail if crop roles include assets rejected for crop, if path roles include boardwalk-only assets, if signs exceed count limits, if props occupy ground layers incorrectly, or if collision and trigger objects are missing from the intended layers [1][2][18]. It should also fail if raw GIDs appear in generation templates without resolving through local tileset metadata and catalog IDs, because GIDs are not stable semantic names across maps [3].</p>
+<p>Spatial validation should test reachability from spawn to critical doors, path continuity, collision blocking, layer legality, and object footprint bounds [1][2]. Door reachability should use grid search over walkable tiles and collision masks, because Phaser renders tile layers but does not itself prove that a generated layout is navigable [1]. Oversized prop spam should be caught by asset dimensions, object bounding boxes, and per-role density limits [16][18].</p>
+<p>Visual validation should render a preview image and compare the rendered map to intended role masks where feasible [19]. Phaser&#8217;s renderer snapshot APIs can capture the canvas or areas of it, and a Node/Python preview renderer can also composite tiles from catalog coordinates without launching the browser [19]. The key acceptance rule is that browser launch is not proof of correctness unless the preview and semantic validator pass [1][19].</p>
+<h3 id="preview-rendering-strategy">Preview Rendering Strategy</h3>
+<p>The minimum preview renderer should be offline and deterministic: load the same tilesheets, atlas frames, and individual PNGs; composite layers in Phaser-like order; draw object bounding boxes and role overlays; and write <code>preview.png</code>, <code>preview_roles.png</code>, and <code>validation_report.json</code> [1][4]. This avoids waiting for a full browser loop to catch obvious semantic errors [1][19]. The browser remains the final visual source of truth, but the offline renderer catches cheap failures earlier [1][19].</p>
+<p>The preview should display at least four overlays: approved role layer, rejected-role violations, collision mask, and navigation path from spawn to doors [1][2][18]. The preview should include asset IDs on hover in an HTML report or numbered legend in a PNG contact sheet, because reviewers need traceability from a visual error back to the source crop and catalog entry [16][18]. The renderer should save a diff against the previous accepted preview for map edits, because repeated prompt loops often hide regressions that are obvious side by side [19].</p>
+<h3 id="hermes-integration-strategy">Hermes Integration Strategy</h3>
+<p>Hermes should receive this system as both a reusable skill and project-local data [6][18]. The global or reusable part should include instructions and scripts named around operations such as <code>extract_assets</code>, <code>classify_assets</code>, <code>review_catalog</code>, <code>generate_map</code>, <code>validate_map</code>, and <code>render_preview</code> [6][18]. The project-local part should include the catalogs, role taxonomy, human review decisions, rejected examples, and preview history [2][3][18].</p>
+<p>Hermes should be instructed to follow this order before map work: read <code>asset_role_catalog.json</code>, read <code>rejected_assets.json</code>, read <code>map_design_rules.json</code>, select assets by approved role, generate maps through a deterministic generator, run validators, render previews, and only then open the browser [1][2][18][19]. Hermes should not call a VLM during routine code edits unless an asset is missing from the catalog or the user explicitly requests asset reclassification [6][7][18]. Hermes should never promote a VLM-only label into a global skill, because local art semantics are project-specific and can be wrong until reviewed [7][8][18].</p>
+<p>The safest &#8220;learning&#8221; mechanism is curated project memory rather than global memory [18]. A reviewed catalog entry can be reused inside the same project and used as an example for future projects, but it should not become a universal rule unless the reusable rule is structural, such as do not use unstable GIDs as semantic labels [3][18]. Future projects should import tooling and schemas, then create fresh catalogs from their own art packs [2][3][18].</p>
+<h2 id="comparative-summary">Comparative Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Tool or approach</th>
+<th>Best use in this pipeline</th>
+<th>Strength</th>
+<th>Main limitation</th>
+<th>Recommendation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenCV connected components</td>
+<td>Split transparent PNGs and find opaque components</td>
+<td>Deterministic extraction with stats and centroids</td>
+<td>Does not assign semantic meaning</td>
+<td>Use first for extraction [16]</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>Promptable masks for irregular objects</td>
+<td>Zero-shot segmentation over new image distributions</td>
+<td>Segmenter, not a semantic classifier</td>
+<td>Use only when OpenCV/grid extraction fails [14][16]</td>
+</tr>
+<tr>
+<td>SAM2</td>
+<td>Promptable image/video segmentation</td>
+<td>Reported faster and more accurate than SAM for image segmentation</td>
+<td>More setup complexity than OpenCV</td>
+<td>Watch/adopt after MVP if install is stable [15][16]</td>
+</tr>
+<tr>
+<td>Qwen3-VL</td>
+<td>Primary local VLM candidate</td>
+<td>Current Qwen VLM model card supports image-text-to-text workflows</td>
+<td>Pixel-art tile performance must be tested locally</td>
+<td>Prefer if LM Studio stack supports it [8]</td>
+</tr>
+<tr>
+<td>Qwen2.5-VL</td>
+<td>Stable primary or fallback VLM</td>
+<td>Report emphasizes visual recognition and localization</td>
+<td>Public evidence is not pixel-art-specific</td>
+<td>Adopt as fallback/default test model [7]</td>
+</tr>
+<tr>
+<td>MiniCPM-V</td>
+<td>Compact local VLM fallback</td>
+<td>Official project emphasizes efficient image/video/text understanding</td>
+<td>Evidence is insufficient for role accuracy on tiny sprites</td>
+<td>Watch/test on hardware-constrained setups [10]</td>
+</tr>
+<tr>
+<td>LLaVA</td>
+<td>Baseline VLM</td>
+<td>Paper establishes visual instruction tuning</td>
+<td>Older baseline in this evidence set</td>
+<td>Use as fallback comparison [9]</td>
+</tr>
+<tr>
+<td>InternVL</td>
+<td>Higher-capability VLM candidate</td>
+<td>Paper describes large-scale vision-language alignment</td>
+<td>May be heavier for Windows local use</td>
+<td>Watch/test if hardware permits [11]</td>
+</tr>
+<tr>
+<td>CLIP</td>
+<td>Embedding, clustering, retrieval</td>
+<td>Aligns images and natural language for zero-shot transfer</td>
+<td>Not a gameplay-rule validator</td>
+<td>Adopt for clustering and nearest-neighbor lookup [12]</td>
+</tr>
+<tr>
+<td>SigLIP</td>
+<td>Embedding alternative</td>
+<td>Uses sigmoid loss and supports language-image pretraining</td>
+<td>Local tooling availability varies</td>
+<td>Adopt if easy through local packages [13]</td>
+</tr>
+<tr>
+<td>YOLO</td>
+<td>Later detector for known classes</td>
+<td>Official workflow supports custom training and validation</td>
+<td>Needs labeled data before usefulness</td>
+<td>Avoid in MVP, adopt after labels exist [17]</td>
+</tr>
+<tr>
+<td>JSON Schema + Ajv</td>
+<td>Catalog and map contract validation</td>
+<td>Validates JSON structures with standard keywords and JS tooling</td>
+<td>Cannot detect visual nonsense alone</td>
+<td>Adopt as structural gate [18][20]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="recommended-path-action-plan">Recommended Path / Action Plan</h2>
+<ol>
+<li><p><strong>Build the reusable extractor and catalog schema first.</strong> The first milestone should parse Phaser/Tiled-relevant asset sources, produce stable <code>asset_id</code> values, crop every tile/frame/sprite, and validate JSON outputs with schemas [1][2][3][4][18].</p>
+</li>
+<li><p><strong>Generate contact sheets before model calls.</strong> The contact sheet creates human-readable evidence for every asset and prevents hidden classifier decisions from becoming unreviewable project truth [16][18].</p>
+</li>
+<li><p><strong>Run one local VLM batch classification pass.</strong> Test Qwen3-VL, Qwen2.5-VL, and one compact fallback on a small golden set containing known bad cases, then pick the most reliable local model rather than relying on generic benchmark claims [7][8][10].</p>
+</li>
+<li><p><strong>Create hard rejections and role approvals.</strong> Promote only reviewed or cross-checked labels into <code>asset_role_catalog.json</code>, and put known confusions such as lily pads as crops, planks as dirt roads, and giant signs as farm props into <code>rejected_assets.json</code> [18].</p>
+</li>
+<li><p><strong>Implement deterministic generation from catalogs.</strong> The map generator should request roles like <code>grass</code> or <code>path</code> and receive only approved asset IDs, rather than selecting raw GIDs or filename-matched images [3][18].</p>
+</li>
+<li><p><strong>Implement semantic and spatial validators.</strong> The validators should check layer legality, role legality, rejected asset use, collision masks, trigger placement, door reachability, path continuity, and object density [1][2][18].</p>
+</li>
+<li><p><strong>Implement offline preview rendering.</strong> The renderer should composite a map preview and overlays before browser launch, because the core failure mode is visual correctness rather than TypeScript compilation [1][19].</p>
+</li>
+<li><p><strong>Add Hermes skill instructions after the project MVP works.</strong> The skill should teach Hermes the workflow and command sequence, while project-specific catalogs remain inside the game repo [6][18].</p>
+</li>
+</ol>
+<h2 id="risks-constraints-and-failure-modes">Risks, Constraints, and Failure Modes</h2>
+<ul>
+<li><p><strong>Tiny pixel-art sprites may be too ambiguous for general VLMs.</strong> Mitigation is zoomed contact sheets, role-specific prompts, human review, and local golden-set evaluation [7][8][9][10].</p>
+</li>
+<li><p><strong>Raw GIDs can create false confidence.</strong> Mitigation is stable <code>asset_id</code> values based on source path and local tile/frame coordinates, plus explicit GID resolution at generation time [2][3].</p>
+</li>
+<li><p><strong>SAM masks can look precise while labels remain wrong.</strong> Mitigation is to use SAM only for segmentation and require VLM or human labels for semantic roles [14][15].</p>
+</li>
+<li><p><strong>CLIP/SigLIP clusters can group visually similar but gameplay-different assets.</strong> Mitigation is to use embeddings for review assistance and retrieval rather than final approval [12][13][18].</p>
+</li>
+<li><p><strong>YOLO can automate bad labels if trained too early.</strong> Mitigation is to delay YOLO until human-reviewed catalogs and screenshot labels exist [17].</p>
+</li>
+<li><p><strong>Catalogs can become stale when assets change.</strong> Mitigation is to hash source files and fail validation when a crop&#8217;s source hash changes without reclassification [18].</p>
+</li>
+<li><p><strong>Validators can produce fake success if they only check schemas.</strong> Mitigation is to combine schema checks with semantic rules, spatial reachability, and rendered preview inspection [1][2][18][19].</p>
+</li>
+<li><p><strong>Global Hermes skills can be polluted by project-specific assumptions.</strong> Mitigation is to keep global logic structural and keep role approvals, rejections, and palettes project-local [2][3][18].</p>
+</li>
+</ul>
+<h2 id="metrics-validation-plan">Metrics / Validation Plan</h2>
+<p>The MVP should pass a golden set of at least the known user failure cases before Hermes uses it for production map generation [18]. The golden set should include lily-pad-looking water vegetation, plank or boardwalk tiles, oversized signs, house doors, fences, trees, crops, dirt paths, collision-only tiles, and trigger-only objects [1][2][18]. A model run should be accepted only if rejected assets are blocked from their known bad roles and approved assets remain available for intended roles [18].</p>
+<p>Catalog validation metrics should include percentage of assets classified, percentage needing human review, number of hard rejections, number of approved assets per required role, and number of assets with changed source hashes [18]. Map validation metrics should include rejected-role violations, illegal-layer placements, unreachable required targets, collision leaks, trigger-layer errors, path connectivity failures, and oversized-object density violations [1][2][18]. Preview validation metrics should include generated preview existence, overlay existence, visual diff against previous accepted preview, and human acceptance status for visually significant map changes [19].</p>
+<p>The recommendation should change if local VLM evaluation shows unacceptable role accuracy on the golden set, if LM Studio cannot reliably serve image inputs for the chosen model, or if OpenCV extraction fails on the dominant asset format [6][7][8][16]. The recommendation should also change if the project&#8217;s art assets already include authoritative metadata from the artist or asset pack, because human-authored labels should outrank inferred labels [2][18].</p>
+<h2 id="limitations">Limitations</h2>
+<h2 id="the-evidence-base-does-not-include-a-benchmark-specifically-measuring-qwen3-vl-qwen2.5-vl-minicpm-v-llava-or-internvl-on-tiny-pixel-art-tilesheet-semantic-classification-7891011.the-evidence-base-does-not-prove-that-clip-or-siglip-embeddings-will-cleanly-separate-game-roles-such-as-crop-lily-pad-dirt-path-and-boardwalk-without-project-specific-evaluation-1213.the-evidence-base-does-not-include-hermes-agent-internals-beyond-the-user-provided-operating-description-so-the-integration-strategy-is-framed-as-file-script-and-skill-boundaries-rather-than-hermes-specific-api-calls-618.the-evidence-base-does-not-establish-a-legal-or-licensing-review-for-every-model-weight-or-asset-pack-so-model-and-art-licenses-must-be-checked-before-redistribution-or-commercial-use-81017.the-report-therefore-recommends-an-mvp-with-measurable-local-evaluation-rather-than-a-claim-that-any-single-model-will-solve-asset-understanding-automatically-7818">The evidence base does not include a benchmark specifically measuring Qwen3-VL, Qwen2.5-VL, MiniCPM-V, LLaVA, or InternVL on tiny pixel-art tilesheet semantic classification [7][8][9][10][11]. The evidence base does not prove that CLIP or SigLIP embeddings will cleanly separate game roles such as crop, lily pad, dirt path, and boardwalk without project-specific evaluation [12][13]. The evidence base does not include Hermes Agent internals beyond the user-provided operating description, so the integration strategy is framed as file, script, and skill boundaries rather than Hermes-specific API calls [6][18]. The evidence base does not establish a legal or licensing review for every model weight or asset pack, so model and art licenses must be checked before redistribution or commercial use [8][10][17]. The report therefore recommends an MVP with measurable local evaluation rather than a claim that any single model will solve asset understanding automatically [7][8][18].</h2>
+<h2 id="source-index">Source Index</h2>
+<ul>
+<li><p>[1] Phaser Tilemap API Documentation &#8212; <a href="https://docs.phaser.io/api-documentation/3.88.2/class/tilemaps-tilemap">https://docs.phaser.io/api-documentation/3.88.2/class/tilemaps-tilemap</a></p>
+</li>
+<li><p>[2] Tiled JSON Map Format Documentation &#8212; <a href="https://doc.mapeditor.org/en/stable/reference/json-map-format/">https://doc.mapeditor.org/en/stable/reference/json-map-format/</a></p>
+</li>
+<li><p>[3] Tiled Global Tile IDs Documentation &#8212; <a href="https://doc.mapeditor.org/en/latest/reference/global-tile-ids/">https://doc.mapeditor.org/en/latest/reference/global-tile-ids/</a></p>
+</li>
+<li><p>[4] Phaser Loader Concepts Documentation &#8212; <a href="https://docs.phaser.io/phaser/concepts/loader">https://docs.phaser.io/phaser/concepts/loader</a></p>
+</li>
+<li><p>[5] Vite Static Asset Handling Documentation &#8212; <a href="https://vite.dev/guide/assets.html">https://vite.dev/guide/assets.html</a></p>
+</li>
+<li><p>[6] LM Studio Developer Docs &#8212; <a href="https://lmstudio.ai/docs/api">https://lmstudio.ai/docs/api</a></p>
+</li>
+<li><p>[7] Qwen2.5-VL Technical Report &#8212; <a href="https://arxiv.org/abs/2502.13923">https://arxiv.org/abs/2502.13923</a></p>
+</li>
+<li><p>[8] Qwen3-VL-8B-Instruct Model Card &#8212; <a href="https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct">https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct</a></p>
+</li>
+<li><p>[9] LLaVA: Visual Instruction Tuning &#8212; <a href="https://arxiv.org/abs/2304.08485">https://arxiv.org/abs/2304.08485</a></p>
+</li>
+<li><p>[10] MiniCPM-V Official Repository &#8212; <a href="https://github.com/OpenBMB/MiniCPM-V">https://github.com/OpenBMB/MiniCPM-V</a></p>
+</li>
+<li><p>[11] InternVL: Scaling up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks &#8212; <a href="https://arxiv.org/abs/2312.14238">https://arxiv.org/abs/2312.14238</a></p>
+</li>
+<li><p>[12] CLIP: Learning Transferable Visual Models From Natural Language Supervision &#8212; <a href="https://arxiv.org/abs/2103.00020">https://arxiv.org/abs/2103.00020</a></p>
+</li>
+<li><p>[13] SigLIP: Sigmoid Loss for Language Image Pre-Training &#8212; <a href="https://arxiv.org/abs/2303.15343">https://arxiv.org/abs/2303.15343</a></p>
+</li>
+<li><p>[14] Segment Anything &#8212; <a href="https://arxiv.org/abs/2304.02643">https://arxiv.org/abs/2304.02643</a></p>
+</li>
+<li><p>[15] SAM 2: Segment Anything in Images and Videos &#8212; <a href="https://arxiv.org/abs/2408.00714">https://arxiv.org/abs/2408.00714</a></p>
+</li>
+<li><p>[16] OpenCV Structural Analysis and Shape Descriptors &#8212; <a href="https://docs.opencv.org/3.4/d3/dc0/group__imgproc__shape.html">https://docs.opencv.org/3.4/d3/dc0/group__imgproc__shape.html</a></p>
+</li>
+<li><p>[17] Ultralytics Object Detection Documentation &#8212; <a href="https://docs.ultralytics.com/tasks/detect">https://docs.ultralytics.com/tasks/detect</a></p>
+</li>
+<li><p>[18] JSON Schema Specification &#8212; <a href="https://json-schema.org/specification">https://json-schema.org/specification</a></p>
+</li>
+<li><p>[19] Phaser Renderer Snapshot Documentation &#8212; <a href="https://docs.phaser.io/api-documentation/function/renderer">https://docs.phaser.io/api-documentation/function/renderer</a></p>
+</li>
+<li><p>[20] Ajv JSON Schema Validator Documentation &#8212; <a href="https://ajv.js.org/">https://ajv.js.org/</a></p>
+</li>
+</ul>
+
+</article>
+<footer>
+  <p>Generated by <a href="https://github.com/shellsage-ai/research-reports">ResearchHive</a></p>
+</footer>
+</body>
+</html>

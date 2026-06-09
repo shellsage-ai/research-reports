@@ -1,0 +1,477 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Agentic Crypto Short-Term Trading Automation &#8212; For Dummies Guide</title>
+<style>
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--green:#3fb950;--red:#f85149;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
+header{padding:2.5rem 2rem 2rem;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+header .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem;}
+.badge{border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:600;background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);}
+article{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem;}
+article h2,article h3{color:var(--acc);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.4rem;margin-top:2.2rem;}
+article h3{margin-top:1.8rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.92em;}
+article pre{background:#161b22;border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;}
+article blockquote{border-left:3px solid var(--acc);margin:1rem 0;padding:.5rem 1rem;color:var(--muted);font-style:italic;}
+article table{border-collapse:collapse;width:100%;margin:1rem 0;}
+article th,article td{border:1px solid var(--bdr);padding:8px 12px;text-align:left;}
+article th{background:rgba(255,152,0,.15);color:var(--acc);}
+article img{max-width:100%;border-radius:6px;}
+nav.breadcrumb{padding:1rem 2rem;font-size:.85rem;}
+nav.breadcrumb a{color:var(--link);text-decoration:none;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">&larr; All Reports</a></nav>
+<header>
+  <div class="eyebrow">&#128218; For Dummies Guide &nbsp;&middot;&nbsp; ResearchHive</div>
+  <h1>Agentic Crypto Short-Term Trading Automation &#8212; For Dummies Guide</h1>
+  <div class="badges">
+    <span class="badge">Agentic</span>
+    <span class="badge">Crypto</span>
+    <span class="badge">Short-Term</span>
+    <span class="badge">Trading</span>
+  </div>
+</header>
+<article>
+<p>I&#8217;ll verify the current tool names, download links, and exchange/API setup details first, because crypto automation and local model tooling change often. I&#8217;ll keep the guide practical, but I&#8217;m going to steer it toward paper trading and strong risk limits before any real-money use.</p>
+<p>I&#8217;m going to use the OpenAI docs skill for the Codex/ChatGPT Pro part, and official docs for the trading bot and local model stack. The safest practical shape is: agent helps research and generate strategies, Freqtrade executes only rules you approve, and everything starts in dry-run mode.</p>
+<h1 id="agentic-crypto-swing-trading-lab-for-beginners">Agentic Crypto Swing-Trading Lab For Beginners</h1>
+<h3 id="what-is-it">&#127919; What Is It?</h3>
+<p>This is a setup for a crypto trading bot that tests and runs short-to-medium trades automatically, while AI tools help you research, review results, and improve the strategy. The safest version starts with fake money, called dry-run mode, so you can learn without risking real funds.</p>
+<p>The best practical approach is: let rules place trades, let AI analyze and improve, and keep humans in charge of turning on real money.</p>
+<h3 id="why-does-it-matter">&#129300; Why Does It Matter?</h3>
+<p>Crypto markets move 24/7, so watching charts manually is exhausting. A bot can follow a written plan all day and night without panic-buying, revenge-trading, or forgetting your rules.</p>
+<p>Personally, this gives you a repeatable system: backtest first, paper trade next, then only consider tiny real-money trades after the bot proves it behaves.</p>
+<h3 id="safety-note">&#9888;&#65039; Safety Note</h3>
+<p>Do start in <code>dry_run: true</code>. Do not give any AI agent withdrawal permissions. Do not use leverage or futures as a beginner.</p>
+<p>Do use a separate exchange API key named <code>freqtrade-dryrun-or-small-live</code>. Do set <code>max_open_trades: 3</code>, <code>stake_amount: 25</code>, and <code>tradable_balance_ratio: 0.3</code> while learning.</p>
+<p>Do not let OpenClaw, Codex, or a local model directly edit API-key files or place trades. Use them to read logs, summarize backtests, and propose code changes for you to approve.</p>
+<h3 id="what-youll-need">&#128722; What You'll Need</h3>
+<ol>
+<li><p><strong>Your GMKtec Ryzen AI Max+ 395 mini PC</strong><br />
+Cost: <code>$0 if already owned, about $1,800-2,200 if buying</code><br />
+Get it: <code>https://www.gmktec.com/products/amd-ryzen%E2%84%A2-ai-max-395-evo-x2-ai-mini-pc</code><br />
+For: Running Docker, Freqtrade, local models, and analysis jobs.</p>
+</li>
+<li><p><strong>Docker Desktop for Windows</strong><br />
+Cost: <code>$0 for personal use</code><br />
+Get it: <code>https://www.docker.com/products/docker-desktop/</code><br />
+For: Running Freqtrade cleanly without fighting Python installs.</p>
+</li>
+<li><p><strong>Freqtrade</strong><br />
+Cost: <code>$0</code><br />
+Get it: <code>https://docs.freqtrade.io/en/stable/docker_quickstart/</code><br />
+For: The actual crypto trading bot.</p>
+</li>
+<li><p><strong>Ollama</strong><br />
+Cost: <code>$0</code><br />
+Get it: <code>https://ollama.com/download</code><br />
+For: Running local models like Qwen on your machine.</p>
+</li>
+<li><p><strong>Qwen3 30B local model</strong><br />
+Cost: <code>$0</code><br />
+Get it: <code>https://ollama.com/library/qwen3:30b</code><br />
+For: Reviewing logs, explaining trades, and helping improve strategies.</p>
+</li>
+<li><p><strong>ChatGPT Pro / Codex, optional but useful</strong><br />
+Cost: <code>$100-200/month</code><br />
+Get it: <code>https://chatgpt.com/pricing</code> and <code>https://chatgpt.com/codex</code><br />
+For: Strategy coding help, code review, research, and debugging.</p>
+</li>
+<li><p><strong>OpenClaw, optional and higher risk</strong><br />
+Cost: <code>$0</code><br />
+Get it: <code>https://docs.openclaw.ai/install/index</code><br />
+For: Agent orchestration. Keep it away from exchange secrets.</p>
+</li>
+<li><p><strong>Kraken account for later live testing</strong><br />
+Cost: <code>$0 account, $50-200 suggested tiny test capital later</code><br />
+Get it: <code>https://pro.kraken.com/app/settings/api</code><br />
+For: Exchange API keys after dry-run testing.</p>
+</li>
+<li><p><strong>AMD Ryzen AI Software, optional</strong><br />
+Cost: <code>$0</code><br />
+Get it: <code>https://www.amd.com/en/products/software/ryzen-ai-software.html</code><br />
+For: NPU/iGPU development. Freqtrade does not need it.</p>
+</li>
+</ol>
+<p><strong>Total Estimated Budget:</strong> <code>$0-200 upfront if you already own the PC</code>, plus optional <code>$100-200/month</code> for ChatGPT Pro.</p>
+<h3 id="step-by-step-procedure">&#128203; Step-by-Step Procedure</h3>
+<h4 id="phase-1-install-the-base-tools">Phase 1: Install The Base Tools</h4>
+<ol>
+<li><p><strong>Install Docker Desktop</strong> <code>~10 minutes</code><br />
+Download and run:<br />
+<code>https://www.docker.com/products/docker-desktop/</code><br />
+After installation, restart Windows.<br />
+&#128161; Tip: Freqtrade&#8217;s docs specifically recommend Docker for Windows users.</p>
+</li>
+<li><p><strong>Create your bot folder</strong> <code>~1 minute</code><br />
+Open PowerShell and run:</p>
+</li>
+</ol>
+<pre><code class="language-powershell">mkdir C:\ResearchHive\crypto-agent
+cd C:\ResearchHive\crypto-agent
+</code></pre>
+<ol start="3">
+<li><strong>Download Freqtrade&#8217;s Docker file</strong> <code>~1 minute</code></li>
+</ol>
+<pre><code class="language-powershell">curl.exe https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docker-compose.yml -o docker-compose.yml
+docker compose pull
+docker compose run --rm freqtrade create-userdir --userdir user_data
+</code></pre>
+<ol start="4">
+<li><strong>Create a beginner-safe dry-run config</strong> <code>~3 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">@'
+{
+  &quot;$schema&quot;: &quot;https://schema.freqtrade.io/schema.json&quot;,
+  &quot;max_open_trades&quot;: 3,
+  &quot;stake_currency&quot;: &quot;USD&quot;,
+  &quot;stake_amount&quot;: 25,
+  &quot;tradable_balance_ratio&quot;: 0.3,
+  &quot;fiat_display_currency&quot;: &quot;USD&quot;,
+  &quot;dry_run&quot;: true,
+  &quot;dry_run_wallet&quot;: 1000,
+  &quot;cancel_open_orders_on_exit&quot;: true,
+  &quot;trading_mode&quot;: &quot;spot&quot;,
+  &quot;timeframe&quot;: &quot;4h&quot;,
+  &quot;exchange&quot;: {
+    &quot;name&quot;: &quot;kraken&quot;,
+    &quot;key&quot;: &quot;&quot;,
+    &quot;secret&quot;: &quot;&quot;,
+    &quot;ccxt_config&quot;: {&quot;enableRateLimit&quot;: true},
+    &quot;ccxt_async_config&quot;: {&quot;enableRateLimit&quot;: true},
+    &quot;pair_whitelist&quot;: [&quot;BTC/USD&quot;, &quot;ETH/USD&quot;, &quot;SOL/USD&quot;, &quot;XRP/USD&quot;, &quot;ADA/USD&quot;],
+    &quot;pair_blacklist&quot;: []
+  },
+  &quot;pairlists&quot;: [{&quot;method&quot;: &quot;StaticPairList&quot;}],
+  &quot;order_types&quot;: {
+    &quot;entry&quot;: &quot;limit&quot;,
+    &quot;exit&quot;: &quot;limit&quot;,
+    &quot;emergency_exit&quot;: &quot;market&quot;,
+    &quot;force_entry&quot;: &quot;market&quot;,
+    &quot;force_exit&quot;: &quot;market&quot;,
+    &quot;stoploss&quot;: &quot;market&quot;,
+    &quot;stoploss_on_exchange&quot;: false
+  },
+  &quot;order_time_in_force&quot;: {&quot;entry&quot;: &quot;GTC&quot;, &quot;exit&quot;: &quot;GTC&quot;},
+  &quot;api_server&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;listen_ip_address&quot;: &quot;127.0.0.1&quot;,
+    &quot;listen_port&quot;: 8080,
+    &quot;verbosity&quot;: &quot;error&quot;,
+    &quot;enable_openapi&quot;: false,
+    &quot;jwt_secret_key&quot;: &quot;change_this_to_a_long_random_string_123&quot;,
+    &quot;ws_token&quot;: &quot;change_this_to_another_long_random_string_456&quot;,
+    &quot;CORS_origins&quot;: [],
+    &quot;username&quot;: &quot;freqtrader&quot;,
+    &quot;password&quot;: &quot;change_this_password&quot;
+  },
+  &quot;bot_name&quot;: &quot;agentic-swing-dryrun&quot;,
+  &quot;initial_state&quot;: &quot;running&quot;,
+  &quot;internals&quot;: {&quot;process_throttle_secs&quot;: 5}
+}
+'@ | Set-Content .\user_data\config.json
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t change <code>&quot;dry_run&quot;: true</code> yet.</p>
+<h4 id="phase-2-add-a-simple-swing-strategy">Phase 2: Add A Simple Swing Strategy</h4>
+<ol start="5">
+<li><strong>Create the strategy file</strong> <code>~3 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">@'
+from freqtrade.strategy import IStrategy
+from pandas import DataFrame
+import talib.abstract as ta
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+
+
+class WeeklySwingStrategy(IStrategy):
+    INTERFACE_VERSION = 3
+
+    timeframe = &quot;4h&quot;
+    startup_candle_count = 100
+    can_short = False
+
+    minimal_roi = {
+        &quot;0&quot;: 0.08,
+        &quot;720&quot;: 0.04,
+        &quot;2160&quot;: 0.02,
+        &quot;4320&quot;: 0
+    }
+
+    stoploss = -0.08
+    trailing_stop = True
+    trailing_stop_positive = 0.025
+    trailing_stop_positive_offset = 0.05
+    trailing_only_offset_is_reached = True
+    process_only_new_candles = True
+
+    def populate_indicators(self, dataframe: DataFrame, metadata: dict) -&gt; DataFrame:
+        dataframe[&quot;ema20&quot;] = ta.EMA(dataframe, timeperiod=20)
+        dataframe[&quot;ema50&quot;] = ta.EMA(dataframe, timeperiod=50)
+        dataframe[&quot;rsi&quot;] = ta.RSI(dataframe, timeperiod=14)
+        return dataframe
+
+    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -&gt; DataFrame:
+        dataframe.loc[
+            (
+                (dataframe[&quot;ema20&quot;] &gt; dataframe[&quot;ema50&quot;]) &amp;
+                (qtpylib.crossed_above(dataframe[&quot;rsi&quot;], 40)) &amp;
+                (dataframe[&quot;volume&quot;] &gt; 0)
+            ),
+            &quot;enter_long&quot;
+        ] = 1
+        return dataframe
+
+    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -&gt; DataFrame:
+        dataframe.loc[
+            (
+                (
+                    qtpylib.crossed_below(dataframe[&quot;rsi&quot;], 70) |
+                    (dataframe[&quot;ema20&quot;] &lt; dataframe[&quot;ema50&quot;])
+                ) &amp;
+                (dataframe[&quot;volume&quot;] &gt; 0)
+            ),
+            &quot;exit_long&quot;
+        ] = 1
+        return dataframe
+'@ | Set-Content .\user_data\strategies\WeeklySwingStrategy.py
+</code></pre>
+<ol start="6">
+<li><strong>Download historical data</strong> <code>~5-20 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose run --rm freqtrade download-data --exchange kraken --pairs BTC/USD ETH/USD SOL/USD XRP/USD ADA/USD --days 730 -t 4h
+</code></pre>
+<p>&#128161; Tip: <code>730</code> days gives about two years of data, enough to catch different market moods.</p>
+<ol start="7">
+<li><strong>Backtest the strategy</strong> <code>~2-10 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose run --rm freqtrade backtesting --config user_data/config.json --strategy WeeklySwingStrategy --timerange 20240101-20260601 -i 4h
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: Start live trading because one backtest looks good. One lucky period proves very little.</p>
+<h4 id="phase-3-turn-on-dry-run-automation">Phase 3: Turn On Dry-Run Automation</h4>
+<ol start="8">
+<li><strong>Point Docker Compose at your strategy</strong> <code>~1 minute</code></li>
+</ol>
+<pre><code class="language-powershell">(Get-Content .\docker-compose.yml) -replace 'SampleStrategy', 'WeeklySwingStrategy' | Set-Content .\docker-compose.yml
+</code></pre>
+<ol start="9">
+<li><strong>Start the dry-run bot</strong> <code>~1 minute</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose up -d
+docker compose ps
+</code></pre>
+<ol start="10">
+<li><strong>Open the dashboard</strong> <code>~1 minute</code><br />
+Go to:</li>
+</ol>
+<pre><code class="language-text">http://localhost:8080
+</code></pre>
+<p>Use:</p>
+<pre><code class="language-text">Username: freqtrader
+Password: change_this_password
+</code></pre>
+<ol start="11">
+<li><strong>Watch logs</strong> <code>as needed</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose logs -f
+</code></pre>
+<p>The log file lives here:</p>
+<pre><code class="language-text">C:\ResearchHive\crypto-agent\user_data\logs\freqtrade.log
+</code></pre>
+<h4 id="phase-4-add-local-ai-review">Phase 4: Add Local AI Review</h4>
+<ol start="12">
+<li><strong>Install Ollama</strong> <code>~5 minutes</code><br />
+Download and run:</li>
+</ol>
+<pre><code class="language-text">https://ollama.com/download
+</code></pre>
+<ol start="13">
+<li><strong>Pull Qwen3 30B</strong> <code>~10-40 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">ollama pull qwen3:30b
+ollama run qwen3:30b
+</code></pre>
+<ol start="14">
+<li><strong>Ask the model to review your bot logs</strong> <code>~2 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">Get-Content .\user_data\logs\freqtrade.log -Tail 300 | ollama run qwen3:30b &quot;Summarize this Freqtrade dry-run log. List errors, risky behavior, and what I should check next. Do not recommend live trading.&quot;
+</code></pre>
+<h4 id="phase-5-use-codex-or-openclaw-safely">Phase 5: Use Codex Or OpenClaw Safely</h4>
+<ol start="15">
+<li><strong>Use Codex for code review, not trade execution</strong><br />
+Go to:</li>
+</ol>
+<pre><code class="language-text">https://chatgpt.com/codex
+</code></pre>
+<p>Prompt:</p>
+<pre><code class="language-text">Review my Freqtrade strategy for beginner safety. Keep dry_run true. Do not add leverage, futures, withdrawals, or live-trading defaults.
+</code></pre>
+<ol start="16">
+<li><strong>Install OpenClaw only after the bot works</strong> <code>optional</code></li>
+</ol>
+<pre><code class="language-powershell">iwr -useb https://openclaw.ai/install.ps1 | iex
+openclaw doctor
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t give OpenClaw your Kraken API secret. Let it read logs and produce summaries only.</p>
+<h3 id="real-world-analogy">&#127757; Real-World Analogy</h3>
+<p>Think of <strong>Freqtrade</strong> like a slow cooker. You put in the recipe once, and it follows the recipe exactly instead of improvising.</p>
+<p>Think of <strong>dry-run mode</strong> like a flight simulator. You can crash fake planes while learning, instead of risking real passengers.</p>
+<p>Think of <strong>backtesting</strong> like watching old game footage before a match. It does not guarantee tomorrow&#8217;s win, but it shows whether your plan has obvious weaknesses.</p>
+<p>Think of <strong>Qwen/Ollama</strong> like a local mechanic in your garage. It can inspect your machine privately, but it should not be handed your bank card.</p>
+<p>Think of <strong>API keys</strong> like valet keys for your exchange account. Give the bot permission to park the car, never permission to empty the garage.</p>
+<h3 id="common-mistakes-how-to-avoid-them">&#10060; Common Mistakes &amp; How to Avoid Them</h3>
+<ol>
+<li><p><strong>Turning on live trading too soon</strong><br />
+What goes wrong: Real money disappears during normal bot bugs.<br />
+Why it happens: A good-looking backtest feels exciting.<br />
+Fix: Require 30 days of dry-run before live mode.</p>
+</li>
+<li><p><strong>Giving withdrawal permission to an API key</strong><br />
+What goes wrong: A stolen key can drain funds.<br />
+Why it happens: Beginners enable every checkbox.<br />
+Fix: Enable only query balance, query orders, create/modify orders, and cancel orders.</p>
+</li>
+<li><p><strong>Using too many pairs</strong><br />
+What goes wrong: The bot opens messy trades everywhere.<br />
+Why it happens: More coins feel like more opportunity.<br />
+Fix: Start with <code>BTC/USD</code>, <code>ETH/USD</code>, <code>SOL/USD</code>, <code>XRP/USD</code>, <code>ADA/USD</code>.</p>
+</li>
+<li><p><strong>Trusting AI-generated strategies blindly</strong><br />
+What goes wrong: The code may look smart but lose money.<br />
+Why it happens: AI writes confidently.<br />
+Fix: Backtest, dry-run, and inspect every change.</p>
+</li>
+<li><p><strong>Ignoring fees and slippage</strong><br />
+What goes wrong: Small wins vanish after costs.<br />
+Why it happens: Charts show clean prices, real orders do not.<br />
+Fix: Prefer 4h or 1d trades over frantic 1m scalping.</p>
+</li>
+<li><p><strong>Trying to force the NPU to run everything</strong><br />
+What goes wrong: Setup time gets wasted.<br />
+Why it happens: &#8220;AI chip&#8221; sounds like it should run all AI.<br />
+Fix: Use CPU/iGPU/RAM for large language models; use NPU for supported ONNX workloads.</p>
+</li>
+</ol>
+<h3 id="key-takeaways">&#9989; Key Takeaways</h3>
+<ul>
+<li>Start with dry-run, not real money.</li>
+<li>Let rules trade; let AI review.</li>
+<li>Never enable withdrawal permissions.</li>
+<li>Use spot trading before anything else.</li>
+<li>Backtest across at least one year.</li>
+<li>Smaller stakes reveal mistakes cheaply.</li>
+<li>Logs are your trading black box.</li>
+</ul>
+<h3 id="quick-comparison-table">&#128202; Quick Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Freqtrade dry-run</td>
+<td>Safe, practical, automated</td>
+<td>No real profit</td>
+<td>Learning and testing</td>
+<td><code>$0</code></td>
+</tr>
+<tr>
+<td>Freqtrade live spot</td>
+<td>Real execution</td>
+<td>Real losses possible</td>
+<td>Small validated systems</td>
+<td>Capital + fees</td>
+</tr>
+<tr>
+<td>Codex / ChatGPT Pro</td>
+<td>Strong coding help</td>
+<td>Monthly cost</td>
+<td>Strategy review and debugging</td>
+<td><code>$100-200/mo</code></td>
+</tr>
+<tr>
+<td>Ollama + Qwen3</td>
+<td>Private, local analysis</td>
+<td>Slower than cloud models</td>
+<td>Log review and summaries</td>
+<td><code>$0</code></td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>Agent orchestration</td>
+<td>Security risk with secrets</td>
+<td>Supervised automation</td>
+<td><code>$0</code></td>
+</tr>
+<tr>
+<td>Leverage/futures</td>
+<td>Can short markets</td>
+<td>Beginner-dangerous</td>
+<td>Avoid for now</td>
+<td>High risk</td>
+</tr>
+</tbody>
+</table>
+<h3 id="going-deeper">&#128300; Going Deeper</h3>
+<p>Your Ryzen AI Max+ 395 has 16 CPU cores, 32 threads, up to 128 GB memory support, Radeon 8060S graphics, up to 126 total AI TOPS, and up to 50 NPU TOPS. That is excellent for a local research machine, but the trading bot itself barely needs that much power.</p>
+<p>Qwen3-30B-A3B has about 30.5 billion total parameters but activates about 3.3 billion at a time. That &#8220;A3B&#8221; part is why it can be more efficient than a normal 30B model.</p>
+<p>Ollama&#8217;s <code>qwen3:30b</code> package is about 19 GB in its common quantized form. Your 128 GB RAM machine has plenty of headroom for the model, Docker, logs, and historical data.</p>
+<p>The sample strategy uses 4-hour candles. That means each candle summarizes 4 hours of price action, which is calmer than 1-minute trading and better aligned with trades lasting days or weeks.</p>
+<p>The stoploss is <code>-0.08</code>, meaning the bot exits around an 8% loss before a bad trade becomes catastrophic. The first profit target is <code>0.08</code>, meaning 8% profit, then the required profit gets smaller as time passes.</p>
+<h3 id="glossary">&#128214; Glossary</h3>
+<p><strong>Agentic:</strong> Able to take actions toward a goal, not just answer questions.</p>
+<p><strong>API key:</strong> A digital key that lets software access an account.</p>
+<p><strong>Backtest:</strong> A test of a strategy using old market data.</p>
+<p><strong>Dry-run:</strong> Fake-money trading mode.</p>
+<p><strong>Exchange:</strong> A marketplace where crypto is bought and sold.</p>
+<p><strong>Freqtrade:</strong> An open-source crypto trading bot.</p>
+<p><strong>Leverage:</strong> Borrowed trading power that can multiply wins and losses.</p>
+<p><strong>NPU:</strong> Neural Processing Unit, a chip for certain AI workloads.</p>
+<p><strong>Ollama:</strong> Software for running AI models locally.</p>
+<p><strong>Pair:</strong> A traded market like <code>BTC/USD</code>.</p>
+<p><strong>Slippage:</strong> The difference between expected price and actual fill price.</p>
+<p><strong>Stoploss:</strong> A rule that exits a trade after a set loss.</p>
+<h3 id="sources">&#128279; Sources</h3>
+<p>No URLs were included in the source content, so these are the verified sources used for the practical setup:</p>
+<ul>
+<li><a href="https://docs.freqtrade.io/en/stable/docker_quickstart/">Freqtrade Docker Quickstart</a></li>
+<li><a href="https://docs.freqtrade.io/en/stable/configuration/">Freqtrade Configuration</a></li>
+<li><a href="https://docs.freqtrade.io/en/stable/installation/">Freqtrade Installation</a></li>
+<li><a href="https://ollama.com/download">Ollama Download</a></li>
+<li><a href="https://ollama.com/library/qwen3:30b">Ollama Qwen3 30B</a></li>
+<li><a href="https://docs.ollama.com/api/openai-compatibility">Ollama OpenAI Compatibility</a></li>
+<li><a href="https://docs.ollama.com/gpu">Ollama Hardware Support</a></li>
+<li><a href="https://docs.openclaw.ai/install/index">OpenClaw Install Docs</a></li>
+<li><a href="https://help.openai.com/en/articles/11369540-codex-in-chatgpt-faq">Codex With ChatGPT Plan</a></li>
+<li><a href="https://help.openai.com/en/articles/9793128-what-is-chatgpt-pro">ChatGPT Pro Plans</a></li>
+<li><a href="https://developers.openai.com/codex/cli">Codex CLI Docs</a></li>
+<li><a href="https://www.amd.com/en/products/processors/laptop/ryzen/ai-300-series/amd-ryzen-ai-max-plus-395.html">AMD Ryzen AI Max+ 395 Specs</a></li>
+<li><a href="https://www.amd.com/en/products/software/ryzen-ai-software.html">AMD Ryzen AI Software</a></li>
+<li><a href="https://support.kraken.com/articles/how-to-create-an-api-key-on-kraken-pro">Kraken API Key Guide</a></li>
+</ul>
+
+</article>
+<footer>
+  <p>ResearchHive &mdash; Agentic Research Studio &nbsp;&middot;&nbsp; 6/9/2026 8:35 AM</p>
+  <p><a href="../">&#8592; Back to all reports</a></p>
+</footer>
+</body>
+</html>
