@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Quant Trading Senior Systems Researcher Analysis &#8212; For Dummies Guide</title>
+<style>
+:root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--green:#3fb950;--red:#f85149;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.7;}
+header{padding:2.5rem 2rem 2rem;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,#1a1f2e,#0e1117);}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;background:linear-gradient(135deg,#FF9800,#FFE082);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+header .badges{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.6rem;}
+.badge{border-radius:20px;padding:3px 12px;font-size:.75rem;font-weight:600;background:rgba(255,152,0,.12);color:var(--acc);border:1px solid rgba(255,152,0,.2);}
+article{max-width:820px;margin:0 auto;padding:2.5rem 1.5rem;}
+article h2,article h3{color:var(--acc);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.4rem;margin-top:2.2rem;}
+article h3{margin-top:1.8rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.92em;}
+article pre{background:#161b22;border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;}
+article blockquote{border-left:3px solid var(--acc);margin:1rem 0;padding:.5rem 1rem;color:var(--muted);font-style:italic;}
+article table{border-collapse:collapse;width:100%;margin:1rem 0;}
+article th,article td{border:1px solid var(--bdr);padding:8px 12px;text-align:left;}
+article th{background:rgba(255,152,0,.15);color:var(--acc);}
+article img{max-width:100%;border-radius:6px;}
+nav.breadcrumb{padding:1rem 2rem;font-size:.85rem;}
+nav.breadcrumb a{color:var(--link);text-decoration:none;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">&larr; All Reports</a></nav>
+<header>
+  <div class="eyebrow">&#128218; For Dummies Guide &nbsp;&middot;&nbsp; ResearchHive</div>
+  <h1>Quant Trading Senior Systems Researcher Analysis &#8212; For Dummies Guide</h1>
+  <div class="badges">
+    <span class="badge">Quant</span>
+    <span class="badge">Trading</span>
+    <span class="badge">Senior</span>
+    <span class="badge">Systems</span>
+  </div>
+</header>
+<article>
+<h3 id="what-is-it">&#127919; What Is It?</h3>
+<p>This is a beginner-safe way to build a crypto trading research bot using <strong>Freqtrade</strong>, a popular open-source trading framework. You will not build a &#8220;magic AI trader&#8221;; you will build a careful system that downloads market data, tests strategies, runs fake-money trades, and only later allows tiny real trades if the results are solid.</p>
+<p>The safest version uses AI as a helper for research, code review, and report writing, while humans and hard-coded risk rules stay in charge of real money.</p>
+<h3 id="why-does-it-matter">&#129300; Why Does It Matter?</h3>
+<p>Most beginner trading bots fail because they skip the boring parts: testing with real fees, avoiding fake-looking results, limiting losses, and checking whether a strategy still works outside the test period.</p>
+<p>This approach solves that by giving you a repeatable workflow: download data, backtest, check for bias, paper trade, review results, then decide whether to continue. Personally, it can save you from handing money to scammy &#8220;AI trading bot&#8221; promises or accidentally building a bot that looks profitable in a chart but loses money live.</p>
+<h3 id="what-youll-need">&#128722; What You'll Need</h3>
+<ol>
+<li><p><strong>A computer</strong></p>
+<ul>
+<li>Cost: <code>$0-1,500</code></li>
+<li>Where to get it: already owned, or any modern Windows, macOS, or Linux laptop</li>
+<li>What it&#8217;s for: running Freqtrade, backtests, and local analysis</li>
+</ul>
+</li>
+<li><p><strong>Docker Desktop</strong></p>
+<ul>
+<li>Cost: <code>$0</code></li>
+<li>Download: <code>https://www.docker.com/products/docker-desktop/</code></li>
+<li>What it&#8217;s for: running Freqtrade without manually installing lots of Python packages</li>
+</ul>
+</li>
+<li><p><strong>Freqtrade</strong></p>
+<ul>
+<li>Cost: <code>$0</code></li>
+<li>Docs: <code>https://docs.freqtrade.io/en/latest/bot-usage/</code></li>
+<li>What it&#8217;s for: downloading data, testing strategies, paper trading, and live trading later</li>
+</ul>
+</li>
+<li><p><strong>Visual Studio Code</strong></p>
+<ul>
+<li>Cost: <code>$0</code></li>
+<li>Download: <code>https://code.visualstudio.com/Download</code></li>
+<li>What it&#8217;s for: editing strategy files safely</li>
+</ul>
+</li>
+<li><p><strong>A crypto exchange account</strong></p>
+<ul>
+<li>Cost: <code>$0 to open</code></li>
+<li>Binance Spot API docs: <code>https://github.com/binance/binance-spot-api-docs</code></li>
+<li>Kraken docs: <code>https://docs.kraken.com/</code></li>
+<li>Coinbase Advanced Trade API docs: <code>https://docs.cdp.coinbase.com/api-reference/advanced-trade-api/rest-api/introduction</code></li>
+<li>What it&#8217;s for: paper/live market connection later</li>
+</ul>
+</li>
+<li><p><strong>Optional local AI helper</strong></p>
+<ul>
+<li>Cost: <code>$0</code></li>
+<li>Ollama API docs: <code>https://docs.ollama.com/api</code></li>
+<li>LM Studio API docs: <code>https://lmstudio.ai/docs/api</code></li>
+<li>What it&#8217;s for: summarizing logs, explaining errors, brainstorming strategy ideas</li>
+</ul>
+</li>
+<li><p><strong>Optional cloud AI API</strong></p>
+<ul>
+<li>Cost: <code>$5-50/month to start</code></li>
+<li>OpenRouter docs: <code>https://openrouter.ai/docs/guides/overview/models</code></li>
+<li>What it&#8217;s for: stronger reasoning or coding help when local models are not enough</li>
+</ul>
+</li>
+<li><p><strong>Starting trading capital</strong></p>
+<ul>
+<li>Cost: <code>$0 for paper trading; $25-100 for tiny live testing</code></li>
+<li>Where to get it: only from money you can afford to lose</li>
+<li>What it&#8217;s for: tiny live tests after paper validation</li>
+</ul>
+</li>
+</ol>
+<p><strong>Total Estimated Budget:</strong> <code>$0-150</code> to start safely with paper trading, excluding your existing computer.</p>
+<h3 id="safety-note">&#9888;&#65039; Safety Note</h3>
+<p>Do use <strong>spot-only trading</strong> at first. Spot means buying and selling the actual asset, not borrowing money or using leverage.</p>
+<p>Do create exchange API keys with <strong>trading enabled but withdrawals disabled</strong>. This prevents a stolen bot key from draining your account.</p>
+<p>Don&#8217;t let an AI model place trades directly. Use AI for research, explanations, and code drafts, but never as the final live-money decision maker.</p>
+<p>Don&#8217;t trust &#8220;guaranteed return&#8221; AI trading products. The Commodity Futures Trading Commission specifically warns that AI trading bot hype is often used in scams.</p>
+<p>Don&#8217;t start with leverage, martingale, grid doubling, or &#8220;recover losses&#8221; systems. These can look good briefly and then fail badly.</p>
+<h3 id="step-by-step-procedure">&#128203; Step-by-Step Procedure</h3>
+<h4 id="phase-1-install-the-tools">Phase 1: Install the Tools</h4>
+<ol>
+<li><p><strong>Install Docker Desktop</strong> <code>~10 minutes</code></p>
+<ul>
+<li>Go to <code>https://www.docker.com/products/docker-desktop/</code></li>
+<li>Download the version for your operating system.</li>
+<li>Install it, then restart your computer if asked.</li>
+<li>Open Docker Desktop and wait until it says it is running.</li>
+<li>&#128161; Tip: On Windows, Docker may ask to enable Windows Subsystem for Linux. Accept the default prompts.</li>
+</ul>
+</li>
+<li><p><strong>Create a project folder</strong> <code>~1 minute</code></p>
+<p>Open PowerShell on Windows and run:</p>
+<pre><code class="language-powershell">mkdir &quot;$env:USERPROFILE\freqtrade-lab&quot;
+cd &quot;$env:USERPROFILE\freqtrade-lab&quot;
+</code></pre>
+<p>On macOS or Linux, run:</p>
+<pre><code class="language-bash">mkdir -p ~/freqtrade-lab
+cd ~/freqtrade-lab
+</code></pre>
+</li>
+<li><p><strong>Download the Freqtrade Docker Compose file</strong> <code>~1 minute</code></p>
+<pre><code class="language-powershell">docker compose version
+</code></pre>
+<p>Then run:</p>
+<pre><code class="language-powershell">Invoke-WebRequest -Uri &quot;https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docker-compose.yml&quot; -OutFile &quot;docker-compose.yml&quot;
+</code></pre>
+<p>On macOS or Linux:</p>
+<pre><code class="language-bash">curl -L &quot;https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docker-compose.yml&quot; -o docker-compose.yml
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: continue if <code>docker compose version</code> fails. Open Docker Desktop first.</p>
+</li>
+<li><p><strong>Pull the Freqtrade Docker image</strong> <code>~3-10 minutes</code></p>
+<pre><code class="language-powershell">docker compose pull
+</code></pre>
+</li>
+</ol>
+<h4 id="phase-2-create-your-bot-workspace">Phase 2: Create Your Bot Workspace</h4>
+<ol start="5">
+<li><p><strong>Create the Freqtrade user directory</strong> <code>~2 minutes</code></p>
+<pre><code class="language-powershell">docker compose run --rm freqtrade create-userdir --userdir user_data
+</code></pre>
+</li>
+<li><p><strong>Create a starter configuration file</strong> <code>~3 minutes</code></p>
+<pre><code class="language-powershell">docker compose run --rm freqtrade new-config --config user_data/config.json
+</code></pre>
+<p>When prompted, choose:</p>
+<ul>
+<li>Exchange: <code>binance</code> or your preferred supported exchange</li>
+<li>Stake currency: <code>USDT</code></li>
+<li>Stake amount: <code>10</code></li>
+<li>Dry run: <code>yes</code></li>
+<li>Telegram: <code>no</code> for now</li>
+<li>Web server: <code>yes</code></li>
+</ul>
+<p>&#128161; Tip: &#8220;Dry run&#8221; means fake-money trading. Keep it enabled.</p>
+</li>
+<li><p><strong>Open the config file</strong> <code>~2 minutes</code></p>
+<pre><code class="language-powershell">code user_data/config.json
+</code></pre>
+<p>Confirm these values exist:</p>
+<pre><code class="language-json">&quot;dry_run&quot;: true,
+&quot;stake_currency&quot;: &quot;USDT&quot;,
+&quot;stake_amount&quot;: 10,
+&quot;tradable_balance_ratio&quot;: 0.99
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: put real API keys into random examples, chatbots, screenshots, or public repos.</p>
+</li>
+</ol>
+<h4 id="phase-3-download-market-data">Phase 3: Download Market Data</h4>
+<ol start="8">
+<li><p><strong>Download historical candle data</strong> <code>~5-20 minutes</code></p>
+<p>Start with liquid pairs and a simple timeframe:</p>
+<pre><code class="language-powershell">docker compose run --rm freqtrade download-data --exchange binance --pairs BTC/USDT ETH/USDT SOL/USDT --timeframes 5m 1h --days 365
+</code></pre>
+<p>&#128161; Tip: Liquid pairs like <code>BTC/USDT</code> and <code>ETH/USDT</code> usually have tighter spreads and cleaner data.</p>
+</li>
+<li><p><strong>List available strategies</strong> <code>~1 minute</code></p>
+<pre><code class="language-powershell">docker compose run --rm freqtrade list-strategies --userdir user_data
+</code></pre>
+</li>
+<li><p><strong>Create a new strategy file</strong> <code>~2 minutes</code></p>
+</li>
+</ol>
+<pre><code class="language-powershell">docker compose run --rm freqtrade new-strategy --strategy BeginnerSpotStrategy --userdir user_data
+</code></pre>
+<p>Your strategy file should appear at:</p>
+<pre><code class="language-text">user_data/strategies/BeginnerSpotStrategy.py
+</code></pre>
+<h4 id="phase-4-backtest-before-risking-money">Phase 4: Backtest Before Risking Money</h4>
+<ol start="11">
+<li><strong>Run your first backtest</strong> <code>~2-10 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose run --rm freqtrade backtesting --strategy BeginnerSpotStrategy --timerange 20250101-20250601
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: trust one good backtest. One date range can lie.</p>
+<ol start="12">
+<li><strong>Run an out-of-sample test</strong> <code>~2-10 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose run --rm freqtrade backtesting --strategy BeginnerSpotStrategy --timerange 20250601-20260101
+</code></pre>
+<p>This tests a later period the strategy was not tuned on.</p>
+<ol start="13">
+<li><strong>Check for lookahead bias</strong> <code>~3-10 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose run --rm freqtrade lookahead-analysis --strategy BeginnerSpotStrategy
+</code></pre>
+<p>If this reports problems, stop and fix the strategy before continuing.</p>
+<ol start="14">
+<li><strong>Run recursive analysis</strong> <code>~3-10 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose run --rm freqtrade recursive-analysis --strategy BeginnerSpotStrategy
+</code></pre>
+<p>This checks whether your indicator calculations behave consistently.</p>
+<h4 id="phase-5-paper-trade">Phase 5: Paper Trade</h4>
+<ol start="15">
+<li><strong>Start the bot in dry-run mode</strong> <code>~2 minutes</code></li>
+</ol>
+<pre><code class="language-powershell">docker compose up -d
+</code></pre>
+<ol start="16">
+<li><strong>Open the local dashboard</strong> <code>~1 minute</code></li>
+</ol>
+<p>Go to:</p>
+<pre><code class="language-text">http://127.0.0.1:8080
+</code></pre>
+<p>Watch fake trades for at least:</p>
+<pre><code class="language-text">14-30 days
+</code></pre>
+<p>&#128161; Tip: A bot that cannot survive paper trading should never touch real money.</p>
+<ol start="17">
+<li><strong>Stop the bot when needed</strong></li>
+</ol>
+<pre><code class="language-powershell">docker compose down
+</code></pre>
+<h4 id="phase-6-optional-tiny-live-test">Phase 6: Optional Tiny Live Test</h4>
+<ol start="18">
+<li><strong>Create exchange API keys</strong></li>
+</ol>
+<ul>
+<li>Use your exchange&#8217;s official API page.</li>
+<li>Enable: <code>spot trading</code></li>
+<li>Disable: <code>withdrawals</code></li>
+<li>Set IP restrictions if your exchange supports them.</li>
+</ul>
+<ol start="19">
+<li><strong>Set a tiny stake amount</strong></li>
+</ol>
+<p>In <code>user_data/config.json</code>, keep:</p>
+<pre><code class="language-json">&quot;stake_amount&quot;: 10
+</code></pre>
+<p>Keep your first live account size around:</p>
+<pre><code class="language-text">$25-100
+</code></pre>
+<ol start="20">
+<li><strong>Switch from dry run to live only after paper validation</strong></li>
+</ol>
+<p>Change:</p>
+<pre><code class="language-json">&quot;dry_run&quot;: true
+</code></pre>
+<p>to:</p>
+<pre><code class="language-json">&quot;dry_run&quot;: false
+</code></pre>
+<p>&#9888;&#65039; Don&#8217;t: change this until you have reviewed paper-trading logs and maximum drawdown.</p>
+<h3 id="real-world-analogy">&#127757; Real-World Analogy</h3>
+<p>Think of <strong>Freqtrade</strong> like a training kitchen for recipes. You can test ingredients, timing, and results before serving food to real guests; in trading, that means testing strategies before risking money.</p>
+<p>Think of <strong>backtesting</strong> like a flight simulator. It helps you practice with past market weather, but passing the simulator does not guarantee a smooth real flight.</p>
+<p>Think of <strong>paper trading</strong> like a dress rehearsal. The stage, timing, and cues are real, but the money is fake, so mistakes teach you without costing much.</p>
+<p>Think of <strong>lookahead bias</strong> like peeking at tomorrow&#8217;s exam answers. The results look amazing, but they are fake because you used information you would not have had at the time.</p>
+<p>Think of <strong>AI assistants</strong> like junior research interns. They can gather notes, draft code, and explain logs, but you still check their work before making decisions.</p>
+<p>Think of <strong>exchange API keys</strong> like valet keys for your car. You can give limited access for one job, but you should never hand over the master key.</p>
+<h3 id="common-mistakes-how-to-avoid-them">&#10060; Common Mistakes &amp; How to Avoid Them</h3>
+<ol>
+<li><p><strong>Trusting one profitable backtest</strong></p>
+<ul>
+<li>What goes wrong: The bot loses money live.</li>
+<li>Why it happens: The strategy was accidentally fit to one historical period.</li>
+<li>Fix: Test multiple date ranges with <code>--timerange</code>, including out-of-sample periods.</li>
+</ul>
+</li>
+<li><p><strong>Ignoring fees and slippage</strong></p>
+<ul>
+<li>What goes wrong: Small profits disappear.</li>
+<li>Why it happens: Real trades pay exchange fees and may fill at worse prices.</li>
+<li>Fix: Use realistic backtesting and focus on liquid pairs like <code>BTC/USDT</code>.</li>
+</ul>
+</li>
+<li><p><strong>Letting AI make final trade decisions</strong></p>
+<ul>
+<li>What goes wrong: The AI hallucinates, overreacts, or invents confidence.</li>
+<li>Why it happens: Language models are not reliable live trading engines.</li>
+<li>Fix: Use AI for research and review only, not order placement.</li>
+</ul>
+</li>
+<li><p><strong>Using leverage too early</strong></p>
+<ul>
+<li>What goes wrong: A normal price move can wipe out the account.</li>
+<li>Why it happens: Leverage magnifies both wins and losses.</li>
+<li>Fix: Start with spot-only trading and tiny fixed stakes.</li>
+</ul>
+</li>
+<li><p><strong>Creating unsafe API keys</strong></p>
+<ul>
+<li>What goes wrong: A leaked key can cause serious account damage.</li>
+<li>Why it happens: Beginners enable too many permissions.</li>
+<li>Fix: Disable withdrawals, use IP restrictions, and store keys only in local config.</li>
+</ul>
+</li>
+<li><p><strong>Changing many settings at once</strong></p>
+<ul>
+<li>What goes wrong: You cannot tell what helped or hurt.</li>
+<li>Why it happens: Beginners optimize randomly.</li>
+<li>Fix: Change one variable, run a backtest, write down the result.</li>
+</ul>
+</li>
+<li><p><strong>Skipping paper trading</strong></p>
+<ul>
+<li>What goes wrong: The bot fails on real exchange behavior.</li>
+<li>Why it happens: Backtests do not fully capture latency, partial fills, or outages.</li>
+<li>Fix: Paper trade for <code>14-30 days</code> before live testing.</li>
+</ul>
+</li>
+</ol>
+<h3 id="key-takeaways">&#9989; Key Takeaways</h3>
+<ul>
+<li>Start with Freqtrade, not a custom live bot.</li>
+<li>Use AI for help, not final trades.</li>
+<li>Backtest with realistic fees and dates.</li>
+<li>Paper trade for at least two weeks.</li>
+<li>Start spot-only with tiny stakes.</li>
+<li>Disable withdrawals on API keys.</li>
+<li>Treat good backtests as evidence, not proof.</li>
+</ul>
+<h3 id="quick-comparison-table">&#128202; Quick Comparison Table</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Best For</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Freqtrade</td>
+<td>Backtesting, dry-run, live mode, strategy tools</td>
+<td>Requires Python strategy editing</td>
+<td>Beginner-safe research bot</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Hummingbot</td>
+<td>Strong for market making and exchange connectors</td>
+<td>More complex for beginners</td>
+<td>Market making, arbitrage</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>CCXT</td>
+<td>Huge exchange API library</td>
+<td>Not a full bot system</td>
+<td>Custom tools, advanced builders</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>Jesse</td>
+<td>Backtesting-focused trading framework</td>
+<td>Smaller ecosystem than Freqtrade</td>
+<td>Strategy research</td>
+<td>Free</td>
+</tr>
+<tr>
+<td>AI-only trading bot</td>
+<td>Easy to market, sounds powerful</td>
+<td>High fraud and hallucination risk</td>
+<td>Not recommended</td>
+<td>Varies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="going-deeper">&#128300; Going Deeper</h3>
+<p>The core idea is to separate <strong>research</strong>, <strong>simulation</strong>, and <strong>execution</strong>. Freqtrade is useful because the same strategy surface can support historical data download, backtesting, dry-run trading, and live trading.</p>
+<p>A beginner-friendly validation timeline is:</p>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th style="text-align: right;">Minimum Time</th>
+<th>Goal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Setup</td>
+<td style="text-align: right;">1 day</td>
+<td>Install tools and run one backtest</td>
+</tr>
+<tr>
+<td>Backtesting</td>
+<td style="text-align: right;">3-7 days</td>
+<td>Test several date ranges and pairs</td>
+</tr>
+<tr>
+<td>Bias checks</td>
+<td style="text-align: right;">1 day</td>
+<td>Run lookahead and recursive analysis</td>
+</tr>
+<tr>
+<td>Paper trading</td>
+<td style="text-align: right;">14-30 days</td>
+<td>Observe fake-money live behavior</td>
+</tr>
+<tr>
+<td>Tiny live test</td>
+<td style="text-align: right;">30+ days</td>
+<td>Risk only <code>$25-100</code> initially</td>
+</tr>
+</tbody>
+</table>
+<p>For small accounts, fixed stake sizes like <code>$10</code> are easier to reason about than percentage-based position sizing. A <code>$10</code> stake also limits damage while you are learning how the bot behaves.</p>
+<p>The source material&#8217;s practical verdict is: <strong>Adopt Freqtrade first, watch Hummingbot, avoid autonomous large language model trade execution.</strong> That is because profitability usually depends less on fancy AI and more on clean data, realistic costs, exchange behavior, and strict validation.</p>
+<p>Hardware matters less than discipline. A strong local machine can help with backtests, embeddings, and local AI models, but faster tokens do not fix a bad strategy or unsafe execution.</p>
+<p>Tax and compliance also matter. In the United States, the Internal Revenue Service treats digital assets as reportable, so keep trade history, bot logs, deposits, withdrawals, and exchange exports from day one.</p>
+<h3 id="glossary">&#128214; Glossary</h3>
+<p><strong>Application Programming Interface:</strong> A way for software to talk to another service, such as an exchange.</p>
+<p><strong>API key:</strong> A secret code that lets your bot access your exchange account.</p>
+<p><strong>Backtesting:</strong> Testing a trading strategy against historical market data.</p>
+<p><strong>Dry run:</strong> Fake-money trading inside the bot.</p>
+<p><strong>Exchange:</strong> A marketplace where people buy and sell crypto.</p>
+<p><strong>Freqtrade:</strong> An open-source crypto trading bot framework.</p>
+<p><strong>Hummingbot:</strong> An open-source framework often used for market making and arbitrage.</p>
+<p><strong>Leverage:</strong> Borrowed trading power that increases both gains and losses.</p>
+<p><strong>Lookahead bias:</strong> Accidentally using future information in a historical test.</p>
+<p><strong>Market making:</strong> Placing buy and sell orders to earn from the spread.</p>
+<p><strong>Slippage:</strong> The difference between the expected trade price and the actual filled price.</p>
+<p><strong>Spot trading:</strong> Buying or selling the actual asset without borrowed money.</p>
+<h3 id="sources">&#128279; Sources</h3>
+<ul>
+<li><a href="https://dev.to/daltonic/what-you-need-to-build-an-automated-ai-crypto-trading-bot-47fa">What You Need to Build an Automated AI Crypto Trading Bot</a></li>
+<li><a href="https://resources.anthropic.com/hubfs/Building%20Effective%20AI%20Agents-%20Architecture%20Patterns%20and%20Implementation%20Frameworks.pdf">Building Effective AI Agents</a></li>
+<li><a href="https://github.com/tauricresearch/tradingagents">TradingAgents GitHub Repository</a></li>
+<li><a href="https://docs.freqtrade.io/en/latest/backtesting/">Freqtrade Backtesting</a></li>
+<li><a href="https://docs.freqtrade.io/en/latest/bot-usage/">Freqtrade Bot Usage</a></li>
+<li><a href="https://hummingbot.org/docs/">Hummingbot Documentation</a></li>
+<li><a href="https://hummingbot.org/gateway/strategies/">Hummingbot Gateway Strategies</a></li>
+<li><a href="https://docs.jesse.trade/docs/backtest/">Jesse Backtesting</a></li>
+<li><a href="https://github.com/ccxt/ccxt/wiki/manual">CCXT Manual</a></li>
+<li><a href="https://www.amd.com/en/products/software/ryzen-ai-software.html">AMD Ryzen AI Software</a></li>
+<li><a href="https://www.amd.com/en/developer/resources/technical-articles/2026/ai-model-deployment-using-windows-ml-on-amd-npu.html">AMD NPU Windows ML Deployment</a></li>
+<li><a href="https://github.com/binance/binance-spot-api-docs">Binance Spot API Docs</a></li>
+<li><a href="https://www.cftc.gov/LearnAndProtect/AdvisoriesAndArticles/AITradingBots.html">CFTC AI Trading Bots Advisory</a></li>
+<li><a href="https://www.irs.gov/digitalassets">IRS Digital Assets</a></li>
+<li><a href="https://github.com/drakkar-software/octobot">OctoBot GitHub Repository</a></li>
+<li><a href="https://arxiv.org/abs/2412.20138">LLM Trading Agents Paper</a></li>
+<li><a href="https://lmstudio.ai/docs/api">LM Studio API Docs</a></li>
+<li><a href="https://docs.openclaw.ai/tools/browser">OpenClaw Browser Tools</a></li>
+<li><a href="https://arxiv.org/abs/2604.04759">Trading Research Paper</a></li>
+<li><a href="https://openrouter.ai/docs/guides/overview/models">OpenRouter Models Guide</a></li>
+<li><a href="https://docs.ollama.com/api">Ollama API Docs</a></li>
+<li><a href="https://docs.kraken.com/">Kraken Docs</a></li>
+<li><a href="https://docs.cdp.coinbase.com/api-reference/advanced-trade-api/rest-api/introduction">Coinbase Advanced Trade API</a></li>
+<li><a href="https://www.fincen.gov/resources/statutes-regulations/guidance/application-fincens-regulations-persons-administering">FinCEN Virtual Currency Guidance</a></li>
+</ul>
+
+</article>
+<footer>
+  <p>ResearchHive &mdash; Agentic Research Studio &nbsp;&middot;&nbsp; 6/11/2026 1:36 AM</p>
+  <p><a href="../">&#8592; Back to all reports</a></p>
+</footer>
+</body>
+</html>
