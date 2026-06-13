@@ -2,13 +2,13 @@
 
 - Packet type: Decision
 - Domain: General Research
-- Trust status: Weak Coverage
+- Trust status: Usable With Review
 - Blockers: 0
-- Warnings: 3
-- Sources: 18 available, 12 blocked
-- Citations: 14 saved, 406 markers
+- Warnings: 1
+- Sources: 3 available, 0 blocked
+- Citations: 4 saved, 404 markers
 - Grounding: 93%
-- Primary report: Executive Summary - Research 1960s Counterculture Movement Detailed,
+- Primary report: Full Report - Research 1960s Counterculture Movement Detailed,
 
 ## Executive Answer
 
@@ -152,13 +152,11 @@ See the full report for comparative detail, citations, and limitations.
 
 ## Top Gaps
 
-- 12 source(s) were blocked or unavailable during capture.
 - No saved claim-verification checks were found.
-- 4 unresolved contradiction signal(s) need review.
 
 ## Next Actions
 
-- Review the primary report 'Executive Summary - Research 1960s Counterculture Movement Detailed,' for the full evidence-backed detail.
+- Review the primary report 'Full Report - Research 1960s Counterculture Movement Detailed,' for the full evidence-backed detail.
 - Inspect the most relevant supporting files referenced in this brief before continuing the work.
 - Use unresolved claims or limitations as the first targets for follow-up research.
 

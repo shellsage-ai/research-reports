@@ -2,9 +2,9 @@
 
 - Domain: General Research
 - Status: Active
-- Generated: 2026-06-13 17:39 UTC
+- Generated: 2026-06-13 17:59 UTC
 - Grounding: 93%
-- Primary report: Executive Summary - Research 1960s Counterculture Movement Detailed, (executive)
+- Primary report: Full Report - Research 1960s Counterculture Movement Detailed, (full)
 
 ## Summary
 
@@ -144,14 +144,14 @@ See the full report for comparative detail, citations, and limitations.
 
 ## Top Findings
 
-- What “1960s Counterculture” means.
-- How it differed from mainstream American culture at the time.
-- Whether it was one unified movement or many overlapping movements.
-- Post–World War II prosperity.
+- Executive Summary
+- Key Findings
+- Methodology / Evidence Base
+- Detailed Analysis
 
 ## Next Actions
 
-- Review the primary report 'Executive Summary - Research 1960s Counterculture Movement Detailed,' for the full evidence-backed detail.
+- Review the primary report 'Full Report - Research 1960s Counterculture Movement Detailed,' for the full evidence-backed detail.
 - Inspect the most relevant supporting files referenced in this brief before continuing the work.
 - Use unresolved claims or limitations as the first targets for follow-up research.
 
@@ -159,14 +159,7 @@ See the full report for comparative detail, citations, and limitations.
 
 - Packet Index (packet): index.html
 - Full Report - Research 1960s Counterculture Movement Detailed, (report): reports/Full_Report_-_Research_1960s_Counterculture_Movement_Detaile_624c56ad.html
-- Replay Timeline - Research 1960s Counterculture Movement Detailed, (report): reports/Replay_Timeline_-_Research_1960s_Counterculture_Movement_Det_1e35e908.html
-- Activity Report - Research 1960s Counterculture Movement Detailed, (report): reports/Activity_Report_-_Research_1960s_Counterculture_Movement_Det_de1d31ab.html
-- Executive Summary - Research 1960s Counterculture Movement Detailed, (report): reports/Executive_Summary_-_Research_1960s_Counterculture_Movement_D_b7152b81.html
-- Activity Report - Research 1960s Counterculture Movement Detailed, (report): reports/Activity_Report_-_Research_1960s_Counterculture_Movement_Det_6e6a88de.html
-- Research Status Report - Research 1960s Counterculture Movement Detailed, (report): reports/Research_Status_Report_-_Research_1960s_Counterculture_Movem_d2c18cc4.html
-- Executive Summary - Research 1960s Counterculture Movement Detailed, (report): reports/Executive_Summary_-_Research_1960s_Counterculture_Movement_D_d462573d.html
 - Source Index (data): sources.csv
-- Structured Export (data): StructuredExport_60s_Counter_Culture_20260613_113920/
 - Packet Summary (packet): packet-summary.md
 - Trust Summary (packet): packet-trust-summary.json
 - Packet Visuals (visual): visuals.html

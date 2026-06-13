@@ -1,36 +1,32 @@
 ﻿{
   "SchemaVersion": "researchhive.packet-trust.v1",
-  "Status": "WeakCoverage",
-  "StatusLabel": "Weak Coverage",
+  "Status": "UsableWithReview",
+  "StatusLabel": "Usable With Review",
   "BlockerCount": 0,
-  "WarningCount": 3,
-  "ReportCount": 7,
-  "SourceCount": 18,
-  "BlockedSourceCount": 12,
-  "EvidenceFileCount": 18,
-  "CitationCount": 14,
-  "CitationMarkerCount": 406,
+  "WarningCount": 1,
+  "ReportCount": 1,
+  "SourceCount": 3,
+  "BlockedSourceCount": 0,
+  "EvidenceFileCount": 3,
+  "CitationCount": 4,
+  "CitationMarkerCount": 404,
   "ClaimCheckCount": 0,
   "SupportedClaimCount": 0,
   "UnresolvedClaimCount": 0,
-  "UnresolvedContradictionCount": 4,
+  "UnresolvedContradictionCount": 0,
   "GroundingScore": 0.9302325581395349,
   "Blockers": [],
   "Warnings": [
-    "12 source(s) were blocked or unavailable during capture.",
-    "No saved claim-verification checks were found.",
-    "4 unresolved contradiction signal(s) need review."
+    "No saved claim-verification checks were found."
   ],
   "MissingOrWeakEvidence": [
-    "12 source(s) were blocked or unavailable during capture.",
-    "No saved claim-verification checks were found.",
-    "4 unresolved contradiction signal(s) need review."
+    "No saved claim-verification checks were found."
   ],
   "SourceHealth": {
-    "available": 18,
-    "blocked": 12,
-    "withEvidenceFiles": 18,
-    "savedCitations": 14,
-    "citationMarkers": 406
+    "available": 3,
+    "blocked": 0,
+    "withEvidenceFiles": 3,
+    "savedCitations": 4,
+    "citationMarkers": 404
   }
 }
