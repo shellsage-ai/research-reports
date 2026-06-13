@@ -1,9 +1,9 @@
 ﻿{
   "sessionId": "7f4bd513f1bf",
   "sessionTitle": "60s Counter Culture",
-  "exportedUtc": "2026-06-13T18:29:05.9230007Z",
-  "packetType": "Decision",
-  "packetKind": "Decision",
+  "exportedUtc": "2026-06-13T19:01:12.9298723Z",
+  "packetType": "Informational / Research",
+  "packetKind": "Informational",
   "options": {
     "PacketKind": 0,
     "SelectedReportId": "624c56ad59d8",

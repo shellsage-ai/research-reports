@@ -1,6 +1,6 @@
-﻿# 60s Counter Culture - Decision Packet Summary
+﻿# 60s Counter Culture - Informational / Research Packet Summary
 
-- Packet type: Decision
+- Packet type: Informational / Research
 - Domain: General Research
 - Trust status: Usable With Review
 - Blockers: 0
