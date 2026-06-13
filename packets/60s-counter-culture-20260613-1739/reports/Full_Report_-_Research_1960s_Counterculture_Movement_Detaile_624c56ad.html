@@ -38,7 +38,7 @@ article blockquote p{margin:.3rem 0;}
 .callout-verdict{background:linear-gradient(135deg,rgba(54,179,126,.14),rgba(54,179,126,.05));border-color:rgba(54,179,126,.35);}
 .callout-datapoint{background:linear-gradient(135deg,rgba(127,86,217,.12),rgba(127,86,217,.04));border-color:rgba(127,86,217,.32);}
 article table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem;display:block;overflow-x:auto;}
-article th,article td{border:1px solid var(--bdr);padding:.55rem .75rem;text-align:left;white-space:nowrap;}
+article th,article td{border:1px solid var(--bdr);padding:.55rem .75rem;text-align:left;white-space:normal;vertical-align:top;word-break:break-word;}
 article th{background:var(--surf);color:var(--acc);font-weight:600;position:sticky;top:0;z-index:1;}
 article tr:nth-child(even){background:rgba(255,255,255,.03);}
 article ul,article ol{padding-left:1.4rem;}
@@ -141,7 +141,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
         Array.from(article.children).forEach(function(node){
             if(node===controls||node===meta)return;
             if(node.tagName==='H2'){
-                var details=document.createElement('details');details.className='section-accordion';details.id=node.id||slug(node.textContent||'section');details.open=accordionIndex===0;
+                var details=document.createElement('details');details.className='section-accordion';details.id=node.id||slug(node.textContent||'section');details.open=true;
                 var summary=document.createElement('summary');summary.className='section-summary';summary.textContent=(node.textContent||'').replace(/\u00A7/g,'').trim();
                 var body=document.createElement('div');body.className='section-body';details.appendChild(summary);details.appendChild(body);
                 article.insertBefore(details,node);node.remove();current=body;accordionIndex++;
@@ -155,9 +155,16 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
             if(action==='expand')setAccordionState(true);
             if(action==='collapse')setAccordionState(false);
         });
+        document.querySelectorAll('a[href^="#"]').forEach(function(link){
+            link.addEventListener('click',function(){
+                var target=document.querySelector(link.getAttribute('href'));
+                if(target&&target.tagName==='DETAILS')target.open=true;
+            });
+        });
         window.rhSetAccordionState=setAccordionState;
     })();
   (function fixCitations(node){
+    if(!node)return;
     if(node.nodeType===3){var val=node.nodeValue;if(val&&/\[\d+\]/.test(val)){var span=document.createElement('span');span.innerHTML=val.replace(/\[(\d+)\]/g,'<sup class="cit">[$1]</sup>');node.parentNode.replaceChild(span,node);} }
     else if(node.nodeType===1&&node.nodeName!=='PRE'&&node.nodeName!=='CODE'){Array.from(node.childNodes).forEach(fixCitations);}
   })(document.querySelector('article'));
@@ -222,6 +229,18 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 <p>This report is a source-grounded research packet. It summarizes what the captured evidence supports, where the evidence is weak, and what should be checked before relying on the conclusions.</p>
 <h2 id="table-of-contents">Table Of Contents</h2>
 <ul>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#key-findings">Key Findings</a></li>
+<li><a href="#methodology-evidence-base">Methodology / Evidence Base</a></li>
+<li><a href="#detailed-analysis">Detailed Analysis</a></li>
+<li><a href="#comparative-summary">Comparative Summary</a></li>
+<li><a href="#recommended-path-action-plan">Recommended Path / Action Plan</a></li>
+<li><a href="#risks-constraints-and-failure-modes">Risks, Constraints, and Failure Modes</a></li>
+<li><a href="#metrics-validation-plan">Metrics / Validation Plan</a></li>
+<li><a href="#limitations">Limitations</a></li>
+<li><a href="#appendix-report-quality-and-depth-ledger">Appendix: Report Quality And Depth Ledger</a></li>
+<li><a href="#source-index">Source Index</a></li>
+
 <li>Executive Summary</li>
 <li>Key Findings</li>
 <li>Methodology / Evidence Base</li>
@@ -233,7 +252,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 <li>Limitations</li>
 <li>Appendix: Report Quality And Depth Ledger</li>
 <li>Source Index</li>
-</ul>
+
 <h2 id="evidence-confidence-summary">Evidence Confidence Summary</h2>
 <p><em>Sources: 5 curated | Codex web search: enabled | Citations: 17 | Grounding: 93%</em></p>
 <ul>
@@ -744,7 +763,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 </tr>
 </tbody>
 </table>
-<section class="crosslink-panel"><h2>Related Packet Artifacts</h2><ul class="crosslink-list"><li><a href="../index.html">Packet Index</a> <span class="meta">Return to the packet overview and counts.</span></li><li><a href="../agent-brief.json">Agent Brief (JSON)</a> <span class="meta">Machine-readable handoff for downstream agents.</span></li><li><a href="../agent-brief.md">Agent Brief (Markdown)</a> <span class="meta">Human-readable continuation summary.</span></li><li><a href="../sources.csv">Source Index</a> <span class="meta">Review all captured source URLs and status codes.</span></li></ul></section>
+
 </article>
 <footer>
   <p>Generated by ResearchHive &mdash; Agentic Research Studio</p>

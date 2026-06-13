@@ -38,7 +38,7 @@ article blockquote p{margin:.3rem 0;}
 .callout-verdict{background:linear-gradient(135deg,rgba(54,179,126,.14),rgba(54,179,126,.05));border-color:rgba(54,179,126,.35);}
 .callout-datapoint{background:linear-gradient(135deg,rgba(127,86,217,.12),rgba(127,86,217,.04));border-color:rgba(127,86,217,.32);}
 article table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem;display:block;overflow-x:auto;}
-article th,article td{border:1px solid var(--bdr);padding:.55rem .75rem;text-align:left;white-space:nowrap;}
+article th,article td{border:1px solid var(--bdr);padding:.55rem .75rem;text-align:left;white-space:normal;vertical-align:top;word-break:break-word;}
 article th{background:var(--surf);color:var(--acc);font-weight:600;position:sticky;top:0;z-index:1;}
 article tr:nth-child(even){background:rgba(255,255,255,.03);}
 article ul,article ol{padding-left:1.4rem;}
@@ -141,7 +141,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
         Array.from(article.children).forEach(function(node){
             if(node===controls||node===meta)return;
             if(node.tagName==='H2'){
-                var details=document.createElement('details');details.className='section-accordion';details.id=node.id||slug(node.textContent||'section');details.open=accordionIndex===0;
+                var details=document.createElement('details');details.className='section-accordion';details.id=node.id||slug(node.textContent||'section');details.open=true;
                 var summary=document.createElement('summary');summary.className='section-summary';summary.textContent=(node.textContent||'').replace(/\u00A7/g,'').trim();
                 var body=document.createElement('div');body.className='section-body';details.appendChild(summary);details.appendChild(body);
                 article.insertBefore(details,node);node.remove();current=body;accordionIndex++;
@@ -155,9 +155,16 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
             if(action==='expand')setAccordionState(true);
             if(action==='collapse')setAccordionState(false);
         });
+        document.querySelectorAll('a[href^="#"]').forEach(function(link){
+            link.addEventListener('click',function(){
+                var target=document.querySelector(link.getAttribute('href'));
+                if(target&&target.tagName==='DETAILS')target.open=true;
+            });
+        });
         window.rhSetAccordionState=setAccordionState;
     })();
   (function fixCitations(node){
+    if(!node)return;
     if(node.nodeType===3){var val=node.nodeValue;if(val&&/\[\d+\]/.test(val)){var span=document.createElement('span');span.innerHTML=val.replace(/\[(\d+)\]/g,'<sup class="cit">[$1]</sup>');node.parentNode.replaceChild(span,node);} }
     else if(node.nodeType===1&&node.nodeName!=='PRE'&&node.nodeName!=='CODE'){Array.from(node.childNodes).forEach(fixCitations);}
   })(document.querySelector('article'));
@@ -172,13 +179,13 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 <header>
     <div class="eyebrow">&#128202; Research Packet &nbsp;&middot;&nbsp; ResearchHive</div>
     <h1>60s Counter Culture</h1>
-<div class="cover-badges"><span class="cover-pill domain">General Research</span><span class="cover-pill">Generated 2026-06-13</span><span class="cover-pill">~56 min read</span></div>
+<div class="cover-badges"><span class="cover-pill domain">General Research</span><span class="cover-pill">Generated 2026-06-13</span><span class="cover-pill">~57 min read</span></div>
 </header>
 <article>
 <div class="meta-bar">
     <span class="meta-pill">Research Packet</span>
-        <span class="meta-pill">Generated: 2026-06-13 17:59 UTC</span>
-        <span class="meta-pill">~56 min read</span>
+        <span class="meta-pill">Generated: 2026-06-13 18:15 UTC</span>
+        <span class="meta-pill">~57 min read</span>
     <span class="meta-pill">Exported by ResearchHive</span>
 </div>
 <style>
@@ -215,7 +222,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
     </div>
 </section>
 
-<section class="packet-section" id="packet-toc"><h2>Table Of Contents</h2><ul><li><a href="#full-report">Full Report</a> <span class="meta">Read the selected report on this page</span></li><li><a href="packet-trust-summary.json">Verification Summary</a> <span class="meta">Trust status, blockers, warnings, and source coverage</span></li><li><a href="visuals.html">Packet Visuals</a> <span class="meta">Coverage, source mix, support, gaps, and timeline</span></li><li><a href="visuals.html#contradictions-gaps-board">Contradictions And Gaps</a> <span class="meta">Review unresolved risks and gaps</span></li><li><a href="packet-summary.md">Packet Summary</a> <span class="meta">Copy/paste executive summary</span></li><li><a href="reports/Full_Report_-_Research_1960s_Counterculture_Movement_Detaile_624c56ad.html">Reports</a> <span class="meta">Primary and supporting reports</span></li><li><a href="sources.csv">Source Manifest</a> <span class="meta">Captured URLs, status codes, and block reasons</span></li></ul><h3>Report Sections</h3><ol class="packet-list"><li><a href="#cover">Cover</a></li><li><a href="#scope-and-use">Scope And Use</a></li><li><a href="#table-of-contents">Table Of Contents</a></li><li><a href="#evidence-confidence-summary">Evidence Confidence Summary</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#key-findings">Key Findings</a></li><li><a href="#methodology-evidence-base">Methodology / Evidence Base</a></li><li><a href="#detailed-analysis">Detailed Analysis</a></li><li><a href="#definition-and-scope"> - Definition and Scope</a></li><li><a href="#historical-background"> - Historical Background</a></li><li><a href="#major-causes"> - Major Causes</a></li><li><a href="#major-groups-scenes-and-locations"> - Major Groups, Scenes, and Locations</a></li><li><a href="#music-art-and-media"> - Music, Art, and Media</a></li><li><a href="#politics-and-protest"> - Politics and Protest</a></li><li><a href="#lifestyle-and-values"> - Lifestyle and Values</a></li><li><a href="#internal-tensions-and-criticism"> - Internal Tensions and Criticism</a></li><li><a href="#key-events-timeline"> - Key Events Timeline</a></li><li><a href="#decline-transformation-and-legacy"> - Decline, Transformation, and Legacy</a></li></ol></section>
+<section class="packet-section" id="packet-toc"><h2>Table Of Contents</h2><ul><li><a href="#full-report">Full Report</a> <span class="meta">Read the selected report on this page</span></li><li><a href="packet-trust-summary.json">Verification Summary</a> <span class="meta">Trust status, blockers, warnings, and source coverage</span></li><li><a href="visuals.html">Packet Visuals</a> <span class="meta">Coverage, source mix, support, gaps, and timeline</span></li><li><a href="visuals.html#contradictions-gaps-board">Contradictions And Gaps</a> <span class="meta">Review unresolved risks and gaps</span></li><li><a href="packet-summary.md">Packet Summary</a> <span class="meta">Copy/paste executive summary</span></li><li><a href="reports/Full_Report_-_Research_1960s_Counterculture_Movement_Detaile_624c56ad.html">Reports</a> <span class="meta">Selected report</span></li><li><a href="sources.csv">Source Manifest</a> <span class="meta">Captured URLs, status codes, and block reasons</span></li></ul><h3>Report Sections</h3><ol class="packet-list"><li><a href="#cover">Cover</a></li><li><a href="#scope-and-use">Scope And Use</a></li><li><a href="#table-of-contents">Table Of Contents</a></li><li><a href="#evidence-confidence-summary">Evidence Confidence Summary</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#key-findings">Key Findings</a></li><li><a href="#methodology-evidence-base">Methodology / Evidence Base</a></li><li><a href="#detailed-analysis">Detailed Analysis</a></li><li><a href="#definition-and-scope"> - Definition and Scope</a></li><li><a href="#historical-background"> - Historical Background</a></li><li><a href="#major-causes"> - Major Causes</a></li><li><a href="#major-groups-scenes-and-locations"> - Major Groups, Scenes, and Locations</a></li><li><a href="#music-art-and-media"> - Music, Art, and Media</a></li><li><a href="#politics-and-protest"> - Politics and Protest</a></li><li><a href="#lifestyle-and-values"> - Lifestyle and Values</a></li><li><a href="#internal-tensions-and-criticism"> - Internal Tensions and Criticism</a></li><li><a href="#key-events-timeline"> - Key Events Timeline</a></li><li><a href="#decline-transformation-and-legacy"> - Decline, Transformation, and Legacy</a></li></ol></section>
 
 <section class="packet-section packet-full-report" id="full-report">
     <h2>Full Report</h2>
@@ -261,6 +268,18 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 <p>This report is a source-grounded research packet. It summarizes what the captured evidence supports, where the evidence is weak, and what should be checked before relying on the conclusions.</p>
 <h2 id="table-of-contents">Table Of Contents</h2>
 <ul>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#key-findings">Key Findings</a></li>
+<li><a href="#methodology-evidence-base">Methodology / Evidence Base</a></li>
+<li><a href="#detailed-analysis">Detailed Analysis</a></li>
+<li><a href="#comparative-summary">Comparative Summary</a></li>
+<li><a href="#recommended-path-action-plan">Recommended Path / Action Plan</a></li>
+<li><a href="#risks-constraints-and-failure-modes">Risks, Constraints, and Failure Modes</a></li>
+<li><a href="#metrics-validation-plan">Metrics / Validation Plan</a></li>
+<li><a href="#limitations">Limitations</a></li>
+<li><a href="#appendix-report-quality-and-depth-ledger">Appendix: Report Quality And Depth Ledger</a></li>
+<li><a href="#source-index">Source Index</a></li>
+
 <li>Executive Summary</li>
 <li>Key Findings</li>
 <li>Methodology / Evidence Base</li>
@@ -272,7 +291,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 <li>Limitations</li>
 <li>Appendix: Report Quality And Depth Ledger</li>
 <li>Source Index</li>
-</ul>
+
 <h2 id="evidence-confidence-summary">Evidence Confidence Summary</h2>
 <p><em>Sources: 5 curated | Codex web search: enabled | Citations: 17 | Grounding: 93%</em></p>
 <ul>

@@ -2,7 +2,7 @@
 
 - Domain: General Research
 - Status: Active
-- Generated: 2026-06-13 17:59 UTC
+- Generated: 2026-06-13 18:15 UTC
 - Grounding: 93%
 - Primary report: Full Report - Research 1960s Counterculture Movement Detailed, (full)
 
