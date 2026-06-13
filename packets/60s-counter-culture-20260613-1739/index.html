@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>60s Counter Culture &#8212; ResearchHive</title>
+<style>
+    :root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--font-stack:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--hero-start:#1a1f2e;--hero-end:#0e1117;--hero-text-1:#FF9800;--hero-text-2:#FFE082;--soft-accent:rgba(255,152,0,.07);--soft-accent-border:rgba(255,152,0,.18);--tldr-bg:linear-gradient(135deg,#3a2f13,#1f2a33);--tldr-border:#d9a441;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-stack);line-height:1.7;}
+header{padding:2rem 2rem 1.5rem;text-align:center;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,var(--hero-start),var(--hero-end));}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:800;background:linear-gradient(135deg,var(--hero-text-1),var(--hero-text-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.cover-badges{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin:.9rem 0 0;}
+.cover-pill{display:inline-flex;align-items:center;gap:.35rem;border-radius:999px;padding:.4rem .8rem;border:1px solid var(--soft-accent-border);background:rgba(255,255,255,.18);color:var(--acc2);font-size:.78rem;font-weight:700;letter-spacing:.02em;backdrop-filter:blur(6px);}
+.cover-pill.domain{text-transform:uppercase;letter-spacing:.08em;}
+.cover-pill.confidence-strong{background:rgba(54,179,126,.12);border-color:rgba(54,179,126,.35);}
+.cover-pill.confidence-medium{background:rgba(224,171,16,.12);border-color:rgba(224,171,16,.35);}
+.cover-pill.confidence-low{background:rgba(217,69,69,.12);border-color:rgba(217,69,69,.35);}
+article{max-width:860px;margin:0 auto;padding:2rem 1.5rem;}
+article h1,article h2,article h3,article h4{color:var(--acc2);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.35rem;margin-top:2rem;}
+article h3{margin-top:1.5rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.9em;}
+article pre{background:var(--surf);border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;padding:0;}
+article blockquote{border-left:3px solid var(--acc);margin:1.4rem 0;padding:.8rem 1.4rem;background:var(--soft-accent);border-radius:0 10px 10px 0;font-style:italic;color:var(--acc2);}
+article blockquote p{margin:.3rem 0;}
+.callout-card{border-left:none;border:1px solid var(--soft-accent-border);border-radius:16px;padding:1rem 1.2rem;color:var(--text);box-shadow:0 16px 30px rgba(0,0,0,.08);font-style:normal;}
+.callout-card p{margin:.25rem 0;}
+.callout-card strong{color:var(--acc2);}
+.tldr-callout{border-left:none;border:1px solid var(--tldr-border);background:var(--tldr-bg);border-radius:16px;padding:1rem 1.2rem;color:var(--text);box-shadow:0 16px 30px rgba(0,0,0,.08);font-style:normal;}
+.tldr-callout p{margin:.25rem 0;}
+.tldr-callout strong{color:var(--acc2);}
+.callout-insight{background:linear-gradient(135deg,rgba(34,126,253,.10),rgba(34,126,253,.04));border-color:rgba(34,126,253,.28);}
+.callout-caution{background:linear-gradient(135deg,rgba(224,171,16,.14),rgba(224,171,16,.05));border-color:rgba(224,171,16,.35);}
+.callout-verdict{background:linear-gradient(135deg,rgba(54,179,126,.14),rgba(54,179,126,.05));border-color:rgba(54,179,126,.35);}
+.callout-datapoint{background:linear-gradient(135deg,rgba(127,86,217,.12),rgba(127,86,217,.04));border-color:rgba(127,86,217,.32);}
+article table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.9rem;display:block;overflow-x:auto;}
+article th,article td{border:1px solid var(--bdr);padding:.55rem .75rem;text-align:left;white-space:nowrap;}
+article th{background:var(--surf);color:var(--acc);font-weight:600;position:sticky;top:0;z-index:1;}
+article tr:nth-child(even){background:rgba(255,255,255,.03);}
+article ul,article ol{padding-left:1.4rem;}
+article li{margin:.3rem 0;}
+article strong{color:var(--acc2);}
+article hr{border:none;border-top:1px solid var(--bdr);margin:2rem 0;}
+article img{max-width:100%;height:auto;border-radius:6px;margin:.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.16);}
+.mermaid-wrap{background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.46));border:1px solid var(--bdr);border-radius:18px;padding:1.2rem 1rem .95rem;margin:1.6rem 0;text-align:center;overflow-x:auto;box-shadow:0 18px 36px rgba(0,0,0,.08);}
+.mermaid-wrap svg{max-width:100%;height:auto;display:block;margin:0 auto;}
+.meta-bar{display:flex;flex-wrap:wrap;gap:.5rem .8rem;padding:.7rem 1.5rem;background:var(--soft-accent);border-top:1px solid var(--soft-accent-border);border-bottom:1px solid var(--soft-accent-border);font-size:.8rem;color:var(--muted);align-items:center;justify-content:center;margin-bottom:1rem;}
+.meta-pill{background:var(--soft-accent);border:1px solid var(--soft-accent-border);border-radius:20px;padding:2px 10px;color:var(--acc2);font-weight:600;}
+.reading-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--hero-text-1),var(--hero-text-2));z-index:200;transition:width .15s;}
+.section-controls{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:flex-end;margin:0 0 1.25rem;}
+.section-controls-label{margin-right:auto;font-size:.84rem;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+.section-toggle{appearance:none;border:1px solid var(--soft-accent-border);background:var(--surf);color:var(--acc2);border-radius:999px;padding:.45rem .9rem;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;}
+.section-toggle:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.08);background:var(--soft-accent);}
+.section-accordion{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;margin:1rem 0;overflow:hidden;box-shadow:0 16px 30px rgba(0,0,0,.06);}
+.section-accordion[open]{border-color:var(--soft-accent-border);}
+.section-summary{display:flex;align-items:center;gap:.75rem;list-style:none;cursor:pointer;padding:1rem 1.15rem;font-weight:800;color:var(--acc2);background:linear-gradient(180deg,var(--soft-accent),transparent);}
+.section-summary::-webkit-details-marker{display:none;}
+.section-summary::before{content:'+';width:1.5rem;height:1.5rem;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:var(--soft-accent);border:1px solid var(--soft-accent-border);font-size:1rem;line-height:1;color:var(--acc2);flex:0 0 auto;}
+.section-accordion[open] .section-summary::before{content:'−';}
+.section-body{padding:0 1.15rem 1.1rem;}
+.section-body > :first-child{margin-top:.2rem;}
+.anchor{opacity:0;color:var(--acc);margin-left:.5rem;text-decoration:none;font-weight:300;font-size:.85em;}
+h2:hover .anchor,h3:hover .anchor{opacity:1;}
+sup.cit{color:var(--acc);font-size:.72em;font-weight:700;cursor:default;font-style:normal;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:1.5rem 0 2rem;}
+.stat-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1rem 1.1rem;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);}
+.stat-value{font-size:1.6rem;font-weight:800;color:var(--acc2);}
+.stat-label{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+.quick-start-panel,.crosslink-panel{margin:1.4rem 0;padding:1rem 1.1rem;border-radius:18px;border:1px solid var(--soft-accent-border);background:linear-gradient(180deg,var(--soft-accent),transparent);}
+.quick-start-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.85rem;margin-top:.9rem;}
+.quick-link-card{display:flex;flex-direction:column;gap:.35rem;text-decoration:none;padding:.95rem 1rem;border-radius:14px;border:1px solid var(--bdr);background:var(--surf);color:var(--text);box-shadow:0 10px 24px rgba(0,0,0,.06);}
+.quick-link-card:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(0,0,0,.1);}
+.quick-link-label{font-weight:800;color:var(--acc2);}
+.quick-link-description{font-size:.86rem;color:var(--muted);}
+.crosslink-list{margin:.8rem 0 0;padding-left:1.2rem;}
+.crosslink-list li{margin:.45rem 0;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+@media print{.reading-progress,.section-controls,.anchor{display:none !important;}.section-accordion{break-inside:avoid;box-shadow:none;}.section-accordion>summary{list-style:none;}.section-accordion>.section-body{display:block !important;}}
+@media(max-width:600px){article{padding:1.2rem .9rem;}header{padding:1.5rem 1rem 1rem;}header h1{font-size:1.3rem;} }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('pre > code.language-mermaid').forEach(function(code){
+    var wrap=document.createElement('div');wrap.className='mermaid-wrap';
+    var pre=document.createElement('pre');pre.className='mermaid';
+    pre.textContent=code.textContent;wrap.appendChild(pre);code.parentElement.replaceWith(wrap);
+  });
+    var metaPills=[];
+    document.querySelectorAll('article p').forEach(function(p){
+        var em=p.querySelector('em');if(!em)return;var t=em.textContent||'';
+        if(t.match(/^Generated:/i)||t.match(/^Sources:/i)){
+            t.split('|').forEach(function(seg){seg=seg.trim();if(seg)metaPills.push('<span class="meta-pill">'+seg+'</span>');});
+            p.remove();
+        }
+    });
+    if(metaPills.length){var bar=document.createElement('div');bar.className='meta-bar';bar.innerHTML=metaPills.join('');var a=document.querySelector('article');if(a)a.prepend(bar);}
+    var slug=function(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');};
+    document.querySelectorAll('article blockquote').forEach(function(bq){
+        var text=bq.textContent||'';
+        if(/TL;DR:/i.test(text)){
+            bq.classList.add('tldr-callout');
+            return;
+        }
+        if(/Key Takeaway:/i.test(text)){
+            bq.classList.add('callout-card','callout-insight');
+            return;
+        }
+        if(/Caution:/i.test(text)){
+            bq.classList.add('callout-card','callout-caution');
+            return;
+        }
+        if(/Verdict:/i.test(text)){
+            bq.classList.add('callout-card','callout-verdict');
+            return;
+        }
+        if(/Data Point:/i.test(text)){
+            bq.classList.add('callout-card','callout-datapoint');
+        }
+    });
+    document.querySelectorAll('article h2,article h3').forEach(function(h){
+        if(!h.id)h.id=slug(h.textContent);var a=document.createElement('a');a.className='anchor';a.href='#'+h.id;a.textContent='\u00A7';h.appendChild(a);
+    });
+    (function buildAccordions(){
+        var article=document.querySelector('article');
+        if(!article)return;
+        var children=Array.from(article.children);
+        var topHeadings=children.filter(function(node){return node.tagName==='H2';});
+        if(topHeadings.length<2)return;
+        var controls=document.createElement('div');controls.className='section-controls';
+        controls.innerHTML='<span class="section-controls-label">Sections</span><button type="button" class="section-toggle" data-rh-accordion="expand">Expand All</button><button type="button" class="section-toggle" data-rh-accordion="collapse">Collapse All</button>';
+        var meta=article.querySelector('.meta-bar');
+        if(meta&&meta.parentNode===article&&meta.nextSibling)article.insertBefore(controls,meta.nextSibling);
+        else article.insertBefore(controls,article.firstChild);
+        var current=null;
+        var accordionIndex=0;
+        Array.from(article.children).forEach(function(node){
+            if(node===controls||node===meta)return;
+            if(node.tagName==='H2'){
+                var details=document.createElement('details');details.className='section-accordion';details.id=node.id||slug(node.textContent||'section');details.open=accordionIndex===0;
+                var summary=document.createElement('summary');summary.className='section-summary';summary.textContent=(node.textContent||'').replace(/\u00A7/g,'').trim();
+                var body=document.createElement('div');body.className='section-body';details.appendChild(summary);details.appendChild(body);
+                article.insertBefore(details,node);node.remove();current=body;accordionIndex++;
+                return;
+            }
+            if(current)current.appendChild(node);
+        });
+        var setAccordionState=function(open){document.querySelectorAll('details.section-accordion').forEach(function(el){el.open=open;});};
+        controls.addEventListener('click',function(evt){
+            var action=evt.target&&evt.target.getAttribute('data-rh-accordion');
+            if(action==='expand')setAccordionState(true);
+            if(action==='collapse')setAccordionState(false);
+        });
+        window.rhSetAccordionState=setAccordionState;
+    })();
+  (function fixCitations(node){
+    if(node.nodeType===3){var val=node.nodeValue;if(val&&/\[\d+\]/.test(val)){var span=document.createElement('span');span.innerHTML=val.replace(/\[(\d+)\]/g,'<sup class="cit">[$1]</sup>');node.parentNode.replaceChild(span,node);} }
+    else if(node.nodeType===1&&node.nodeName!=='PRE'&&node.nodeName!=='CODE'){Array.from(node.childNodes).forEach(fixCitations);}
+  })(document.querySelector('article'));
+    var prog=document.querySelector('.reading-progress');
+    if(prog){window.addEventListener('scroll',function(){var h=document.documentElement;var pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;prog.style.width=Math.min(100,pct)+'%';},{passive:true});}
+    mermaid.initialize({startOnLoad:true,theme:'base',securityLevel:'loose',themeVariables:{primaryColor:'#DCEBFF',primaryTextColor:'#10243E',primaryBorderColor:'#4A7BD0',secondaryColor:'#DCF6EF',secondaryTextColor:'#10243E',secondaryBorderColor:'#1F8A70',tertiaryColor:'#FFF1D9',tertiaryTextColor:'#10243E',tertiaryBorderColor:'#D97706',lineColor:'#4B6380',edgeLabelBackground:'#F7FAFC',clusterBkg:'#F2F6FB',clusterBorder:'#BCCADD',titleColor:'#10243E',fontFamily:'Segoe UI, Aptos, Roboto, sans-serif',fontSize:'14px',pie1:'#4A7BD0',pie2:'#1F8A70',pie3:'#D97706',pie4:'#C2410C',pie5:'#7C3AED',pie6:'#0F766E',pie7:'#BE185D',pie8:'#475569'}});
+})();
+</script>
+</head>
+<body>
+<div class="reading-progress"></div>
+<header>
+    <div class="eyebrow">&#128202; Research Packet &nbsp;&middot;&nbsp; ResearchHive</div>
+    <h1>60s Counter Culture</h1>
+<div class="cover-badges"><span class="cover-pill domain">General Research</span><span class="cover-pill">Generated 2026-06-13</span><span class="cover-pill">~13 min read</span></div>
+</header>
+<article>
+<div class="meta-bar">
+    <span class="meta-pill">Research Packet</span>
+        <span class="meta-pill">Generated: 2026-06-13 17:39 UTC</span>
+        <span class="meta-pill">~13 min read</span>
+    <span class="meta-pill">Exported by ResearchHive</span>
+</div>
+<style>
+.packet-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,300px);gap:1rem;align-items:stretch;margin:0 0 1.2rem;padding:1.25rem;border:1px solid var(--bdr);border-radius:16px;background:linear-gradient(135deg,var(--surf),rgba(255,152,0,.06));box-shadow:0 18px 36px rgba(0,0,0,.16);}
+.packet-kicker{margin:0 0 .25rem;color:var(--acc2);font-weight:800;text-transform:uppercase;font-size:.78rem;letter-spacing:0;}
+.packet-hero h2{margin:.1rem 0 .5rem;font-size:1.45rem;}
+.packet-scope{margin:0;color:var(--muted);}
+.packet-trust-card{display:flex;flex-direction:column;justify-content:center;gap:.25rem;border-radius:14px;padding:1rem;border:1px solid var(--soft-accent-border);background:rgba(255,255,255,.04);box-shadow:0 10px 28px rgba(0,0,0,.14);}
+.packet-trust-card span,.packet-trust-card small{color:var(--muted);}
+.packet-trust-card strong{font-size:1.25rem;}
+.trust-strong{border-color:rgba(54,179,126,.55);background:rgba(54,179,126,.12);}.trust-usablewithreview{border-color:rgba(88,166,255,.55);background:rgba(88,166,255,.12);}.trust-weakcoverage{border-color:rgba(255,183,77,.65);background:rgba(255,152,0,.12);}.trust-blocked{border-color:rgba(248,81,73,.7);background:rgba(248,81,73,.13);}
+.packet-section{margin:1.2rem 0;padding:1rem 1.1rem;border:1px solid var(--bdr);border-radius:16px;background:var(--surf);box-shadow:0 16px 30px rgba(0,0,0,.12);}
+.packet-section h2{margin-top:0;}
+.packet-two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+.packet-three-col,.gap-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;}
+.packet-list{margin:.4rem 0 0;padding-left:1.1rem;}.packet-list li{margin:.35rem 0;}
+.packet-table{width:100%;border-collapse:collapse;margin:.5rem 0;}.packet-table th,.packet-table td{padding:.65rem;border:1px solid var(--bdr);text-align:left;vertical-align:top;}.packet-table th{background:rgba(255,152,0,.08);}
+.packet-badge{display:inline-block;border-radius:999px;padding:.18rem .55rem;font-size:.78rem;font-weight:700;}.packet-badge.ok{background:rgba(54,179,126,.16);color:#7ee2a8;border:1px solid rgba(54,179,126,.35);}.packet-badge.warn{background:rgba(255,183,77,.14);color:var(--acc2);border:1px solid rgba(255,183,77,.32);}
+.packet-svg{width:100%;max-width:520px;height:auto;display:block;}.svg-label{font:13px sans-serif;fill:var(--muted);}.svg-value{font:700 13px sans-serif;fill:var(--acc2);}
+.support-map{display:flex;align-items:center;gap:1rem;margin:.8rem 0;}.support-node{width:120px;min-height:80px;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid var(--bdr);}.support-node span{font-size:1.7rem;font-weight:800;}.support-node small{color:var(--muted);}.support-node.strong{background:rgba(54,179,126,.12);border-color:rgba(54,179,126,.35);}.support-node.review{background:rgba(255,152,0,.12);border-color:rgba(255,183,77,.35);}.support-line{height:2px;flex:1;background:var(--soft-accent-border);}
+.timeline-list{list-style:none;padding:0;margin:0;}.timeline-list li{display:grid;grid-template-columns:140px 120px minmax(0,1fr);gap:.75rem;padding:.6rem 0;border-bottom:1px solid var(--bdr);}.timeline-list span{color:var(--muted);}.timeline-list strong{color:var(--acc2);}
+@media(max-width:760px){.packet-hero,.packet-two-col,.packet-three-col,.gap-board{grid-template-columns:1fr;}.timeline-list li{grid-template-columns:1fr;gap:.15rem;}}
+</style>
+<section class="packet-hero">
+    <div>
+        <p class="packet-kicker">Decision Packet</p>
+        <h2>Decision Packet</h2>
+        <p class="packet-scope">Counter Culture of the 60s</p>
+    </div>
+    <div class="packet-trust-card trust-weakcoverage">
+        <span>Evidence Status</span>
+        <strong>Weak Coverage</strong>
+        <small>0 blockers | 3 warnings</small>
+    </div>
+</section>
+
+<section class="packet-section">
+    <h2>Executive Answer</h2>
+    <p># Executive Summary
+
+**Research question:** Research the 1960s Counterculture movement and create a detailed, balanced report that explains what it was, why it emerged, how it developed, and what its lasting effects were.
+
+Do not write this as an opinion piece. Present the topic historically, analytically, and with evidence. Include competing interpretations where historians, journalists, participants, critics, or later scholars disagree.
+
+The report should cover:
+
+1. **Definition and Scope**
+
+   * What “1960s Counterculture” means.
+   * How it differed from mainstream American culture at the time.
+   * Whether it was one unified movement or many overlapping movements.
+
+2. **Historical Background**
+
+   * Post–World War II prosperity.
+   * The Cold War, nuclear anxiety, and anti-communism.
+   * Suburbanization, consumer culture, and conformity.
+   * The Beat Generation as a predecessor.
+   * Civil rights activism and youth political awakening.
+
+3. **Major Causes**
+
+   * Opposition to the Vietnam War.
+   * Distrust of government and authority.
+   * Civil rights struggles.
+   * Generational conflict.
+   * Sexual revolution.
+   * Expansion of universities and youth culture.
+   * Psychedelic drugs, psychology, and spiritual exploration.
+   * Mass media, television, music, and underground press.
+
+4. **Major Groups, Scenes, and Locations**
+
+   * Hippies.
+   * Student activists.
+   * Antiwar organizers.
+   * New Left groups such as SDS.
+   * Civil rights and Black freedom movements.
+   * Feminist movements.
+   * LGBTQ liberation.
+   * Environmentalism.
+   * Communes and intentional communities.
+   * Haight-Ashbury, Berkeley, Greenwich Village, Los Angeles, Chicago, and other key places.
+
+5. **Music, Art, and Media**
+
+   * Folk, rock, psychedelic rock, protest music, and festivals.
+   * Bob Dylan, Joan Baez, The Beatles, Jimi Hendrix, Janis Joplin, Jefferson Airplane, The Grateful Dead, and others.
+   * Woodstock, Monterey Pop, and Altamont.
+   * Underground newspapers, posters, comics, film, and visual art.
+   * How music and media spread countercultural ideas.
+
+6. **Politics and Protest**
+
+   * Antiwar protests.
+   * Draft resistance.
+   * Free Speech Movement.
+   * 1968 Democratic National Convention protests.
+   * Civil rights demonstrations.
+   * Relationship between peaceful protest, civil disobedience, and radicalization.
+   * Government and police response.
+
+7. **Lifestyle and Values**
+
+   * Communal living.
+   * “Dropping out.”
+   * Anti-materialism.
+   * Sexual freedom.
+   * Eastern religion, mysticism, meditation, and alternative spirituality.
+   * Drug use, especially cannabis and psychedelics.
+   * Natural foods, back-to-the-land movements, and alternative medicine.
+   * Fashion, hair, language, and symbols.
+
+8. **Internal Tensions and Criticism**
+
+   * Gender roles within counterculture spaces.
+   * Race and class limitations.
+   * Commercialization of rebellion.
+   * Drug abuse and exploitation.
+   * Conflict between political activists and lifestyle counterculture.
+   * Criticism from conservatives, liberals, religious groups, parents, labor groups, veterans, and participants themselves.
+
+9. **Key Events Timeline**
+
+   * Provide a chronological timeline from the late 1950s through the early 1970s.
+   * Include major events such as the Free Speech Movement, escalation of Vietnam, Summer of Love, 1968 protests, Woodstock, Altamont, Kent State, and the decline/fragmentation of the movement.
+
+10. **Decline, Transformation, and Legacy**
+
+* Why the 1960s counterculture faded or changed in the 1970s.
+* How it influenced later music, fashion, politics, environmentalism, feminism, LGBTQ rights, drug policy, technology culture, wellness culture, education, and distrust of institutions.
+* Which parts became mainstream.
+* Which parts failed, were exaggerated, or had unintended consequences.
+
+11. **Global Context**
+
+* Compare the American counterculture with youth movements in Europe, Mexico, Japan, and elsewhere.
+* Include May 1968 in France and other international protest movements where relevant.
+
+12. **Myths vs. Reality**
+
+* Identify common myths about the 1960s counterculture.
+* Explain what evidence supports or challenges those myths.
+
+13. **Primary Sources**
+
+* Include direct evidence from speeches, manifestos, underground newspapers, music lyrics where legally permissible, interviews, government records, photographs, documentaries, and participant memoirs.
+* Clearly label primary sources versus secondary analysis.
+
+14. **Secondary Sources**
+
+* Use credible books, academic articles, documentaries, museum archives, university sources, and reputable historical publications.
+* Include sources from different perspectives, including sympathetic, critical, and neutral historians.
+
+15. **Final Output Requirements**
+
+* Write the report in clear sections with headings.
+* Include a concise executive summary at the beginning.
+* Include a detailed timeline.
+* Include a list of key people, groups, events, books, songs, films, and locations.
+* Include a “major debates and interpretations” section.
+* Include a bibliography or source list with links where available.
+* Avoid making the report preachy, partisan, nostalgic, or dismissive.
+* Focus on evidence, context, causes, complexity, and consequences.
+
+
+The 1960s Counterculture was not a single organization or doctrine, but a loose and often unstable constellation of youth, artistic, political, spiritual, and lifestyle movements that challenged mainstream American authority, consumerism, racial hierarchy, sexual norms, Cold War militarism, and inherited ideas of respectability.  Its best-known image was the hippie scene centered on places such as San Francisco’s Haight-Ashbury, but its wider history also includes student activism, antiwar protest, civil rights organizing, second-wave feminism, gay liberation, environmentalism, underground media, experimental art, and new forms of communal and spiritual life.  [5] [10]
+
+The movement emerged from contradictions in postwar America: unprecedented prosperity and suburban consumer growth coexisted with racial segregation, nuclear anxiety, Cold War anti-communism, gender restrictions, and a gr...
+
+See the full report for comparative detail, citations, and limitations.</p>
+    <div class="packet-two-col">
+        <div>
+            <h3>Recommendation</h3>
+            <ul class="packet-list"><li>Review the primary report before acting on this packet.</li></ul>
+        </div>
+        <div>
+            <h3>Evidence Status</h3>
+            <p>Weak Coverage: 18 available source(s), 14 saved citation(s), 406 citation marker(s), 0 blocker(s), and 3 warning(s). Grounding is 93%.</p>
+        </div>
+    </div>
+</section>
+
+<section class="packet-section">
+    <h2>Risks, Gaps, And Next Actions</h2>
+    <div class="packet-three-col">
+        <div><h3>Top Risks</h3><ul class="packet-list"><li>12 source(s) were blocked or unavailable during capture.</li><li>No saved claim-verification checks were found.</li><li>4 unresolved contradiction signal(s) need review.</li></ul></div>
+        <div><h3>Top Gaps</h3><ul class="packet-list"><li>12 source(s) were blocked or unavailable during capture.</li><li>No saved claim-verification checks were found.</li><li>4 unresolved contradiction signal(s) need review.</li></ul></div>
+        <div><h3>Next Actions</h3><ul class="packet-list"><li>Review the primary report 'Executive Summary - Research 1960s Counterculture Movement Detailed,' for the full evidence-backed detail.</li><li>Inspect the most relevant supporting files referenced in this brief before continuing the work.</li><li>Use unresolved claims or limitations as the first targets for follow-up research.</li></ul></div>
+    </div>
+</section>
+
+<section class="packet-section">
+    <h2>Packet Profile</h2>
+    <div class="packet-two-col">
+        <div><h3>Required Sections</h3><ul class="packet-list"><li>Executive answer</li><li>Recommendation</li><li>Evidence status</li><li>Top risks</li><li>Top gaps</li><li>Next actions</li></ul></div>
+        <div><h3>Export Emphasis</h3><ul class="packet-list"><li>Recommendation clarity</li><li>Evidence confidence</li><li>Risks, gaps, and next actions</li></ul></div>
+    </div>
+</section>
+
+<section class="packet-section"><h2>Table Of Contents</h2><ul><li><a href="packet-summary.md">Packet Summary</a> <span class="meta">Copy/paste executive summary</span></li><li><a href="packet-trust-summary.json">Verification Summary</a> <span class="meta">Trust status, blockers, warnings, and source coverage</span></li><li><a href="visuals.html">Packet Visuals</a> <span class="meta">Coverage, source mix, support, gaps, and timeline</span></li><li><a href="visuals.html#contradictions-gaps-board">Contradictions And Gaps</a> <span class="meta">Review unresolved risks and gaps</span></li><li><a href="reports/Executive_Summary_-_Research_1960s_Counterculture_Movement_D_b7152b81.html">Reports</a> <span class="meta">Primary and supporting reports</span></li><li><a href="evidence/">Evidence</a> <span class="meta">Captured source text and HTML files</span></li><li><a href="sources.csv">Source Manifest</a> <span class="meta">Captured URLs, status codes, and block reasons</span></li><li><a href="StructuredExport_60s_Counter_Culture_20260613_113920/">Structured Exports</a> <span class="meta">JSON and CSV data exports</span></li></ul></section>
+
+<p><strong>Pack:</strong> General Research | <strong>Created:</strong> 2026-06-13 | <strong>Status:</strong> Active</p>
+<p><strong>Packet type:</strong> Decision | <strong>Recommended length:</strong> Small: 4-8 pages; standard: 8-15 pages; deep: 15-25 pages when the decision has high risk.</p>
+<p><strong>Included in this packet:</strong> reports, guides, source index, notebook, evidence, artifacts, logs, figures, diagrams, project fusions, legal matters, structured JSON, structured CSV</p>
+<div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">7</div><div class="stat-label">Reports</div></div>
+    <div class="stat-card"><div class="stat-value">30</div><div class="stat-label">Sources</div></div>
+    <div class="stat-card"><div class="stat-value">8</div><div class="stat-label">Evidence</div></div>
+    <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Notes</div></div>
+    <div class="stat-card"><div class="stat-value">0</div><div class="stat-label">Blockers</div></div>
+    <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">Warnings</div></div>
+</div>
+
+<section class="quick-start-panel"><h2>Start Here</h2><p class="meta">Open the handoff artifacts in this order if you need the fastest path through the packet.</p><div class="quick-start-grid"><a class="quick-link-card" href="agent-brief.json"><span class="quick-link-label">Agent Brief (JSON)</span><span class="quick-link-description">Machine-readable handoff for downstream agents.</span></a><a class="quick-link-card" href="agent-brief.md"><span class="quick-link-label">Agent Brief (Markdown)</span><span class="quick-link-description">Human-readable continuation summary.</span></a><a class="quick-link-card" href="reports/Executive_Summary_-_Research_1960s_Counterculture_Movement_D_b7152b81.html"><span class="quick-link-label">Primary Report</span><span class="quick-link-description">Open the highest-value final report first.</span></a><a class="quick-link-card" href="sources.csv"><span class="quick-link-label">Source Index</span><span class="quick-link-description">Review all captured source URLs and status codes.</span></a><a class="quick-link-card" href="StructuredExport_60s_Counter_Culture_20260613_113920/"><span class="quick-link-label">Structured Export</span><span class="quick-link-description">Open the machine-readable JSON and CSV folder.</span></a></div></section>
+
+<h2>Reports</h2><ul><li><a href="reports/Full_Report_-_Research_1960s_Counterculture_Movement_Detaile_624c56ad.html">Full Report - Research 1960s Counterculture Movement Detailed,</a> <span class="meta">(full, 2026-06-13)</span></li>
+<li><a href="reports/Replay_Timeline_-_Research_1960s_Counterculture_Movement_Det_1e35e908.html">Replay Timeline - Research 1960s Counterculture Movement Detailed,</a> <span class="meta">(replay, 2026-06-13)</span></li>
+<li><a href="reports/Activity_Report_-_Research_1960s_Counterculture_Movement_Det_de1d31ab.html">Activity Report - Research 1960s Counterculture Movement Detailed,</a> <span class="meta">(activity, 2026-06-13)</span></li>
+<li><a href="reports/Executive_Summary_-_Research_1960s_Counterculture_Movement_D_b7152b81.html">Executive Summary - Research 1960s Counterculture Movement Detailed,</a> <span class="meta">(executive, 2026-06-13)</span></li>
+<li><a href="reports/Activity_Report_-_Research_1960s_Counterculture_Movement_Det_6e6a88de.html">Activity Report - Research 1960s Counterculture Movement Detailed,</a> <span class="meta">(activity, 2026-06-13)</span></li>
+<li><a href="reports/Research_Status_Report_-_Research_1960s_Counterculture_Movem_d2c18cc4.html">Research Status Report - Research 1960s Counterculture Movement Detailed,</a> <span class="meta">(full, 2026-06-13)</span></li>
+<li><a href="reports/Executive_Summary_-_Research_1960s_Counterculture_Movement_D_d462573d.html">Executive Summary - Research 1960s Counterculture Movement Detailed,</a> <span class="meta">(executive, 2026-06-13)</span></li>
+</ul>
+<h2>Evidence (8 files)</h2><ul><li><a href="evidence/Counterculture_of_the_1960_s_70306292.txt">Counterculture of the 1960's</a> <span class="meta">(200, 2026-06-13)</span></li>
+<li><a href="evidence/Assignment_Topics_-_Underground_Newspaper_Collection_1960s_C_b65ca210.txt">Assignment Topics - Underground Newspaper Collection: 1960s Counterculture - LibGuides at Jacksonville State University</a> <span class="meta">(200, 2026-06-13)</span></li>
+<li><a href="evidence/PDF_document_cfbb5c8d.txt">[PDF] document</a> <span class="meta">(200, 2026-06-13)</span></li>
+<li><a href="evidence/Exhibition_Home_-_NIU_-_Strange_Days_Vinyl_Aesthetics_of_the_a3eecc09.txt">Exhibition Home - NIU - Strange Days: Vinyl Aesthetics of the Psychedelic Era</a> <span class="meta">(200, 2026-06-13)</span></li>
+<li><a href="evidence/Psychedelia_-_Wikipedia_a5a3f1fc.txt">Psychedelia - Wikipedia</a> <span class="meta">(200, 2026-06-13)</span></li>
+<li><a href="evidence/Untitled_7df80f92.txt">Untitled</a> <span class="meta">(200, 2026-06-13)</span></li>
+<li><a href="evidence/The_Sixties_-_History_-_Primary_Sources_-_Research_Guides_at_a8f91500.txt">The Sixties - History - Primary Sources - Research Guides at Rider University</a> <span class="meta">(200, 2026-06-13)</span></li>
+<li><a href="evidence/The_Sixties_._Resource_Library_PBS_59222d6f.txt">The Sixties . Resource Library | PBS</a> <span class="meta">(200, 2026-06-13)</span></li>
+</ul>
+<h2>Artifacts</h2><ul><li><a href="artifacts/7ca7ccd29ee00007eafdb38b.pdf">7ca7ccd29ee00007eafdb38b.pdf</a></li>
+<li><a href="artifacts/KIDARI_Melisa_M1PLC_Etudes_anglophones_2012.pdf">KIDARI_Melisa_M1PLC_Etudes_anglophones_2012.pdf</a> <span class="meta">(646,994 bytes)</span></li>
+</ul>
+<h2>Data Files</h2><ul><li><a href="sources.csv">sources.csv</a> &mdash; All captured sources (30 entries)</li>
+<li><a href="StructuredExport_60s_Counter_Culture_20260613_113920/">structured export</a> &mdash; Machine-readable JSON/CSV outputs</li>
+<li><a href="packet-summary.md">packet-summary.md</a> &mdash; Concise executive summary for copy/paste use</li>
+<li><a href="packet-trust-summary.json">packet-trust-summary.json</a> &mdash; Deterministic trust, blocker, warning, and coverage summary</li>
+<li><a href="visuals.html">visuals.html</a> &mdash; Packet-ready coverage, source, support, gap, and timeline visuals</li>
+<li><a href="agent-brief.json">agent brief (JSON)</a> &mdash; Compact machine-readable handoff for downstream agents</li>
+<li><a href="agent-brief.md">agent brief (Markdown)</a> &mdash; Human-readable continuation brief</li>
+</ul>
+</article>
+<footer>
+  <p>Generated by ResearchHive &mdash; Agentic Research Studio</p>
+</footer>
+</body>
+</html>

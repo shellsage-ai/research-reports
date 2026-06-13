@@ -1,0 +1,36 @@
+﻿{
+  "SchemaVersion": "researchhive.packet-trust.v1",
+  "Status": "WeakCoverage",
+  "StatusLabel": "Weak Coverage",
+  "BlockerCount": 0,
+  "WarningCount": 3,
+  "ReportCount": 7,
+  "SourceCount": 18,
+  "BlockedSourceCount": 12,
+  "EvidenceFileCount": 18,
+  "CitationCount": 14,
+  "CitationMarkerCount": 406,
+  "ClaimCheckCount": 0,
+  "SupportedClaimCount": 0,
+  "UnresolvedClaimCount": 0,
+  "UnresolvedContradictionCount": 4,
+  "GroundingScore": 0.9302325581395349,
+  "Blockers": [],
+  "Warnings": [
+    "12 source(s) were blocked or unavailable during capture.",
+    "No saved claim-verification checks were found.",
+    "4 unresolved contradiction signal(s) need review."
+  ],
+  "MissingOrWeakEvidence": [
+    "12 source(s) were blocked or unavailable during capture.",
+    "No saved claim-verification checks were found.",
+    "4 unresolved contradiction signal(s) need review."
+  ],
+  "SourceHealth": {
+    "available": 18,
+    "blocked": 12,
+    "withEvidenceFiles": 18,
+    "savedCitations": 14,
+    "citationMarkers": 406
+  }
+}
