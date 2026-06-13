@@ -1,0 +1,38 @@
+﻿{
+  "Enabled": true,
+  "MaxVisuals": 3,
+  "GeographyRequired": true,
+  "DatasetRequired": true,
+  "Reason": "Visual needs inferred from prompt/report purpose.",
+  "Visuals": [
+    {
+      "Kind": 0,
+      "Title": "North America Hotspot Map",
+      "Purpose": "Show geographic concentration of mapped report rows.",
+      "Caption": "Dots are approximate when exact coordinates were not available; this visual shows reported clustering, not proof."
+    },
+    {
+      "Kind": 1,
+      "Title": "Regional Report Density Heat Map",
+      "Purpose": "Rank states, provinces, territories, and Mexican states by report density.",
+      "Caption": "Heat reflects extracted report rows and evidence levels, with lower-confidence rows kept visually lighter."
+    },
+    {
+      "Kind": 2,
+      "Title": "Legend And Report Timeline",
+      "Purpose": "Show when major legends, accounts, or source clusters first appear.",
+      "Caption": "Dates are approximate when the source only supports a broad era."
+    }
+  ],
+  "DatasetColumns": [
+    "Country",
+    "State/Province",
+    "Specific Location",
+    "Phenomenon",
+    "Category",
+    "Evidence Level",
+    "Coordinate Confidence",
+    "Source Quality"
+  ],
+  "Diagnostics": []
+}

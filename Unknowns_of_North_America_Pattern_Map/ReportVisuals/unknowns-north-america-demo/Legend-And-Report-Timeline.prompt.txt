@@ -1,0 +1,28 @@
+﻿Create a professional research-report visualization, not fantasy art.
+
+Visual title: Legend And Report Timeline
+Visual purpose: Show when major legends, accounts, or source clusters first appear.
+Caption / limitation: Dates are approximate when the source only supports a broad era.
+
+Style:
+- clean intelligence-report graphic
+- dark navy background with amber/cyan accents
+- readable labels
+- no horror imagery, no monsters, no photorealistic claims
+- do not invent locations or data
+- represent uncertainty clearly
+
+Source-grounded rows:
+- Point Pleasant / TNT area | Mothman | category=Cryptid / omen folklore | evidence=3 | coord=regional
+- Navajo Nation borderlands | Skinwalker-related accounts | category=Indigenous tradition / modern paranormal | evidence=1 | coord=regional
+- San Luis Valley / Dulce lore zone | UFO-paranormal overlap | category=UAP folklore | evidence=2 | coord=regional
+- Columbia River / Cascades | Bigfoot/Sasquatch | category=Cryptid | evidence=3 | coord=regional
+- Vancouver Island / Coast ranges | Sasquatch | category=Cryptid | evidence=3 | coord=regional
+- Great Lakes / northern forest | Windigo/Wendigo | category=Spiritual tradition / modern horror distortion | evidence=0 | coord=regional
+- St. Lawrence corridor | Haunted roads and apparitions | category=Ghost / road folklore | evidence=2 | coord=regional
+- Copper Canyon / northern desert corridors | Bruja and witch-light reports | category=Folklore / luminous phenomena | evidence=1 | coord=regional
+- Los Tuxtlas region | Nahual / shapeshifter accounts | category=Indigenous/Mesoamerican tradition | evidence=0 | coord=regional
+- Ranch and livestock zones | Chupacabra spread | category=Cryptid / media-era folklore | evidence=2 | coord=unmapped
+
+Original report prompt excerpt:
+Research the “unknowns” of North America: legends, myths, paranormal claims, cryptid reports, metaphysical phenomena, folklore entities, and recurring unexplained accounts across the United States, Canada, and Mexico. The goal is not to prove or disprove everything. The goal is to build a serious, evidence-aware research report that separates folklore, eyewitness patterns, cultural history, physical evidence claims, hoaxes, skeptical explanations, and unexplained recurring patterns. Research scope: 1. Geographic coverage Cover the United States, Canada, and Mexico. Identify where reports cluster most often by state, province, territory, region, reservation/tribal area when appropriate, mountain range, forest, desert, lake, road, abandoned settlement, battlefield, cemetery, or known folklore hotspot. 2. Phenomena to include Research, compare, and map recurring reports involving: * Ghos...
