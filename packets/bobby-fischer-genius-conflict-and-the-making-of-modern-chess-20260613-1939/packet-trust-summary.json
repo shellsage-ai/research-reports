@@ -1,0 +1,37 @@
+﻿{
+  "SchemaVersion": "researchhive.packet-trust.v1",
+  "Status": "Blocked",
+  "StatusLabel": "Blocked",
+  "BlockerCount": 2,
+  "WarningCount": 1,
+  "ReportCount": 1,
+  "SourceCount": 16,
+  "BlockedSourceCount": 0,
+  "EvidenceFileCount": 16,
+  "CitationCount": 16,
+  "CitationMarkerCount": 597,
+  "ClaimCheckCount": 0,
+  "SupportedClaimCount": 0,
+  "UnresolvedClaimCount": 0,
+  "UnresolvedContradictionCount": 0,
+  "GroundingScore": 0.9103448275862069,
+  "Blockers": [
+    "The primary research job failed before packet export.",
+    "The primary report health is QualityGateFailed: Required section missing: Recommended Path / Action Plan.; Required section missing: Risks, Constraints, and Failure Modes.; Required section missing: Metrics / Validation Plan.; Report repeats the same long claim across sections."
+  ],
+  "Warnings": [
+    "No saved claim-verification checks were found."
+  ],
+  "MissingOrWeakEvidence": [
+    "The primary research job failed before packet export.",
+    "The primary report health is QualityGateFailed: Required section missing: Recommended Path / Action Plan.; Required section missing: Risks, Constraints, and Failure Modes.; Required section missing: Metrics / Validation Plan.; Report repeats the same long claim across sections.",
+    "No saved claim-verification checks were found."
+  ],
+  "SourceHealth": {
+    "available": 16,
+    "blocked": 0,
+    "withEvidenceFiles": 16,
+    "savedCitations": 16,
+    "citationMarkers": 597
+  }
+}

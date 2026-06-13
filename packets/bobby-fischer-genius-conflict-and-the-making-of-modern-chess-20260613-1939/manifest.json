@@ -1,0 +1,44 @@
+﻿{
+  "sessionId": "1776428f38fc",
+  "sessionTitle": "Bobby Fischer: Genius, Conflict, and the Making of Modern Chess",
+  "exportedUtc": "2026-06-13T19:39:44.7665279Z",
+  "packetType": "Informational / Research",
+  "packetKind": "Informational",
+  "options": {
+    "PacketKind": 0,
+    "SelectedReportId": "996e496c6faf",
+    "IncludeReports": true,
+    "IncludeSourcesCsv": true,
+    "IncludeNotebook": false,
+    "IncludeEvidence": false,
+    "IncludeLogs": false,
+    "IncludeArtifacts": false,
+    "IncludeGuides": false,
+    "IncludeFigures": false,
+    "IncludeDiagrams": true,
+    "IncludeProjectFusions": false,
+    "IncludeLegalMatters": false,
+    "IncludeStructuredJson": false,
+    "IncludeStructuredCsv": false
+  },
+  "trust": {
+    "status": "Blocked",
+    "blockers": 2,
+    "warnings": 1,
+    "groundingScore": 0.9103448275862069
+  },
+  "counts": {
+    "reports": 1,
+    "sources": 16,
+    "notebookEntries": 0,
+    "guides": 0,
+    "evidence": 0,
+    "figures": 0,
+    "diagrams": 0,
+    "projectFusions": 0,
+    "legalMatters": 0,
+    "artifacts": 0,
+    "logs": 0,
+    "agentBrief": true
+  }
+}
