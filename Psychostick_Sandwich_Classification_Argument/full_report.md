@@ -15,6 +15,10 @@
 | Confidence | High for catalog and music classification; medium for broader interpretive claims. |
 | Evidence status | Final edited synthesis from official, catalog, press, and reference sources. |
 
+![Cover visual summarizing the report's final verdict](assets/01-cover-verdict.svg)
+
+*Visual: The cleaned verdict keeps the literal song classification and the sandwich joke frame visible at the same time.*
+
 ## Executive Summary
 
 The strongest defensible answer is not "sandwich instead of song" but "song whose entire premise is claiming sandwich status." Official Psychostick pages, Bandcamp, the store listing, and Apple Music establish that the work is released, credited, and consumed as a track on the 2009 album *Sandwich* [1][2][3][4][5]. By ordinary music-reference definitions, that makes it a song or track in the literal catalog sense [6][7].
@@ -43,6 +47,10 @@ This final pass removes failed-generation residue and keeps only sources that ma
 
 Irrelevant or corrupted source stubs from the earlier draft were removed. Where the report moves from hard fact to interpretation, that shift is stated directly.
 
+![Evidence hierarchy used in the report](assets/02-source-hierarchy.svg)
+
+*Visual: The final synthesis weights official Psychostick sources first, then catalog metadata, then reference definitions, with press context used only as supporting frame.*
+
 ## What The Record Establishes
 
 ### 1. The literal release facts
@@ -50,6 +58,10 @@ Irrelevant or corrupted source stubs from the earlier draft were removed. Where 
 Psychostick's official lyrics page places "This Is Not a Song, It's a Sandwich" under the album *Sandwich* and credits music to Key and lyrics to Key and Grant [1]. Bandcamp lists the track with a 3:53 runtime on the album page [3]. The official store also includes it in the album track list and sells the record as a CD or digital product [4]. Apple Music presents it as a song from *Sandwich* [5].
 
 Those sources answer the narrow catalog question cleanly. Whatever joke the work makes, it was published, listed, and distributed as a song or track in music systems.
+
+![Release facts that support literal song classification](assets/03-release-facts.svg)
+
+*Visual: Independent release systems converge on the same conclusion because they all treat the work as a track with credits, runtime, placement, and platform presentation.*
 
 ### 2. The album context is intentionally food-heavy
 
@@ -83,6 +95,10 @@ The earlier draft leaned too far toward treating the sandwich claim as the final
 | What is the joke asking you to imagine it is? | A sandwich | The title, lyrics, and album concept insist on that frame [1][2][4]. |
 | Which answer should control the final write-up? | Both, with clear separation | The comedy depends on the gap between literal form and absurd claim. |
 
+![Matrix comparing literal song classification and comedic sandwich framing](assets/04-classification-matrix.svg)
+
+*Visual: The two frames answer different questions, so the rigorous write-up keeps both while letting the song frame control the literal verdict.*
+
 ## Why The Joke Works
 
 The song works because Psychostick do not merely say something silly; they commit real musical structure to a silly claim. The heavier and more confident the delivery, the funnier the denial becomes. If the piece were musically shapeless, the sandwich line would just be a novelty title. Because it still behaves like a metal or comedy-metal track, the contradiction has something sturdy to ride on.
@@ -94,6 +110,10 @@ The result is a joke with a stable structure:
 2. The title and lyrics deny the obvious.
 3. The band doubles down instead of resolving the contradiction.
 4. The contradiction itself becomes the entertainment.
+
+![Four-step sequence showing how the joke works](assets/05-joke-mechanism.svg)
+
+*Visual: The humor depends on an audience recognizing a real song first, then watching the song insist on the wrong category with total commitment.*
 
 That is the core cleanup the draft needed. The strongest version of the report is not a mock-serious argument that the object is literally lunch. It is a clear explanation of how Psychostick use fake reclassification as the mechanism of the joke.
 
