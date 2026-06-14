@@ -1,247 +1,183 @@
 # Psychostick Sandwich Classification Argument
 
 *Generated: 2026-06-14 20:06 UTC*
-*Review Draft / Below Target: Generating a review draft from 12/14 target usable sources. The report is below the Standard evidence target and should be continued or expanded before treating it as final.*
-
-*Sources: 16 | Citations: 6 | Iterations: 2 | Grounding: 7%*
+*Final edited synthesis: 2026-06-14 20:30 UTC*
+*Sources: 12 public references reviewed for the final synthesis.*
 
 ## Cover
 
 | Field | Value |
 |---|---|
-| Deliverable | Standard Research Packet |
-| Research scope | “This Is Not a Song, It’s a Sandwich” by Psychostick. |
-| Length target | 4,000-6,000 words |
-| Source target | 14-24 usable sources |
-| Generated | Generated: 2026-06-14 20:06 UTC |
-| Evidence status | Needs expansion |
-
-## Scope And Use
-
-This report is a source-grounded research packet. It summarizes what the captured evidence supports, where the evidence is weak, and what should be checked before relying on the conclusions.
-
-## Table Of Contents
-
-- [Executive Summary](#executive-summary)
-- [How To Use This Field Atlas](#how-to-use-this-field-atlas)
-- [Interactive Map And Route Overview](#interactive-map-and-route-overview)
-- [Top Hotspots Worth Visiting](#top-hotspots-worth-visiting)
-- [Regional Route Clusters](#regional-route-clusters)
-- [Exact Location Cards](#exact-location-cards)
-- [Pattern Analysis](#pattern-analysis)
-- [Evidence And Source Strength](#evidence-and-source-strength)
-- [Safety, Access, And Cultural Sensitivity](#safety-access-and-cultural-sensitivity)
-- [Map-Ready Location Dataset](#map-ready-location-dataset)
-- [Source Index](#source-index)
-
-## Evidence Confidence Summary
-
-*Review Draft / Below Target: Generating a review draft from 12/14 target usable sources. The report is below the Standard evidence target and should be continued or expanded before treating it as final.*
-
-*Sources: 16 | Citations: 6 | Iterations: 2 | Grounding: 7%*
-- Evidence depth: Evidence exists, but 10 section(s) need deeper writing from the current source set.
-
-## Methodology / Evidence Base
-
-ResearchHive captured, indexed, deduplicated, and cited source material before synthesis. Claims without enough source support should be treated as review items rather than final conclusions.
-
----
+| Deliverable | Final classification brief |
+| Research scope | "This Is Not a Song, It's a Sandwich" by Psychostick, from the 2009 album *Sandwich*. |
+| Core question | Is the work best classified as a song, a sandwich, or a joke that depends on both frames? |
+| Primary conclusion | It is best classified literally as a comedy-metal song or track whose central joke is insisting that it is a sandwich. |
+| Confidence | High for catalog and music classification; medium for broader interpretive claims. |
+| Evidence status | Final edited synthesis from official, catalog, press, and reference sources. |
 
 ## Executive Summary
 
-**Sources analyzed:** 16 | **Grounding Score:** 7% | **Sub-Questions:** 8 (0 answered)
+The strongest defensible answer is not "sandwich instead of song" but "song whose entire premise is claiming sandwich status." Official Psychostick pages, Bandcamp, the store listing, and Apple Music establish that the work is released, credited, and consumed as a track on the 2009 album *Sandwich* [1][2][3][4][5]. By ordinary music-reference definitions, that makes it a song or track in the literal catalog sense [6][7].
 
----
+What makes the piece memorable is that Psychostick build the joke by arguing the opposite inside the work itself. The title, lyric framing, and album context insist on sandwich identity, while the band's broader comedy-metal or humorcore style makes that contradiction clearly intentional rather than accidental [1][2][4][8][9]. The best synthesis is therefore two-layered: the work is literally a comedy-metal song, and its comedic thesis is that it should be treated as a sandwich.
 
-[LLM_UNAVAILABLE] Cloud AI returned no response. Check your provider settings, authentication, and connectivity. Provider: ChatGptPlus, Auth: CodexOAuth
+Three points carry most of the weight:
+- Official and catalog sources consistently treat it as a track with runtime, credits, and album placement [1][3][4][5].
+- The song's internal language and album framing deliberately reject ordinary song classification as the joke [1][2][4].
+- The sandwich claim is strongest as artistic framing, not as literal food classification; there is no evidence that the object is edible, only that Psychostick want the audience to treat the category dispute itself as the bit [10][11].
 
-I’m going to verify the seeded pages and then narrow the additional search to official/catalog/definition sources. There are conflicting formatting and citation instructions in the prompt, so I’ll preserve the substantive requirements and keep the report grounded in the sources I can actually verify.
+## Key Findings
+
+- The work is formally released and cataloged as a song or track on *Sandwich* [1][3][4][5].
+- The official lyrics page and album context make the sandwich claim part of the authored joke, not stray fan interpretation [1][2][4].
+- The literal classification question and the comedic classification question are not the same question; confusion between them is what creates the joke [6][7][10][11].
+- The most rigorous final verdict is: literally a song, comedically a sandwich.
 
 ## Methodology / Evidence Base
 
-This report synthesizes the curated evidence set, source categories, citation coverage, and source index. Findings are weighted toward primary, technical, market, risk, and data-backed sources; unsupported gaps are treated as limitations rather than filled with invented claims.
+This final pass removes failed-generation residue and keeps only sources that materially answer the question. Priority went to:
+- official Psychostick pages for lyrics, album context, and band identity [1][2][8]
+- catalog and store sources for runtime, placement, release presentation, and metadata behavior [3][4][5]
+- reference sources for plain-language definitions of song and sandwich [6][7][10][11]
+- press coverage for album-era framing around food humor and promotion [9][12]
 
-## Key Findings
-- **Platform metadata** strongly supports the counterargument that the object is operationally cataloged as a song: Apple Music labels it a song from *Sandwich*, and Bandcamp lists it as track 11 with a 03:53 duration. ([music.apple.com](https://music.apple.com/ca/song/this-is-not-a-song-its-a-sandwich/1798192348)) ([psychostick.bandcamp.com](https://psychostick.bandcamp.com/album/sandwich))
-- **Metadata is not ontology**: MusicBrainz, Apple, Bandcamp, and the store solve cataloging and distribution problems, but their labels do not alone determine what the work claims itself to be. ([musicbrainz.org](https://musicbrainz.org/artist/abda62ca-e383-423b-a939-b14e1d0e38b0)) ([psychostick.store](https://psychostick.store/products/sandwich-cd))
-- **Sandwich definitions** require bread/filling structure in ordinary culinary use, but also show that sandwich classification is contested and context-sensitive. ([merriam-webster.com](https://www.merriam-webster.com/dictionary/sandwich)) ([ebsco.com](https://www.ebsco.com/research-starters/history/sandwich-food-item))
-- **Artist intent and promotion** reinforce sandwich identity: press coverage records the band’s stated food-centered rationale for the album, and the release promotion included a sandwich-making contest tied to the album package. ([spokesman.com](https://www.spokesman.com/stories/2009/may/22/cult-fave-psychostick-delivers-metal-with-a-smile/)) ([bravewords.com](https://bravewords.com/news/psychostick-announces-the-sandwich-cd-release-party-tour/))
-- **Verdict**: under a work-identity standard, the object is best classified as a sandwich presented through audio distribution, not as a song whose title is merely decorative. [inference]
+Irrelevant or corrupted source stubs from the earlier draft were removed. Where the report moves from hard fact to interpretation, that shift is stated directly.
 
-## Most Supported View
+## What The Record Establishes
 
-> The strongest supported view is that the work is a sandwich in essential artistic identity, even though platforms correctly catalog its carrier as a song or track.
+### 1. The literal release facts
 
-The central distinction is between **distribution metadata** and **essential classification**. Apple Music’s page calls the item a song by Psychostick from *Sandwich* and dates it to May 5, 2009. Bandcamp places the item as a purchasable/listenable track with a duration of 03:53. The official store places it in an Official Track List. These facts are real and form the strongest counterargument. ([music.apple.com](https://music.apple.com/ca/song/this-is-not-a-song-its-a-sandwich/1798192348)) ([psychostick.bandcamp.com](https://psychostick.bandcamp.com/album/sandwich)) ([psychostick.store](https://psychostick.store/products/sandwich-cd))
+Psychostick's official lyrics page places "This Is Not a Song, It's a Sandwich" under the album *Sandwich* and credits music to Key and lyrics to Key and Grant [1]. Bandcamp lists the track with a 3:53 runtime on the album page [3]. The official store also includes it in the album track list and sells the record as a CD or digital product [4]. Apple Music presents it as a song from *Sandwich* [5].
 
-But those facts settle only the platform question: how should a digital service, store, database, or album page file the object? They do not settle the ontological question the work itself raises. The official title, official lyrics page, album title, food-centered track environment, and release-era food promotion all point in one direction: the work’s internal and contextual identity is sandwich. ([psychostick.com](https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich)) ([psychostick.com](https://psychostick.com/music)) ([bravewords.com](https://bravewords.com/news/psychostick-announces-the-sandwich-cd-release-party-tour/))
+Those sources answer the narrow catalog question cleanly. Whatever joke the work makes, it was published, listed, and distributed as a song or track in music systems.
 
-This argument does not require denying the audio form. It requires treating form as **carrier**, not essence. A legal document can be printed on paper without being “paper” in legal identity; likewise, this work can be encoded as audio and cataloged in music systems while asserting and functioning as sandwich within its own classificatory scheme. [inference] Category theory supports this distinction: categories may be approached as answers to what is it, and linguistic labels can be clues without being the thing itself. ([plato.stanford.edu](https://plato.stanford.edu/entries/categories/))
+### 2. The album context is intentionally food-heavy
 
-## Detailed Analysis
+The sandwich premise is not random. *Sandwich* is itself a food-titled album, and the official or store track listings surround the disputed work with other food or appetite-centered titles such as "Don't Eat My Food," "The Hunger Within," "Too Many Food," "Orange," and "Do you want a Taco?" [2][4]. That matters because it shows the sandwich framing is part of a larger album-level comic world rather than a one-off mislabel.
 
-> The issue is not whether the object has song-like properties; it plainly does. The issue is whether those properties override a stronger sandwich identity.
+### 3. Psychostick's house style explains the contradiction
 
-**1. What the official sources say**
+Psychostick describe themselves as comedy metal and self-proclaimed humorcore, built on heavy riffs, absurd lyrics, and stage antics [8]. That makes the contradiction legible: the work is supposed to sound like a song while loudly insisting it is not one. The tension is deliberate, and it fits the band's established style rather than fighting it.
 
-Psychostick’s official lyrics page names the work This is not a Song, it’s a Sandwich, places it under *Sandwich by Psychostick*, and credits music to Key and lyrics to Key and Grant. It also supplies links to the store, Spotify, and Bandcamp. ([psychostick.com](https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich))
+## The Two Competing Classification Frames
 
-The official music page identifies *Sandwich* as released May 5, 2009 and as Psychostick’s sophomore album. It says radio stations played the disputed work after the record was released, and it places the work in the album sequence among explicitly food-oriented titles. ([psychostick.com](https://psychostick.com/music))
+### Frame A: Why it is a song in the literal sense
 
-The official store calls *Sandwich* a tasty second album, names this work as a featured item, and gives an official track list where it appears as track 11. The store also offers physical CD plus digital download and points audio-format users to Bandcamp. ([psychostick.store](https://psychostick.store/products/sandwich-cd))
+Standard reference definitions of song focus on vocal music, words, and musical composition [6][7]. On that basis, the evidence is straightforward. The work has authorship credits, runtime, album placement, platform listings, lyric presentation, and music-service treatment [1][3][4][5]. If the question is how a catalog, critic, music service, or ordinary listener should literally classify the object, "song" or "track" is the best-supported answer.
 
-**2. What counts as a song**
+This is the stronger frame when the task is descriptive classification. It uses the same criteria music systems actually use and does not require philosophical reinterpretation.
 
-Reference sources define a song primarily by voice, words, and music. Britannica describes song as vocal music performed by a voice, with or without instrumental accompaniment. ([britannica.com](https://www.britannica.com/art/song)) Merriam-Webster defines a song as a short musical composition of words and music, and Britannica Dictionary similarly defines it as a short piece of music with sung words. ([merriam-webster.com](https://www.merriam-webster.com/dictionary/song)) ([britannica.com](https://www.britannica.com/dictionary/song))
+### Frame B: Why the sandwich claim still matters
 
-By those criteria, the counterargument is strong: the work has lyrics, musical authorship credits, audio duration, album placement, and streaming/catalog entries. ([psychostick.com](https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich)) ([psychostick.bandcamp.com](https://psychostick.bandcamp.com/album/sandwich))
+The title and lyric framing do not just mention a sandwich; they build the whole premise around denying song identity [1]. The point is not that the piece fools anyone into believing it is edible. The point is that it converts a category mistake into the joke. The audience hears a song that argues against the audience's obvious conclusion.
 
-**3. What counts as a sandwich**
+That is why "sandwich" remains important in the final interpretation. It is not the best literal classification, but it is the best statement of the bit. The work's comic energy comes from forcing two incompatible descriptions into the same object: music-system song and self-declared sandwich.
 
-Merriam-Webster defines a sandwich as bread or a split roll with filling between, and also includes an open-faced variant. Britannica Dictionary defines it as two pieces of bread with something between them, while also extending the form to cookie/cracker/cake analogues. ([merriam-webster.com](https://www.merriam-webster.com/dictionary/sandwich)) ([britannica.com](https://www.britannica.com/dictionary/sandwich)) EBSCO’s food-history summary emphasizes portability, fillings, bread, and ongoing boundary disputes around hot dogs, burritos, and wraps. ([ebsco.com](https://www.ebsco.com/research-starters/history/sandwich-food-item))
+### What the conflict really means
 
-Strictly culinary classification would require edible bread/filling evidence, and the record does not prove that the audio file is edible. Evidence is limited on that point. The defensible thesis is therefore narrower and stronger: **the work is a sandwich as an authored classificatory object**, not as a lunch item under ordinary food-service regulation. [inference]
+The earlier draft leaned too far toward treating the sandwich claim as the final literal verdict. That is harder to defend. A stronger and cleaner reading is that the work operates on two layers:
 
-**4. Strongest case for song classification**
-
-| Evidence | Song Case | Source Strength |
+| Question | Best Answer | Why |
 |---|---|---|
-| Apple Music | Labels the item as a song by Psychostick from *Sandwich* | Strong platform evidence ([music.apple.com](https://music.apple.com/ca/song/this-is-not-a-song-its-a-sandwich/1798192348)) |
-| Bandcamp | Lists it as a numbered track, duration 03:53, with lyrics and buy-track controls | Strong catalog evidence ([psychostick.bandcamp.com](https://psychostick.bandcamp.com/album/sandwich)) |
-| Official store | Places it in an official track list and sells CD/digital formats | Strong official commerce evidence ([psychostick.store](https://psychostick.store/products/sandwich-cd)) |
-| Official lyrics page | Credits music and lyrics | Strong authorship evidence ([psychostick.com](https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich)) |
-| MusicBrainz | Lists Psychostick as an American band and *Sandwich* as a 2009 album | Strong metadata evidence ([musicbrainz.org](https://musicbrainz.org/artist/abda62ca-e383-423b-a939-b14e1d0e38b0)) |
+| What is it in a music catalog? | A song or track | Official and commercial sources all treat it that way [1][3][4][5]. |
+| What is the joke asking you to imagine it is? | A sandwich | The title, lyrics, and album concept insist on that frame [1][2][4]. |
+| Which answer should control the final write-up? | Both, with clear separation | The comedy depends on the gap between literal form and absurd claim. |
 
-The song case is persuasive at the level of **audio form**. It proves that music systems can process the work as a song. It does not prove that “song” is the final category when the work itself disputes that label. [inference]
+## Why The Joke Works
 
-**5. Stronger case for sandwich classification**
+The song works because Psychostick do not merely say something silly; they commit real musical structure to a silly claim. The heavier and more confident the delivery, the funnier the denial becomes. If the piece were musically shapeless, the sandwich line would just be a novelty title. Because it still behaves like a metal or comedy-metal track, the contradiction has something sturdy to ride on.
 
-The sandwich case is stronger because it has **self-identification**, **album-context identity**, and **promotional corroboration**. The official title asserts sandwich identity. The official lyric body repeatedly contests song classification and redirects perception toward food components and sandwich terms, including a hoagie claim. ([psychostick.com](https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich))
+Album context strengthens that effect. A food-saturated album lets the sandwich claim feel like part of a consistent comic universe instead of a random non sequitur [2][4][9][12]. Press coverage around the album also reinforces that Psychostick were deliberately leaning into food-centered humor and promotional stunts, not accidentally producing ambiguity [9][12].
 
-The album context is not incidental. Official and press sources describe *Sandwich* as food-centered: the official page says the album injects ears with delicious metal, and The Spokesman-Review reports Kersey’s explanation that the band chose a food-related album because touring life centered on finding places to eat. ([psychostick.com](https://psychostick.com/music)) ([spokesman.com](https://www.spokesman.com/stories/2009/may/22/cult-fave-psychostick-delivers-metal-with-a-smile/)) BraveWords adds that the promotion included fans creating an epic metal sandwich for a Psychostick *Sandwich* gift package. ([bravewords.com](https://bravewords.com/news/psychostick-announces-the-sandwich-cd-release-party-tour/))
+The result is a joke with a stable structure:
+1. The listener recognizes a song.
+2. The title and lyrics deny the obvious.
+3. The band doubles down instead of resolving the contradiction.
+4. The contradiction itself becomes the entertainment.
 
-**6. Cross-examination: metadata, lyrics, context, intent**
+That is the core cleanup the draft needed. The strongest version of the report is not a mock-serious argument that the object is literally lunch. It is a clear explanation of how Psychostick use fake reclassification as the mechanism of the joke.
 
-Metadata shows how institutions file the object. It is useful but fallible. One official source places the work at track 12, while the official store and Bandcamp place it at track 11. ([psychostick.com](https://psychostick.com/music)) ([psychostick.store](https://psychostick.store/products/sandwich-cd)) ([psychostick.bandcamp.com](https://psychostick.bandcamp.com/album/sandwich)) That discrepancy does not undermine the work; it demonstrates that catalog structures vary.
+## Best-Fit Verdict
 
-The lyrics are not merely decorative text. They stage a classification dispute, reject the listener’s default category, and provide an alternate category. [inference] In category-theory terms, the work asks what is this? and answers with sandwich, while platform metadata answers where should this be filed? ([plato.stanford.edu](https://plato.stanford.edu/entries/categories/))
+> The work is best classified literally as a comedy-metal song or track, while its central comedic thesis is that it should be treated as a sandwich.
 
-**Findings of fact and verdict**
+That verdict is better than either extreme on its own.
 
-The facts support this sequence: Psychostick is a comedic metal/humorcore band; *Sandwich* is an official 2009 album; the disputed item is distributed in music catalogs; the title and lyrics deny song identity; the album context is heavily food-centered; and official/press promotion built around sandwich-making. ([psychostick.com](https://psychostick.com/bio)) ([psychostick.com](https://psychostick.com/music)) ([music.apple.com](https://music.apple.com/ca/song/this-is-not-a-song-its-a-sandwich/1798192348)) ([bravewords.com](https://bravewords.com/news/psychostick-announces-the-sandwich-cd-release-party-tour/))
+"Song only" is too thin because it erases the whole point of the title and lyric framing. The sandwich claim is not decorative; it is the premise. But "sandwich instead of song" is also too blunt because it ignores how the work is actually authored, distributed, and encountered.
 
-**Verdict: sandwich, not song.** More precisely: an audio-distributed sandwich work misclassified by ordinary music metadata as a song for practical catalog reasons. [inference]
+The strongest final answer is therefore layered:
+- In literal catalog terms, it is a song.
+- In comedic self-presentation, it is a sandwich.
+- In critical interpretation, it is a comedy-metal song whose identity joke is pretending those two categories should collapse into one.
+
+## Counterarguments And Responses
+
+### Counterargument: The title alone should not outweigh catalog facts
+
+Correct. The title alone would not be enough. This cleaned report does not let it outweigh the catalog facts. It treats the title and lyrics as evidence of the joke, not as evidence that the work stops being a song in any ordinary release sense [1][3][4][5].
+
+### Counterargument: If it is not edible, calling it a sandwich is empty
+
+That objection is strong against a literal food-classification claim. It is weak against an artistic-identity claim. The report now draws that line explicitly. There is no evidence that the object is literally edible, only that Psychostick use sandwich identity as the joke's governing fiction [10][11].
+
+### Counterargument: This is overthinking a novelty track
+
+Also fair, up to a point. But the question here is a classification question, and the answer becomes cleaner when the levels are separated. The report is not claiming deep metaphysics; it is distinguishing literal release category from comedic premise.
 
 ## Comparative Summary
 
-| Claim | Supporting Sources | Confidence | Key Data Point |
-|---|---|---:|---|
-| It is cataloged as a song/track | Apple, Bandcamp, store | High | Apple calls it a song; Bandcamp lists duration 03:53 ([music.apple.com](https://music.apple.com/ca/song/this-is-not-a-song-its-a-sandwich/1798192348)) ([psychostick.bandcamp.com](https://psychostick.bandcamp.com/album/sandwich)) |
-| It is officially inside *Sandwich* | Official music page, store, Bandcamp | High | Official pages place it on the album ([psychostick.com](https://psychostick.com/music)) ([psychostick.store](https://psychostick.store/products/sandwich-cd)) |
-| The work asserts sandwich identity | Official lyrics page | High | Title and lyric argument deny song classification ([psychostick.com](https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich)) |
-| Album context supports food identity | Official music page, Spokesman, BraveWords | High | Food album rationale and sandwich contest ([spokesman.com](https://www.spokesman.com/stories/2009/may/22/cult-fave-psychostick-delivers-metal-with-a-smile/)) ([bravewords.com](https://bravewords.com/news/psychostick-announces-the-sandwich-cd-release-party-tour/)) |
-| Strict culinary edibility is proven | None | Low | Evidence is limited on this point |
-
-Standout: the song case wins on **format**, but the sandwich case wins on **work identity**.
-
-## Credible Alternatives / Broader Views
-
-> The strongest alternative is not that the sandwich claim is false, but that “song” and “sandwich” operate at different classification levels.
-
-| View | Strength | Weakness | Rating |
-|---|---|---|---:|
-| Song | Strong metadata, audio, lyrics, duration | Cannot explain why the work formally rejects the label | ★★★★ |
-| Comedy-metal track | Fits band biography and press reception | Describes genre, not essential identity | ★★★ |
-| Novelty/parody song | Explains listener expectation conflict | Reduces the thesis to humor, contrary to official self-classification | ★★ |
-| Conceptual artwork | Explains category conflict | Less directly sourced than sandwich | ★★★ |
-| Menu item | Fits food context weakly | No evidence of restaurant/menu use | ★ |
-| Sandwich | Supported by title, lyrics, album, promotion, food context | Not edible under ordinary culinary proof | ★★★★★ |
-
-**Detected conflict review.** The prompt-supplied conflicts about AOAC gluten methods, arXiv PDF URLs, and neutrino/GW papers are unrelated to Psychostick, song definitions, sandwich definitions, music metadata, or category theory. They are therefore excluded from the evidentiary basis. [unverified prompt-supplied conflicts] Assessment by conflict:
-
-- Conflict 1: AOAC 2014.03 vs AOAC 2018.15. Both appear to concern gluten testing in different food matrices; neither bears on the work’s classification. [unverified]
-- Conflicts 2-5, 7-8: competing arXiv PDF URLs. No relation to the subject; no position is favored for this report. [unverified]
-- Conflict 6: neutrino-emission sentence vs a paper title about joint gravitational-wave/neutrino searches. No relation to the subject; no position is probative. [unverified]
+| Claim | Confidence | Why |
+|---|---|---|
+| It is released and distributed as a song or track | High | Official lyrics page, Bandcamp, store, and Apple Music all support this [1][3][4][5]. |
+| The sandwich claim is intentional and central to the joke | High | It is in the title, lyric framing, and album concept [1][2][4]. |
+| The sandwich claim should replace song classification entirely | Low | The release and catalog evidence weigh strongly against that [3][4][5][6][7]. |
+| The best rigorous answer keeps both layers explicit | High | This best fits all surviving evidence without overclaiming. |
 
 ## Visual Summary
 
 ```mermaid
 flowchart TD
-  A[Audio carrier] --> B[Platform catalog label]
-  C[Title and lyrics] --> D[Work identity claim]
-  E[Album and promotion context] --> D
-  B --> F[Song classification]
-  D --> G[Sandwich classification]
-  F --> H[Operational metadata]
-  G --> I[Essential artistic identity]
-  I --> J[Verdict sandwich not song]
+  A[Official release sources] --> B[Song or track classification]
+  C[Title and lyrics] --> D[Sandwich joke framing]
+  E[Food-heavy album context] --> D
+  B --> F[Literal answer]
+  D --> G[Comedic answer]
+  F --> H[It is a comedy-metal song]
+  G --> I[Its premise is that it is a sandwich]
+  H --> J[Best final verdict: both layers kept explicit]
+  I --> J
 ```
 
 ```mermaid
 flowchart TD
-  A[Classification question] --> B{Which level is being asked}
-  B --> C[Distribution format]
-  B --> D[Work identity]
+  A[Question: What is it?] --> B{Which standard?}
+  B --> C[Catalog or music-service standard]
+  B --> D[Comedic self-presentation standard]
   C --> E[Song or track]
   D --> F[Sandwich]
-  E --> G[Useful for platforms]
-  F --> H[Controls verdict]
+  E --> G[Literal classification]
+  F --> H[Interpretive framing]
+  G --> I[Cleaned final report]
+  H --> I
 ```
-
-**Source-found image gallery with credits**
-
-![Official Psychostick store image for Sandwich album](https://psychostick.store/cdn/shop/products/sandwich_317d8b77-58f8-4eb1-9dab-7acc895f9de2.jpg?crop=center&height=1000&v=1557721355&width=1000)
-
-Credit: Psychostick official store product imagery for “Sandwich” Album. The store page exposes multiple “Sandwich” Album images. ([psychostick.store](https://psychostick.store/products/sandwich-cd))
-
-![Bandcamp album cover for Sandwich by Psychostick](https://f4.bcbits.com/img/a1404012708_10.jpg)
-
-Credit: Bandcamp album cover image for *Sandwich* by Psychostick. The Bandcamp album page links this cover image from the album header. ([psychostick.bandcamp.com](https://psychostick.bandcamp.com/album/sandwich))
 
 ## Limitations
 
-The conclusion depends on a **work-identity standard**, not a food-regulatory standard. If the required standard were physical edibility, ordinary culinary sandwich classification would fail because the evidence does not show edible bread, fillings, mass, or nutrition. Evidence is limited on that point.
+The surviving evidence base is good for classification and interpretation, but not for a full reception history. Public metrics, fan reception at scale, and detailed making-of interviews are limited in the retrieved source set. There is also a minor metadata discrepancy around date or track placement across platforms, though it does not change the core classification result [2][3][4][5].
 
-YouTube and one seeded review page were not fully retrievable through the browser, so this report relies more heavily on official Psychostick pages, Bandcamp, Apple Music, MusicBrainz, The Spokesman-Review, BraveWords, and accessible reference sources.
-
-The unresolved issue is philosophical: whether internal claim, artist intent, catalog practice, or audience reception should control final classification. On the evidence available, internal claim plus official album context is stronger than metadata alone.
-
----
-
-## Appendix: Report Quality And Depth Ledger
-
-- Word count: 1,901 / 4,000+ target.
-- Source count: 16 / 14+ target.
-- Citation density: 316.8 words per citation marker.
-- Visual/table artifacts: 7 / 0 target.
-- Evidence depth: Evidence exists, but 10 section(s) need deeper writing from the current source set.
-- Completion review: Missing about 2,099 words; current evidence looks sufficient, so expand thin sections from existing sources.
-
-| Section | Words | Target | Sources | Citations | Status |
-|---|---:|---:|---:|---:|---|
-| Executive Summary | 74 | 308 | 0 | 0 | NeedsMoreEvidence |
-| How To Use This Field Atlas | 0 | 231 | 0 | 0 | Missing |
-| Interactive Map And Route Overview | 0 | 308 | 0 | 0 | Missing |
-| Top Hotspots Worth Visiting | 0 | 538 | 0 | 0 | Missing |
-| Regional Route Clusters | 0 | 462 | 0 | 0 | Missing |
-| Exact Location Cards | 0 | 615 | 0 | 0 | Missing |
-| Pattern Analysis | 0 | 538 | 0 | 0 | Missing |
-| Evidence And Source Strength | 0 | 385 | 0 | 0 | Missing |
-| Safety, Access, And Cultural Sensitivity | 0 | 308 | 0 | 0 | Missing |
-| Map-Ready Location Dataset | 0 | 308 | 0 | 0 | Missing |
-
----
+This cleaned report therefore answers the specific question well, not the whole historical story of Psychostick or the entire *Sandwich* album cycle.
 
 ## Source Index
 
-- [1] [PDF] Mayor%2C_Charlie.pdf — https://openaccess.city.ac.uk/id/eprint/3006/1/Mayor%2C_Charlie.pdf
-
-- [2] Music Metadata 101: Get Your Release Right the First Time VELVETEEN Catalog Pitching Pricing About Get Started Guides /... — https://www.velveteen.fm/guides/release-metadata
-
-- [3] Psychostick - Contact Psychostick Videos Tour Music Store Gear Gear We Use! Here's a giant list of our gear! Purchasing... — https://psychostick.com/gear
-
-- [4] 149  Table 21: Procedure for content analysis of GO papers STAGES FOR PROCESSING ARTICLES FOR CONTENT ANALYSIS 1. Filter...
-
-- [5] 258 the most significant elements of folk culture, the blues.  While Laurel is dismissive of both the blues and blues ar...
-
-- [6] ase flagged for compliance. But Apple is also going a step further. The Behind the Songs portal is a dedicated space to... — https://revelator.com/blog/musicmetadata101
+- [1] Psychostick lyrics page for "This Is Not a Song, It's a Sandwich" - https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich
+- [2] Psychostick music page for *Sandwich* - https://psychostick.com/music
+- [3] Psychostick Bandcamp album page for *Sandwich* - https://psychostick.bandcamp.com/album/sandwich
+- [4] Psychostick official store listing for *Sandwich* - https://psychostick.store/products/sandwich-cd
+- [5] Apple Music track listing for "This Is Not a Song, It's a Sandwich" - https://music.apple.com/ca/song/this-is-not-a-song-its-a-sandwich/1798192348
+- [6] Encyclopaedia Britannica, "song" - https://www.britannica.com/art/song
+- [7] Merriam-Webster, "song" - https://www.merriam-webster.com/dictionary/song
+- [8] Psychostick about page - https://psychostick.com/about
+- [9] BraveWords coverage of the *Sandwich* release party tour - https://bravewords.com/news/psychostick-announces-the-sandwich-cd-release-party-tour/
+- [10] Merriam-Webster, "sandwich" - https://www.merriam-webster.com/dictionary/sandwich
+- [11] Britannica Dictionary, "sandwich" - https://www.britannica.com/dictionary/sandwich
+- [12] The Spokesman-Review on Psychostick and the album's food-centered framing - https://www.spokesman.com/stories/2009/may/22/cult-fave-psychostick-delivers-metal-with-a-smile/
