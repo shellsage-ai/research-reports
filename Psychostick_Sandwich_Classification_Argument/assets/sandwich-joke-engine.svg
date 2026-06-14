@@ -1,35 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
   <title id="title">Sandwich joke engine</title>
-  <desc id="desc">A flow diagram showing how the song form, explicit denial, album framing, and overcommitment produce a sandwich-first verdict.</desc>
+  <desc id="desc">A cleaned flow graphic showing how the track shell, denial, food world, and overcommitment produce a sandwich verdict.</desc>
   <rect width="1600" height="980" rx="34" fill="#111722"/>
-  <text x="108" y="126" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="60" font-weight="900">How the sandwich claim becomes the point</text>
-  <text x="108" y="180" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="29">The medium matters only because it gives the sandwich argument something solid to hijack.</text>
+  <text x="108" y="126" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="58" font-weight="900">How the sandwich claim becomes the point</text>
+  <text x="108" y="178" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="28">The medium matters because it gives the sandwich thesis something solid to hijack.</text>
 
-  <rect x="108" y="300" width="280" height="300" rx="28" fill="#f6ecd2"/>
-  <text x="152" y="372" fill="#915c00" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">STEP 1</text>
-  <text x="152" y="438" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="900">Song-shaped vehicle</text>
-  <text x="152" y="502" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="24">Riffs, runtime, credits, and track placement create a recognizable audio shell.</text>
+  <rect x="104" y="294" width="260" height="264" rx="28" fill="#f6ecd2"/>
+  <text x="142" y="352" fill="#935d00" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">STEP 1</text>
+  <text x="142" y="416" fill="#161c25" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="900">Song shell</text>
+  <text x="142" y="468" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="22">
+    <tspan x="142" dy="0">Recognizable track form.</tspan>
+    <tspan x="142" dy="30">That gives the joke traction.</tspan>
+  </text>
 
-  <rect x="452" y="300" width="280" height="300" rx="28" fill="#171d26" stroke="#30363d" stroke-width="2"/>
-  <text x="496" y="372" fill="#58a6ff" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">STEP 2</text>
-  <text x="496" y="438" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="900">Explicit denial</text>
-  <text x="496" y="502" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="24">The work immediately refuses the obvious label and names itself sandwich instead.</text>
+  <rect x="418" y="294" width="260" height="264" rx="28" fill="#171d26" stroke="#30363d" stroke-width="2"/>
+  <text x="456" y="352" fill="#58a6ff" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">STEP 2</text>
+  <text x="456" y="416" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="900">Denial</text>
+  <text x="456" y="468" fill="#c4cfdb" font-family="Segoe UI, Arial, sans-serif" font-size="22">
+    <tspan x="456" dy="0">The work says</tspan>
+    <tspan x="456" dy="30">"not a song" and names sandwich.</tspan>
+  </text>
 
-  <rect x="796" y="300" width="280" height="300" rx="28" fill="#f6ecd2"/>
-  <text x="840" y="372" fill="#915c00" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">STEP 3</text>
-  <text x="840" y="438" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="38" font-weight="900">Food-world backup</text>
-  <text x="840" y="502" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="24">The album title and neighboring food tracks keep the sandwich claim from feeling random.</text>
+  <rect x="732" y="294" width="260" height="264" rx="28" fill="#f6ecd2"/>
+  <text x="770" y="352" fill="#935d00" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">STEP 3</text>
+  <text x="770" y="416" fill="#161c25" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="900">Food world</text>
+  <text x="770" y="468" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="22">
+    <tspan x="770" dy="0">The album keeps</tspan>
+    <tspan x="770" dy="30">the claim coherent.</tspan>
+  </text>
 
-  <rect x="1140" y="252" width="352" height="396" rx="32" fill="#f7c85d"/>
-  <text x="1186" y="336" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">STEP 4</text>
-  <text x="1186" y="410" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="900">Verdict</text>
-  <text x="1186" y="474" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="900">Sandwich</text>
-  <text x="1186" y="550" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="28">The song form becomes a wrapper the sandwich thesis wears on purpose.</text>
+  <rect x="1060" y="256" width="372" height="340" rx="32" fill="#f7c85d"/>
+  <text x="1104" y="318" fill="#161c25" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="800">STEP 4</text>
+  <text x="1104" y="396" fill="#161c25" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="900">Verdict</text>
+  <text x="1104" y="454" fill="#161c25" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="900">Sandwich</text>
+  <text x="1104" y="520" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="24">
+    <tspan x="1104" dy="0">The shell carries</tspan>
+    <tspan x="1104" dy="32">a sandwich identity.</tspan>
+  </text>
 
-  <path d="M388 450 C420 450 432 450 452 450" fill="none" stroke="#f7c85d" stroke-width="9" stroke-linecap="round"/>
-  <path d="M732 450 C764 450 776 450 796 450" fill="none" stroke="#f7c85d" stroke-width="9" stroke-linecap="round"/>
-  <path d="M1076 450 C1110 450 1120 450 1140 450" fill="none" stroke="#f7c85d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M364 438 C388 438 398 438 418 438" fill="none" stroke="#f7c85d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M678 438 C702 438 712 438 732 438" fill="none" stroke="#f7c85d" stroke-width="9" stroke-linecap="round"/>
+  <path d="M992 438 C1020 438 1032 438 1060 438" fill="none" stroke="#f7c85d" stroke-width="9" stroke-linecap="round"/>
 
-  <rect x="250" y="734" width="1100" height="106" rx="24" fill="#171d26" stroke="#30363d" stroke-width="2"/>
-  <text x="304" y="796" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="800">If the music shell vanished, the joke would collapse. But if the sandwich claim vanished, the work would stop being this work.</text>
+  <rect x="232" y="708" width="1140" height="116" rx="24" fill="#171d26" stroke="#30363d" stroke-width="2"/>
+  <text x="286" y="770" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">
+    <tspan x="286" dy="0">Remove the shell and the joke weakens.</tspan>
+     <tspan x="286" dy="34">Remove sandwich and the bit disappears.</tspan>
+  </text>
 </svg>
