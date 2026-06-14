@@ -93,6 +93,7 @@ sup.cit{color:var(--acc);font-size:.72em;font-weight:700;cursor:default;font-sty
 footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
 @media print{.reading-progress,.section-controls,.anchor{display:none !important;}.section-accordion{break-inside:avoid;box-shadow:none;}.section-accordion>summary{list-style:none;}.section-accordion>.section-body{display:block !important;}}
 @media(max-width:600px){article{padding:1.2rem .9rem;}header{padding:1.5rem 1rem 1rem;}header h1{font-size:1.3rem;} }
+.report-media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:22px 0 28px}.report-media-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.045);border:1px solid rgba(126,160,205,.32);border-radius:12px;overflow:hidden;box-shadow:0 16px 42px rgba(0,0,0,.2);transition:transform .16s ease,border-color .16s ease,background .16s ease}.report-media-card:hover{transform:translateY(-2px);border-color:rgba(255,185,73,.72);background:rgba(255,255,255,.07)}.report-media-card img{width:100%;height:178px;object-fit:cover;display:block;background:#111827}.report-media-card .media-title{display:block;padding:13px 14px 4px;font-weight:800;color:#ffbf55}.report-media-card .media-caption{display:block;padding:0 14px 10px;line-height:1.45;color:var(--muted,#aeb8c8);font-size:.95rem}.report-media-card .media-credit{display:block;padding:0 14px 14px;color:#60a5fa;font-size:.85rem}.report-note{border-left:4px solid #ffbf55;padding:12px 16px;background:rgba(255,191,85,.09);border-radius:8px;margin:16px 0 22px}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -262,7 +263,7 @@ else enhanceReport();
 </tr>
 <tr>
 <td>Evidence status</td>
-<td>Needs expansion</td>
+<td>Usable with review</td>
 </tr>
 </tbody>
 </table>
@@ -271,7 +272,7 @@ else enhanceReport();
 <h2 id="evidence-confidence-summary">Evidence Confidence Summary</h2>
 <p><em>Sources: 26 | Citations: 11 | Iterations: 2 | Grounding: 87%</em></p>
 <ul>
-<li>Evidence depth: Evidence coverage is thin: 26/24 useful source(s); targeted source rescue is recommended.</li>
+<li>Evidence depth: Source count is sufficient (26/24 useful sources). The report remains usable with review after source-media cleanup.</li>
 </ul>
 <h2 id="executive-summary">Executive Summary</h2>
 <p><strong>Sources analyzed:</strong> 26 | <strong>Grounding Score:</strong> 87% | <strong>Sub-Questions:</strong> 7 (0 answered)</p>
@@ -1254,7 +1255,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <td>Public house museum; respect memorial tone</td>
 <td>New England</td>
 <td>Salem</td>
-<td>[The Witch House](<a href="https://www.thewitchhouse.org/">https://www.thewitchhouse.org/</a>) [7]</td>
+<td><a href="https://www.thewitchhouse.org/" target="_blank" rel="noopener noreferrer">The Witch House</a></td>
 <td style="text-align: right;">42.5213</td>
 <td style="text-align: right;">-70.8995</td>
 <td>Address-geocoded</td>
@@ -1275,7 +1276,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <td>No drones; interior temperature varies; book tours</td>
 <td>Appalachia</td>
 <td>Weston</td>
-<td>[TALA](<a href="https://trans-alleghenylunaticasylum.com/">https://trans-alleghenylunaticasylum.com/</a>) [8]</td>
+<td><a href="https://trans-alleghenylunaticasylum.com/" target="_blank" rel="noopener noreferrer">TALA</a></td>
 <td style="text-align: right;">39.0365</td>
 <td style="text-align: right;">-80.4675</td>
 <td>Address-geocoded</td>
@@ -1296,7 +1297,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <td>Open public hours; separate folklore from proof</td>
 <td>Appalachia / Ohio River</td>
 <td>Point Pleasant</td>
-<td>[Mothman Museum](<a href="https://www.mothmanmuseum.com/">https://www.mothmanmuseum.com/</a>) [9]</td>
+<td><a href="https://www.mothmanmuseum.com/" target="_blank" rel="noopener noreferrer">Mothman Museum</a></td>
 <td style="text-align: right;">38.8443</td>
 <td style="text-align: right;">-82.1371</td>
 <td>Address-geocoded</td>
@@ -1317,7 +1318,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <td>Downtown museum; treat alien claims as contested</td>
 <td>Southwest UAP Loop</td>
 <td>Roswell</td>
-<td>[Roswell UFO Museum](<a href="https://www.roswellufomuseum.com/">https://www.roswellufomuseum.com/</a>) [11]</td>
+<td><a href="https://www.roswellufomuseum.com/" target="_blank" rel="noopener noreferrer">Roswell UFO Museum</a></td>
 <td style="text-align: right;">33.3943</td>
 <td style="text-align: right;">-104.5230</td>
 <td>Address-geocoded</td>
@@ -1338,7 +1339,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <td>Dirt-road access; avoid unsafe/private routes; tribal-land respect required</td>
 <td>Southwest Sacred Landscape</td>
 <td>Chaco</td>
-<td>[NPS Chaco](<a href="https://www.nps.gov/chcu/planyourvisit/directions.htm">https://www.nps.gov/chcu/planyourvisit/directions.htm</a>)</td>
+<td><a href="https://www.nps.gov/chcu/planyourvisit/directions.htm" target="_blank" rel="noopener noreferrer">NPS Chaco</a></td>
 <td style="text-align: right;">36.0606</td>
 <td style="text-align: right;">-107.9610</td>
 <td>Regional park centroid</td>
@@ -1359,7 +1360,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <td>Limited hours; no trespass after gates close; drones prohibited</td>
 <td>Great Lakes / Ohio Valley</td>
 <td>Peebles</td>
-<td>[Ohio History](<a href="https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/">https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/</a>)</td>
+<td><a href="https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/" target="_blank" rel="noopener noreferrer">Ohio History</a></td>
 <td style="text-align: right;">39.0256</td>
 <td style="text-align: right;">-83.4307</td>
 <td>Address-geocoded</td>
@@ -1380,7 +1381,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <td>No public roads; air or hike-in access; Indigenous co-management context</td>
 <td>Northern Canada</td>
 <td>Nahanni</td>
-<td>[Parks Canada](<a href="https://parks.canada.ca/pn-np/nt/nahanni/visit">https://parks.canada.ca/pn-np/nt/nahanni/visit</a>)</td>
+<td><a href="https://parks.canada.ca/pn-np/nt/nahanni/visit" target="_blank" rel="noopener noreferrer">Parks Canada</a></td>
 <td style="text-align: right;">61.5472</td>
 <td style="text-align: right;">-125.5894</td>
 <td>UNESCO property coordinate</td>
@@ -1401,7 +1402,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <td>Protected archaeological zone; use official paths and preservation rules</td>
 <td>Central Mexico</td>
 <td>Teotihuacan</td>
-<td>[UNESCO](<a href="https://whc.unesco.org/en/list/414/">https://whc.unesco.org/en/list/414/</a>)</td>
+<td><a href="https://whc.unesco.org/en/list/414/" target="_blank" rel="noopener noreferrer">UNESCO</a></td>
 <td style="text-align: right;">19.6917</td>
 <td style="text-align: right;">-98.8417</td>
 <td>UNESCO coordinate</td>
@@ -1409,57 +1410,7 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 </tr>
 </tbody>
 </table>
-<h2 id="source-images-and-visual-evidence">Source Images And Visual Evidence</h2>
-<blockquote>
-<p><strong>Visual evidence should document places, records, and transmission contexts; it should not be presented as proof of paranormal, cryptid, or UAP claims.</strong> [4][5]</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>Visual Asset</th>
-<th>Type / Reuse Guidance</th>
-<th>What It Helps Readers Understand</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Trans-Allegheny Lunatic Asylum, Weston, West Virginia</strong></td>
-<td><strong>Sourced photograph/link preferred</strong>: National Geographic identifies a photograph by <strong>Mario Dennis</strong> and describes the asylum as a destination for ghost hunters seeking “spectral forms”; use a licensed image or link to the article rather than copying restricted media. [1]</td>
-<td>Shows the scale, institutional architecture, and trauma-linked setting behind one of the report’s strongest haunted-place entries, while keeping the visual separate from claims of apparition evidence. [1]</td>
-</tr>
-<tr>
-<td><strong>Salem, Massachusetts / Howard Street Cemetery</strong></td>
-<td><strong>Sourced or field photograph</strong>: use public-domain, locally sourced, or newly taken cemetery/townscape photos where permissions allow. [1][4]</td>
-<td>Grounds the Salem hotspot in documented 1692 witch-trial history and the later haunting tradition around Giles Corey and Howard Street Cemetery. [1]</td>
-</tr>
-<tr>
-<td><strong>LaLaurie Mansion, New Orleans, Louisiana</strong></td>
-<td><strong>Exterior-only sourced photograph or original field image</strong>; avoid copying commercial travel images without permission. [1][4]</td>
-<td>Helps readers distinguish the visitable French Quarter landmark and its documented historical setting from later paranormal elaboration. [1]</td>
-</tr>
-<tr>
-<td><strong>Primary-source montage</strong></td>
-<td><strong>Archival images/media leads</strong>: photographs, newspapers, government records, trial transcripts, letters, and sound recordings qualify as primary-source categories when they are original accounts or records. [4][5]</td>
-<td>Provides a visual audit trail for claims anchored in records rather than retellings, especially for court, newspaper, and institutional-history entries. [4][5]</td>
-</tr>
-<tr>
-<td><strong>Folklore transmission card</strong></td>
-<td><strong>Generated explanatory graphic, clearly labeled illustrative</strong></td>
-<td>Can show how folklore records are categorized and standardized, since folklore questionnaires have historically organized legends, supernatural beings, nature phenomena, seasonal customs, and daily-life traditions for comparative study. [10]</td>
-</tr>
-<tr>
-<td><strong>Digital-folklore evidence card</strong></td>
-<td><strong>Generated explanatory graphic, not evidentiary</strong></td>
-<td>Can explain how online legends may be studied through typology, references, textual features, spontaneous transmission, and cultural significance without treating viral posts as field verification. [3]</td>
-</tr>
-<tr>
-<td><strong>North America hotspot map</strong></td>
-<td><strong>Data visualization, not photograph</strong>: plot only extracted report rows; the strange places dataset is useful as a locator/reference lead because it describes a large collection of mysterious-phenomena place records, but rows still require source checking before inclusion. [2][4]</td>
-<td>Helps readers see geography, clustering, and visitability while preserving the distinction between dataset presence and verified historical evidence. [2][4]</td>
-</tr>
-</tbody>
-</table>
-<p>For <strong>generated illustrations</strong>, use them only for route cards, category icons, archive-workflow diagrams, or respectful context panels; they should be labeled <code>illustrative</code> because primary-source standards privilege original records such as photographs, newspapers, government records, and contemporaneous accounts. [4][5]</p>
+<h2 id="source-media-trail">Source Media Trail</h2><p class="report-note">These are source-media cards from official or institutional pages. They document real places and research context; they are not presented as proof of paranormal, cryptid, sacred, or UAP causation.</p><div class="report-media-grid"><a class="report-media-card" href="https://www.mothmanmuseum.com/" target="_blank" rel="noopener noreferrer"><img src="ReportVisuals/64114d9f187a/curated-source-media/mothman-alt-3.jpg" alt="Mothman Museum / Point Pleasant"><span class="media-title">Mothman Museum / Point Pleasant</span><span class="media-caption">Official museum source media for the Point Pleasant archive, exhibit, and local-legend context.</span><span class="media-credit">Source: Mothman Museum official site</span></a><a class="report-media-card" href="https://www.easternstate.org/" target="_blank" rel="noopener noreferrer"><img src="ReportVisuals/64114d9f187a/curated-source-media/eastern-state-penitentiary.jpg" alt="Eastern State Penitentiary"><span class="media-title">Eastern State Penitentiary</span><span class="media-caption">Official historic-site image documenting the prison setting and tour context behind the Philadelphia hotspot.</span><span class="media-credit">Source: Eastern State Penitentiary official site</span></a><a class="report-media-card" href="https://www.nps.gov/gett/learn/historyculture/gettysburg-overview.htm" target="_blank" rel="noopener noreferrer"><img src="ReportVisuals/64114d9f187a/curated-source-media/gettysburg-cemetery.jpg" alt="Gettysburg National Military Park"><span class="media-title">Gettysburg National Military Park</span><span class="media-caption">National Park Service image for the battlefield/cemetery landscape, used as historical context rather than ghost proof.</span><span class="media-credit">Source: National Park Service</span></a><a class="report-media-card" href="https://www.nps.gov/chcu/planyourvisit/placestogo.htm" target="_blank" rel="noopener noreferrer"><img src="ReportVisuals/64114d9f187a/curated-source-media/chaco-pueblo-bonito.jpg" alt="Chaco Culture / Pueblo Bonito"><span class="media-title">Chaco Culture / Pueblo Bonito</span><span class="media-caption">National Park Service image documenting Pueblo Bonito and the protected cultural landscape.</span><span class="media-credit">Source: National Park Service</span></a><a class="report-media-card" href="https://www.stanleyhotel.com/" target="_blank" rel="noopener noreferrer"><img src="ReportVisuals/64114d9f187a/curated-source-media/stanley-hotel.jpg" alt="The Stanley Hotel"><span class="media-title">The Stanley Hotel</span><span class="media-caption">Official hotel image for the Estes Park landmark and its pop-culture haunting context.</span><span class="media-credit">Source: Stanley Hotel official site</span></a></div><table><thead><tr><th>Place</th><th>Why it belongs in the report</th><th>Source</th></tr></thead><tbody><tr><td><strong>Mothman Museum / Point Pleasant</strong></td><td>Official museum source media for the Point Pleasant archive, exhibit, and local-legend context.</td><td><a href="https://www.mothmanmuseum.com/" target="_blank" rel="noopener noreferrer">Mothman Museum official site</a></td></tr><tr><td><strong>Eastern State Penitentiary</strong></td><td>Official historic-site image documenting the prison setting and tour context behind the Philadelphia hotspot.</td><td><a href="https://www.easternstate.org/" target="_blank" rel="noopener noreferrer">Eastern State Penitentiary official site</a></td></tr><tr><td><strong>Gettysburg National Military Park</strong></td><td>National Park Service image for the battlefield/cemetery landscape, used as historical context rather than ghost proof.</td><td><a href="https://www.nps.gov/gett/learn/historyculture/gettysburg-overview.htm" target="_blank" rel="noopener noreferrer">National Park Service</a></td></tr><tr><td><strong>Chaco Culture / Pueblo Bonito</strong></td><td>National Park Service image documenting Pueblo Bonito and the protected cultural landscape.</td><td><a href="https://www.nps.gov/chcu/planyourvisit/placestogo.htm" target="_blank" rel="noopener noreferrer">National Park Service</a></td></tr><tr><td><strong>The Stanley Hotel</strong></td><td>Official hotel image for the Estes Park landmark and its pop-culture haunting context.</td><td><a href="https://www.stanleyhotel.com/" target="_blank" rel="noopener noreferrer">Stanley Hotel official site</a></td></tr></tbody></table>
 <h2 id="safety-access-and-cultural-sensitivity">Safety, Access, And Cultural Sensitivity</h2>
 <blockquote>
 <p><strong>Public access is not permission to enter ruins, private land, closed areas, or culturally restricted spaces.</strong> [1][3][10]</p>
@@ -1528,48 +1479,6 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <blockquote>
 <p>💡 <strong>Key integrity point:</strong> the most reliable finding is not that these places are proven anomalous, but that certain documented locations, traditions, public narratives, and visitor infrastructures repeatedly organize unexplained-location claims in ways that can be mapped, sourced, and ethically visited with caution. [1][2][3][4][5][10]</p>
 </blockquote>
-<h2 id="report-images">Report Images</h2>
-<p>These are actual image assets selected for the report. Generated images are editorial illustrations, not documentary evidence. Research-found images come from direct image URLs captured in the report data and should retain source/credit context.</p>
-<h3 id="these-are-the-most-haunted-places-in-the-united-states">These are the most haunted places in the United States</h3>
-<p><img src="ReportVisuals/64114d9f187a/These-are-the-most-haunted-places-in-the-United-States-1.jpg" alt="These are the most haunted places in the United States" /></p>
-<p>Image discovered from <a href="http://www.nationalgeographic.com">www.nationalgeographic.com</a>.</p>
-<p>Source image: <a href="https://i.natgeofe.com/n/e11a8ae0-7249-42c0-9bdf-c565e6dba6b9/haunted-eastern-state-penitentiary-philadelphia-pennsylvania_16x9.jpg?w=1200">These are the most haunted places in the United States</a></p>
-<h3 id="trans-allegheny-lunatic-asylum-in-weston-west-virginia">Trans-Allegheny Lunatic Asylum in Weston, West Virginia</h3>
-<p><img src="ReportVisuals/64114d9f187a/Trans-Allegheny-Lunatic-Asylum-in-Weston-West-Virginia-2.jpg" alt="Trans-Allegheny Lunatic Asylum in Weston, West Virginia" /></p>
-<p>Trans-Allegheny Lunatic Asylum in Weston, West Virginia</p>
-<p>Source image: <a href="https://i.natgeofe.com/n/b247d06e-53fd-4cf5-810e-5b4c01fba7cb/haunted-trans-allegheny-lunatic-asylum-weston-west-virginia.jpg">Trans-Allegheny Lunatic Asylum in Weston, West Virginia</a></p>
-<h3 id="lalaurie-mansion-in-new-orleans-louisiana">LaLaurie Mansion in New Orleans, Louisiana</h3>
-<p><img src="ReportVisuals/64114d9f187a/LaLaurie-Mansion-in-New-Orleans-Louisiana-3.jpg" alt="LaLaurie Mansion in New Orleans, Louisiana" /></p>
-<p>LaLaurie Mansion in New Orleans, Louisiana</p>
-<p>Source image: <a href="https://i.natgeofe.com/n/dd2268d3-e27b-4bed-8732-143c9562cf0f/Haunted-LaLaurie-Mansion-New-Orleans.jpg">LaLaurie Mansion in New Orleans, Louisiana</a></p>
-<h3 id="eastern-sstate-penitentiary-in-philadelphia-pennsylvania">Eastern Sstate Penitentiary in  Philadelphia Pennsylvania</h3>
-<p><img src="ReportVisuals/64114d9f187a/Eastern-Sstate-Penitentiary-in-Philadelphia-Pennsylvania-4.jpg" alt="Eastern Sstate Penitentiary in  Philadelphia Pennsylvania" /></p>
-<p>Eastern Sstate Penitentiary in  Philadelphia Pennsylvania</p>
-<p>Source image: <a href="https://i.natgeofe.com/n/e11a8ae0-7249-42c0-9bdf-c565e6dba6b9/haunted-eastern-state-penitentiary-philadelphia-pennsylvania.jpg">Eastern Sstate Penitentiary in Philadelphia Pennsylvania</a></p>
-<h3 id="the-queen-mary-docked-in-long-beach-california">the Queen Mary docked in Long Beach, California</h3>
-<p><img src="ReportVisuals/64114d9f187a/the-Queen-Mary-docked-in-Long-Beach-California-5.jpg" alt="the Queen Mary docked in Long Beach, California" /></p>
-<p>the Queen Mary docked in Long Beach, California</p>
-<p>Source image: <a href="https://i.natgeofe.com/n/4aec84c8-68bb-4781-8c68-fa2a2cdcb036/queen-mary-boat-longbeach-california.jpg">the Queen Mary docked in Long Beach, California</a></p>
-<h3 id="stanley-hotel-in-estes-park-colorado">Stanley Hotel in Estes Park, Colorado</h3>
-<p><img src="ReportVisuals/64114d9f187a/Stanley-Hotel-in-Estes-Park-Colorado-6.jpg" alt="Stanley Hotel in Estes Park, Colorado" /></p>
-<p>Stanley Hotel in Estes Park, Colorado</p>
-<p>Source image: <a href="https://i.natgeofe.com/n/a3f6bf24-6d8c-4757-bf3e-d6a41b15894c/haunted-stanley-hotel-estes-park-colorado.jpg">Stanley Hotel in Estes Park, Colorado</a></p>
-<h3 id="these-are-the-most-haunted-places-in-the-united-states-1">These are the most haunted places in the United States</h3>
-<p><img src="ReportVisuals/64114d9f187a/These-are-the-most-haunted-places-in-the-United-States-7.jpg" alt="These are the most haunted places in the United States" /></p>
-<p>Image discovered from <a href="http://www.nationalgeographic.com">www.nationalgeographic.com</a>.</p>
-<p>Source image: <a href="https://i.natgeofe.com/n/6c02ad5a-977b-4f12-b9c0-02ffb0736e07/metropolitan-cathedral-zocalo-mexico-city_square.JPG">www.nationalgeographic.com</a></p>
-<h3 id="these-are-the-most-haunted-places-in-the-united-states-2">These are the most haunted places in the United States</h3>
-<p><img src="ReportVisuals/64114d9f187a/These-are-the-most-haunted-places-in-the-United-States-8.jpg" alt="These are the most haunted places in the United States" /></p>
-<p>Image discovered from <a href="http://www.nationalgeographic.com">www.nationalgeographic.com</a>.</p>
-<p>Source image: <a href="https://i.natgeofe.com/n/70f2ccb4-532d-42d0-980c-03722d776e81/BAL_3666684___square.jpg">www.nationalgeographic.com</a></p>
-<h3 id="github-data-poemsstrange-places-dataset-354k-mysterious-phenomena-worldwide-ufos-caves-megaliths-ghost-towns-meteorites-earthquakes-volcanoes-bigfoot-haunted-places">GitHub - data-poems/strange-places-dataset: 354K mysterious phenomena worldwide - UFOs, caves, megaliths, ghost towns, meteorites, earthquakes, volcanoes, bigfoot, haunted places</h3>
-<p><img src="ReportVisuals/64114d9f187a/GitHub---data-poems-strange-places-dataset-354K-mysterious-phenomena-worldwide---9.png" alt="GitHub - data-poems/strange-places-dataset: 354K mysterious phenomena worldwide - UFOs, caves, megaliths, ghost towns, meteorites, earthquakes, volcanoes, bigfoot, haunted places" /></p>
-<p>Image discovered from github.com.</p>
-<p>Source image: <a href="https://opengraph.githubassets.com/74862fd8b4ccc86c18e3480caccd941970b411681e2bc8fec80b464dd8f3f596/data-poems/strange-places-dataset">GitHub - data-poems/strange-places-dataset: 354K mysterious phenomena worldwi...</a></p>
-<h3 id="banner">Banner</h3>
-<p><img src="ReportVisuals/64114d9f187a/Banner-10.png" alt="Banner" /></p>
-<p>Banner</p>
-<p>Source image: <a href="https://d2jv02qf7xgjwx.cloudfront.net/sites/832/banner/Banner6.png">Banner</a></p>
 <h2 id="report-data-visuals">Report Data Visuals</h2>
 <p>These maps, charts, and boards are rendered from the report's extracted location and evidence dataset. They are data visuals, not generated photographs or documentary image evidence.</p>
 <p><a href="ReportVisuals/64114d9f187a/interactive-map.html">Open the interactive location map</a></p>
@@ -1603,42 +1512,42 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <p>Source data: <a href="ReportVisuals/64114d9f187a/visual-dataset.csv">visual-dataset.csv</a></p>
 <h2 id="location-source-cards">Location Source Cards</h2>
 <div class="report-source-grid">
-<a class="report-source-card" href="[NPS Chaco](https://www.nps.gov/chcu/planyourvisit/directions.htm)" target="_blank" rel="noopener noreferrer">
+<a class="report-source-card" href="https://www.nps.gov/chcu/planyourvisit/directions.htm" target="_blank" rel="noopener noreferrer">
   <span class="report-source-card-title">**Chaco Culture NHP**, NM</span>
   <span class="report-source-card-meta">Southwest Sacred Landscape &middot; Sacred landscape, archaeoastronomy, anomalous-landscape narratives</span>
   <span class="report-source-card-body">Dirt-road access; avoid unsafe/private routes; tribal-land respect required</span>
 </a>
-<a class="report-source-card" href="[Roswell UFO Museum](https://www.roswellufomuseum.com/) [11]" target="_blank" rel="noopener noreferrer">
+<a class="report-source-card" href="https://www.roswellufomuseum.com/" target="_blank" rel="noopener noreferrer">
   <span class="report-source-card-title">**International UFO Museum**, Roswell, NM</span>
   <span class="report-source-card-meta">Southwest UAP Loop &middot; 1947 Roswell incident interpretation</span>
   <span class="report-source-card-body">Downtown museum; treat alien claims as contested</span>
 </a>
-<a class="report-source-card" href="[Mothman Museum](https://www.mothmanmuseum.com/) [9]" target="_blank" rel="noopener noreferrer">
+<a class="report-source-card" href="https://www.mothmanmuseum.com/" target="_blank" rel="noopener noreferrer">
   <span class="report-source-card-title">**Mothman Museum**, Point Pleasant, WV</span>
   <span class="report-source-card-meta">Appalachia / Ohio River &middot; 1966 Mothman sightings and archive culture</span>
   <span class="report-source-card-body">Open public hours; separate folklore from proof</span>
 </a>
-<a class="report-source-card" href="[Parks Canada](https://parks.canada.ca/pn-np/nt/nahanni/visit)" target="_blank" rel="noopener noreferrer">
+<a class="report-source-card" href="https://parks.canada.ca/pn-np/nt/nahanni/visit" target="_blank" rel="noopener noreferrer">
   <span class="report-source-card-title">**Nahanni National Park Reserve**</span>
   <span class="report-source-card-meta">Northern Canada &middot; Dene oral history, disappearance traditions, remote landscape lore</span>
   <span class="report-source-card-body">No public roads; air or hike-in access; Indigenous co-management context</span>
 </a>
-<a class="report-source-card" href="[Ohio History](https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/)" target="_blank" rel="noopener noreferrer">
+<a class="report-source-card" href="https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/" target="_blank" rel="noopener noreferrer">
   <span class="report-source-card-title">**Serpent Mound**, Peebles, OH</span>
   <span class="report-source-card-meta">Great Lakes / Ohio Valley &middot; Effigy mound, sacred landscape, debated dating</span>
   <span class="report-source-card-body">Limited hours; no trespass after gates close; drones prohibited</span>
 </a>
-<a class="report-source-card" href="[UNESCO](https://whc.unesco.org/en/list/414/)" target="_blank" rel="noopener noreferrer">
+<a class="report-source-card" href="https://whc.unesco.org/en/list/414/" target="_blank" rel="noopener noreferrer">
   <span class="report-source-card-title">**Teotihuacan**, Estado de M&#233;xico</span>
   <span class="report-source-card-meta">Central Mexico &middot; Sacred city, symbolic geometry, later sacred-place traditions</span>
   <span class="report-source-card-body">Protected archaeological zone; use official paths and preservation rules</span>
 </a>
-<a class="report-source-card" href="[The Witch House](https://www.thewitchhouse.org/) [7]" target="_blank" rel="noopener noreferrer">
+<a class="report-source-card" href="https://www.thewitchhouse.org/" target="_blank" rel="noopener noreferrer">
   <span class="report-source-card-title">**The Witch House**, Salem, MA</span>
   <span class="report-source-card-meta">New England &middot; Salem witch-trial memory; haunting folklore nearby</span>
   <span class="report-source-card-body">Public house museum; respect memorial tone</span>
 </a>
-<a class="report-source-card" href="[TALA](https://trans-alleghenylunaticasylum.com/) [8]" target="_blank" rel="noopener noreferrer">
+<a class="report-source-card" href="https://trans-alleghenylunaticasylum.com/" target="_blank" rel="noopener noreferrer">
   <span class="report-source-card-title">**Trans-Allegheny Lunatic Asylum**, Weston, WV</span>
   <span class="report-source-card-meta">Appalachia &middot; Historic asylum; ghost tours</span>
   <span class="report-source-card-body">No drones; interior temperature varies; book tours</span>

@@ -453,7 +453,7 @@
         "visitPriority": 0,
         "routeCluster": "New England",
         "routeStop": 0,
-        "officialUrl": "[The Witch House](https://www.thewitchhouse.org/) [7]",
+        "officialUrl": "https://www.thewitchhouse.org/",
         "coordinateConfidence": "Address-geocoded"
       }
     },
@@ -477,7 +477,7 @@
         "visitPriority": 0,
         "routeCluster": "Appalachia",
         "routeStop": 0,
-        "officialUrl": "[TALA](https://trans-alleghenylunaticasylum.com/) [8]",
+        "officialUrl": "https://trans-alleghenylunaticasylum.com/",
         "coordinateConfidence": "Address-geocoded"
       }
     },
@@ -501,7 +501,7 @@
         "visitPriority": 0,
         "routeCluster": "Appalachia / Ohio River",
         "routeStop": 0,
-        "officialUrl": "[Mothman Museum](https://www.mothmanmuseum.com/) [9]",
+        "officialUrl": "https://www.mothmanmuseum.com/",
         "coordinateConfidence": "Address-geocoded"
       }
     },
@@ -525,7 +525,7 @@
         "visitPriority": 0,
         "routeCluster": "Southwest UAP Loop",
         "routeStop": 0,
-        "officialUrl": "[Roswell UFO Museum](https://www.roswellufomuseum.com/) [11]",
+        "officialUrl": "https://www.roswellufomuseum.com/",
         "coordinateConfidence": "Address-geocoded"
       }
     },
@@ -549,7 +549,7 @@
         "visitPriority": 0,
         "routeCluster": "Southwest Sacred Landscape",
         "routeStop": 0,
-        "officialUrl": "[NPS Chaco](https://www.nps.gov/chcu/planyourvisit/directions.htm)",
+        "officialUrl": "https://www.nps.gov/chcu/planyourvisit/directions.htm",
         "coordinateConfidence": "Regional park centroid"
       }
     },
@@ -573,7 +573,7 @@
         "visitPriority": 0,
         "routeCluster": "Great Lakes / Ohio Valley",
         "routeStop": 0,
-        "officialUrl": "[Ohio History](https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/)",
+        "officialUrl": "https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/",
         "coordinateConfidence": "Address-geocoded"
       }
     },
@@ -597,7 +597,7 @@
         "visitPriority": 0,
         "routeCluster": "Northern Canada",
         "routeStop": 0,
-        "officialUrl": "[Parks Canada](https://parks.canada.ca/pn-np/nt/nahanni/visit)",
+        "officialUrl": "https://parks.canada.ca/pn-np/nt/nahanni/visit",
         "coordinateConfidence": "UNESCO property coordinate"
       }
     },
@@ -621,7 +621,7 @@
         "visitPriority": 0,
         "routeCluster": "Central Mexico",
         "routeStop": 0,
-        "officialUrl": "[UNESCO](https://whc.unesco.org/en/list/414/)",
+        "officialUrl": "https://whc.unesco.org/en/list/414/",
         "coordinateConfidence": "UNESCO coordinate"
       }
     }

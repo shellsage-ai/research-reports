@@ -1,0 +1,42 @@
+﻿[
+    {
+        "slug":  "mothman-museum",
+        "label":  "Mothman Museum / Point Pleasant",
+        "localFile":  "curated-source-media/mothman-museum.jpg",
+        "imageSource":  "https://www.mothmanmuseum.com/uploads/6/9/0/9/69091379/p1288583_orig.jpg",
+        "pageSource":  "https://www.mothmanmuseum.com/",
+        "credit":  "Mothman Museum official site"
+    },
+    {
+        "slug":  "eastern-state-penitentiary",
+        "label":  "Eastern State Penitentiary",
+        "localFile":  "curated-source-media/eastern-state-penitentiary.jpg",
+        "imageSource":  "https://www.easternstate.org/uploads/general/TourGuidePhotoNewBrighter.jpg",
+        "pageSource":  "https://www.easternstate.org/",
+        "credit":  "Eastern State Penitentiary official site"
+    },
+    {
+        "slug":  "gettysburg-cemetery",
+        "label":  "Gettysburg National Military Park",
+        "localFile":  "curated-source-media/gettysburg-cemetery.jpg",
+        "imageSource":  "https://www.nps.gov/gett/learn/historyculture/images/Mary_cemetery_07-13-22_0033.jpg",
+        "pageSource":  "https://www.nps.gov/gett/learn/historyculture/gettysburg-overview.htm",
+        "credit":  "National Park Service"
+    },
+    {
+        "slug":  "chaco-pueblo-bonito",
+        "label":  "Chaco Culture / Pueblo Bonito",
+        "localFile":  "curated-source-media/chaco-pueblo-bonito.jpg",
+        "imageSource":  "https://www.nps.gov/chcu/planyourvisit/images/Pueblo-Bonito_1.jpg",
+        "pageSource":  "https://www.nps.gov/chcu/planyourvisit/placestogo.htm",
+        "credit":  "National Park Service"
+    },
+    {
+        "slug":  "stanley-hotel",
+        "label":  "The Stanley Hotel",
+        "localFile":  "curated-source-media/stanley-hotel.jpg",
+        "imageSource":  "https://image-tc.galaxy.tf/wijpeg-1hnkb8qhjrb9ovly1sosgvk5/20130618-exteriors-010-1-orig.jpg?width=1920",
+        "pageSource":  "https://www.stanleyhotel.com/",
+        "credit":  "The Stanley Hotel official site"
+    }
+]
