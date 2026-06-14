@@ -1,0 +1,64 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-label="Top Hotspots Visitability Board">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#172536"/></linearGradient></defs>
+<rect width="1100" height="650" fill="url(#bg)"/>
+<text x="55" y="58" fill="#ffbd59" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Top Hotspots Visitability Board</text>
+<text x="55" y="84" fill="#aeb8c5" font-family="Segoe UI, Arial" font-size="14">Visitability is not proof. It indicates whether a user can practically inspect, tour, or research the location.</text>
+<text x="80" y="100" fill="#ffbd59" font-size="14" font-weight="700">Stop</text><text x="150" y="100" fill="#ffbd59" font-size="14" font-weight="700">Location</text><text x="430" y="100" fill="#ffbd59" font-size="14" font-weight="700">Phenomenon / Visit Reason</text><text x="860" y="100" fill="#ffbd59" font-size="14" font-weight="700">Score</text>
+<rect x="70" y="120" width="960" height="50" rx="8" fill="#15202b" stroke="#24384b"/>
+<text x="100" y="151" fill="#0b1020" font-size="13" font-weight="900" text-anchor="middle"><tspan fill="#ffbd59">-</tspan></text>
+<text x="150" y="142" fill="#dce4ed" font-size="13" font-weight="700">Chaco Culture NHP, approx. 36.0...</text>
+<text x="150" y="158" fill="#91a0b2" font-size="11">Southwest sacred/UAP route</text>
+<text x="430" y="143" fill="#dce4ed" font-size="13">Sacred/cultural landscape, archaeoastronomy</text>
+<text x="430" y="159" fill="#91a0b2" font-size="11"></text>
+<text x="860" y="151" fill="#7f8b99" font-size="13" font-weight="700">E0 / V-</text>
+<rect x="70" y="176" width="960" height="50" rx="8" fill="#15202b" stroke="#24384b"/>
+<text x="100" y="207" fill="#0b1020" font-size="13" font-weight="900" text-anchor="middle"><tspan fill="#ffbd59">-</tspan></text>
+<text x="150" y="198" fill="#dce4ed" font-size="13" font-weight="700">Roswell UFO Museum, 114 N. Main...</text>
+<text x="150" y="214" fill="#91a0b2" font-size="11">Southwest UAP route</text>
+<text x="430" y="199" fill="#dce4ed" font-size="13">UAP crash narrative</text>
+<text x="430" y="215" fill="#91a0b2" font-size="11"></text>
+<text x="860" y="207" fill="#7f8b99" font-size="13" font-weight="700">E0 / V-</text>
+<rect x="70" y="232" width="960" height="50" rx="8" fill="#15202b" stroke="#24384b"/>
+<text x="100" y="263" fill="#0b1020" font-size="13" font-weight="900" text-anchor="middle"><tspan fill="#ffbd59">-</tspan></text>
+<text x="150" y="254" fill="#dce4ed" font-size="13" font-weight="700">Shag Harbour Interpretive Centr...</text>
+<text x="150" y="270" fill="#91a0b2" font-size="11">Atlantic Canada route</text>
+<text x="430" y="255" fill="#dce4ed" font-size="13">UAP water-impact report</text>
+<text x="430" y="271" fill="#91a0b2" font-size="11"></text>
+<text x="860" y="263" fill="#7f8b99" font-size="13" font-weight="700">E0 / V-</text>
+<rect x="70" y="288" width="960" height="50" rx="8" fill="#15202b" stroke="#24384b"/>
+<text x="100" y="319" fill="#0b1020" font-size="13" font-weight="900" text-anchor="middle"><tspan fill="#ffbd59">-</tspan></text>
+<text x="150" y="310" fill="#dce4ed" font-size="13" font-weight="700">Gettysburg National Military Pa...</text>
+<text x="150" y="326" fill="#91a0b2" font-size="11">Mid-Atlantic/Appalachia</text>
+<text x="430" y="311" fill="#dce4ed" font-size="13">Battlefield haunting tradition</text>
+<text x="430" y="327" fill="#91a0b2" font-size="11"></text>
+<text x="860" y="319" fill="#7f8b99" font-size="13" font-weight="700">E0 / V-</text>
+<rect x="70" y="344" width="960" height="50" rx="8" fill="#15202b" stroke="#24384b"/>
+<text x="100" y="375" fill="#0b1020" font-size="13" font-weight="900" text-anchor="middle"><tspan fill="#ffbd59">-</tspan></text>
+<text x="150" y="366" fill="#dce4ed" font-size="13" font-weight="700">Salem Witch Trials sites, incl....</text>
+<text x="150" y="382" fill="#91a0b2" font-size="11">New England route</text>
+<text x="430" y="367" fill="#dce4ed" font-size="13">Witch-trial hauntings</text>
+<text x="430" y="383" fill="#91a0b2" font-size="11"></text>
+<text x="860" y="375" fill="#7f8b99" font-size="13" font-weight="700">E0 / V-</text>
+<rect x="70" y="400" width="960" height="50" rx="8" fill="#15202b" stroke="#24384b"/>
+<text x="100" y="431" fill="#0b1020" font-size="13" font-weight="900" text-anchor="middle"><tspan fill="#ffbd59">-</tspan></text>
+<text x="150" y="422" fill="#dce4ed" font-size="13" font-weight="700">Trans-Allegheny Lunatic Asylum</text>
+<text x="150" y="438" fill="#91a0b2" font-size="11">Appalachia route</text>
+<text x="430" y="423" fill="#dce4ed" font-size="13">Institutional haunting</text>
+<text x="430" y="439" fill="#91a0b2" font-size="11"></text>
+<text x="860" y="431" fill="#7f8b99" font-size="13" font-weight="700">E0 / V-</text>
+<rect x="70" y="456" width="960" height="50" rx="8" fill="#15202b" stroke="#24384b"/>
+<text x="100" y="487" fill="#0b1020" font-size="13" font-weight="900" text-anchor="middle"><tspan fill="#ffbd59">-</tspan></text>
+<text x="150" y="478" fill="#dce4ed" font-size="13" font-weight="700">Mothman Museum, 400 Main St.</text>
+<text x="150" y="494" fill="#91a0b2" font-size="11">Appalachia cryptid route</text>
+<text x="430" y="479" fill="#dce4ed" font-size="13">Cryptid/UAP-adjacent folklore</text>
+<text x="430" y="495" fill="#91a0b2" font-size="11"></text>
+<text x="860" y="487" fill="#7f8b99" font-size="13" font-weight="700">E0 / V-</text>
+<rect x="70" y="512" width="960" height="50" rx="8" fill="#15202b" stroke="#24384b"/>
+<text x="100" y="543" fill="#0b1020" font-size="13" font-weight="900" text-anchor="middle"><tspan fill="#ffbd59">-</tspan></text>
+<text x="150" y="534" fill="#dce4ed" font-size="13" font-weight="700">Chichen-Itza / Sacred Cenote, 2...</text>
+<text x="150" y="550" fill="#91a0b2" font-size="11">Maya/Yucatan route</text>
+<text x="430" y="535" fill="#dce4ed" font-size="13">Sacred Maya anomaly tradition</text>
+<text x="430" y="551" fill="#91a0b2" font-size="11"></text>
+<text x="860" y="543" fill="#7f8b99" font-size="13" font-weight="700">E0 / V-</text>
+<text x="55" y="622" fill="#7f8b99" font-family="Segoe UI, Arial" font-size="12">Generated by ResearchHive from extracted report data. Visuals indicate research patterns, not proof.</text>
+</svg>

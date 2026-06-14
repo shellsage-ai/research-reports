@@ -1,0 +1,585 @@
+﻿{
+    "type":  "FeatureCollection",
+    "features":  [
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -107.961,
+                                                              36.0606
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  1,
+                                            "Country":  "USA",
+                                            "Region":  "New Mexico",
+                                            "Location":  "Chaco Culture National Historical Park",
+                                            "AddressOrArea":  "Chaco Canyon, Nageezi area",
+                                            "Phenomenon":  "Sacred cultural landscape and archaeoastronomy",
+                                            "Category":  "Sacred / anomalous landscape",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "Official/public records plus cultural significance",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High; visit respectfully",
+                                            "RouteCluster":  "Southwest sacred landscape",
+                                            "OfficialUrl":  "https://www.nps.gov/chcu/index.htm",
+                                            "Latitude":  36.0606,
+                                            "Longitude":  -107.961,
+                                            "CoordinateConfidence":  "Park coordinate",
+                                            "AccessNotes":  "Dirt-road access; verify road conditions; tribal-land respect required"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -104.523,
+                                                              33.3943
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  2,
+                                            "Country":  "USA",
+                                            "Region":  "New Mexico",
+                                            "Location":  "International UFO Museum and Research Center",
+                                            "AddressOrArea":  "114 N. Main St., Roswell",
+                                            "Phenomenon":  "1947 Roswell UAP crash narrative",
+                                            "Category":  "UAP",
+                                            "EvidenceLevel":  3,
+                                            "EvidenceLabel":  "Public records plus disputed lore",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "Southwest UAP route",
+                                            "OfficialUrl":  "https://www.roswellufomuseum.com/",
+                                            "Latitude":  33.3943,
+                                            "Longitude":  -104.523,
+                                            "CoordinateConfidence":  "Address-geocoded",
+                                            "AccessNotes":  "Museum/archive stop; treat extraordinary claims as contested"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -65.7277,
+                                                              43.5028
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  3,
+                                            "Country":  "Canada",
+                                            "Region":  "Nova Scotia",
+                                            "Location":  "Shag Harbour Interpretive Centre and UFO Gazebo",
+                                            "AddressOrArea":  "Shag Harbour, Nova Scotia",
+                                            "Phenomenon":  "1967 UAP water-impact report",
+                                            "Category":  "UAP",
+                                            "EvidenceLevel":  4,
+                                            "EvidenceLabel":  "Official/public records and repeated accounts",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "Atlantic Canada route",
+                                            "OfficialUrl":  "https://shagharbourincident.wordpress.com/museum/",
+                                            "Latitude":  43.5028,
+                                            "Longitude":  -65.7277,
+                                            "CoordinateConfidence":  "Town/site approximate",
+                                            "AccessNotes":  "Verify seasonal museum hours and coastal access"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -77.2311,
+                                                              39.8309
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  4,
+                                            "Country":  "USA",
+                                            "Region":  "Pennsylvania",
+                                            "Location":  "Gettysburg National Military Park",
+                                            "AddressOrArea":  "1195 Baltimore Pike, Gettysburg",
+                                            "Phenomenon":  "Battlefield haunting tradition",
+                                            "Category":  "Haunted / battlefield folklore",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "Documented historic place plus folklore overlay",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "Mid-Atlantic / Appalachia",
+                                            "OfficialUrl":  "https://www.nps.gov/gett/index.htm",
+                                            "Latitude":  39.8309,
+                                            "Longitude":  -77.2311,
+                                            "CoordinateConfidence":  "Official park coordinate",
+                                            "AccessNotes":  "Use NPS rules; separate battlefield history from ghost-tour claims"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -70.8995,
+                                                              42.5213
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  5,
+                                            "Country":  "USA",
+                                            "Region":  "Massachusetts",
+                                            "Location":  "Salem witch-trials landscape",
+                                            "AddressOrArea":  "Salem, including Howard Street Cemetery and The Witch House",
+                                            "Phenomenon":  "Witch-trial memory and haunting folklore",
+                                            "Category":  "Haunted / folklore",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "Documented place plus repeated folklore",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "New England route",
+                                            "OfficialUrl":  "https://www.thewitchhouse.org/",
+                                            "Latitude":  42.5213,
+                                            "Longitude":  -70.8995,
+                                            "CoordinateConfidence":  "Address-geocoded",
+                                            "AccessNotes":  "Respect memorial and cemetery settings; verify local hours"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -80.4675,
+                                                              39.0365
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  6,
+                                            "Country":  "USA",
+                                            "Region":  "West Virginia",
+                                            "Location":  "Trans-Allegheny Lunatic Asylum",
+                                            "AddressOrArea":  "71 Asylum Dr., Weston",
+                                            "Phenomenon":  "Historic asylum and ghost-tour tradition",
+                                            "Category":  "Haunted",
+                                            "EvidenceLevel":  4,
+                                            "EvidenceLabel":  "Documented place plus repeated accounts",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "Appalachia route",
+                                            "OfficialUrl":  "https://trans-alleghenylunaticasylum.com/",
+                                            "Latitude":  39.0365,
+                                            "Longitude":  -80.4675,
+                                            "CoordinateConfidence":  "Address-geocoded",
+                                            "AccessNotes":  "Book tours; respect patient history; no drones"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -82.1371,
+                                                              38.8443
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  7,
+                                            "Country":  "USA",
+                                            "Region":  "West Virginia",
+                                            "Location":  "Mothman Museum",
+                                            "AddressOrArea":  "400 Main St., Point Pleasant",
+                                            "Phenomenon":  "1966 Mothman sightings and archive culture",
+                                            "Category":  "Cryptid",
+                                            "EvidenceLevel":  3,
+                                            "EvidenceLabel":  "Repeated accounts and local archive",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "Appalachia / Ohio River",
+                                            "OfficialUrl":  "https://www.mothmanmuseum.com/",
+                                            "Latitude":  38.8443,
+                                            "Longitude":  -82.1371,
+                                            "CoordinateConfidence":  "Address-geocoded",
+                                            "AccessNotes":  "Use museum and public town stops; do not trespass in TNT areas"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -88.5686,
+                                                              20.6829
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  8,
+                                            "Country":  "Mexico",
+                                            "Region":  "Yucatan",
+                                            "Location":  "Chichen Itza / Sacred Cenote",
+                                            "AddressOrArea":  "Yucatan, Mexico",
+                                            "Phenomenon":  "Sacred Maya-Toltec center and anomaly traditions",
+                                            "Category":  "Sacred / folklore",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "UNESCO documented place plus sacred tradition",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High; cultural caution",
+                                            "RouteCluster":  "Maya / Yucatan route",
+                                            "OfficialUrl":  "https://whc.unesco.org/en/list/483/",
+                                            "Latitude":  20.6829,
+                                            "Longitude":  -88.5686,
+                                            "CoordinateConfidence":  "UNESCO/site coordinate",
+                                            "AccessNotes":  "Use official access; respect protected archaeological rules"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -98.8438,
+                                                              19.6925
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  9,
+                                            "Country":  "Mexico",
+                                            "Region":  "Mexico State",
+                                            "Location":  "Teotihuacan",
+                                            "AddressOrArea":  "Archaeological zone northeast of Mexico City",
+                                            "Phenomenon":  "Sacred monumental landscape and symbolic geometry",
+                                            "Category":  "Sacred / anomalous landscape",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "UNESCO documented place plus sacred tradition",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High; cultural caution",
+                                            "RouteCluster":  "Central Mexico route",
+                                            "OfficialUrl":  "https://whc.unesco.org/en/list/414/",
+                                            "Latitude":  19.6925,
+                                            "Longitude":  -98.8438,
+                                            "CoordinateConfidence":  "UNESCO coordinate",
+                                            "AccessNotes":  "Use official paths; protect archaeological features"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -90.0643,
+                                                              38.6547
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  10,
+                                            "Country":  "USA",
+                                            "Region":  "Illinois",
+                                            "Location":  "Cahokia Mounds State Historic Site",
+                                            "AddressOrArea":  "30 Ramey St., Collinsville",
+                                            "Phenomenon":  "Sacred/archaeological landscape",
+                                            "Category":  "Sacred / archaeological",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "Documented public historic site",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "Mississippi Valley route",
+                                            "OfficialUrl":  "https://cahokiamounds.org/",
+                                            "Latitude":  38.6547,
+                                            "Longitude":  -90.0643,
+                                            "CoordinateConfidence":  "Address/site coordinate",
+                                            "AccessNotes":  "Use official trails and preservation rules"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -83.4307,
+                                                              39.0256
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  11,
+                                            "Country":  "USA",
+                                            "Region":  "Ohio",
+                                            "Location":  "Serpent Mound",
+                                            "AddressOrArea":  "3850 State Route 73, Peebles",
+                                            "Phenomenon":  "Effigy mound and sacred landscape",
+                                            "Category":  "Sacred / folklore",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "Official public heritage site",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High; strict ethics",
+                                            "RouteCluster":  "Ohio Valley route",
+                                            "OfficialUrl":  "https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/",
+                                            "Latitude":  39.0256,
+                                            "Longitude":  -83.4307,
+                                            "CoordinateConfidence":  "Address-geocoded",
+                                            "AccessNotes":  "No after-hours access; no drones; do not walk on mounds"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -121.9511,
+                                                              37.3184
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  12,
+                                            "Country":  "USA",
+                                            "Region":  "California",
+                                            "Location":  "Winchester Mystery House",
+                                            "AddressOrArea":  "525 S. Winchester Blvd., San Jose",
+                                            "Phenomenon":  "Haunted architecture and mystery-house lore",
+                                            "Category":  "Haunted / architecture",
+                                            "EvidenceLevel":  4,
+                                            "EvidenceLabel":  "Documented place plus repeated accounts",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "California route",
+                                            "OfficialUrl":  "https://winchestermysteryhouse.com/",
+                                            "Latitude":  37.3184,
+                                            "Longitude":  -121.9511,
+                                            "CoordinateConfidence":  "Address-geocoded",
+                                            "AccessNotes":  "Use official tours and current ticketing"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -75.1727,
+                                                              39.9683
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  13,
+                                            "Country":  "USA",
+                                            "Region":  "Pennsylvania",
+                                            "Location":  "Eastern State Penitentiary",
+                                            "AddressOrArea":  "2027 Fairmount Ave., Philadelphia",
+                                            "Phenomenon":  "Prison haunting and historic-site programming",
+                                            "Category":  "Haunted / prison history",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "National Historic Landmark plus staged folklore",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High",
+                                            "RouteCluster":  "Mid-Atlantic route",
+                                            "OfficialUrl":  "https://www.easternstate.org/",
+                                            "Latitude":  39.9683,
+                                            "Longitude":  -75.1727,
+                                            "CoordinateConfidence":  "Address-geocoded",
+                                            "AccessNotes":  "Use official tours; do not imply photos prove haunting"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -122.423,
+                                                              37.8267
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  14,
+                                            "Country":  "USA",
+                                            "Region":  "California",
+                                            "Location":  "Alcatraz Island",
+                                            "AddressOrArea":  "San Francisco Bay",
+                                            "Phenomenon":  "Prison hauntings and Indigenous occupation memory",
+                                            "Category":  "Haunted / public history",
+                                            "EvidenceLevel":  5,
+                                            "EvidenceLabel":  "NPS documented place; folklore secondary",
+                                            "VisitPriority":  5,
+                                            "VisitLabel":  "High; ferry access",
+                                            "RouteCluster":  "California route",
+                                            "OfficialUrl":  "https://www.nps.gov/alca/index.htm",
+                                            "Latitude":  37.8267,
+                                            "Longitude":  -122.423,
+                                            "CoordinateConfidence":  "Island coordinate",
+                                            "AccessNotes":  "Use NPS/ferry access and preserve historic setting"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -103.856,
+                                                              30.275
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  15,
+                                            "Country":  "USA",
+                                            "Region":  "Texas",
+                                            "Location":  "Marfa Lights Viewing Area",
+                                            "AddressOrArea":  "US-90 east of Marfa",
+                                            "Phenomenon":  "Anomalous lights",
+                                            "Category":  "Anomalous lights",
+                                            "EvidenceLevel":  3,
+                                            "EvidenceLabel":  "Repeated accounts; contested explanations",
+                                            "VisitPriority":  4,
+                                            "VisitLabel":  "Medium-high",
+                                            "RouteCluster":  "Southwest desert route",
+                                            "OfficialUrl":  "https://visitmarfa.com/marfa-lights/",
+                                            "Latitude":  30.275,
+                                            "Longitude":  -103.856,
+                                            "CoordinateConfidence":  "Viewing-area approximate",
+                                            "AccessNotes":  "Use public viewing area; night driving caution"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -87.066,
+                                                              36.582
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  16,
+                                            "Country":  "USA",
+                                            "Region":  "Tennessee",
+                                            "Location":  "Bell Witch Cave",
+                                            "AddressOrArea":  "Adams, Tennessee",
+                                            "Phenomenon":  "Poltergeist folklore",
+                                            "Category":  "Haunted / folklore",
+                                            "EvidenceLevel":  2,
+                                            "EvidenceLabel":  "Folklore/oral tradition",
+                                            "VisitPriority":  3,
+                                            "VisitLabel":  "Medium",
+                                            "RouteCluster":  "Appalachia route",
+                                            "OfficialUrl":  "https://www.bellwitchcave.com/",
+                                            "Latitude":  36.582,
+                                            "Longitude":  -87.066,
+                                            "CoordinateConfidence":  "Site approximate",
+                                            "AccessNotes":  "Verify official seasonal access before travel"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -99.096,
+                                                              19.29
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  17,
+                                            "Country":  "Mexico",
+                                            "Region":  "Mexico City",
+                                            "Location":  "Island of the Dolls",
+                                            "AddressOrArea":  "Xochimilco canals",
+                                            "Phenomenon":  "Haunted folk-art island",
+                                            "Category":  "Haunted / folk tradition",
+                                            "EvidenceLevel":  2,
+                                            "EvidenceLabel":  "Folklore/oral tradition plus visitable site",
+                                            "VisitPriority":  3,
+                                            "VisitLabel":  "Medium; local boat access",
+                                            "RouteCluster":  "Central Mexico route",
+                                            "OfficialUrl":  "https://mexicocity.cdmx.gob.mx/venues/island-of-the-dolls/",
+                                            "Latitude":  19.29,
+                                            "Longitude":  -99.096,
+                                            "CoordinateConfidence":  "Chinampa-area approximate",
+                                            "AccessNotes":  "Use licensed trajinera operators; respect lived landscape"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -68.7712,
+                                                              44.8016
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  18,
+                                            "Country":  "USA",
+                                            "Region":  "Maine",
+                                            "Location":  "International Cryptozoology Museum",
+                                            "AddressOrArea":  "Bangor, Maine",
+                                            "Phenomenon":  "Cryptid archive and museum culture",
+                                            "Category":  "Cryptid / archive",
+                                            "EvidenceLevel":  3,
+                                            "EvidenceLabel":  "Documented place and research archive",
+                                            "VisitPriority":  4,
+                                            "VisitLabel":  "Medium-high",
+                                            "RouteCluster":  "New England route",
+                                            "OfficialUrl":  "https://cryptozoologymuseum.com/",
+                                            "Latitude":  44.8016,
+                                            "Longitude":  -68.7712,
+                                            "CoordinateConfidence":  "City/site approximate",
+                                            "AccessNotes":  "Verify current location and hours"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -119.496,
+                                                              49.8879
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  19,
+                                            "Country":  "Canada",
+                                            "Region":  "British Columbia",
+                                            "Location":  "Okanagan Lake / Kelowna waterfront",
+                                            "AddressOrArea":  "Kelowna, British Columbia",
+                                            "Phenomenon":  "Ogopogo / Nxaxaitkw lake tradition",
+                                            "Category":  "Cryptid / oral tradition",
+                                            "EvidenceLevel":  2,
+                                            "EvidenceLabel":  "Folklore/oral tradition and repeated accounts",
+                                            "VisitPriority":  2,
+                                            "VisitLabel":  "Research-only near sensitive tradition",
+                                            "RouteCluster":  "Pacific Northwest / British Columbia",
+                                            "OfficialUrl":  "https://www.tourismkelowna.com/things-to-do/outdoor-recreation/okanagan-lake/",
+                                            "Latitude":  49.8879,
+                                            "Longitude":  -119.496,
+                                            "CoordinateConfidence":  "Waterfront approximate",
+                                            "AccessNotes":  "Respect Syilx cultural context and avoid sensational framing"
+                                        }
+                     },
+                     {
+                         "type":  "Feature",
+                         "geometry":  {
+                                          "type":  "Point",
+                                          "coordinates":  [
+                                                              -81.75,
+                                                              35.915
+                                                          ]
+                                      },
+                         "properties":  {
+                                            "Rank":  20,
+                                            "Country":  "USA",
+                                            "Region":  "North Carolina / Virginia",
+                                            "Location":  "Blue Ridge Parkway / Brown Mountain lights corridor",
+                                            "AddressOrArea":  "Blue Ridge Parkway overlooks near western North Carolina",
+                                            "Phenomenon":  "Ghost-light cluster",
+                                            "Category":  "Anomalous lights / folklore",
+                                            "EvidenceLevel":  2,
+                                            "EvidenceLabel":  "Documented public corridor; weak specific claim",
+                                            "VisitPriority":  3,
+                                            "VisitLabel":  "Medium; weather dependent",
+                                            "RouteCluster":  "Appalachia route",
+                                            "OfficialUrl":  "https://www.nps.gov/blri/index.htm",
+                                            "Latitude":  35.915,
+                                            "Longitude":  -81.75,
+                                            "CoordinateConfidence":  "Regional corridor approximate",
+                                            "AccessNotes":  "Check Parkway closures, weather, and safe overlooks"
+                                        }
+                     }
+                 ]
+}

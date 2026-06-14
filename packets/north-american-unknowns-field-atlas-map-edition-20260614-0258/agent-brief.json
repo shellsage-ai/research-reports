@@ -1,0 +1,83 @@
+{
+  "SchemaVersion": "researchhive.agent-brief.v2",
+  "ArtifactId": "agent-brief:6efb948d372e:1f88100e20d5",
+  "SessionId": "6efb948d372e",
+  "SessionTitle": "North American Unknowns Atlas: Haunted, Folklore, UAP, and Anomalous Hotspots",
+  "Domain": "General Research",
+  "Status": "Active",
+  "GeneratedUtc": "2026-06-14T06:54:48.4798969Z",
+  "ResumeContext": {
+    "sessionId": "6efb948d372e",
+    "primaryReportId": "1f88100e20d5",
+    "primaryJobId": "64114d9f187a",
+    "reportIds": [
+      "1f88100e20d5"
+    ],
+    "claimCheckIds": [],
+    "sessionStatus": "Active",
+    "workspacePath": "C:\\Users\\Ian\\AppData\\Local\\ResearchHive\\Sessions\\2026-06-14_North American Unknowns Atlas_ Haunted, _f6fee654"
+  },
+  "PrimaryReportTitle": "Full Report - North American Anomaly Field Atlas",
+  "PrimaryReportType": "full",
+  "Summary": "The repaired packet contains a full North American anomaly field atlas with ranked hotspots, exact location guide, route roadmap, map-ready dataset, curated source-media cards, data visuals, source index, and citation verification summary. Images are now limited to curated official or institutional source-media cards, and data visuals remain separate from photographs/editorial images.",
+  "TopFindings": [
+    "Documented places and repeated public narratives are stronger than unsupported extraordinary claims.",
+    "Hotspots should be ranked by sourceability, visitability, ethical access, and claim type.",
+    "Images are source-media context, not proof of anomalous causation."
+  ],
+  "Decisions": [
+    "Rank these as documented place + repeated accounts, not as proven paranormal events [1][4].",
+    "Rank each hotspot twice: once for the documented location and once for the extraordinary claim attached to it, because those two evidence questions are not the same [1], [4], [5].",
+    "For every field card, use a fixed evidence line: Documented place, Historical anchor, Claim type, Claim evidence, Visitability, Access risk, and Ethical caution [1], [4], [5]."
+  ],
+  "Risks": [
+    "This atlas can identify credible visitable leads and explain why they matter, but it cannot prove paranormal, cryptid, or UAP causation from the cited evidence alone; the strongest defensible conclusions are about documented places, reported traditions, public records, and patterns of circulation. [1][2][3][4][5][10]"
+  ],
+  "Uncertainties": [],
+  "NextActions": [
+    "Open the repaired full report.",
+    "Use the interactive map and location guide for route planning.",
+    "Verify access, permissions, and cultural sensitivity before visiting any site."
+  ],
+  "GroundingScore": 0.8712328767123289,
+  "Counts": {
+    "reports": 1,
+    "sources": 16,
+    "notebookEntries": 0,
+    "guides": 0,
+    "supportedClaimChecks": 0,
+    "unresolvedClaimChecks": 0
+  },
+  "References": [
+    {
+      "Kind": "packet",
+      "Label": "Packet Index",
+      "Path": "index.html"
+    },
+    {
+      "Kind": "report",
+      "Label": "Full Report - North American Anomaly Field Atlas",
+      "Path": "reports/Full_Report_-_North_American_Anomaly_Field_Atlas_1f88100e.html"
+    },
+    {
+      "Kind": "data",
+      "Label": "Source Index",
+      "Path": "sources.csv"
+    },
+    {
+      "Kind": "packet",
+      "Label": "Packet Summary",
+      "Path": "packet-summary.md"
+    },
+    {
+      "Kind": "packet",
+      "Label": "Trust Summary",
+      "Path": "packet-trust-summary.json"
+    },
+    {
+      "Kind": "visual",
+      "Label": "Packet Visuals",
+      "Path": "visuals.html"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+﻿{
+  "sessionId": "6efb948d372e",
+  "sessionTitle": "North American Unknowns Atlas: Haunted, Folklore, UAP, and Anomalous Hotspots",
+  "exportedUtc": "2026-06-14T06:54:48.5371595Z",
+  "packetType": "Informational / Research",
+  "packetKind": "Informational",
+  "options": {
+    "PacketKind": 0,
+    "SelectedReportId": "1f88100e20d5",
+    "IncludeReports": true,
+    "IncludeSourcesCsv": true,
+    "IncludeNotebook": false,
+    "IncludeEvidence": false,
+    "IncludeLogs": false,
+    "IncludeArtifacts": false,
+    "IncludeGuides": false,
+    "IncludeFigures": false,
+    "IncludeDiagrams": false,
+    "IncludeProjectFusions": false,
+    "IncludeLegalMatters": false,
+    "IncludeStructuredJson": false,
+    "IncludeStructuredCsv": false
+  },
+  "trust": {
+    "status": "Usable With Review",
+    "blockers": 0,
+    "warnings": 1,
+    "groundingScore": 0.8712328767123289
+  },
+  "counts": {
+    "reports": 1,
+    "sources": 16,
+    "notebookEntries": 0,
+    "guides": 0,
+    "evidence": 0,
+    "figures": 0,
+    "diagrams": 0,
+    "projectFusions": 0,
+    "legalMatters": 0,
+    "artifacts": 0,
+    "logs": 0,
+    "agentBrief": true
+  }
+}
