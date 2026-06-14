@@ -1,0 +1,68 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-label="Hotspot Field Route Map">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#172536"/></linearGradient></defs>
+<rect width="1100" height="650" fill="url(#bg)"/>
+<text x="55" y="58" fill="#ffbd59" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Hotspot Field Route Map</text>
+<text x="55" y="84" fill="#aeb8c5" font-family="Segoe UI, Arial" font-size="14">Numbered pins represent visitable or researchable locations. Verify access, hours, safety, and cultural sensitivity before travel.</text>
+<rect x="55" y="102" width="990" height="405" rx="26" fill="#102033" stroke="#29445f"/>
+<path d="M132 194 C250 125 365 140 480 214 C602 292 730 218 852 255 C956 286 997 373 930 474 C845 579 668 532 540 502 C408 467 282 544 176 482 C72 421 72 256 132 194Z" fill="#18394a" stroke="#3a6577" stroke-width="2" opacity="0.72"/>
+<line x1="764" y1="347.1" x2="736.2" y2="351.5" stroke="#ffbd59" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="764" cy="347.1" r="17.6" fill="#ffbd59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="764" y="352.1" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="786.6" y="351.1" fill="#e9eef5" font-size="11">Mothman Museum</text>
+<circle cx="736.2" cy="351.5" r="20.4" fill="#ffbd59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="736.2" y="356.5" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="761.6" y="355.5" fill="#e9eef5" font-size="11">Waverly Hills Sanatorium</text>
+<line x1="501" y1="384.5" x2="465.4" y2="356.5" stroke="#54d2a6" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<line x1="465.4" y1="356.5" x2="461.8" y2="353.4" stroke="#54d2a6" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="501" cy="384.5" r="21" fill="#54d2a6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="501" y="389.5" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="527" y="388.5" fill="#e9eef5" font-size="11">Whaley House Museum</text>
+<circle cx="465.4" cy="356.5" r="21" fill="#54d2a6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="465.4" y="361.5" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="491.4" y="360.5" fill="#e9eef5" font-size="11">Winchester Mystery House</text>
+<circle cx="461.8" cy="353.4" r="21" fill="#54d2a6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="461.8" y="358.4" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">3</text>
+<text x="487.8" y="357.4" fill="#e9eef5" font-size="11">Alcatraz Island</text>
+<line x1="816.2" y1="340.2" x2="800.8" y2="341" stroke="#7cc7ff" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="816.2" cy="340.2" r="17.6" fill="#7cc7ff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="816.2" y="345.2" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="838.8" y="344.2" fill="#e9eef5" font-size="11">Eastern State Penitentiary</text>
+<circle cx="800.8" cy="341" r="19" fill="#7cc7ff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="800.8" y="346" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="824.8" y="345" fill="#e9eef5" font-size="11">Gettysburg National Milit...</text>
+<line x1="527.8" y1="280.2" x2="640.3" y2="468.9" stroke="#ff7a59" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="527.8" cy="280.2" r="21" fill="#ff7a59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="527.8" y="285.2" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="553.8" y="284.2" fill="#e9eef5" font-size="11">Head-Smashed-In Buffalo Jump</text>
+<circle cx="640.3" cy="468.9" r="21" fill="#ff7a59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="640.3" y="473.9" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="666.3" y="472.9" fill="#e9eef5" font-size="11">Iztaccihuatl-Popocatepetl...</text>
+<line x1="596.1" y1="380.6" x2="600.4" y2="399.5" stroke="#c78bff" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="596.1" cy="380.6" r="21" fill="#c78bff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="596.1" y="385.6" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="622.1" y="384.6" fill="#e9eef5" font-size="11">International UFO Museum...</text>
+<circle cx="600.4" cy="399.5" r="21" fill="#c78bff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="600.4" y="404.5" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="626.4" y="403.5" fill="#e9eef5" font-size="11">Marfa Lights Viewing Area</text>
+<line x1="493.6" y1="378.4" x2="588.6" y2="337.6" stroke="#f472b6" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="493.6" cy="378.4" r="17.6" fill="#f472b6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="493.6" y="383.4" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="516.2" y="382.4" fill="#e9eef5" font-size="11">The Queen Mary</text>
+<circle cx="588.6" cy="337.6" r="19" fill="#f472b6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="588.6" y="342.6" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="612.6" y="341.6" fill="#e9eef5" font-size="11">The Stanley Hotel</text>
+<text x="80" y="535" fill="#ffbd59" font-size="15" font-weight="800">Route lanes</text>
+<line x1="210" y1="530" x2="244" y2="530" stroke="#ffbd59" stroke-width="4"/>
+<text x="252" y="535" fill="#dce4ed" font-size="12">Appalachia / Oh...</text>
+<line x1="350" y1="530" x2="384" y2="530" stroke="#54d2a6" stroke-width="4"/>
+<text x="392" y="535" fill="#dce4ed" font-size="12">California myst...</text>
+<line x1="490" y1="530" x2="524" y2="530" stroke="#7cc7ff" stroke-width="4"/>
+<text x="532" y="535" fill="#dce4ed" font-size="12">Northeast histo...</text>
+<line x1="630" y1="530" x2="664" y2="530" stroke="#ff7a59" stroke-width="4"/>
+<text x="672" y="535" fill="#dce4ed" font-size="12">Respectful cult...</text>
+<line x1="770" y1="530" x2="804" y2="530" stroke="#c78bff" stroke-width="4"/>
+<text x="812" y="535" fill="#dce4ed" font-size="12">UAP and anomalo...</text>
+<line x1="910" y1="530" x2="944" y2="530" stroke="#f472b6" stroke-width="4"/>
+<text x="952" y="535" fill="#dce4ed" font-size="12">Western archite...</text>
+<text x="55" y="622" fill="#7f8b99" font-family="Segoe UI, Arial" font-size="12">Generated by ResearchHive from extracted report data. Visuals indicate research patterns, not proof.</text>
+</svg>
