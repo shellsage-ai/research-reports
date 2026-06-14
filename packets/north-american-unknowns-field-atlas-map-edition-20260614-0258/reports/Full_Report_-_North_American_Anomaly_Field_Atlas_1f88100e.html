@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -97,6 +97,7 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border
 .report-media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:22px 0 28px}.report-media-card{display:block;color:inherit;text-decoration:none;background:rgba(255,255,255,.045);border:1px solid rgba(126,160,205,.32);border-radius:12px;overflow:hidden;box-shadow:0 16px 42px rgba(0,0,0,.2);transition:transform .16s ease,border-color .16s ease,background .16s ease}.report-media-card:hover{transform:translateY(-2px);border-color:rgba(255,185,73,.72);background:rgba(255,255,255,.07)}.report-media-card img{width:100%;height:178px;object-fit:cover;display:block;background:#111827}.report-media-card .media-title{display:block;padding:13px 14px 4px;font-weight:800;color:#ffbf55}.report-media-card .media-caption{display:block;padding:0 14px 10px;line-height:1.45;color:var(--muted,#aeb8c8);font-size:.95rem}.report-media-card .media-credit{display:block;padding:0 14px 14px;color:#60a5fa;font-size:.85rem}.report-note{border-left:4px solid #ffbf55;padding:12px 16px;background:rgba(255,191,85,.09);border-radius:8px;margin:16px 0 22px}
 
 .field-map-panel{border:1px solid rgba(88,166,255,.35);background:linear-gradient(135deg,rgba(88,166,255,.10),rgba(255,185,79,.06));border-radius:16px;padding:1rem 1.1rem;margin:1rem 0 1.5rem}.field-map-panel h3{margin-top:0}.field-map-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75rem;margin-top:.9rem}.field-map-mini{border:1px solid var(--bdr);background:rgba(255,255,255,.04);border-radius:12px;padding:.75rem}.field-map-mini strong{display:block;color:var(--acc2);font-size:1.25rem}.report-map-cta a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.65rem 1rem;border-radius:12px;background:rgba(88,166,255,.14);border:1px solid rgba(88,166,255,.45);font-weight:800;text-decoration:none;color:var(--link)}.report-map-cta a:hover{background:rgba(88,166,255,.22);text-decoration:none}
+.field-atlas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin:24px 0 34px}.field-atlas-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;border:1px solid rgba(148,163,184,.28);border-radius:14px;overflow:hidden;background:rgba(15,23,42,.72);box-shadow:0 14px 34px rgba(0,0,0,.22);min-height:100%;transition:transform .16s ease,border-color .16s ease,background .16s ease}.field-atlas-card:hover{transform:translateY(-2px);border-color:rgba(96,165,250,.65);background:rgba(15,23,42,.92)}.field-atlas-card img{width:100%;height:178px;object-fit:cover;display:block;background:#0b1220}.field-atlas-card-body{display:flex;flex-direction:column;gap:8px;padding:16px}.field-atlas-kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:#93c5fd;font-weight:800}.field-atlas-title{font-size:1.12rem;line-height:1.25;color:#fbbf24;font-weight:900}.field-atlas-meta{font-size:.86rem;line-height:1.45;color:#cbd5e1}.field-atlas-text{font-size:.92rem;line-height:1.55;color:#e5e7eb}.field-atlas-credit{display:block;padding:10px 14px;background:rgba(2,6,23,.68);font-size:.78rem;line-height:1.4;color:#cbd5e1}.field-atlas-card.no-image .field-atlas-card-body{padding-top:18px}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 <script>
@@ -194,7 +195,8 @@ else enhanceReport();
         <span class="meta-pill">~102 min read</span>
     <span class="meta-pill">Exported by ResearchHive</span>
 </div>
-<section class="report-toc"><h2 id="table-of-contents">Table Of Contents</h2><ul class="packet-list"><li><a href="#scope-and-use">Scope And Use</a></li><li><a href="#evidence-confidence-summary">Evidence Confidence Summary</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#interactive-map-and-route-overview">Interactive Map And Route Overview</a></li><li><a href="#methodology-evidence-base">Methodology / Evidence Base</a></li><li><a href="#key-findings">Key Findings</a></li><li><a href="#most-supported-view">Most Supported View</a></li><li><a href="#detailed-analysis">Detailed Analysis</a></li><li><a href="#comparative-summary">Comparative Summary</a></li><li><a href="#credible-alternatives-broader-views">Credible Alternatives / Broader Views</a></li><li><a href="#ranked-hotspot-atlas">Ranked Hotspot Atlas</a></li><li><a href="#exact-location-field-guide">Exact Location Field Guide</a></li><li><a href="#route-trail-roadmap">Route / Trail Roadmap</a></li><li><a href="#map-ready-location-dataset">Map-Ready Location Dataset</a></li><li><a href="#source-media-trail">Source Media Trail</a></li><li><a href="#safety-access-and-cultural-sensitivity">Safety, Access, And Cultural Sensitivity</a></li><li><a href="#limitations">Limitations</a></li><li><a href="#report-data-visuals">Report Data Visuals</a></li><li><a href="#location-source-cards">Location Source Cards</a></li><li><a href="#source-index">Source Index</a></li><li><a href="#citation-verification-summary">Citation Verification Summary</a></li></ul></section><p><em>Generated: 2026-06-14 06:47 UTC</em>
+<section class="report-toc"><h2 id="table-of-contents">Table Of Contents</h2><ul class="packet-list"><li><a href="#scope-and-use">Scope And Use</a></li><li><a href="#evidence-confidence-summary">Evidence Confidence Summary</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#interactive-map-and-route-overview">Interactive Map And Route Overview</a></li>
+<li><a href="#visual-field-guide-locations-and-source-media">Visual Field Guide: Locations And Source Media</a></li><li><a href="#methodology-evidence-base">Methodology / Evidence Base</a></li><li><a href="#key-findings">Key Findings</a></li><li><a href="#most-supported-view">Most Supported View</a></li><li><a href="#detailed-analysis">Detailed Analysis</a></li><li><a href="#comparative-summary">Comparative Summary</a></li><li><a href="#credible-alternatives-broader-views">Credible Alternatives / Broader Views</a></li><li><a href="#ranked-hotspot-atlas">Ranked Hotspot Atlas</a></li><li><a href="#exact-location-field-guide">Exact Location Field Guide</a></li><li><a href="#route-trail-roadmap">Route / Trail Roadmap</a></li><li><a href="#map-ready-location-dataset">Map-Ready Location Dataset</a></li><li><a href="#safety-access-and-cultural-sensitivity">Safety, Access, And Cultural Sensitivity</a></li><li><a href="#limitations">Limitations</a></li><li><a href="#report-data-visuals">Report Data Visuals</a></li><li><a href="#source-index">Source Index</a></li><li><a href="#citation-verification-summary">Citation Verification Summary</a></li></ul></section><p><em>Generated: 2026-06-14 06:47 UTC</em>
 <em>Sources: 26 | Citations: 11 | Iterations: 2 | Grounding: 87%</em></p>
 <h2 id="cover">Cover</h2>
 <table>
@@ -258,6 +260,250 @@ else enhanceReport();
   <p>The primary atlas artifact is an interactive OpenStreetMap view with roads, cities, route clusters, clickable markers, source links, and access notes. Use it as a field-planning companion to the report, not as proof of any extraordinary claim.</p>
   <p class="report-map-cta"><a href="../ReportVisuals/64114d9f187a/interactive-map.html" target="_blank" rel="noopener noreferrer">Open Interactive Field Map</a></p>
   <div class="field-map-grid"><div class="field-map-mini"><strong>20</strong><span>mapped stops</span></div><div class="field-map-mini"><strong>3</strong><span>countries</span></div><div class="field-map-mini"><strong>8+</strong><span>route clusters</span></div><div class="field-map-mini"><strong>Source-linked</strong><span>cards and markers</span></div></div>
+</div>
+<h2 id="visual-field-guide-locations-and-source-media">Visual Field Guide: Locations And Source Media</h2>
+<p class="report-note">Start here after the map: each card is a real place or route stop, links to an official/source page, and keeps any available source image with the location it documents. Images are context, not proof of anomalous claims.</p>
+<div class="field-atlas-grid">
+<a class="field-atlas-card has-image" href="https://www.nps.gov/chcu/index.htm" target="_blank" rel="noopener noreferrer">
+  <img src="../ReportVisuals/64114d9f187a/curated-source-media/chaco-pueblo-bonito.jpg" alt="Chaco Culture National Historical Park"><span class="field-atlas-credit">Image/context source: National Park Service. National Park Service media documenting Pueblo Bonito and the protected cultural landscape.</span>
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 1 - Southwest sacred landscape</span>
+    <span class="field-atlas-title">Chaco Culture National Historical Park</span>
+    <span class="field-atlas-meta">Chaco Canyon, Nageezi area - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Sacred cultural landscape and archaeoastronomy</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Sacred / anomalous landscape</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Dirt-road access; verify road conditions; tribal-land respect required</span>
+    <span class="field-atlas-meta">Coordinates: 36.0606, -107.961</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://www.roswellufomuseum.com/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 2 - Southwest UAP route</span>
+    <span class="field-atlas-title">International UFO Museum and Research Center</span>
+    <span class="field-atlas-meta">114 N. Main St., Roswell - Evidence 3 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> 1947 Roswell UAP crash narrative</span>
+    <span class="field-atlas-text"><strong>Category:</strong> UAP</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Museum/archive stop; treat extraordinary claims as contested</span>
+    <span class="field-atlas-meta">Coordinates: 33.3943, -104.523</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://shagharbourincident.wordpress.com/museum/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 3 - Atlantic Canada route</span>
+    <span class="field-atlas-title">Shag Harbour Interpretive Centre and UFO Gazebo</span>
+    <span class="field-atlas-meta">Shag Harbour, Nova Scotia - Evidence 4 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> 1967 UAP water-impact report</span>
+    <span class="field-atlas-text"><strong>Category:</strong> UAP</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Verify seasonal museum hours and coastal access</span>
+    <span class="field-atlas-meta">Coordinates: 43.5028, -65.7277</span>
+  </span>
+</a>
+<a class="field-atlas-card has-image" href="https://www.nps.gov/gett/index.htm" target="_blank" rel="noopener noreferrer">
+  <img src="../ReportVisuals/64114d9f187a/curated-source-media/gettysburg-cemetery.jpg" alt="Gettysburg National Military Park"><span class="field-atlas-credit">Image/context source: National Park Service. National Park Service media for the battlefield and cemetery landscape, used as historical context.</span>
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 4 - Mid-Atlantic / Appalachia</span>
+    <span class="field-atlas-title">Gettysburg National Military Park</span>
+    <span class="field-atlas-meta">1195 Baltimore Pike, Gettysburg - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Battlefield haunting tradition</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Haunted / battlefield folklore</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use NPS rules; separate battlefield history from ghost-tour claims</span>
+    <span class="field-atlas-meta">Coordinates: 39.8309, -77.2311</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://www.thewitchhouse.org/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 5 - New England route</span>
+    <span class="field-atlas-title">Salem witch-trials landscape</span>
+    <span class="field-atlas-meta">Salem, including Howard Street Cemetery and The Witch House - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Witch-trial memory and haunting folklore</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Haunted / folklore</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Respect memorial and cemetery settings; verify local hours</span>
+    <span class="field-atlas-meta">Coordinates: 42.5213, -70.8995</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://trans-alleghenylunaticasylum.com/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 6 - Appalachia route</span>
+    <span class="field-atlas-title">Trans-Allegheny Lunatic Asylum</span>
+    <span class="field-atlas-meta">71 Asylum Dr., Weston - Evidence 4 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Historic asylum and ghost-tour tradition</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Haunted</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Book tours; respect patient history; no drones</span>
+    <span class="field-atlas-meta">Coordinates: 39.0365, -80.4675</span>
+  </span>
+</a>
+<a class="field-atlas-card has-image" href="https://www.mothmanmuseum.com/" target="_blank" rel="noopener noreferrer">
+  <img src="../ReportVisuals/64114d9f187a/curated-source-media/mothman-alt-3.jpg" alt="Mothman Museum"><span class="field-atlas-credit">Image/context source: Mothman Museum official site. Official museum media for the Point Pleasant archive, exhibit, and local-legend context.</span>
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 7 - Appalachia / Ohio River</span>
+    <span class="field-atlas-title">Mothman Museum</span>
+    <span class="field-atlas-meta">400 Main St., Point Pleasant - Evidence 3 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> 1966 Mothman sightings and archive culture</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Cryptid</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use museum and public town stops; do not trespass in TNT areas</span>
+    <span class="field-atlas-meta">Coordinates: 38.8443, -82.1371</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://whc.unesco.org/en/list/483/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 8 - Maya / Yucatan route</span>
+    <span class="field-atlas-title">Chichen Itza / Sacred Cenote</span>
+    <span class="field-atlas-meta">Yucatan, Mexico - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Sacred Maya-Toltec center and anomaly traditions</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Sacred / folklore</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use official access; respect protected archaeological rules</span>
+    <span class="field-atlas-meta">Coordinates: 20.6829, -88.5686</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://whc.unesco.org/en/list/414/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 9 - Central Mexico route</span>
+    <span class="field-atlas-title">Teotihuacan</span>
+    <span class="field-atlas-meta">Archaeological zone northeast of Mexico City - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Sacred monumental landscape and symbolic geometry</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Sacred / anomalous landscape</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use official paths; protect archaeological features</span>
+    <span class="field-atlas-meta">Coordinates: 19.6925, -98.8438</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://cahokiamounds.org/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 10 - Mississippi Valley route</span>
+    <span class="field-atlas-title">Cahokia Mounds State Historic Site</span>
+    <span class="field-atlas-meta">30 Ramey St., Collinsville - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Sacred/archaeological landscape</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Sacred / archaeological</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use official trails and preservation rules</span>
+    <span class="field-atlas-meta">Coordinates: 38.6547, -90.0643</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 11 - Ohio Valley route</span>
+    <span class="field-atlas-title">Serpent Mound</span>
+    <span class="field-atlas-meta">3850 State Route 73, Peebles - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Effigy mound and sacred landscape</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Sacred / folklore</span>
+    <span class="field-atlas-text"><strong>Access:</strong> No after-hours access; no drones; do not walk on mounds</span>
+    <span class="field-atlas-meta">Coordinates: 39.0256, -83.4307</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://winchestermysteryhouse.com/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 12 - California route</span>
+    <span class="field-atlas-title">Winchester Mystery House</span>
+    <span class="field-atlas-meta">525 S. Winchester Blvd., San Jose - Evidence 4 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Haunted architecture and mystery-house lore</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Haunted / architecture</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use official tours and current ticketing</span>
+    <span class="field-atlas-meta">Coordinates: 37.3184, -121.9511</span>
+  </span>
+</a>
+<a class="field-atlas-card has-image" href="https://www.easternstate.org/" target="_blank" rel="noopener noreferrer">
+  <img src="../ReportVisuals/64114d9f187a/curated-source-media/eastern-state-penitentiary.jpg" alt="Eastern State Penitentiary"><span class="field-atlas-credit">Image/context source: Eastern State Penitentiary official site. Official historic-site media for the prison setting, tour context, and preservation framing.</span>
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 13 - Mid-Atlantic route</span>
+    <span class="field-atlas-title">Eastern State Penitentiary</span>
+    <span class="field-atlas-meta">2027 Fairmount Ave., Philadelphia - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Prison haunting and historic-site programming</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Haunted / prison history</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use official tours; do not imply photos prove haunting</span>
+    <span class="field-atlas-meta">Coordinates: 39.9683, -75.1727</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://www.nps.gov/alca/index.htm" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 14 - California route</span>
+    <span class="field-atlas-title">Alcatraz Island</span>
+    <span class="field-atlas-meta">San Francisco Bay - Evidence 5 - Visit Priority 5</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Prison hauntings and Indigenous occupation memory</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Haunted / public history</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use NPS/ferry access and preserve historic setting</span>
+    <span class="field-atlas-meta">Coordinates: 37.8267, -122.423</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://visitmarfa.com/marfa-lights/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 15 - Southwest desert route</span>
+    <span class="field-atlas-title">Marfa Lights Viewing Area</span>
+    <span class="field-atlas-meta">US-90 east of Marfa - Evidence 3 - Visit Priority 4</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Anomalous lights</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Anomalous lights</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use public viewing area; night driving caution</span>
+    <span class="field-atlas-meta">Coordinates: 30.275, -103.856</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://www.bellwitchcave.com/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 16 - Appalachia route</span>
+    <span class="field-atlas-title">Bell Witch Cave</span>
+    <span class="field-atlas-meta">Adams, Tennessee - Evidence 2 - Visit Priority 3</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Poltergeist folklore</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Haunted / folklore</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Verify official seasonal access before travel</span>
+    <span class="field-atlas-meta">Coordinates: 36.582, -87.066</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://mexicocity.cdmx.gob.mx/venues/island-of-the-dolls/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 17 - Central Mexico route</span>
+    <span class="field-atlas-title">Island of the Dolls</span>
+    <span class="field-atlas-meta">Xochimilco canals - Evidence 2 - Visit Priority 3</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Haunted folk-art island</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Haunted / folk tradition</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Use licensed trajinera operators; respect lived landscape</span>
+    <span class="field-atlas-meta">Coordinates: 19.29, -99.096</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://cryptozoologymuseum.com/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 18 - New England route</span>
+    <span class="field-atlas-title">International Cryptozoology Museum</span>
+    <span class="field-atlas-meta">Bangor, Maine - Evidence 3 - Visit Priority 4</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Cryptid archive and museum culture</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Cryptid / archive</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Verify current location and hours</span>
+    <span class="field-atlas-meta">Coordinates: 44.8016, -68.7712</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://www.tourismkelowna.com/things-to-do/outdoor-recreation/okanagan-lake/" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 19 - Pacific Northwest / British Columbia</span>
+    <span class="field-atlas-title">Okanagan Lake / Kelowna waterfront</span>
+    <span class="field-atlas-meta">Kelowna, British Columbia - Evidence 2 - Visit Priority 2</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Ogopogo / Nxaxaitkw lake tradition</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Cryptid / oral tradition</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Respect Syilx cultural context and avoid sensational framing</span>
+    <span class="field-atlas-meta">Coordinates: 49.8879, -119.496</span>
+  </span>
+</a>
+<a class="field-atlas-card no-image" href="https://www.nps.gov/blri/index.htm" target="_blank" rel="noopener noreferrer">
+
+  <span class="field-atlas-card-body">
+    <span class="field-atlas-kicker">Stop 20 - Appalachia route</span>
+    <span class="field-atlas-title">Blue Ridge Parkway / Brown Mountain lights corridor</span>
+    <span class="field-atlas-meta">Blue Ridge Parkway overlooks near western North Carolina - Evidence 2 - Visit Priority 3</span>
+    <span class="field-atlas-text"><strong>Phenomenon:</strong> Ghost-light cluster</span>
+    <span class="field-atlas-text"><strong>Category:</strong> Anomalous lights / folklore</span>
+    <span class="field-atlas-text"><strong>Access:</strong> Check Parkway closures, weather, and safe overlooks</span>
+    <span class="field-atlas-meta">Coordinates: 35.915, -81.75</span>
+  </span>
+</a>
 </div>
 <h2 id="methodology-evidence-base">Methodology / Evidence Base</h2>
 <p>This report synthesizes the curated evidence set, source categories, citation coverage, and source index. Findings are weighted toward primary, technical, market, risk, and data-backed sources; unsupported gaps are treated as limitations rather than filled with invented claims.</p>
@@ -1381,47 +1627,6 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 </tr>
 </tbody>
 </table>
-<h2 id="source-media-trail">Source Media Trail</h2>
-<p class="report-note">These are source-media cards from official or institutional pages. They document real places and research context; they are not presented as proof of paranormal, cryptid, sacred, or UAP causation.</p>
-<div class="report-media-grid">
-<a class="report-media-card" href="https://www.mothmanmuseum.com/" target="_blank" rel="noopener noreferrer">
-<img src="../ReportVisuals/64114d9f187a/curated-source-media/mothman-alt-3.jpg" alt="Mothman Museum / Point Pleasant">
-<span class="media-title">Mothman Museum / Point Pleasant</span>
-<span class="media-caption">Official museum source media for the Point Pleasant archive, exhibit, and local-legend context.</span>
-<span class="media-credit">Source: Mothman Museum official site</span>
-</a>
-<a class="report-media-card" href="https://www.easternstate.org/" target="_blank" rel="noopener noreferrer">
-<img src="../ReportVisuals/64114d9f187a/curated-source-media/eastern-state-penitentiary.jpg" alt="Eastern State Penitentiary">
-<span class="media-title">Eastern State Penitentiary</span>
-<span class="media-caption">Official historic-site image documenting the prison setting and tour context behind the Philadelphia hotspot.</span>
-<span class="media-credit">Source: Eastern State Penitentiary official site</span>
-</a>
-<a class="report-media-card" href="https://www.nps.gov/gett/learn/historyculture/gettysburg-overview.htm" target="_blank" rel="noopener noreferrer">
-<img src="../ReportVisuals/64114d9f187a/curated-source-media/gettysburg-cemetery.jpg" alt="Gettysburg National Military Park">
-<span class="media-title">Gettysburg National Military Park</span>
-<span class="media-caption">National Park Service image for the battlefield/cemetery landscape, used as historical context rather than ghost proof.</span>
-<span class="media-credit">Source: National Park Service</span>
-</a>
-<a class="report-media-card" href="https://www.nps.gov/chcu/planyourvisit/placestogo.htm" target="_blank" rel="noopener noreferrer">
-<img src="../ReportVisuals/64114d9f187a/curated-source-media/chaco-pueblo-bonito.jpg" alt="Chaco Culture / Pueblo Bonito">
-<span class="media-title">Chaco Culture / Pueblo Bonito</span>
-<span class="media-caption">National Park Service image documenting Pueblo Bonito and the protected cultural landscape.</span>
-<span class="media-credit">Source: National Park Service</span>
-</a>
-<a class="report-media-card" href="https://www.stanleyhotel.com/" target="_blank" rel="noopener noreferrer">
-<img src="../ReportVisuals/64114d9f187a/curated-source-media/stanley-hotel.jpg" alt="The Stanley Hotel">
-<span class="media-title">The Stanley Hotel</span>
-<span class="media-caption">Official hotel image for the Estes Park landmark and its pop-culture haunting context.</span>
-<span class="media-credit">Source: Stanley Hotel official site</span>
-</a>
-</div>
-<table><thead><tr><th>Place</th><th>Why it belongs in the report</th><th>Source</th></tr></thead><tbody>
-<tr><td><strong>Mothman Museum / Point Pleasant</strong></td><td>Official museum source media for the Point Pleasant archive, exhibit, and local-legend context.</td><td><a href="https://www.mothmanmuseum.com/" target="_blank" rel="noopener noreferrer">Mothman Museum official site</a></td></tr>
-<tr><td><strong>Eastern State Penitentiary</strong></td><td>Official historic-site image documenting the prison setting and tour context behind the Philadelphia hotspot.</td><td><a href="https://www.easternstate.org/" target="_blank" rel="noopener noreferrer">Eastern State Penitentiary official site</a></td></tr>
-<tr><td><strong>Gettysburg National Military Park</strong></td><td>National Park Service image for the battlefield/cemetery landscape, used as historical context rather than ghost proof.</td><td><a href="https://www.nps.gov/gett/learn/historyculture/gettysburg-overview.htm" target="_blank" rel="noopener noreferrer">National Park Service</a></td></tr>
-<tr><td><strong>Chaco Culture / Pueblo Bonito</strong></td><td>National Park Service image documenting Pueblo Bonito and the protected cultural landscape.</td><td><a href="https://www.nps.gov/chcu/planyourvisit/placestogo.htm" target="_blank" rel="noopener noreferrer">National Park Service</a></td></tr>
-<tr><td><strong>The Stanley Hotel</strong></td><td>Official hotel image for the Estes Park landmark and its pop-culture haunting context.</td><td><a href="https://www.stanleyhotel.com/" target="_blank" rel="noopener noreferrer">Stanley Hotel official site</a></td></tr>
-</tbody></table>
 <h2 id="safety-access-and-cultural-sensitivity">Safety, Access, And Cultural Sensitivity</h2>
 <blockquote>
 <p><strong>Public access is not permission to enter ruins, private land, closed areas, or culturally restricted spaces.</strong> [1][3][10]</p>
@@ -1519,49 +1724,6 @@ Treat aggregated anomaly datasets and online legend corpora as <strong>research-
 <p><img src="../ReportVisuals/64114d9f187a/Signal-Versus-Evidence-Chart.svg" alt="Signal Versus Evidence Chart" /></p>
 <p>Higher-right items have stronger recurrence and stronger available evidence, but are still not treated as proven.</p>
 <p>Source data: <a href="../ReportVisuals/64114d9f187a/visual-dataset.csv">visual-dataset.csv</a></p>
-<h2 id="location-source-cards">Location Source Cards</h2>
-<div class="report-source-grid">
-<a class="report-source-card" href="https://www.nps.gov/chcu/planyourvisit/directions.htm" target="_blank" rel="noopener noreferrer">
-  <span class="report-source-card-title">**Chaco Culture NHP**, NM</span>
-  <span class="report-source-card-meta">Southwest Sacred Landscape &middot; Sacred landscape, archaeoastronomy, anomalous-landscape narratives</span>
-  <span class="report-source-card-body">Dirt-road access; avoid unsafe/private routes; tribal-land respect required</span>
-</a>
-<a class="report-source-card" href="https://www.roswellufomuseum.com/" target="_blank" rel="noopener noreferrer">
-  <span class="report-source-card-title">**International UFO Museum**, Roswell, NM</span>
-  <span class="report-source-card-meta">Southwest UAP Loop &middot; 1947 Roswell incident interpretation</span>
-  <span class="report-source-card-body">Downtown museum; treat alien claims as contested</span>
-</a>
-<a class="report-source-card" href="https://www.mothmanmuseum.com/" target="_blank" rel="noopener noreferrer">
-  <span class="report-source-card-title">**Mothman Museum**, Point Pleasant, WV</span>
-  <span class="report-source-card-meta">Appalachia / Ohio River &middot; 1966 Mothman sightings and archive culture</span>
-  <span class="report-source-card-body">Open public hours; separate folklore from proof</span>
-</a>
-<a class="report-source-card" href="https://parks.canada.ca/pn-np/nt/nahanni/visit" target="_blank" rel="noopener noreferrer">
-  <span class="report-source-card-title">**Nahanni National Park Reserve**</span>
-  <span class="report-source-card-meta">Northern Canada &middot; Dene oral history, disappearance traditions, remote landscape lore</span>
-  <span class="report-source-card-body">No public roads; air or hike-in access; Indigenous co-management context</span>
-</a>
-<a class="report-source-card" href="https://www.ohiohistory.org/visit/browse-historical-sites/serpent-mound/" target="_blank" rel="noopener noreferrer">
-  <span class="report-source-card-title">**Serpent Mound**, Peebles, OH</span>
-  <span class="report-source-card-meta">Great Lakes / Ohio Valley &middot; Effigy mound, sacred landscape, debated dating</span>
-  <span class="report-source-card-body">Limited hours; no trespass after gates close; drones prohibited</span>
-</a>
-<a class="report-source-card" href="https://whc.unesco.org/en/list/414/" target="_blank" rel="noopener noreferrer">
-  <span class="report-source-card-title">**Teotihuacan**, Estado de M&#233;xico</span>
-  <span class="report-source-card-meta">Central Mexico &middot; Sacred city, symbolic geometry, later sacred-place traditions</span>
-  <span class="report-source-card-body">Protected archaeological zone; use official paths and preservation rules</span>
-</a>
-<a class="report-source-card" href="https://www.thewitchhouse.org/" target="_blank" rel="noopener noreferrer">
-  <span class="report-source-card-title">**The Witch House**, Salem, MA</span>
-  <span class="report-source-card-meta">New England &middot; Salem witch-trial memory; haunting folklore nearby</span>
-  <span class="report-source-card-body">Public house museum; respect memorial tone</span>
-</a>
-<a class="report-source-card" href="https://trans-alleghenylunaticasylum.com/" target="_blank" rel="noopener noreferrer">
-  <span class="report-source-card-title">**Trans-Allegheny Lunatic Asylum**, Weston, WV</span>
-  <span class="report-source-card-meta">Appalachia &middot; Historic asylum; ghost tours</span>
-  <span class="report-source-card-body">No drones; interior temperature varies; book tours</span>
-</a>
-</div>
 <h2 id="source-index">Source Index</h2>
 <ul>
 <li><p>[1] These are the most haunted places in the United States | National Geographic — <a href="https://www.nationalgeographic.com/travel/article/the-most-haunted-places-in-the-united-states">https://www.nationalgeographic.com/travel/article/the-most-haunted-places-in-the-united-states</a></p>
