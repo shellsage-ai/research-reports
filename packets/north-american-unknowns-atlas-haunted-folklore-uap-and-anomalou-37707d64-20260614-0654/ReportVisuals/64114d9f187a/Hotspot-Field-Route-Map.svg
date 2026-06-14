@@ -1,0 +1,134 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650" role="img" aria-label="Hotspot Field Route Map">
+<defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#172536"/></linearGradient></defs>
+<rect width="1100" height="650" fill="url(#bg)"/>
+<text x="55" y="58" fill="#ffbd59" font-family="Segoe UI, Arial" font-size="30" font-weight="800">Hotspot Field Route Map</text>
+<text x="55" y="84" fill="#aeb8c5" font-family="Segoe UI, Arial" font-size="14">Numbered pins represent visitable or researchable locations. Verify access, hours, safety, and cultural sensitivity before travel.</text>
+<rect x="70" y="100" width="960" height="455" rx="18" fill="#102033" stroke="#29445f"/>
+<line x1="180" y1="555" x2="180" y2="125" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="180" y="548" fill="#8091a6" font-size="11" text-anchor="middle">-160°</text>
+<line x1="330" y1="555" x2="330" y2="125" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="330" y="548" fill="#8091a6" font-size="11" text-anchor="middle">-140°</text>
+<line x1="480" y1="555" x2="480" y2="125" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="480" y="548" fill="#8091a6" font-size="11" text-anchor="middle">-120°</text>
+<line x1="630" y1="555" x2="630" y2="125" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="630" y="548" fill="#8091a6" font-size="11" text-anchor="middle">-100°</text>
+<line x1="780" y1="555" x2="780" y2="125" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="780" y="548" fill="#8091a6" font-size="11" text-anchor="middle">-80°</text>
+<line x1="930" y1="555" x2="930" y2="125" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="930" y="548" fill="#8091a6" font-size="11" text-anchor="middle">-60°</text>
+<line x1="105" y1="524.3" x2="1005" y2="524.3" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="82" y="528.3" fill="#8091a6" font-size="11">10°N</text>
+<line x1="105" y1="462.9" x2="1005" y2="462.9" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="82" y="466.9" fill="#8091a6" font-size="11">20°N</text>
+<line x1="105" y1="401.4" x2="1005" y2="401.4" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="82" y="405.4" fill="#8091a6" font-size="11">30°N</text>
+<line x1="105" y1="340" x2="1005" y2="340" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="82" y="344" fill="#8091a6" font-size="11">40°N</text>
+<line x1="105" y1="278.6" x2="1005" y2="278.6" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="82" y="282.6" fill="#8091a6" font-size="11">50°N</text>
+<line x1="105" y1="217.1" x2="1005" y2="217.1" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="82" y="221.1" fill="#8091a6" font-size="11">60°N</text>
+<line x1="105" y1="155.7" x2="1005" y2="155.7" stroke="#25425c" stroke-width="1" opacity="0.7"/>
+<text x="82" y="159.7" fill="#8091a6" font-size="11">70°N</text>
+<text x="622.5" y="229.4" fill="#52708d" font-size="22" font-weight="800" text-anchor="middle" opacity="0.38">Canada</text>
+<text x="645" y="346.1" fill="#52708d" font-size="22" font-weight="800" text-anchor="middle" opacity="0.38">United States</text>
+<text x="615" y="444.4" fill="#52708d" font-size="22" font-weight="800" text-anchor="middle" opacity="0.38">Mexico</text>
+<text x="120" y="134" fill="#7cc7ff" font-size="18" font-weight="700">Route stops by coordinate</text>
+<text x="120" y="158" fill="#aeb8c5" font-size="13">Route lines connect extracted stop rows. They are planning aids, not proof of any claim.</text>
+<text x="885" y="548" fill="#8091a6" font-size="11">Longitude / latitude grid</text>
+<circle cx="776.5" cy="345.9" r="12" fill="#ffbd59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="776.5" y="350.9" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="793.5" y="349.9" fill="#e9eef5" font-size="11">**Trans-Allegheny Lunatic...</text>
+<circle cx="764" cy="347.1" r="12" fill="#54d2a6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="764" y="352.1" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="781" y="351.1" fill="#e9eef5" font-size="11">**Mothman Museum**, Point...</text>
+<circle cx="789.8" cy="355.4" r="12" fill="#7cc7ff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="789.8" y="360.4" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="806.8" y="359.4" fill="#e9eef5" font-size="11">Mothman Museum, 400 Main St.</text>
+<line x1="789.8" y1="355.4" x2="732" y2="365.8" stroke="#ff7a59" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="789.8" cy="355.4" r="12" fill="#ff7a59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="789.8" y="360.4" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="806.8" y="359.4" fill="#e9eef5" font-size="11">Trans-Allegheny Lunatic A...</text>
+<circle cx="732" cy="365.8" r="12" fill="#ff7a59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="732" y="370.8" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="749" y="369.8" fill="#e9eef5" font-size="11">Bell Witch Cave</text>
+<circle cx="907.5" cy="309.3" r="12" fill="#c78bff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="907.5" y="314.3" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="924.5" y="313.3" fill="#e9eef5" font-size="11">Shag Harbour Interpretive...</text>
+<line x1="484.5" y1="359.7" x2="484.5" y2="359.7" stroke="#f472b6" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="484.5" cy="359.7" r="12" fill="#f472b6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="484.5" y="364.7" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="501.5" y="363.7" fill="#e9eef5" font-size="11">Winchester Mystery House,...</text>
+<circle cx="484.5" cy="359.7" r="12" fill="#f472b6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="484.5" y="364.7" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="501.5" y="363.7" fill="#e9eef5" font-size="11">Alcatraz Island</text>
+<circle cx="638.7" cy="464.8" r="12" fill="#ffbd59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="638.7" y="469.8" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="655.7" y="468.8" fill="#e9eef5" font-size="11">**Teotihuacan**, Estado d...</text>
+<circle cx="636.8" cy="466.5" r="12" fill="#54d2a6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="636.8" y="471.5" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="653.8" y="470.5" fill="#e9eef5" font-size="11">Island of the Dolls, Xoch...</text>
+<circle cx="754.3" cy="346" r="12" fill="#7cc7ff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="754.3" y="351" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="771.3" y="350" fill="#e9eef5" font-size="11">**Serpent Mound**, Peeble...</text>
+<circle cx="712.5" cy="458.6" r="12" fill="#ff7a59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="712.5" y="463.6" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="729.5" y="462.6" fill="#e9eef5" font-size="11">Chichen-Itza / Sacred Cen...</text>
+<circle cx="801" cy="332.6" r="12" fill="#c78bff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="801" y="337.6" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="818" y="336.6" fill="#e9eef5" font-size="11">Eastern State Penitentiary</text>
+<circle cx="801" cy="332.6" r="12" fill="#f472b6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="801" y="337.6" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="818" y="336.6" fill="#e9eef5" font-size="11">Gettysburg National Milit...</text>
+<circle cx="711" cy="340" r="12" fill="#ffbd59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="711" y="345" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="728" y="344" fill="#e9eef5" font-size="11">Cahokia Mounds, 30 Ramey St.</text>
+<circle cx="848.3" cy="324.5" r="12" fill="#54d2a6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="848.3" y="329.5" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="865.3" y="328.5" fill="#e9eef5" font-size="11">**The Witch House**, Sale...</text>
+<line x1="841.5" y1="325.9" x2="862.5" y2="307.4" stroke="#7cc7ff" stroke-width="3" opacity="0.58" stroke-dasharray="7 7"/>
+<circle cx="841.5" cy="325.9" r="12" fill="#7cc7ff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="841.5" y="330.9" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="858.5" y="329.9" fill="#e9eef5" font-size="11">Salem Witch Trials sites,...</text>
+<circle cx="862.5" cy="307.4" r="12" fill="#7cc7ff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="862.5" y="312.4" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">2</text>
+<text x="879.5" y="311.4" fill="#e9eef5" font-size="11">International Cryptozoolo...</text>
+<circle cx="438.1" cy="207.6" r="12" fill="#ff7a59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="438.1" y="212.6" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="455.1" y="211.6" fill="#e9eef5" font-size="11">**Nahanni National Park R...</text>
+<circle cx="759" cy="337.5" r="12" fill="#c78bff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="759" y="342.5" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="776" y="341.5" fill="#e9eef5" font-size="11">Serpent Mound, 3850 State...</text>
+<circle cx="444.8" cy="255.8" r="12" fill="#f472b6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="444.8" y="260.8" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="461.8" y="259.8" fill="#e9eef5" font-size="11">Okanagan Lake / Kelowna w...</text>
+<circle cx="630.8" cy="395.3" r="12" fill="#ffbd59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="630.8" y="400.3" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="647.8" y="399.3" fill="#e9eef5" font-size="11">Marfa Lights Viewing Area</text>
+<circle cx="570.3" cy="364.2" r="12" fill="#54d2a6" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="570.3" y="369.2" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="587.3" y="368.2" fill="#e9eef5" font-size="11">**Chaco Culture NHP**, NM</text>
+<circle cx="585" cy="373.8" r="12" fill="#7cc7ff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="585" y="378.8" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="602" y="377.8" fill="#e9eef5" font-size="11">Chaco Culture NHP, approx...</text>
+<circle cx="596.1" cy="380.6" r="12" fill="#ff7a59" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="596.1" y="385.6" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="613.1" y="384.6" fill="#e9eef5" font-size="11">**International UFO Museu...</text>
+<circle cx="585" cy="373.8" r="12" fill="#c78bff" opacity="0.86" stroke="#ffffff" stroke-width="2"/>
+<text x="585" y="378.8" fill="#0b1020" font-size="14" font-weight="900" text-anchor="middle">1</text>
+<text x="602" y="377.8" fill="#e9eef5" font-size="11">Roswell UFO Museum, 114 N...</text>
+<text x="80" y="535" fill="#ffbd59" font-size="15" font-weight="800">Route lanes</text>
+<line x1="210" y1="530" x2="244" y2="530" stroke="#ffbd59" stroke-width="4"/>
+<text x="252" y="535" fill="#dce4ed" font-size="12">Appalachia</text>
+<line x1="350" y1="530" x2="384" y2="530" stroke="#54d2a6" stroke-width="4"/>
+<text x="392" y="535" fill="#dce4ed" font-size="12">Appalachia / Oh...</text>
+<line x1="490" y1="530" x2="524" y2="530" stroke="#7cc7ff" stroke-width="4"/>
+<text x="532" y="535" fill="#dce4ed" font-size="12">Appalachia cryp...</text>
+<line x1="630" y1="530" x2="664" y2="530" stroke="#ff7a59" stroke-width="4"/>
+<text x="672" y="535" fill="#dce4ed" font-size="12">Appalachia route</text>
+<line x1="770" y1="530" x2="804" y2="530" stroke="#c78bff" stroke-width="4"/>
+<text x="812" y="535" fill="#dce4ed" font-size="12">Atlantic Canada...</text>
+<line x1="910" y1="530" x2="944" y2="530" stroke="#f472b6" stroke-width="4"/>
+<text x="952" y="535" fill="#dce4ed" font-size="12">California route</text>
+<text x="55" y="622" fill="#7f8b99" font-family="Segoe UI, Arial" font-size="12">Generated by ResearchHive from extracted report data. Visuals indicate research patterns, not proof.</text>
+</svg>

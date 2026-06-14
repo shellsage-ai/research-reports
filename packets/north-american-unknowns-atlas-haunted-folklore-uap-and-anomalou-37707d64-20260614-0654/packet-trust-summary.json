@@ -1,0 +1,32 @@
+﻿{
+  "SchemaVersion": "researchhive.packet-trust.v1",
+  "Status": "UsableWithReview",
+  "StatusLabel": "Usable With Review",
+  "BlockerCount": 0,
+  "WarningCount": 1,
+  "ReportCount": 1,
+  "SourceCount": 16,
+  "BlockedSourceCount": 0,
+  "EvidenceFileCount": 16,
+  "CitationCount": 21,
+  "CitationMarkerCount": 742,
+  "ClaimCheckCount": 0,
+  "SupportedClaimCount": 0,
+  "UnresolvedClaimCount": 0,
+  "UnresolvedContradictionCount": 0,
+  "GroundingScore": 0.8712328767123289,
+  "Blockers": [],
+  "Warnings": [
+    "No saved claim-verification checks were found."
+  ],
+  "MissingOrWeakEvidence": [
+    "No saved claim-verification checks were found."
+  ],
+  "SourceHealth": {
+    "available": 16,
+    "blocked": 0,
+    "withEvidenceFiles": 16,
+    "savedCitations": 21,
+    "citationMarkers": 742
+  }
+}
