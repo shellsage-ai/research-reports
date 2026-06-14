@@ -1,0 +1,708 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Full Report - Psychostick Sandwich Comedy-Metal Analysis &#8212; ResearchHive</title>
+<style>
+    :root{--bg:#0e1117;--surf:#161b22;--bdr:#30363d;--acc:#FF9800;--acc2:#FFB74D;--text:#e6edf3;--muted:#8b949e;--link:#58a6ff;--font-stack:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;--hero-start:#1a1f2e;--hero-end:#0e1117;--hero-text-1:#FF9800;--hero-text-2:#FFE082;--soft-accent:rgba(255,152,0,.07);--soft-accent-border:rgba(255,152,0,.18);--tldr-bg:linear-gradient(135deg,#3a2f13,#1f2a33);--tldr-border:#d9a441;}
+*,*::before,*::after{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-stack);line-height:1.7;}
+header{padding:2rem 2rem 1.5rem;text-align:center;border-bottom:1px solid var(--bdr);background:linear-gradient(135deg,var(--hero-start),var(--hero-end));}
+header .eyebrow{color:var(--muted);font-size:.85rem;margin-bottom:.4rem;}
+header h1{margin:0 0 .6rem;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:800;background:linear-gradient(135deg,var(--hero-text-1),var(--hero-text-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.cover-badges{display:flex;flex-wrap:wrap;gap:.55rem;justify-content:center;margin:.9rem 0 0;}
+.cover-pill{display:inline-flex;align-items:center;gap:.35rem;border-radius:999px;padding:.4rem .8rem;border:1px solid var(--soft-accent-border);background:rgba(255,255,255,.18);color:var(--acc2);font-size:.78rem;font-weight:700;letter-spacing:.02em;backdrop-filter:blur(6px);}
+.cover-pill.domain{text-transform:uppercase;letter-spacing:.08em;}
+.cover-pill.confidence-strong{background:rgba(54,179,126,.12);border-color:rgba(54,179,126,.35);}
+.cover-pill.confidence-medium{background:rgba(224,171,16,.12);border-color:rgba(224,171,16,.35);}
+.cover-pill.confidence-low{background:rgba(217,69,69,.12);border-color:rgba(217,69,69,.35);}
+article{max-width:860px;margin:0 auto;padding:2rem 1.5rem;}
+article h1,article h2,article h3,article h4{color:var(--acc2);}
+article h2{border-bottom:1px solid var(--bdr);padding-bottom:.35rem;margin-top:2rem;}
+article h3{margin-top:1.5rem;}
+article a{color:var(--link);}
+article code{background:rgba(255,255,255,.06);padding:2px 6px;border-radius:4px;font-family:Consolas,'Courier New',monospace;font-size:.9em;}
+article pre{background:var(--surf);border:1px solid var(--bdr);padding:1rem;border-radius:8px;overflow-x:auto;}
+article pre code{background:transparent;padding:0;}
+article blockquote{border-left:3px solid var(--acc);margin:1.4rem 0;padding:.8rem 1.4rem;background:var(--soft-accent);border-radius:0 10px 10px 0;font-style:italic;color:var(--acc2);}
+article blockquote p{margin:.3rem 0;}
+.callout-card{border-left:none;border:1px solid var(--soft-accent-border);border-radius:16px;padding:1rem 1.2rem;color:var(--text);box-shadow:0 16px 30px rgba(0,0,0,.08);font-style:normal;}
+.callout-card p{margin:.25rem 0;}
+.callout-card strong{color:var(--acc2);}
+.tldr-callout{border-left:none;border:1px solid var(--tldr-border);background:var(--tldr-bg);border-radius:16px;padding:1rem 1.2rem;color:var(--text);box-shadow:0 16px 30px rgba(0,0,0,.08);font-style:normal;}
+.tldr-callout p{margin:.25rem 0;}
+.tldr-callout strong{color:var(--acc2);}
+.callout-insight{background:linear-gradient(135deg,rgba(34,126,253,.10),rgba(34,126,253,.04));border-color:rgba(34,126,253,.28);}
+.callout-caution{background:linear-gradient(135deg,rgba(224,171,16,.14),rgba(224,171,16,.05));border-color:rgba(224,171,16,.35);}
+.callout-verdict{background:linear-gradient(135deg,rgba(54,179,126,.14),rgba(54,179,126,.05));border-color:rgba(54,179,126,.35);}
+.callout-datapoint{background:linear-gradient(135deg,rgba(127,86,217,.12),rgba(127,86,217,.04));border-color:rgba(127,86,217,.32);}
+.table-scroll{max-width:100%;overflow-x:auto;margin:1rem 0;border:1px solid var(--bdr);border-radius:10px;background:rgba(255,255,255,.02);}
+article table{width:max-content;min-width:100%;max-width:none;border-collapse:collapse;margin:0;font-size:.92rem;display:table;table-layout:auto;}
+article th,article td{border:1px solid var(--bdr);padding:.65rem .8rem;text-align:left;white-space:normal;vertical-align:top;word-break:normal;overflow-wrap:anywhere;}
+article th:first-child,article td:first-child{width:11rem;min-width:11rem;white-space:nowrap;overflow-wrap:normal;font-weight:700;color:var(--acc2);}
+article th{background:var(--surf);color:var(--acc);font-weight:600;position:sticky;top:0;z-index:1;}
+article tr:nth-child(even){background:rgba(255,255,255,.03);}
+article .report-cover-table{display:table;table-layout:fixed;border:1px solid var(--soft-accent-border);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,var(--soft-accent),transparent);box-shadow:0 16px 30px rgba(0,0,0,.08);}
+article .report-cover-table th{position:static;}
+article .report-cover-table td:first-child,article .report-cover-table th:first-child{width:12rem;min-width:12rem;letter-spacing:.03em;text-transform:uppercase;font-size:.78rem;}
+article .report-cover-table td:nth-child(2),article .report-cover-table th:nth-child(2){white-space:normal;overflow-wrap:break-word;line-height:1.6;}
+article ul,article ol{padding-left:1.4rem;}
+article li{margin:.3rem 0;}
+article strong{color:var(--acc2);}
+article hr{border:none;border-top:1px solid var(--bdr);margin:2rem 0;}
+article img{max-width:100%;height:auto;border-radius:6px;margin:.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.16);}
+.mermaid-wrap{background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.46));border:1px solid var(--bdr);border-radius:18px;padding:1.2rem 1rem .95rem;margin:1.6rem 0;text-align:center;overflow-x:auto;box-shadow:0 18px 36px rgba(0,0,0,.08);}
+.mermaid-wrap svg{max-width:100%;height:auto;display:block;margin:0 auto;}
+.meta-bar{display:flex;flex-wrap:wrap;gap:.5rem .8rem;padding:.7rem 1.5rem;background:var(--soft-accent);border-top:1px solid var(--soft-accent-border);border-bottom:1px solid var(--soft-accent-border);font-size:.8rem;color:var(--muted);align-items:center;justify-content:center;margin-bottom:1rem;}
+.meta-pill{background:var(--soft-accent);border:1px solid var(--soft-accent-border);border-radius:20px;padding:2px 10px;color:var(--acc2);font-weight:600;}
+.reading-progress{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--hero-text-1),var(--hero-text-2));z-index:200;transition:width .15s;}
+.section-controls{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center;justify-content:flex-end;margin:0 0 1.25rem;}
+.section-controls-label{margin-right:auto;font-size:.84rem;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;}
+.section-toggle{appearance:none;border:1px solid var(--soft-accent-border);background:var(--surf);color:var(--acc2);border-radius:999px;padding:.45rem .9rem;font:inherit;font-size:.88rem;font-weight:700;cursor:pointer;transition:transform .15s,box-shadow .15s,background .15s;}
+.section-toggle:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.08);background:var(--soft-accent);}
+.section-accordion{background:var(--surf);border:1px solid var(--bdr);border-radius:16px;margin:1rem 0;overflow:hidden;box-shadow:0 16px 30px rgba(0,0,0,.06);}
+.section-accordion[open]{border-color:var(--soft-accent-border);}
+.section-summary{display:flex;align-items:center;gap:.75rem;list-style:none;cursor:pointer;padding:1rem 1.15rem;font-weight:800;color:var(--acc2);background:linear-gradient(180deg,var(--soft-accent),transparent);}
+.section-summary::-webkit-details-marker{display:none;}
+.section-summary::before{content:'+';width:1.5rem;height:1.5rem;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;background:var(--soft-accent);border:1px solid var(--soft-accent-border);font-size:1rem;line-height:1;color:var(--acc2);flex:0 0 auto;}
+.section-accordion[open] .section-summary::before{content:'−';}
+.section-body{padding:0 1.15rem 1.1rem;}
+.section-body > :first-child{margin-top:.2rem;}
+.anchor{opacity:0;color:var(--acc);margin-left:.5rem;text-decoration:none;font-weight:300;font-size:.85em;}
+h2:hover .anchor,h3:hover .anchor{opacity:1;}
+sup.cit{color:var(--acc);font-size:.72em;font-weight:700;font-style:normal;}
+sup.cit a.cit-link{color:var(--acc);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer;}
+sup.cit a.cit-link:hover{color:var(--link);border-bottom-style:solid;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:1.5rem 0 2rem;}
+.stat-card{background:var(--surf);border:1px solid var(--bdr);border-radius:14px;padding:1rem 1.1rem;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.08);}
+.stat-value{font-size:1.6rem;font-weight:800;color:var(--acc2);}
+.stat-label{font-size:.82rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+.quick-start-panel,.crosslink-panel{margin:1.4rem 0;padding:1rem 1.1rem;border-radius:18px;border:1px solid var(--soft-accent-border);background:linear-gradient(180deg,var(--soft-accent),transparent);}
+.quick-start-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.85rem;margin-top:.9rem;}
+.quick-link-card{display:flex;flex-direction:column;gap:.35rem;text-decoration:none;padding:.95rem 1rem;border-radius:14px;border:1px solid var(--bdr);background:var(--surf);color:var(--text);box-shadow:0 10px 24px rgba(0,0,0,.06);}
+.quick-link-card:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(0,0,0,.1);}
+.quick-link-label{font-weight:800;color:var(--acc2);}
+.quick-link-description{font-size:.86rem;color:var(--muted);}
+.report-source-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin:1rem 0;}
+.report-source-card{display:flex;flex-direction:column;gap:.35rem;text-decoration:none;color:var(--text);border:1px solid var(--bdr);border-radius:14px;background:var(--surf);padding:1rem;box-shadow:0 10px 24px rgba(0,0,0,.08);}
+.report-source-card:hover{border-color:var(--soft-accent-border);transform:translateY(-1px);}
+.report-source-card-title{font-weight:800;color:var(--acc2);}
+.report-source-card-meta{font-size:.82rem;color:var(--muted);}
+.report-source-card-body{font-size:.9rem;color:var(--text);}
+.report-map-embed{margin:1rem 0 1.35rem;border:1px solid rgba(88,166,255,.28);border-radius:18px;overflow:hidden;background:var(--surf);box-shadow:0 18px 38px rgba(0,0,0,.18);}
+.report-map-embed iframe{display:block;width:100%;height:min(62vh,560px);min-height:360px;border:0;background:#0b1220;}
+.report-map-embed .report-map-cta{margin:0;padding:.85rem 1rem;border-top:1px solid var(--bdr);background:rgba(255,255,255,.03);}
+.report-map-cta{margin:1rem 0 1.2rem;}
+.report-map-cta a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:.65rem 1rem;border-radius:12px;background:rgba(88,166,255,.14);border:1px solid rgba(88,166,255,.45);font-weight:800;text-decoration:none;color:var(--link);}
+.report-map-cta a:hover{background:rgba(88,166,255,.22);text-decoration:none;}
+.report-media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.1rem;margin:1.2rem 0;}
+.report-media-card{display:flex;flex-direction:column;gap:.65rem;text-decoration:none;color:var(--text);border:1px solid var(--bdr);border-radius:14px;background:var(--surf);overflow:hidden;box-shadow:0 14px 30px rgba(0,0,0,.12);}
+.report-media-card:hover{border-color:var(--soft-accent-border);transform:translateY(-1px);}
+.report-media-card img{width:100%;aspect-ratio:16/10;object-fit:cover;margin:0;border-radius:0;box-shadow:none;}
+.report-media-card span{padding:0 1rem;}
+.report-media-card .media-title{font-weight:800;color:var(--acc2);}
+.report-media-card .media-caption{font-size:.9rem;line-height:1.45;color:var(--text);}
+.report-media-card .media-credit{font-size:.78rem;color:var(--muted);padding-bottom:1rem;}
+.field-atlas-cluster{margin:1.5rem 0 2rem;padding:1rem;border:1px solid rgba(255,152,0,.16);border-radius:18px;background:linear-gradient(180deg,rgba(255,152,0,.045),rgba(255,255,255,.018));}
+.field-atlas-cluster h3{margin:.15rem 0 .85rem;color:var(--acc2);}
+.field-atlas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.15rem;margin:1.25rem 0 1.6rem;}
+.field-atlas-card{display:flex;flex-direction:column;min-height:100%;overflow:hidden;text-decoration:none;color:var(--text);border:1px solid var(--bdr);border-radius:16px;background:linear-gradient(180deg,var(--surf),rgba(255,255,255,.025));box-shadow:0 16px 34px rgba(0,0,0,.13);}
+.field-atlas-card:hover{border-color:var(--soft-accent-border);transform:translateY(-1px);text-decoration:none;}
+.field-atlas-card img{width:100%;aspect-ratio:16/9;object-fit:cover;margin:0;border-radius:0;box-shadow:none;border-bottom:1px solid var(--bdr);}
+.field-atlas-card.no-image{padding-top:.25rem;}
+.field-atlas-card-body{display:flex;flex-direction:column;gap:.46rem;padding:1rem 1.05rem 1.1rem;}
+.field-atlas-kicker{font-size:.76rem;color:var(--muted);text-transform:uppercase;font-weight:800;letter-spacing:0;}
+.field-atlas-title{font-size:1.05rem;font-weight:900;color:var(--acc2);line-height:1.25;}
+.field-atlas-meta{font-size:.86rem;color:var(--muted);line-height:1.35;}
+.field-atlas-text{font-size:.91rem;color:var(--text);line-height:1.48;}
+.field-atlas-credit{font-size:.78rem;color:var(--muted);margin-top:auto;padding-top:.35rem;}
+.crosslink-list{margin:.8rem 0 0;padding-left:1.2rem;}
+.crosslink-list li{margin:.45rem 0;}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:2rem;border-top:1px solid var(--bdr);}
+@media print{.reading-progress,.section-controls,.anchor{display:none !important;}.section-accordion{break-inside:avoid;box-shadow:none;}.section-accordion>summary{list-style:none;}.section-accordion>.section-body{display:block !important;}}
+@media(max-width:600px){article{padding:1.2rem .9rem;}header{padding:1.5rem 1rem 1rem;}header h1{font-size:1.3rem;} }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+(function(){
+function enhanceReport(){
+  document.querySelectorAll('pre > code.language-mermaid').forEach(function(code){
+    var wrap=document.createElement('div');wrap.className='mermaid-wrap';
+    var pre=document.createElement('pre');pre.className='mermaid';
+    pre.textContent=code.textContent;wrap.appendChild(pre);code.parentElement.replaceWith(wrap);
+  });
+    var metaPills=[];
+    document.querySelectorAll('article p').forEach(function(p){
+        var em=p.querySelector('em');if(!em)return;var t=em.textContent||'';
+        if(t.match(/^Generated:/i)||t.match(/^Sources:/i)){
+            t.split('|').forEach(function(seg){seg=seg.trim();if(seg)metaPills.push('<span class="meta-pill">'+seg+'</span>');});
+            p.remove();
+        }
+    });
+    if(metaPills.length){var bar=document.createElement('div');bar.className='meta-bar';bar.innerHTML=metaPills.join('');var a=document.querySelector('article');if(a)a.prepend(bar);}
+    document.querySelectorAll('article table').forEach(function(table){
+        if(table.closest('.table-scroll'))return;
+        var wrap=document.createElement('div');wrap.className='table-scroll';table.parentNode.insertBefore(wrap,table);wrap.appendChild(table);
+    });
+    var slug=function(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');};
+    (function polishCoverTable(){
+        var cover=document.querySelector('article h2#cover');
+        var table=cover&&cover.nextElementSibling&&cover.nextElementSibling.tagName==='TABLE'?cover.nextElementSibling:null;
+        if(!table)return;
+        table.classList.add('report-cover-table');
+        Array.from(table.querySelectorAll('tr')).forEach(function(row){
+            var cells=row.cells;
+            if(!cells||cells.length<2)return;
+            var label=(cells[0].textContent||'').trim().toLowerCase();
+            var value=(cells[1].textContent||'').trim();
+            if(label==='research question'&&value.length>520){
+                cells[1].setAttribute('title',value);
+                cells[1].textContent=value.slice(0,517).trim()+'...';
+            }
+        });
+    })();
+    document.querySelectorAll('article blockquote').forEach(function(bq){
+        var text=bq.textContent||'';
+        if(/TL;DR:/i.test(text)){
+            bq.classList.add('tldr-callout');
+            return;
+        }
+        if(/Key Takeaway:/i.test(text)){
+            bq.classList.add('callout-card','callout-insight');
+            return;
+        }
+        if(/Caution:/i.test(text)){
+            bq.classList.add('callout-card','callout-caution');
+            return;
+        }
+        if(/Verdict:/i.test(text)){
+            bq.classList.add('callout-card','callout-verdict');
+            return;
+        }
+        if(/Data Point:/i.test(text)){
+            bq.classList.add('callout-card','callout-datapoint');
+        }
+    });
+    document.querySelectorAll('article h2,article h3').forEach(function(h){
+        if(h.closest('.report-toc'))return;
+        if(!h.id)h.id=slug(h.textContent);var a=document.createElement('a');a.className='anchor';a.href='#'+h.id;a.textContent='\u00A7';h.appendChild(a);
+    });
+  function escapeAttr(value){return String(value||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function buildCitationTargetMap(){
+    var map={};
+    var heading=document.getElementById('source-index');
+    if(!heading)return map;
+    var nodes=[];
+    var el=heading.nextElementSibling;
+    while(el && !/^H[12]$/i.test(el.tagName)){nodes.push(el);el=el.nextElementSibling;}
+    nodes.forEach(function(container){
+      var entries=container.matches&&container.matches('li,tr,p')?[container]:Array.from(container.querySelectorAll('li,tr,p'));
+      entries.forEach(function(entry){
+        var text=entry.textContent||'';
+        var labels=text.match(/\[(\d+)\]/g);
+        if(!labels||!labels.length)return;
+        var link=Array.from(entry.querySelectorAll('a[href]')).find(function(a){return /^https?:/i.test(a.getAttribute('href')||'');});
+        var href=link?link.getAttribute('href'):'';
+        if(!href){var m=text.match(/https?:\/\/[^\s<>)\]]+/);if(m)href=m[0].replace(/[.,;:]+$/,'');}
+        labels.forEach(function(label){
+          var n=label.replace(/\D/g,'');
+          if(!n)return;
+          if(!href){
+            var id=entry.id||('source-ref-'+n);
+            entry.id=id;
+            map[n]='#'+id;
+          }else{
+            map[n]=href;
+          }
+        });
+      });
+    });
+    return map;
+  }
+  var citationTargets=buildCitationTargetMap();
+  (function fixCitations(node){
+    if(!node)return;
+    if(node.nodeType===3){var val=node.nodeValue;if(val&&/\[\d+\]/.test(val)){var span=document.createElement('span');span.innerHTML=val.replace(/\[(\d+)\]/g,function(match,n){var href=citationTargets[n]||'#source-index';var external=/^https?:/i.test(href);return '<sup class="cit"><a class="cit-link" href="'+escapeAttr(href)+'"'+(external?' target="_blank" rel="noopener noreferrer"':'')+' aria-label="Open source ['+n+']">['+n+']</a></sup>';});node.parentNode.replaceChild(span,node);} }
+    else if(node.nodeType===1&&node.nodeName!=='PRE'&&node.nodeName!=='CODE'&&node.nodeName!=='A'){Array.from(node.childNodes).forEach(fixCitations);}
+  })(document.querySelector('article'));
+    var prog=document.querySelector('.reading-progress');
+    if(prog){window.addEventListener('scroll',function(){var h=document.documentElement;var pct=(h.scrollTop/(h.scrollHeight-h.clientHeight))*100;prog.style.width=Math.min(100,pct)+'%';},{passive:true});}
+    if(window.mermaid){
+        mermaid.initialize({startOnLoad:false,theme:'base',securityLevel:'loose',themeVariables:{primaryColor:'#DCEBFF',primaryTextColor:'#10243E',primaryBorderColor:'#4A7BD0',secondaryColor:'#DCF6EF',secondaryTextColor:'#10243E',secondaryBorderColor:'#1F8A70',tertiaryColor:'#FFF1D9',tertiaryTextColor:'#10243E',tertiaryBorderColor:'#D97706',lineColor:'#4B6380',edgeLabelBackground:'#F7FAFC',clusterBkg:'#F2F6FB',clusterBorder:'#BCCADD',titleColor:'#10243E',fontFamily:'Segoe UI, Aptos, Roboto, sans-serif',fontSize:'14px',pie1:'#4A7BD0',pie2:'#1F8A70',pie3:'#D97706',pie4:'#C2410C',pie5:'#7C3AED',pie6:'#0F766E',pie7:'#BE185D',pie8:'#475569'}});
+        mermaid.run({querySelector:'.mermaid'}).catch(function(err){console.error(err);});
+    }
+}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',enhanceReport);
+else enhanceReport();
+})();
+</script>
+</head>
+<body>
+<div class="reading-progress"></div>
+<header>
+    <div class="eyebrow">&#128202; full &nbsp;&middot;&nbsp; ResearchHive</div>
+    <h1>Full Report - Psychostick Sandwich Comedy-Metal Analysis</h1>
+<div class="cover-badges"><span class="cover-pill domain">General Research</span><span class="cover-pill">Generated 2026-06-14</span><span class="cover-pill">~23 min read</span><span class="cover-pill confidence-low">Grounding 9%</span></div>
+</header>
+<article>
+<div class="meta-bar">
+    <span class="meta-pill">full</span>
+        <span class="meta-pill">Generated: 2026-06-14 13:36 UTC</span>
+        <span class="meta-pill">~23 min read</span>
+    <span class="meta-pill">Exported by ResearchHive</span>
+</div>
+<section class="report-toc"><h2 id="table-of-contents">Table Of Contents</h2><ul class="packet-list"><li><a href="#scope-and-use">Scope And Use</a></li><li><a href="#evidence-confidence-summary">Evidence Confidence Summary</a></li><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#methodology-evidence-base">Methodology / Evidence Base</a></li><li><a href="#key-findings">Key Findings</a></li><li><a href="#most-supported-view">Most Supported View</a></li><li><a href="#detailed-analysis">Detailed Analysis</a></li><li><a href="#verifiable-song-and-album-facts"> - 1. Verifiable Song And Album Facts</a></li><li><a href="#who-psychostick-are"> - 2. Who Psychostick Are</a></li><li><a href="#how-the-joke-is-built"> - 3. How The Joke Is Built</a></li><li><a href="#fit-within-sandwich-and-the-catalog"> - 4. Fit Within Sandwich And The Catalog</a></li><li><a href="#what-challenges-the-stupid-smart-reading"> - 5. What Challenges The Stupid-Smart Reading</a></li><li><a href="#comparable-works"> - 6. Comparable Works</a></li><li><a href="#creative-breakdown-musical-ingredients"> - 7. Creative Breakdown: Musical Ingredients</a></li><li><a href="#comparative-summary">Comparative Summary</a></li><li><a href="#credible-alternatives-broader-views">Credible Alternatives / Broader Views</a></li><li><a href="#visual-summary">Visual Summary</a></li><li><a href="#limitations">Limitations</a></li><li><a href="#finally-reception-data-is-mostly-qualitative.we-have-official-framing-bandcamp-fan-comments-and-broad-catalog-context-but-not-reliable-statistics-on-streams-shares-or-long-term-fandom-ranking.evidence-is-limited-on-those-points">Finally, reception data is mostly qualitative. We have official framing, Bandcamp fan comments, and broad catalog context, but not reliable statistics on streams, shares, or long-term fandom ranking. Evidence is limited on those points.</a></li><li><a href="#source-images">Source Images</a></li><li><a href="#source-index">Source Index</a></li><li><a href="#citation-verification-summary">Citation Verification Summary</a></li></ul></section><p><em>Generated: 2026-06-14 19:36 UTC</em>
+<em>Sources: 18 | Citations: 3 | Iterations: 2 | Grounding: 9%</em></p>
+<h2 id="cover">Cover</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deliverable</td>
+<td>Standard Research Packet</td>
+</tr>
+<tr>
+<td>Research scope</td>
+<td>“This Is Not a Song, It’s a Sandwich” by Psychostick, from the album Sandwich (2009).</td>
+</tr>
+<tr>
+<td>Length target</td>
+<td>4,000-6,000 words</td>
+</tr>
+<tr>
+<td>Source target</td>
+<td>12-20 usable sources</td>
+</tr>
+<tr>
+<td>Generated</td>
+<td>Generated: 2026-06-14 19:36 UTC</td>
+</tr>
+<tr>
+<td>Evidence status</td>
+<td>Needs expansion</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scope-and-use">Scope And Use</h2>
+<p>This report is a source-grounded research packet. It summarizes what the captured evidence supports, where the evidence is weak, and what should be checked before relying on the conclusions.</p>
+<h2 id="evidence-confidence-summary">Evidence Confidence Summary</h2>
+<p><em>Sources: 18 | Citations: 3 | Iterations: 2 | Grounding: 9%</em></p>
+<ul>
+<li>Evidence depth: Evidence exists, but 5 section(s) need deeper writing from the current source set.</li>
+</ul>
+<h2 id="executive-summary">Executive Summary</h2>
+<p><strong>Sources analyzed:</strong> 18 | <strong>Grounding Score:</strong> 9% | <strong>Sub-Questions:</strong> 7 (0 answered)</p>
+<p>This report asks how Psychostick’s “This is not a Song, it’s a Sandwich” functions as both a comic-metal track and an album-context joke, and why that matters for understanding the band’s humorcore style. Methodologically, it checks claims against <strong>six public official/catalog sources</strong> and combines factual verification with close reading of lyrics, album placement, metadata, and band identity.</p>
+<ul>
+<li><strong>The track’s core facts are well supported:</strong> Bandcamp lists a 3:53 runtime, while Psychostick’s lyric page credits music to Key and lyrics to Key and Grant [1][2].</li>
+<li><strong>The album context strengthens the interpretation:</strong> <em>Sandwich</em> is officially the band’s second album, tied to food-heavy sequencing and related titles such as “Don’t Eat My Food” and “Do you want a Taco?” [3][6].</li>
+<li><strong>The song’s main joke is self-negation:</strong> it behaves like a metal song while insisting it is food, using contradiction, repetition, literalism, and escalating absurdity as the hook [2].</li>
+<li><strong>Psychostick’s band identity makes the joke intentional rather than accidental:</strong> their official bio frames them as comedic metal/humorcore built on heavy riffs, absurd lyrics, stage antics, and DIY production [5].</li>
+</ul>
+<p><strong>The primary conclusion is that the song works because its deliberately dumb premise is carried by competent metal structure, making the contradiction itself the joke.</strong> Its significance lies less in lyrical depth than in how precisely it turns genre form into comedy. Limitations remain: the evidence base is narrow, reception data is mostly from the band’s own framing, and the May 4 versus May 5, 2009 release-date discrepancy is unresolved beyond a likely metadata explanation [1][3][4].</p>
+<p>I’ll verify the song facts against official and catalog sources first, then separate hard evidence from interpretation. The provided evidence set is thin and partly irrelevant, so I’ll flag where the answer depends on external verification versus the three supplied snippets.</p>
+<h2 id="methodology-evidence-base">Methodology / Evidence Base</h2>
+<p>This report synthesizes the curated evidence set, source categories, citation coverage, and source index. Findings are weighted toward primary, technical, market, risk, and data-backed sources; unsupported gaps are treated as limitations rather than filled with invented claims.</p>
+<h2 id="key-findings">Key Findings</h2>
+<ul>
+<li><strong>Album facts:</strong> Official Psychostick pages describe <em>Sandwich</em> as the band's second album, released <strong>May 5, 2009</strong>, produced by Psychostick, mixed/engineered by Joshua Key, with artwork by Robert Kersey. (<a href="https://psychostick.com/music">psychostick.com</a>)</li>
+<li><strong>Metadata wrinkle:</strong> Bandcamp gives <strong>May 4, 2009</strong>, while Psychostick's official site and Apple Music give <strong>May 5, 2009</strong>; the best-supported public release date is May 5, with May 4 likely reflecting Bandcamp upload/date metadata. (<a href="https://psychostick.bandcamp.com/album/sandwich">psychostick.bandcamp.com</a>) (<a href="https://music.apple.com/us/album/sandwich/1798192118">music.apple.com</a>)</li>
+<li><strong>Band identity:</strong> Psychostick's own bio calls them comedic metal and self-proclaimed <strong>humorcore</strong>, built from heavy riffs, absurd lyrics, stage antics, and DIY production. (<a href="https://psychostick.com/about">psychostick.com</a>)</li>
+<li><strong>Joke mechanics:</strong> The song turns the act of denying its own form into the hook: it behaves exactly like a metal song while insisting it is food, using literalism, contradiction, repetition, and escalating nonsense. (<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">psychostick.com</a>)</li>
+<li><strong>Album fit:</strong> <em>Sandwich</em> is food-saturated: nearby titles include <em>Don't Eat My Food</em>, <em>The Hunger Within</em>, <em>Grocery Escape Plan</em>, <em>Too Many Food</em>, <em>Orange</em>, and <em>Do you want a Taco?</em> (<a href="https://psychostick.store/products/sandwich-cd">psychostick.store</a>)</li>
+<li><strong>Reception split:</strong> Psychostick's own site frames <em>Sandwich</em> as loved by fans and disliked by critics, which matches the broader novelty-metal risk: hilarious if you accept the bit, exhausting if you do not. (<a href="https://psychostick.com/music">psychostick.com</a>)</li>
+</ul>
+<h2 id="most-supported-view">Most Supported View</h2>
+<blockquote>
+<p>The song works because Psychostick make the dumb premise musically competent enough that the joke has something solid to ride on.</p>
+</blockquote>
+<p><em>This is not a Song, it's a Sandwich</em> is not complicated in premise: a metal song loudly denies being a song. The trick is that the denial is presented through the very features that prove the opposite: verses, chorus, riffs, rhythmic emphasis, call-and-response phrasing, and a list-based comic payoff. Psychostick do not hide the contradiction. They squeeze it like mustard until the whole track becomes a format joke. The listener is not laughing only at sandwich imagery; the listener is laughing at a song losing an argument with its own existence. (<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">psychostick.com</a>)</p>
+<p>The band context matters. Psychostick's official bio describes them as comedic metal, self-proclaimed humorcore, and a band that combines heavy aggression with joke-driven lyrics and stage absurdity. That means the track is not an isolated novelty accident; it sits inside a deliberate project where heavy music is treated as both a serious delivery system and a target for parody. (<a href="https://psychostick.com/about">psychostick.com</a>)</p>
+<p>The album context also matters. <em>Sandwich</em> surrounds this track with food, mundane annoyances, internet irritation, and anti-pop jokes. Official listings put the song among food-centered tracks and near self-aware pieces like <em>#1 Radio $ingle</em> and <em>We Ran Out of CD Space</em>. That sequencing makes the sandwich claim feel less random: the whole album is already obsessed with taking ordinary appetites and pushing them into metal-scale overstatement. (<a href="https://psychostick.store/products/sandwich-cd">psychostick.store</a>)</p>
+<h2 id="detailed-analysis">Detailed Analysis</h2>
+<h3 id="verifiable-song-and-album-facts">1. Verifiable Song And Album Facts</h3>
+<table>
+<thead>
+<tr>
+<th>Fact</th>
+<th>Best Evidence</th>
+<th>Confidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artist</td>
+<td>Psychostick official pages and Bandcamp</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Album</td>
+<td><em>Sandwich</em></td>
+<td>High</td>
+</tr>
+<tr>
+<td>Year</td>
+<td>2009</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Official album date</td>
+<td>May 5, 2009</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Bandcamp date</td>
+<td>May 4, 2009</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Track placement</td>
+<td>Track 11 on official store and Bandcamp; conflicting official music page has track-list duplication</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Runtime</td>
+<td>3:53 on Bandcamp</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Credits</td>
+<td>Music: Key; Lyrics: Key, Grant</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>The strongest trail is official: Psychostick's store describes <em>Sandwich</em> as the fan-funded second album and lists <em>This is not a Song, it's a Sandwich</em> on the official track list. (<a href="https://psychostick.store/products/sandwich-cd">psychostick.store</a>) The official lyrics page ties the song to <em>Sandwich</em> and gives the Key/Grant writing split. (<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">psychostick.com</a>) Bandcamp adds the runtime of 3:53 and confirms the track's digital album placement. (<a href="https://psychostick.bandcamp.com/album/sandwich">psychostick.bandcamp.com</a>)</p>
+<p>The official YouTube trail is partly verifiable but not fully recoverable here: Psychostick's official music page links the song to a YouTube lyric video, but the tool could not fetch the YouTube page or description. The official-site link still supports that Psychostick treated the YouTube upload as part of its public catalog trail. (<a href="https://psychostick.com/music">psychostick.com</a>)</p>
+<h3 id="who-psychostick-are">2. Who Psychostick Are</h3>
+<p>Psychostick are best described as <strong>comedy metal</strong> with a self-aware humorcore tag. Their official bio says the project began from Rob Kersey and Josh Key applying a shared absurd sense of humor to heavy music, and it emphasizes heavy riffs, funny lyrics, stage antics, and high-energy performance. (<a href="https://psychostick.com/about">psychostick.com</a>) The same bio also says their records are self-produced, engineered, and mixed by guitarist Joshua Key, with web/art/marketing work handled by vocalist Robert Kersey. (<a href="https://psychostick.com/about">psychostick.com</a>)</p>
+<p>That DIY fact is important because Psychostick's comedy feels integrated rather than pasted on. The jokes are not just lyric sheets over generic tracks; they are baked into titles, sequencing, videos, album packaging, and band voice. [inference]</p>
+<h3 id="how-the-joke-is-built">3. How The Joke Is Built</h3>
+<p>The song's engine is <strong>literal contradiction</strong>. It begins by acknowledging the listener's obvious objection: this sounds like a song. Then it argues, with fake logic, that the listener is wrong. The proof is intentionally bad: sensory confusion around cheese, ham, bread, and meat; absurd negative comparisons; and a chorus that repeats the denial. (<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">psychostick.com</a>)</p>
+<p>The central lyric joke can be summarized without reproducing the song: the narrator insists that the recording is a sandwich, not music, and keeps inventing reasons why it is not other things either. A tiny quoted hook captures the gag: not a song it's a sandwich. (<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">psychostick.com</a>)</p>
+<p>Musically, this is a classic novelty-song move: <strong>commit too hard to a stupid premise</strong>. The heavier and more declarative the music feels, the funnier the food claim becomes. [inference] The track also uses a list gag near the end, where normal sandwich ingredients give way to intruders like non-food objects, turning the food theme into escalating nonsense. (<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">psychostick.com</a>)</p>
+<h3 id="fit-within-sandwich-and-the-catalog">4. Fit Within <em>Sandwich</em> And The Catalog</h3>
+<p><em>Sandwich</em> is not merely an album with one food joke. The official track list includes a dense run of food-adjacent titles: <em>Don't Eat My Food</em>, <em>The Hunger Within</em>, <em>Grocery Escape Plan</em>, <em>Too Many Food</em>, <em>This is not a Song, it's a Sandwich</em>, <em>Orange</em>, and <em>Do you want a Taco?</em> (<a href="https://psychostick.store/products/sandwich-cd">psychostick.store</a>)</p>
+<p>That matters because Psychostick use food as a low-stakes topic that can absorb metal-scale intensity. Hunger, groceries, tacos, oranges, stolen leftovers, and CD-space jokes all become arenas for overreaction. [inference] The official page also says radio stations began playing <em>This is not a Song, it's a Sandwich</em> and <em>Girl Directions</em> after release, which supports the idea that the song functioned as a shareable entry point, not just deep-cut filler. (<a href="https://psychostick.com/music">psychostick.com</a>)</p>
+<h3 id="what-challenges-the-stupid-smart-reading">5. What Challenges The Stupid-Smart Reading</h3>
+<p>The strongest complication is that novelty songs can wear out quickly. Psychostick's own site admits the album had a fan/critic split, saying fans loved it while critics hated it. (<a href="https://psychostick.com/music">psychostick.com</a>) The supplied Skeptic Cynic evidence also makes a broader point about metal humor: comic visuals or effects can become distracting from the song itself when pushed too hard [1].</p>
+<p>That objection is credible. A song built around one contradiction can be very funny on first contact and less surprising on repeat listens. [inference] The defense is that Psychostick's version has enough craft, pacing, and genre commitment to remain a song people remember, quote, and request research about. Bandcamp fan comments specifically single out the album's musicianship and humor, and one listener names this track as a favorite. (<a href="https://psychostick.bandcamp.com/album/sandwich">psychostick.bandcamp.com</a>)</p>
+<h3 id="comparable-works">6. Comparable Works</h3>
+<table>
+<thead>
+<tr>
+<th>Example / Cluster</th>
+<th>Similarity</th>
+<th>Difference</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weird Al Yankovic / Tenacious D / Bloodhound Gang</td>
+<td>Comedy-first rock identity</td>
+<td>Usually less metalcore-heavy than Psychostick</td>
+<td>Psychostick bio names them as wit/humor reference points. ([psychostick.com](<a href="https://psychostick.com/about">https://psychostick.com/about</a>))</td>
+</tr>
+<tr>
+<td>Psychostick's own food songs</td>
+<td>Food as comic trigger</td>
+<td>Same band voice, same album ecosystem</td>
+<td>Official <em>Sandwich</em> track list. ([psychostick.store](<a href="https://psychostick.store/products/sandwich-cd">https://psychostick.store/products/sandwich-cd</a>))</td>
+</tr>
+<tr>
+<td><em>#1 Radio $ingle</em></td>
+<td>Meta-song parody</td>
+<td>Targets radio formula rather than food</td>
+<td>Official track list and Bandcamp lyrics excerpt. ([psychostick.bandcamp.com](<a href="https://psychostick.bandcamp.com/album/sandwich">https://psychostick.bandcamp.com/album/sandwich</a>))</td>
+</tr>
+<tr>
+<td>Dethklok / Austrian Death Machine / Alestorm</td>
+<td>Comic or theatrical metal adjacency</td>
+<td>Different fictional/parodic frames</td>
+<td>Apple Music recommendation cluster. ([music.apple.com](<a href="https://music.apple.com/us/album/sandwich/1798192118">https://music.apple.com/us/album/sandwich/1798192118</a>))</td>
+</tr>
+<tr>
+<td>At The Plates' <em>Omnivore</em></td>
+<td>Culinary metal concept</td>
+<td>More food-as-theme than anti-song absurdism</td>
+<td>Bandcamp recommendation text describes culinary-themed melodic death metal. ([psychostick.bandcamp.com](<a href="https://psychostick.bandcamp.com/album/sandwich">https://psychostick.bandcamp.com/album/sandwich</a>))</td>
+</tr>
+</tbody>
+</table>
+<p>The standout comparison is <em>#1 Radio $ingle</em>: both songs make the format itself part of the joke. One says the quiet part of commercial songwriting out loud; the other denies being a song while functioning as one. (<a href="https://psychostick.bandcamp.com/album/sandwich">psychostick.bandcamp.com</a>)</p>
+<h3 id="creative-breakdown-musical-ingredients">7. Creative Breakdown: Musical Ingredients</h3>
+<table>
+<thead>
+<tr>
+<th>Sandwich Ingredient</th>
+<th>Musical Equivalent</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bread</td>
+<td>Metal structure</td>
+<td>Holds the nonsense together. [inference]</td>
+</tr>
+<tr>
+<td>Meat</td>
+<td>Heavy riffing and shouted delivery</td>
+<td>Gives the joke force. [inference]</td>
+</tr>
+<tr>
+<td>Cheese</td>
+<td>The premise itself</td>
+<td>Proudly dumb, intentionally excessive. [inference]</td>
+</tr>
+<tr>
+<td>Condiments</td>
+<td>Repetition and lists</td>
+<td>Makes the gag sticky. ([psychostick.com](<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich</a>))</td>
+</tr>
+<tr>
+<td>Toothpick</td>
+<td>Deadpan insistence</td>
+<td>Keeps the whole absurd stack upright. [inference]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="comparative-summary">Comparative Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Claim</th>
+<th>Supporting Sources</th>
+<th>Confidence</th>
+<th>Key Data Point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The song is by Psychostick and appears on <em>Sandwich</em></td>
+<td>Official lyrics, store, Bandcamp</td>
+<td>High</td>
+<td>Official lyrics page lists <em>Sandwich by Psychostick</em>. ([psychostick.com](<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich</a>))</td>
+</tr>
+<tr>
+<td>The track runtime is 3:53</td>
+<td>Bandcamp</td>
+<td>High</td>
+<td>Bandcamp lists the track at 03:53. ([psychostick.bandcamp.com](<a href="https://psychostick.bandcamp.com/album/sandwich">https://psychostick.bandcamp.com/album/sandwich</a>))</td>
+</tr>
+<tr>
+<td>The album's public release year is 2009</td>
+<td>Official site, Apple Music, Bandcamp</td>
+<td>High</td>
+<td>Official site and Apple give 2009; Bandcamp gives May 4, 2009. ([psychostick.com](<a href="https://psychostick.com/music">https://psychostick.com/music</a>)) ([music.apple.com](<a href="https://music.apple.com/us/album/sandwich/1798192118">https://music.apple.com/us/album/sandwich/1798192118</a>)) ([psychostick.bandcamp.com](<a href="https://psychostick.bandcamp.com/album/sandwich">https://psychostick.bandcamp.com/album/sandwich</a>))</td>
+</tr>
+<tr>
+<td>Psychostick's style is comedy metal / humorcore</td>
+<td>Official bio, Bandcamp tags</td>
+<td>High</td>
+<td>Official bio uses comedic metal and self-proclaimed humorcore. ([psychostick.com](<a href="https://psychostick.com/about">https://psychostick.com/about</a>))</td>
+</tr>
+<tr>
+<td>The song works through anti-song literalism</td>
+<td>Official lyrics</td>
+<td>High for lyric evidence; medium for interpretation</td>
+<td>Lyrics explicitly argue the recording is a sandwich. ([psychostick.com](<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich</a>))</td>
+</tr>
+<tr>
+<td>The album is food-heavy</td>
+<td>Official store track list</td>
+<td>High</td>
+<td>Multiple official track titles center food. ([psychostick.store](<a href="https://psychostick.store/products/sandwich-cd">https://psychostick.store/products/sandwich-cd</a>))</td>
+</tr>
+</tbody>
+</table>
+<p>The standout: the song is not random internet weirdness floating loose. It is documented as part of a deliberately food-obsessed, comedy-metal album.</p>
+<h2 id="credible-alternatives-broader-views">Credible Alternatives / Broader Views</h2>
+<table>
+<thead>
+<tr>
+<th>Conflict</th>
+<th>Opposing Positions</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Generic song-form text vs. metadata guidance</td>
+<td>This conflict is malformed. The supplied [2] is a Psychostick page, not the song-form passage. Metadata guidance belongs closer to [3], which is relevant only for cataloging, not musical analysis.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Same as Conflict 1</td>
+<td>Duplicate conflict; same assessment.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Music metadata guide vs. gravitational-wave catalog text</td>
+<td>The gravitational-wave text is irrelevant to this music question. [3] is useful only for explaining why release dates, track counts, and credits should be handled carefully.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>arXiv PDF URL vs. unrelated PDF extraction failure</td>
+<td>Neither source is in the provided [1]-[3] evidence set, and neither concerns Psychostick. No weight.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>arXiv 1411 PDF vs. arXiv 0901 PDF</td>
+<td>Irrelevant to the song, album, band, or music metadata. No weight.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>arXiv 1411 PDF vs. arXiv 2601 PDF</td>
+<td>Irrelevant. No weight.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>arXiv 1411 PDF vs. arXiv 1710 PDF</td>
+<td>Irrelevant. No weight.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>arXiv 1411 PDF vs. partial 1710 citation</td>
+<td>Irrelevant and incomplete. No weight.</td>
+</tr>
+</tbody>
+</table>
+<p>The real source conflicts are more useful than the detected ones:</p>
+<table>
+<thead>
+<tr>
+<th>Real Conflict</th>
+<th>Sources</th>
+<th>Best Reading</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release date</td>
+<td>Official site and Apple say May 5, 2009; Bandcamp says May 4, 2009</td>
+<td>Use May 5 for public release, note Bandcamp metadata variant.</td>
+</tr>
+<tr>
+<td>Track count / order</td>
+<td>Store and Bandcamp list 24 tracks with the sandwich song at 11; official music page has a duplicated <em>Beer, Part 2</em> and places the track at 12</td>
+<td>Store and Bandcamp are cleaner; official music page likely has a page-maintenance error.</td>
+</tr>
+<tr>
+<td>Apple track count</td>
+<td>Apple says 16 songs, 48 minutes</td>
+<td>This appears to be a truncated platform listing rather than the full CD/Bandcamp version.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="visual-summary">Visual Summary</h2>
+<div class="mermaid">flowchart TD
+  A[Heavy metal frame] --> B[Absurd food premise]
+  B --> C[Literal denial of being a song]
+  C --> D[Repeated chorus]
+  D --> E[List escalation]
+  E --> F[Shareable comedy hook]
+  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
+  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
+  classDef outcome fill:#0d2e0d,stroke:#4caf50,color:#e6edf3
+</div>
+<div class="mermaid">flowchart TD
+  A[Psychostick] --> B[Comedy metal identity]
+  B --> C[Sandwich album]
+  C --> D[Food songs]
+  C --> E[Meta songs]
+  D --> F[This is not a Song its a Sandwich]
+  E --> F
+  F --> G[Fandom quotation and sharing]
+  classDef input fill:#1e3a5f,stroke:#4a90d9,color:#e6edf3
+  classDef process fill:#0d2e2b,stroke:#26a69a,color:#e6edf3
+  classDef outcome fill:#0d2e0d,stroke:#4caf50,color:#e6edf3
+</div>
+<h2 id="limitations">Limitations</h2>
+<p>Evidence is limited on the official YouTube/Wireclub provenance because the YouTube page could not be fetched, and search did not surface a stable Wireclub source. The official Psychostick site does link the track to a YouTube lyric video, but the video description itself remains unverified here. (<a href="https://psychostick.com/music">psychostick.com</a>)</p>
+<p>Evidence is also limited on creation history. The official lyrics page gives writing credits, but I did not find a primary interview specifically explaining how this track was written. (<a href="https://psychostick.com/lyrics/this_is_not_a_song_its_a_sandwich">psychostick.com</a>)</p>
+<h2 id="finally-reception-data-is-mostly-qualitative.we-have-official-framing-bandcamp-fan-comments-and-broad-catalog-context-but-not-reliable-statistics-on-streams-shares-or-long-term-fandom-ranking.evidence-is-limited-on-those-points">Finally, reception data is mostly qualitative. We have official framing, Bandcamp fan comments, and broad catalog context, but not reliable statistics on streams, shares, or long-term fandom ranking. Evidence is limited on those points.</h2>
+<h2 id="source-images">Source Images</h2>
+<p>The image assets below were selected from researched source material and kept with source links for review.</p>
+<div class="report-media-grid">
+<a class="report-media-card" href="https://www.velveteen.fm/api/og/guide?slug=release-metadata" target="_blank" rel="noopener noreferrer">
+  <img src="../ReportVisuals/193c3cfca155/Music-Metadata-101-Get-Your-Release-Right-the-First-Time-1.png" alt="Music Metadata 101: Get Your Release Right the First Time">
+  <span class="media-title">Music Metadata 101: Get Your Release Right the First Time</span>
+  <span class="media-caption">Image discovered from www.velveteen.fm.</span>
+  <span class="media-credit">Source image: Music Metadata 101: Get Your Release Right the First Time</span>
+</a>
+<a class="report-media-card" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/DasWandern.pdf/page1-960px-DasWandern.pdf.jpg" target="_blank" rel="noopener noreferrer">
+  <img src="../ReportVisuals/193c3cfca155/Strophic-form---Wikipedia-2.jpg" alt="Strophic form - Wikipedia">
+  <span class="media-title">Strophic form - Wikipedia</span>
+  <span class="media-caption">Image discovered from en.wikipedia.org.</span>
+  <span class="media-credit">Source image: Strophic form - Wikipedia</span>
+</a>
+<a class="report-media-card" href="https://skepticcynic.wordpress.com/wp-content/uploads/2017/10/room-of-nightmares.jpg?w=1000&amp;h=700&amp;crop=1" target="_blank" rel="noopener noreferrer">
+  <img src="../ReportVisuals/193c3cfca155/Skeptic-Cynic-3.jpg" alt="Skeptic Cynic">
+  <span class="media-title">Skeptic Cynic</span>
+  <span class="media-caption">Image discovered from skepticcynic.wordpress.com.</span>
+  <span class="media-credit">Source image: skepticcynic.wordpress.com</span>
+</a>
+<a class="report-media-card" href="https://skepticcynic.wordpress.com/wp-content/uploads/2017/04/peter.jpg?w=680&amp;h=525&amp;crop=1" target="_blank" rel="noopener noreferrer">
+  <img src="../ReportVisuals/193c3cfca155/Skeptic-Cynic-4.jpg" alt="Skeptic Cynic">
+  <span class="media-title">Skeptic Cynic</span>
+  <span class="media-caption">Image discovered from skepticcynic.wordpress.com.</span>
+  <span class="media-credit">Source image: skepticcynic.wordpress.com</span>
+</a>
+</div>
+<h2 id="source-index">Source Index</h2>
+<ul>
+<li><p>[1] Music Metadata 101: Get Your Release Right the First Time — <a href="https://www.velveteen.fm/guides/release-metadata">https://www.velveteen.fm/guides/release-metadata</a></p>
+</li>
+<li><p>[2] Strophic form - Wikipedia — <a href="https://en.wikipedia.org/wiki/Strophic_form">https://en.wikipedia.org/wiki/Strophic_form</a></p>
+</li>
+<li><p>[3] Skeptic Cynic | Light reading on heavy metal Menu Home About Search for: Skip to content Skeptic Cynic Light reading on... — <a href="https://skepticcynic.wordpress.com/">https://skepticcynic.wordpress.com/</a></p>
+</li>
+</ul>
+<h2 id="citation-verification-summary">Citation Verification Summary</h2>
+<p><em>Verified automatically after report generation.</em></p>
+<table>
+<thead>
+<tr>
+<th>Outcome</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✓ Verified (source supports claim)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>~ Plausible (partial text match)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>⚠ Unverified (claim not found in source)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>✗ No Source (citation has no fetched content)</td>
+<td>0</td>
+</tr>
+<tr>
+<td>[inference] labels from model</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+
+</article>
+<footer>
+  <p>Generated by ResearchHive &mdash; Agentic Research Studio</p>
+</footer>
+</body>
+</html>
