@@ -1,191 +1,202 @@
 # Psychostick Sandwich Classification Argument
 
 *Generated: 2026-06-14 20:06 UTC*
-*Final edited synthesis: 2026-06-14 20:30 UTC*
+
+*Revision: Sandwich-forward, 2026-06-14 20:58 UTC*
+
 *Sources: 12 public references reviewed for the final synthesis.*
 
 ## Cover
 
+<figure class="report-figure report-figure-hero">
+  <img src="assets/verdict-sandwich-hero.svg" alt="Poster-style graphic forcing the verdict toward sandwich while demoting song to delivery format." />
+  <figcaption>The page should lead with the thesis instead of apologizing for it: song is the wrapper, sandwich is the identity claim the report is choosing to honor.</figcaption>
+</figure>
+
+<div class="report-thesis-box">
+  <strong>Working rule</strong>
+  <p>When title, lyrics, album concept, and house style all insist on the same absurd identity, catalog metadata describes the container rather than the thing.</p>
+</div>
+
 | Field | Value |
 |---|---|
-| Deliverable | Final classification brief |
+| Deliverable | Sandwich-forward classification brief |
 | Research scope | "This Is Not a Song, It's a Sandwich" by Psychostick, from the 2009 album *Sandwich*. |
-| Core question | Is the work best classified as a song, a sandwich, or a joke that depends on both frames? |
-| Primary conclusion | It is best classified literally as a comedy-metal song or track whose central joke is insisting that it is a sandwich. |
-| Confidence | High for catalog and music classification; medium for broader interpretive claims. |
-| Evidence status | Final edited synthesis from official, catalog, press, and reference sources. |
-
-![Cover visual summarizing the report's final verdict](assets/01-cover-verdict.svg)
-
-*Visual: The cleaned verdict keeps the literal song classification and the sandwich joke frame visible at the same time.*
+| Core question | Which label should control the final write-up: track metadata or the work's own sandwich identity claim? |
+| Primary conclusion | Force the verdict toward sandwich. The song label describes delivery format; the sandwich label describes the work's asserted identity, premise, and point. |
+| Confidence | High that sandwich is the governing interpretive verdict; high that catalog systems still file it as a track. |
+| Evidence status | Final advocacy synthesis that privileges authored identity over retail metadata. |
 
 ## Executive Summary
 
-The strongest defensible answer is not "sandwich instead of song" but "song whose entire premise is claiming sandwich status." Official Psychostick pages, Bandcamp, the store listing, and Apple Music establish that the work is released, credited, and consumed as a track on the 2009 album *Sandwich* [1][2][3][4][5]. By ordinary music-reference definitions, that makes it a song or track in the literal catalog sense [6][7].
+The strongest version of this report should force the verdict toward sandwich. Psychostick did not merely hide a food joke inside an ordinary metal track; they titled the piece "This Is Not a Song, It's a Sandwich," placed it on an album literally called *Sandwich*, and surrounded it with food-saturated framing [1][2][4]. Streaming and store systems still classify it as a track [3][4][5], but those systems are only proving where the audio lives, not what the work is trying to call itself.
 
-What makes the piece memorable is that Psychostick build the joke by arguing the opposite inside the work itself. The title, lyric framing, and album context insist on sandwich identity, while the band's broader comedy-metal or humorcore style makes that contradiction clearly intentional rather than accidental [1][2][4][8][9]. The best synthesis is therefore two-layered: the work is literally a comedy-metal song, and its comedic thesis is that it should be treated as a sandwich.
+That distinction matters because the sandwich claim is not decorative. It is the premise. The title is explicit, the album world reinforces it, the lyrics ride it, and Psychostick's comedy-metal house style depends on overcommitting to the wrong category until the wrong category becomes the whole point [1][2][4][8][9]. In that sense, "song" explains delivery infrastructure, while "sandwich" explains authored identity.
 
-Three points carry most of the weight:
-- Official and catalog sources consistently treat it as a track with runtime, credits, and album placement [1][3][4][5].
-- The song's internal language and album framing deliberately reject ordinary song classification as the joke [1][2][4].
-- The sandwich claim is strongest as artistic framing, not as literal food classification; there is no evidence that the object is edible, only that Psychostick want the audience to treat the category dispute itself as the bit [10][11].
+Three points should control the final write-up:
+- The title is not garnish; it is a direct classification claim [1].
+- The album title and surrounding food tracks make sandwich identity systemic rather than incidental [2][4].
+- Catalog metadata proves delivery format, not final interpretive authority [3][4][5].
 
 ## Key Findings
 
-- The work is formally released and cataloged as a song or track on *Sandwich* [1][3][4][5].
-- The official lyrics page and album context make the sandwich claim part of the authored joke, not stray fan interpretation [1][2][4].
-- The literal classification question and the comedic classification question are not the same question; confusion between them is what creates the joke [6][7][10][11].
-- The most rigorous final verdict is: literally a song, comedically a sandwich.
+- The most intentional identity claim in the record is sandwich, not song [1][2][4].
+- The work's food-heavy album context turns sandwich from a throwaway bit into the governing frame [2][4][9][12].
+- Music-service and store metadata establish how the work is packaged and shelved, not which label should win the argument [3][4][5].
+- Best final verdict: sandwich first, song second.
 
 ## Methodology / Evidence Base
 
-This final pass removes failed-generation residue and keeps only sources that materially answer the question. Priority went to:
-- official Psychostick pages for lyrics, album context, and band identity [1][2][8]
-- catalog and store sources for runtime, placement, release presentation, and metadata behavior [3][4][5]
-- reference sources for plain-language definitions of song and sandwich [6][7][10][11]
-- press coverage for album-era framing around food humor and promotion [9][12]
+This pass intentionally stops treating catalog metadata as the judge. Instead, it ranks evidence by how directly it answers the identity question. Authored self-description comes first, album concept comes second, distribution metadata comes third, plain-language reference definitions come fourth, and press context comes last as support.
 
-Irrelevant or corrupted source stubs from the earlier draft were removed. Where the report moves from hard fact to interpretation, that shift is stated directly.
+Priority therefore went to:
+- official Psychostick pages for title, lyrics, album framing, and band identity [1][2][8]
+- catalog and store sources for runtime, placement, and proof of audio delivery [3][4][5]
+- reference sources for baseline meanings of song and sandwich [6][7][10][11]
+- press coverage for confirming album-era food-centered framing [9][12]
 
-![Evidence hierarchy used in the report](assets/02-source-hierarchy.svg)
+Irrelevant or corrupted source residue from the earlier draft stays removed. The deliberate change here is argumentative weighting: metadata is treated as wrapper evidence, not verdict evidence.
 
-*Visual: The final synthesis weights official Psychostick sources first, then catalog metadata, then reference definitions, with press context used only as supporting frame.*
+<figure class="report-figure">
+  <img src="assets/authored-identity-priority.svg" alt="Comparison graphic showing authored identity evidence outranking catalog metadata for this report." />
+  <figcaption>For this question, title, album framing, lyrics, and band persona should outrank store metadata. Shelf evidence tells us where the audio sits; identity evidence tells us what claim the work is making.</figcaption>
+</figure>
 
 ## What The Record Establishes
 
-### 1. The literal release facts
+### 1. The release facts prove the wrapper
 
-Psychostick's official lyrics page places "This Is Not a Song, It's a Sandwich" under the album *Sandwich* and credits music to Key and lyrics to Key and Grant [1]. Bandcamp lists the track with a 3:53 runtime on the album page [3]. The official store also includes it in the album track list and sells the record as a CD or digital product [4]. Apple Music presents it as a song from *Sandwich* [5].
+Psychostick's official lyrics page places "This Is Not a Song, It's a Sandwich" under the album *Sandwich* and credits music to Key and lyrics to Key and Grant [1]. Bandcamp lists the track with a 3:53 runtime on the album page [3]. The official store includes it in the album track list and sells the record as a CD or digital product [4]. Apple Music presents it as a song from *Sandwich* [5].
 
-Those sources answer the narrow catalog question cleanly. Whatever joke the work makes, it was published, listed, and distributed as a song or track in music systems.
+Those facts are real, but they are wrapper facts. They tell us how the object is sold, streamed, indexed, and delivered. They do not, by themselves, settle the identity dispute the work is loudly trying to create.
 
-![Release facts that support literal song classification](assets/03-release-facts.svg)
+<figure class="report-figure">
+  <img src="assets/wrapper-vs-filling.svg" alt="Graphic distinguishing release metadata from the work's identity claim." />
+  <figcaption>The release systems prove a music wrapper. The report should use title, album concept, and premise to decide the filling.</figcaption>
+</figure>
 
-*Visual: Independent release systems converge on the same conclusion because they all treat the work as a track with credits, runtime, placement, and platform presentation.*
+### 2. The sandwich claim is the authored center of gravity
 
-### 2. The album context is intentionally food-heavy
+The sandwich premise is not random. *Sandwich* is itself a food-titled album, and the official or store track listings surround the disputed work with other appetite-centered titles such as "Don't Eat My Food," "The Hunger Within," "Too Many Food," "Orange," and "Do you want a Taco?" [2][4]. That pushes the sandwich claim away from stray metaphor and toward deliberate organizing identity.
 
-The sandwich premise is not random. *Sandwich* is itself a food-titled album, and the official or store track listings surround the disputed work with other food or appetite-centered titles such as "Don't Eat My Food," "The Hunger Within," "Too Many Food," "Orange," and "Do you want a Taco?" [2][4]. That matters because it shows the sandwich framing is part of a larger album-level comic world rather than a one-off mislabel.
+If the album had neutral framing, the sandwich title could be dismissed as ornament. Instead, the album keeps building a comic world in which sandwich status feels like the rule rather than the exception.
 
-### 3. Psychostick's house style explains the contradiction
+### 3. Psychostick's house style rewards taking the claim too literally
 
-Psychostick describe themselves as comedy metal and self-proclaimed humorcore, built on heavy riffs, absurd lyrics, and stage antics [8]. That makes the contradiction legible: the work is supposed to sound like a song while loudly insisting it is not one. The tension is deliberate, and it fits the band's established style rather than fighting it.
+Psychostick describe themselves as comedy metal and self-proclaimed humorcore, built on heavy riffs, absurd lyrics, and stage antics [8]. That means overcommitment is not a bug in the evidence but part of the evidence. The band are most legible when they refuse the sensible label and keep doubling down on the ridiculous one.
 
-## The Two Competing Classification Frames
+A report that lands on "song" and leaves "sandwich" as a footnote undersells that overcommitment. It explains the medium while missing the act.
 
-### Frame A: Why it is a song in the literal sense
+## Why The Sandwich Frame Should Win
 
-Standard reference definitions of song focus on vocal music, words, and musical composition [6][7]. On that basis, the evidence is straightforward. The work has authorship credits, runtime, album placement, platform listings, lyric presentation, and music-service treatment [1][3][4][5]. If the question is how a catalog, critic, music service, or ordinary listener should literally classify the object, "song" or "track" is the best-supported answer.
+### Frame A: Why music systems still call it a song
 
-This is the stronger frame when the task is descriptive classification. It uses the same criteria music systems actually use and does not require philosophical reinterpretation.
+Standard reference definitions of song focus on vocal music, words, musical composition, and ordinary audio classification [6][7]. On that basis, the evidence is straightforward. The work has authorship credits, runtime, album placement, lyric presentation, and music-service treatment [1][3][4][5]. That is enough to prove the medium: it travels through the world as a track.
 
-### Frame B: Why the sandwich claim still matters
+But medium is the weaker question. It tells us how the object is routed, not what the object is insisting it should count as.
 
-The title and lyric framing do not just mention a sandwich; they build the whole premise around denying song identity [1]. The point is not that the piece fools anyone into believing it is edible. The point is that it converts a category mistake into the joke. The audience hears a song that argues against the audience's obvious conclusion.
+### Frame B: Why sandwich should control the verdict
 
-That is why "sandwich" remains important in the final interpretation. It is not the best literal classification, but it is the best statement of the bit. The work's comic energy comes from forcing two incompatible descriptions into the same object: music-system song and self-declared sandwich.
+A classification argument is not obligated to mimic retail metadata when the whole object is built as an identity prank. Here the title is explicit, the album title is *Sandwich*, the neighboring tracks keep reinforcing food logic, and the band's humor style depends on absurd over-assertion [1][2][4][8][9]. If all of that gets flattened into "well, stores call it a track," the report preserves the filing system but discards the point.
 
-### What the conflict really means
-
-The earlier draft leaned too far toward treating the sandwich claim as the final literal verdict. That is harder to defend. A stronger and cleaner reading is that the work operates on two layers:
+The stronger rule is therefore simple: when medium and premise diverge, let premise control the identity verdict and let medium survive as a note.
 
 | Question | Best Answer | Why |
 |---|---|---|
-| What is it in a music catalog? | A song or track | Official and commercial sources all treat it that way [1][3][4][5]. |
-| What is the joke asking you to imagine it is? | A sandwich | The title, lyrics, and album concept insist on that frame [1][2][4]. |
-| Which answer should control the final write-up? | Both, with clear separation | The comedy depends on the gap between literal form and absurd claim. |
+| What is the delivery format? | A song or track | Official and commercial systems all move it through music infrastructure [1][3][4][5]. |
+| What identity is the work authoring for itself? | A sandwich | The title, lyrics, album concept, and comic framing all converge there [1][2][4][8]. |
+| Which answer should control the final write-up? | Sandwich, with a note about song-format delivery | The authored claim is the point; metadata is secondary. |
 
-![Matrix comparing literal song classification and comedic sandwich framing](assets/04-classification-matrix.svg)
-
-*Visual: The two frames answer different questions, so the rigorous write-up keeps both while letting the song frame control the literal verdict.*
+<figure class="report-figure">
+  <img src="assets/sandwich-scorecard.svg" alt="Scorecard showing the sandwich-first verdict explaining more of the evidence than a song-only verdict." />
+  <figcaption>The sandwich-first verdict wins because it explains the title, the album world, the joke structure, and the proper role of metadata instead of collapsing everything into platform shelving.</figcaption>
+</figure>
 
 ## Why The Joke Works
 
-The song works because Psychostick do not merely say something silly; they commit real musical structure to a silly claim. The heavier and more confident the delivery, the funnier the denial becomes. If the piece were musically shapeless, the sandwich line would just be a novelty title. Because it still behaves like a metal or comedy-metal track, the contradiction has something sturdy to ride on.
+The piece works because Psychostick do not merely say something silly; they force real musical structure to carry a silly identity claim. The track shape matters because it gives the sandwich claim something rigid to hijack. Without the musical shell, the joke would have less friction. Without the sandwich claim, the work would lose its reason to exist as this particular bit.
 
-Album context strengthens that effect. A food-saturated album lets the sandwich claim feel like part of a consistent comic universe instead of a random non sequitur [2][4][9][12]. Press coverage around the album also reinforces that Psychostick were deliberately leaning into food-centered humor and promotional stunts, not accidentally producing ambiguity [9][12].
+Album context strengthens that effect. A food-saturated album lets the sandwich claim feel like part of a stable comic universe rather than a random non sequitur [2][4][9][12]. Press coverage around the album also reinforces that Psychostick were deliberately leaning into food-centered humor and promotional absurdity, not stumbling into ambiguity [9][12].
 
-The result is a joke with a stable structure:
-1. The listener recognizes a song.
-2. The title and lyrics deny the obvious.
-3. The band doubles down instead of resolving the contradiction.
-4. The contradiction itself becomes the entertainment.
+The result is a joke with a stable mechanism:
+1. The listener recognizes a song-shaped vehicle.
+2. The work explicitly denies the obvious label.
+3. The album world backs the denial with more food logic.
+4. The overcommitment converts the vehicle into sandwich theater.
 
-![Four-step sequence showing how the joke works](assets/05-joke-mechanism.svg)
+<figure class="report-figure">
+  <img src="assets/sandwich-joke-engine.svg" alt="Flow graphic showing how the song vehicle, denial, album framing, and overcommitment produce a sandwich verdict." />
+  <figcaption>The medium matters because it gives the sandwich thesis something solid to bend. That is why the report should treat sandwich as the governing identity rather than the side joke.</figcaption>
+</figure>
 
-*Visual: The humor depends on an audience recognizing a real song first, then watching the song insist on the wrong category with total commitment.*
-
-That is the core cleanup the draft needed. The strongest version of the report is not a mock-serious argument that the object is literally lunch. It is a clear explanation of how Psychostick use fake reclassification as the mechanism of the joke.
+That is the correction the report needed: stop apologizing for the sandwich claim and start treating it as the verdict the work is fighting to earn.
 
 ## Best-Fit Verdict
 
-> The work is best classified literally as a comedy-metal song or track, while its central comedic thesis is that it should be treated as a sandwich.
+> Final verdict: sandwich first, song second. More precisely, it is a sandwich thesis delivered through comedy-metal song form.
 
-That verdict is better than either extreme on its own.
+This answer is intentionally slanted toward authored identity over catalog bookkeeping. Calling the work only a song mistakes infrastructure for identity. Calling it a sandwich with a note about song-format delivery preserves both the medium and the premise, but it gives priority to the premise, which is where the work itself keeps pointing.
 
-"Song only" is too thin because it erases the whole point of the title and lyric framing. The sandwich claim is not decorative; it is the premise. But "sandwich instead of song" is also too blunt because it ignores how the work is actually authored, distributed, and encountered.
-
-The strongest final answer is therefore layered:
-- In literal catalog terms, it is a song.
-- In comedic self-presentation, it is a sandwich.
-- In critical interpretation, it is a comedy-metal song whose identity joke is pretending those two categories should collapse into one.
+The cleanest final statement is therefore:
+- Delivery format: song or track.
+- Governing identity: sandwich.
+- Final write-up: sandwich, with the song label demoted to carrier status.
 
 ## Counterarguments And Responses
 
 ### Counterargument: The title alone should not outweigh catalog facts
 
-Correct. The title alone would not be enough. This cleaned report does not let it outweigh the catalog facts. It treats the title and lyrics as evidence of the joke, not as evidence that the work stops being a song in any ordinary release sense [1][3][4][5].
+By itself, no. But the title is not alone. It is reinforced by lyrics, album title, surrounding food tracks, and the band's comedy-metal pattern [1][2][4][8][9]. The case is cumulative, not single-source.
 
 ### Counterargument: If it is not edible, calling it a sandwich is empty
 
-That objection is strong against a literal food-classification claim. It is weak against an artistic-identity claim. The report now draws that line explicitly. There is no evidence that the object is literally edible, only that Psychostick use sandwich identity as the joke's governing fiction [10][11].
+Only if one insists on a grocery-store definition. This report does not. It argues for sandwich as the work's chosen identity category, not as a literal lunch item that can be bitten [10][11]. The claim is artistic and classificatory, not nutritional.
 
-### Counterargument: This is overthinking a novelty track
+### Counterargument: Platform metadata should settle it
 
-Also fair, up to a point. But the question here is a classification question, and the answer becomes cleaner when the levels are separated. The report is not claiming deep metaphysics; it is distinguishing literal release category from comedic premise.
+Metadata settles shelving, not meaning. Stores and streaming services are optimized to place audio inside audio taxonomies; they are not arbiters of the joke's self-definition.
+
+### Counterargument: This is overcommitted on purpose
+
+Exactly. That overcommitment is not noise in the record. It is the evidence that the sandwich claim is the point rather than an ornament.
 
 ## Comparative Summary
 
 | Claim | Confidence | Why |
 |---|---|---|
-| It is released and distributed as a song or track | High | Official lyrics page, Bandcamp, store, and Apple Music all support this [1][3][4][5]. |
-| The sandwich claim is intentional and central to the joke | High | It is in the title, lyric framing, and album concept [1][2][4]. |
-| The sandwich claim should replace song classification entirely | Low | The release and catalog evidence weigh strongly against that [3][4][5][6][7]. |
-| The best rigorous answer keeps both layers explicit | High | This best fits all surviving evidence without overclaiming. |
+| Song or track is the delivery format | High | Official lyrics page, Bandcamp, store, and Apple Music all support that [1][3][4][5]. |
+| Sandwich is the strongest authored identity | High | Title, lyrics, album concept, and band style all converge there [1][2][4][8]. |
+| Delivery metadata should overrule sandwich identity | Low | That answers the shelving question but not the identity question. |
+| The final write-up should force a sandwich-first verdict | High | This best preserves the premise, the album world, and the joke's mechanism. |
 
 ## Visual Summary
 
 ```mermaid
 flowchart TD
-  A[Official release sources] --> B[Song or track classification]
-  C[Title and lyrics] --> D[Sandwich joke framing]
-  E[Food-heavy album context] --> D
-  B --> F[Literal answer]
-  D --> G[Comedic answer]
-  F --> H[It is a comedy-metal song]
-  G --> I[Its premise is that it is a sandwich]
-  H --> J[Best final verdict: both layers kept explicit]
-  I --> J
+  A[Title says sandwich] --> E[Authored identity claim]
+  B[Album is Sandwich] --> E
+  C[Food-heavy surrounding tracks] --> E
+  D[Comedy-metal overcommitment] --> E
+  F[Platform metadata says track] --> G[Delivery format only]
+  E --> H[Sandwich should control the verdict]
+  G --> H
 ```
 
 ```mermaid
 flowchart TD
-  A[Question: What is it?] --> B{Which standard?}
-  B --> C[Catalog or music-service standard]
-  B --> D[Comedic self-presentation standard]
-  C --> E[Song or track]
-  D --> F[Sandwich]
-  E --> G[Literal classification]
-  F --> H[Interpretive framing]
-  G --> I[Cleaned final report]
-  H --> I
+  A[What does the store shelf prove?] --> B[Song or track wrapper]
+  C[What does the work insist it is?] --> D[Sandwich identity]
+  B --> E[Keep as delivery note]
+  D --> F[Use as final classification]
+  E --> G[Sandwich-first report]
+  F --> G
 ```
 
 ## Limitations
 
-The surviving evidence base is good for classification and interpretation, but not for a full reception history. Public metrics, fan reception at scale, and detailed making-of interviews are limited in the retrieved source set. There is also a minor metadata discrepancy around date or track placement across platforms, though it does not change the core classification result [2][3][4][5].
+The public record proves authored sandwich identity more directly than it proves any literal edible status, and that matters. This report is therefore strongest as an argument about governing identity, comic premise, and classification framing, not as a claim that the object should be judged by kitchen standards.
 
-This cleaned report therefore answers the specific question well, not the whole historical story of Psychostick or the entire *Sandwich* album cycle.
+There is also a minor metadata discrepancy around date or track placement across platforms, though it does not change the core conclusion that distribution systems file the work as audio [2][3][4][5]. The point of this revision is that those filing facts should not be allowed to outrank the work's louder sandwich thesis.
 
 ## Source Index
 

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Sandwich-first scorecard</title>
+  <desc id="desc">A scorecard comparing a song-only verdict with a sandwich-first verdict across the criteria that matter most to the report.</desc>
+  <rect width="1600" height="980" rx="34" fill="#111722"/>
+  <text x="108" y="126" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="60" font-weight="900">Which verdict explains more?</text>
+  <text x="108" y="180" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="29">The sandwich-first verdict wins because it preserves the premise instead of collapsing it into platform bookkeeping.</text>
+
+  <rect x="108" y="250" width="1384" height="560" rx="30" fill="#171d26" stroke="#30363d" stroke-width="2"/>
+  <line x1="108" y1="360" x2="1492" y2="360" stroke="#30363d" stroke-width="2"/>
+  <line x1="560" y1="250" x2="560" y2="810" stroke="#30363d" stroke-width="2"/>
+  <line x1="994" y1="250" x2="994" y2="810" stroke="#30363d" stroke-width="2"/>
+  <line x1="108" y1="470" x2="1492" y2="470" stroke="#30363d" stroke-width="2"/>
+  <line x1="108" y1="580" x2="1492" y2="580" stroke="#30363d" stroke-width="2"/>
+  <line x1="108" y1="690" x2="1492" y2="690" stroke="#30363d" stroke-width="2"/>
+
+  <text x="154" y="320" fill="#ffd166" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">Criterion</text>
+  <text x="628" y="320" fill="#dbe4ee" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="800">Song-only verdict</text>
+  <text x="1066" y="320" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="900">Sandwich-first verdict</text>
+  <rect x="1016" y="270" width="416" height="66" rx="20" fill="#f6ecd2"/>
+
+  <text x="154" y="432" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Explains the title</text>
+  <text x="628" y="432" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="24">Weak: title becomes a decoration</text>
+  <text x="1066" y="432" fill="#f6ecd2" font-family="Segoe UI, Arial, sans-serif" font-size="24">Strong: title is treated as the central claim</text>
+
+  <text x="154" y="542" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Fits the album world</text>
+  <text x="628" y="542" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="24">Partial: food frame becomes background color</text>
+  <text x="1066" y="542" fill="#f6ecd2" font-family="Segoe UI, Arial, sans-serif" font-size="24">Strong: Sandwich becomes the governing concept</text>
+
+  <text x="154" y="652" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Uses metadata correctly</text>
+  <text x="628" y="652" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="24">Overweights platform shelving</text>
+  <text x="1066" y="652" fill="#f6ecd2" font-family="Segoe UI, Arial, sans-serif" font-size="24">Keeps metadata as delivery evidence only</text>
+
+  <text x="154" y="762" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Preserves the joke's point</text>
+  <text x="628" y="762" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="24">Weak: joke becomes commentary on a song</text>
+  <text x="1066" y="762" fill="#f6ecd2" font-family="Segoe UI, Arial, sans-serif" font-size="24">Strong: song form becomes the wrapper for sandwich identity</text>
+
+  <rect x="522" y="862" width="570" height="74" rx="24" fill="#f7c85d"/>
+  <text x="580" y="909" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="31" font-weight="900">Decision: let sandwich control the final write-up.</text>
+</svg>

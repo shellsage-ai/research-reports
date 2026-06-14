@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Sandwich-first verdict poster</title>
+  <desc id="desc">A poster-style graphic arguing that the report should force the verdict toward sandwich, while treating song as only the delivery format.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6ecd2"/>
+      <stop offset="100%" stop-color="#f2c66a"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141a22"/>
+      <stop offset="100%" stop-color="#232c37"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="980" rx="34" fill="#111722"/>
+  <rect x="44" y="44" width="1512" height="892" rx="30" fill="url(#bg)"/>
+  <text x="110" y="132" fill="#915c00" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" letter-spacing="4">PSYCHOSTICK CLASSIFICATION ARGUMENT</text>
+  <text x="110" y="238" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="82" font-weight="900">Force the verdict</text>
+  <text x="110" y="326" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="82" font-weight="900">toward sandwich.</text>
+  <text x="110" y="404" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="31">The song label explains the delivery channel.</text>
+  <text x="110" y="446" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="31">The sandwich label explains the point, the title, and the identity claim.</text>
+
+  <rect x="110" y="520" width="520" height="120" rx="22" fill="#151b23"/>
+  <text x="146" y="568" fill="#f7c85d" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">DELIVERY FORMAT</text>
+  <text x="146" y="621" fill="#f7f2e7" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="800">Song / track</text>
+
+  <rect x="110" y="670" width="520" height="160" rx="22" fill="#fff8ea" stroke="#151b23" stroke-width="3"/>
+  <text x="146" y="722" fill="#915c00" font-family="Segoe UI, Arial, sans-serif" font-size="23" font-weight="800">GOVERNING IDENTITY</text>
+  <text x="146" y="782" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="64" font-weight="900">Sandwich</text>
+  <text x="146" y="822" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="25">Title, album, lyrics, and comic premise all push here.</text>
+
+  <g transform="translate(930 170)">
+    <ellipse cx="220" cy="540" rx="220" ry="54" fill="#d3b471" opacity="0.35"/>
+    <rect x="70" y="130" width="310" height="70" rx="35" fill="#ce8f3b"/>
+    <rect x="52" y="200" width="346" height="30" rx="15" fill="#5b9b59"/>
+    <rect x="58" y="236" width="334" height="34" rx="17" fill="#f2d15f"/>
+    <rect x="48" y="282" width="356" height="26" rx="13" fill="#aa4435"/>
+    <rect x="42" y="320" width="368" height="32" rx="16" fill="#ffd889"/>
+    <rect x="56" y="366" width="338" height="44" rx="22" fill="#7a4e24"/>
+    <rect x="64" y="412" width="322" height="60" rx="30" fill="#d09a48"/>
+    <path d="M90 124 C118 72 160 42 226 42 C292 42 334 72 362 124" fill="none" stroke="#151b23" stroke-width="10" stroke-linecap="round"/>
+    <text x="126" y="520" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="900">SANDWICH</text>
+    <text x="112" y="564" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="25">Treat the music as the wrapper.</text>
+  </g>
+
+  <path d="M650 585 C735 585 758 585 820 585" fill="none" stroke="#151b23" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="676" cy="585" r="10" fill="#151b23"/>
+  <circle cx="739" cy="585" r="10" fill="#151b23"/>
+  <circle cx="802" cy="585" r="10" fill="#151b23"/>
+
+  <rect x="886" y="712" width="520" height="118" rx="24" fill="#151b23"/>
+  <text x="926" y="762" fill="#f7c85d" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800">REPORT POSITION</text>
+  <text x="926" y="812" fill="#f7f2e7" font-family="Segoe UI, Arial, sans-serif" font-size="41" font-weight="800">Sandwich first, song second.</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Wrapper versus filling</title>
+  <desc id="desc">A graphic showing that release metadata proves the wrapper while the sandwich thesis supplies the identity filling.</desc>
+  <rect width="1600" height="980" rx="34" fill="#111722"/>
+  <text x="108" y="126" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="60" font-weight="900">What release facts actually prove</text>
+  <text x="108" y="180" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="29">They prove the wrapper: audio delivery, credits, runtime, and shelf placement.</text>
+
+  <rect x="108" y="270" width="280" height="146" rx="24" fill="#161b22" stroke="#30363d"/>
+  <text x="145" y="334" fill="#ffd166" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">Lyrics page</text>
+  <text x="145" y="382" fill="#dbe4ee" font-family="Segoe UI, Arial, sans-serif" font-size="24">Credits and track identity</text>
+
+  <rect x="108" y="452" width="280" height="146" rx="24" fill="#161b22" stroke="#30363d"/>
+  <text x="145" y="516" fill="#58a6ff" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">Bandcamp</text>
+  <text x="145" y="564" fill="#dbe4ee" font-family="Segoe UI, Arial, sans-serif" font-size="24">Runtime and album placement</text>
+
+  <rect x="108" y="634" width="280" height="146" rx="24" fill="#161b22" stroke="#30363d"/>
+  <text x="145" y="698" fill="#ffb74d" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="800">Store + Apple Music</text>
+  <text x="145" y="746" fill="#dbe4ee" font-family="Segoe UI, Arial, sans-serif" font-size="24">Sales and streaming categories</text>
+
+  <path d="M420 525 C520 525 560 525 650 525" fill="none" stroke="#f7c85d" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="470" cy="525" r="11" fill="#f7c85d"/>
+  <circle cx="540" cy="525" r="11" fill="#f7c85d"/>
+  <circle cx="610" cy="525" r="11" fill="#f7c85d"/>
+
+  <rect x="674" y="356" width="312" height="352" rx="34" fill="#f6ecd2"/>
+  <rect x="714" y="414" width="232" height="48" rx="24" fill="#d39a46"/>
+  <rect x="700" y="464" width="260" height="20" rx="10" fill="#5b9b59"/>
+  <rect x="708" y="494" width="244" height="24" rx="12" fill="#f2d15f"/>
+  <rect x="696" y="530" width="268" height="18" rx="9" fill="#aa4435"/>
+  <rect x="688" y="562" width="284" height="26" rx="13" fill="#ffd889"/>
+  <rect x="708" y="596" width="244" height="38" rx="19" fill="#7a4e24"/>
+  <text x="755" y="678" fill="#151b23" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="900">WRAPPER FACTS</text>
+  <text x="754" y="718" fill="#2b3542" font-family="Segoe UI, Arial, sans-serif" font-size="24">prove a music wrapper</text>
+
+  <rect x="1054" y="290" width="430" height="488" rx="34" fill="#171d26" stroke="#30363d" stroke-width="2"/>
+  <text x="1102" y="364" fill="#f7c85d" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="800" letter-spacing="3">WHAT THEY DO NOT PROVE</text>
+  <text x="1102" y="438" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="900">They do not settle</text>
+  <text x="1102" y="492" fill="#f4f7fb" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="900">the identity fight.</text>
+  <text x="1102" y="568" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="27">For that, the report should look to the title,</text>
+  <text x="1102" y="608" fill="#aab5c0" font-family="Segoe UI, Arial, sans-serif" font-size="27">lyrics, album concept, and total comic premise.</text>
+  <rect x="1102" y="676" width="332" height="66" rx="22" fill="#58a6ff"/>
+  <text x="1144" y="719" fill="#0d1117" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="900">Wrapper is not filling.</text>
+</svg>
