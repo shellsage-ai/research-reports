@@ -1,0 +1,36 @@
+﻿{
+  "SchemaVersion": "researchhive.packet-trust.v1",
+  "Status": "UsableWithReview",
+  "StatusLabel": "Usable With Review",
+  "BlockerCount": 0,
+  "WarningCount": 3,
+  "ReportCount": 1,
+  "SourceCount": 27,
+  "BlockedSourceCount": 1,
+  "EvidenceFileCount": 27,
+  "CitationCount": 0,
+  "CitationMarkerCount": 313,
+  "ClaimCheckCount": 0,
+  "SupportedClaimCount": 0,
+  "UnresolvedClaimCount": 0,
+  "UnresolvedContradictionCount": 0,
+  "GroundingScore": 1,
+  "Blockers": [],
+  "Warnings": [
+    "1 source(s) were blocked or unavailable during capture.",
+    "Citation markers are present, but no saved citation ledger entries were found.",
+    "No saved claim-verification checks were found."
+  ],
+  "MissingOrWeakEvidence": [
+    "1 source(s) were blocked or unavailable during capture.",
+    "Citation markers are present, but no saved citation ledger entries were found.",
+    "No saved claim-verification checks were found."
+  ],
+  "SourceHealth": {
+    "available": 27,
+    "blocked": 1,
+    "withEvidenceFiles": 27,
+    "savedCitations": 0,
+    "citationMarkers": 313
+  }
+}
