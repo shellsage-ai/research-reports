@@ -1,0 +1,37 @@
+﻿{
+  "SchemaVersion": "researchhive.packet-trust.v1",
+  "Status": "NeedsRepair",
+  "StatusLabel": "Needs Repair",
+  "BlockerCount": 0,
+  "WarningCount": 4,
+  "ReportCount": 1,
+  "SourceCount": 14,
+  "BlockedSourceCount": 0,
+  "EvidenceFileCount": 14,
+  "CitationCount": 16,
+  "CitationMarkerCount": 6,
+  "ClaimCheckCount": 0,
+  "SupportedClaimCount": 0,
+  "UnresolvedClaimCount": 0,
+  "UnresolvedContradictionCount": 0,
+  "GroundingScore": 0.06756756756756757,
+  "Blockers": [],
+  "Warnings": [
+    "The run ended with a failure state after writing a reviewable report; inspect the report notes before publishing it as final.",
+    "The primary report needs follow-up: Report was generated below the selected evidence target; continue with more sources or accept it as a review draft.",
+    "Grounding score is 7%; review weak or unsupported claims before relying on this packet.",
+    "No saved claim-verification checks were found."
+  ],
+  "MissingOrWeakEvidence": [
+    "The primary report needs follow-up: Report was generated below the selected evidence target; continue with more sources or accept it as a review draft.",
+    "Grounding score is 7%; review weak or unsupported claims before relying on this packet.",
+    "No saved claim-verification checks were found."
+  ],
+  "SourceHealth": {
+    "available": 14,
+    "blocked": 0,
+    "withEvidenceFiles": 14,
+    "savedCitations": 16,
+    "citationMarkers": 6
+  }
+}

@@ -1,0 +1,80 @@
+﻿{
+  "SchemaVersion": "researchhive.agent-brief.v2",
+  "ArtifactId": "agent-brief:9c27a2e7f889:80145d92a224",
+  "SessionId": "9c27a2e7f889",
+  "SessionTitle": "This Is Not a Song, It\u2019s a Sandwich: Psychostick\u2019s Comedy-Metal Food Joke Explained",
+  "Domain": "General Research",
+  "Status": "Active",
+  "GeneratedUtc": "2026-07-09T21:16:58.6178869Z",
+  "ResumeContext": {
+    "sessionId": "9c27a2e7f889",
+    "primaryReportId": "80145d92a224",
+    "primaryJobId": "de06113d89a8",
+    "reportIds": [
+      "80145d92a224"
+    ],
+    "claimCheckIds": [],
+    "sessionStatus": "Active",
+    "workspacePath": "C:\\Users\\Ian\\AppData\\Local\\ResearchHive\\Sessions\\2026-06-14_This Is Not a Song, It\u2019s a Sandwich_ Psy_56c3fa51"
+  },
+  "PrimaryReportTitle": "Full Report - Psychostick Sandwich Classification Argument",
+  "PrimaryReportType": "full",
+  "Summary": "# Executive Summary\n\n**Sources analyzed:** 16 | **Grounding Score:** 7% | **Sub-Questions:** 8 (0 answered)\n\n---\n\n[LLM_UNAVAILABLE] Cloud AI returned no response. Check your provider settings, authentication, and connectivity. Provider: ChatGptPlus, Auth: CodexOAuth",
+  "TopFindings": [
+    "[Executive Summary](executive-summary)",
+    "[How To Use This Field Atlas](how-to-use-this-field-atlas)",
+    "[Interactive Map And Route Overview](interactive-map-and-route-overview)",
+    "[Top Hotspots Worth Visiting](top-hotspots-worth-visiting)"
+  ],
+  "Decisions": [
+    "under a work-identity standard, the object is best classified as a sandwich presented through audio distribution, not as a song whose title is merely decorative. [inference]",
+    "sandwich, not song. More precisely: an audio-distributed sandwich work misclassified by ordinary music metadata as a song for practical catalog reasons. [inference]"
+  ],
+  "Risks": [],
+  "Uncertainties": [],
+  "NextActions": [
+    "under a work-identity standard, the object is best classified as a sandwich presented through audio distribution, not as a song whose title is merely decorative. [inference]",
+    "sandwich, not song. More precisely: an audio-distributed sandwich work misclassified by ordinary music metadata as a song for practical catalog reasons. [inference]"
+  ],
+  "GroundingScore": 0.06756756756756757,
+  "Counts": {
+    "reports": 1,
+    "sources": 14,
+    "notebookEntries": 0,
+    "guides": 0,
+    "supportedClaimChecks": 0,
+    "unresolvedClaimChecks": 0
+  },
+  "References": [
+    {
+      "Kind": "packet",
+      "Label": "Packet Index",
+      "Path": "index.html"
+    },
+    {
+      "Kind": "report",
+      "Label": "Full Report - Psychostick Sandwich Classification Argument",
+      "Path": "reports/Full_Report_-_Psychostick_Sandwich_Classification_Argument_80145d92.html"
+    },
+    {
+      "Kind": "data",
+      "Label": "Source Index",
+      "Path": "sources.csv"
+    },
+    {
+      "Kind": "packet",
+      "Label": "Packet Summary",
+      "Path": "packet-summary.md"
+    },
+    {
+      "Kind": "packet",
+      "Label": "Trust Summary",
+      "Path": "packet-trust-summary.json"
+    },
+    {
+      "Kind": "visual",
+      "Label": "Packet Visuals",
+      "Path": "visuals.html"
+    }
+  ]
+}
